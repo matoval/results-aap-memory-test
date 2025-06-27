@@ -120,10 +120,194 @@ def generate_html_report(analysis_data, analysis_dir):
 """
 
     if analysis_data:
-        # Add analysis data sections here (truncated for brevity)
         html_content += """
-        <h2>📊 Analysis Data Available</h2>
+        <h2>📊 Memory Usage Analysis Results</h2>
         <p>Memory analysis data was found and processed successfully.</p>
+        
+        <h3>🔍 Overall System Memory Comparison</h3>
+        <div style="display: flex; gap: 20px; margin: 20px 0;">
+            <div style="flex: 1; background: #e3f2fd; padding: 15px; border-radius: 8px;">
+                <h4 style="margin-top: 0; color: #1976d2;">AAP 2.4</h4>
+        """
+        
+        aap24 = analysis_data.get('aap24', {})
+        aap25 = analysis_data.get('aap25', {})
+        comparison = analysis_data.get('comparison', {})
+        
+        if aap24:
+            html_content += f"""
+                <ul style="list-style: none; padding: 0;">
+                    <li><strong>Average Memory:</strong> {aap24.get('avg_memory_mb', 0):.1f} MB</li>
+                    <li><strong>Peak Memory:</strong> {aap24.get('peak_memory_mb', 0):.1f} MB</li>
+                    <li><strong>Min Memory:</strong> {aap24.get('min_memory_mb', 0):.1f} MB</li>
+                    <li><strong>Samples:</strong> {aap24.get('samples', 0)}</li>
+                </ul>
+            """
+        
+        html_content += """
+            </div>
+            <div style="flex: 1; background: #ffebee; padding: 15px; border-radius: 8px;">
+                <h4 style="margin-top: 0; color: #d32f2f;">AAP 2.5</h4>
+        """
+        
+        if aap25:
+            html_content += f"""
+                <ul style="list-style: none; padding: 0;">
+                    <li><strong>Average Memory:</strong> {aap25.get('avg_memory_mb', 0):.1f} MB</li>
+                    <li><strong>Peak Memory:</strong> {aap25.get('peak_memory_mb', 0):.1f} MB</li>
+                    <li><strong>Min Memory:</strong> {aap25.get('min_memory_mb', 0):.1f} MB</li>
+                    <li><strong>Samples:</strong> {aap25.get('samples', 0)}</li>
+                </ul>
+            """
+        
+        html_content += """
+            </div>
+        </div>
+        """
+        
+        # Add comparison summary
+        if comparison:
+            diff_mb = comparison.get('avg_memory_diff_mb', 0)
+            diff_percent = comparison.get('avg_memory_diff_percent', 0)
+            uses_more = comparison.get('aap25_uses_more', False)
+            
+            color = '#d32f2f' if uses_more else '#4caf50'
+            symbol = '📈' if uses_more else '📉'
+            direction = 'more' if uses_more else 'less'
+            
+            html_content += f"""
+            <div class="alert alert-info">
+                <h4 style="margin-top: 0;">{symbol} Memory Difference Analysis</h4>
+                <p><strong>AAP 2.5 uses {abs(diff_mb):.1f} MB {direction} memory than AAP 2.4</strong></p>
+                <p style="color: {color}; font-size: 1.2em; font-weight: bold;">
+                    Difference: {diff_percent:+.1f}%
+                </p>
+            </div>
+            """
+        
+        # Add top processes comparison
+        html_content += """
+        <h3>🔧 Top Memory Consuming Processes</h3>
+        <div style="display: flex; gap: 20px; margin: 20px 0;">
+            <div style="flex: 1;">
+                <h4>AAP 2.4 Top Processes</h4>
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                    <thead>
+                        <tr style="background-color: #f5f5f5;">
+                            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Process</th>
+                            <th style="border: 1px solid #ddd; padding: 8px; text-align: right;">Avg Memory (MB)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        """
+        
+        if aap24.get('top_processes'):
+            for i, (process, data) in enumerate(aap24['top_processes'][:5]):
+                avg_mb = data.get('avg_rss', 0) / 1024
+                process_short = process[:40] + '...' if len(process) > 40 else process
+                html_content += f"""
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; font-family: monospace; font-size: 0.9em;">{process_short}</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: right;">{avg_mb:.1f}</td>
+                        </tr>
+                """
+        
+        html_content += """
+                    </tbody>
+                </table>
+            </div>
+            <div style="flex: 1;">
+                <h4>AAP 2.5 Top Processes</h4>
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                    <thead>
+                        <tr style="background-color: #f5f5f5;">
+                            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Process</th>
+                            <th style="border: 1px solid #ddd; padding: 8px; text-align: right;">Avg Memory (MB)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        """
+        
+        if aap25.get('top_processes'):
+            for i, (process, data) in enumerate(aap25['top_processes'][:5]):
+                avg_mb = data.get('avg_rss', 0) / 1024
+                process_short = process[:40] + '...' if len(process) > 40 else process
+                html_content += f"""
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; font-family: monospace; font-size: 0.9em;">{process_short}</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: right;">{avg_mb:.1f}</td>
+                        </tr>
+                """
+        
+        html_content += """
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        """
+        
+        # Add receptor memory comparison if available
+        if aap24.get('receptor_memory') and aap25.get('receptor_memory'):
+            html_content += """
+            <h3>📡 Receptor Memory Analysis</h3>
+            <div style="display: flex; gap: 20px; margin: 20px 0;">
+                <div style="flex: 1; background: #e8f5e8; padding: 15px; border-radius: 8px;">
+                    <h4 style="margin-top: 0;">AAP 2.4 Receptor</h4>
+            """
+            
+            receptor24 = aap24['receptor_memory']
+            html_content += f"""
+                    <ul style="list-style: none; padding: 0;">
+                        <li><strong>Average:</strong> {receptor24.get('avg_memory_mb', 0):.1f} MB</li>
+                        <li><strong>Peak:</strong> {receptor24.get('peak_memory_mb', 0):.1f} MB</li>
+                        <li><strong>Samples:</strong> {receptor24.get('samples', 0)}</li>
+                    </ul>
+                </div>
+                <div style="flex: 1; background: #ffe8e8; padding: 15px; border-radius: 8px;">
+                    <h4 style="margin-top: 0;">AAP 2.5 Receptor</h4>
+            """
+            
+            receptor25 = aap25['receptor_memory']
+            html_content += f"""
+                    <ul style="list-style: none; padding: 0;">
+                        <li><strong>Average:</strong> {receptor25.get('avg_memory_mb', 0):.1f} MB</li>
+                        <li><strong>Peak:</strong> {receptor25.get('peak_memory_mb', 0):.1f} MB</li>
+                        <li><strong>Samples:</strong> {receptor25.get('samples', 0)}</li>
+                    </ul>
+                </div>
+            </div>
+            """
+            
+            # Add receptor comparison if available
+            if comparison.get('receptor'):
+                receptor_comparison = comparison['receptor']
+                receptor_diff = receptor_comparison.get('avg_memory_diff_mb', 0)
+                receptor_percent = receptor_comparison.get('avg_memory_diff_percent', 0)
+                
+                html_content += f"""
+                <div class="alert alert-info">
+                    <strong>Receptor Memory Difference:</strong> {receptor_diff:+.1f} MB ({receptor_percent:+.1f}%)
+                </div>
+                """
+        
+        # Add charts if available
+        if chart_base64:
+            html_content += f"""
+            <h3>📊 Memory Usage Charts</h3>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="data:image/png;base64,{chart_base64}" 
+                     alt="Memory Comparison Charts" 
+                     style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+            </div>
+            """
+        
+        html_content += """
+        <h3>📁 Generated Files</h3>
+        <ul>
+            <li><strong>memory_comparison_charts.png</strong> - Visual comparison charts</li>
+            <li><strong>memory_analysis_summary.json</strong> - Detailed numerical analysis</li>
+            <li><strong>README.md</strong> - Markdown summary report</li>
+        </ul>
         """
     else:
         html_content += """
