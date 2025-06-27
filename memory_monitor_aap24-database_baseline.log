@@ -1,0 +1,1367 @@
+Starting memory monitoring for aap24 baseline test at Fri Jun 27 02:04:13 PM PDT 2025
+=================================================================================
+2025-06-27 14:04:13
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         615        7065          60         291        7065
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    801       1 /usr/bin/postmaster -D /var 61952
+    745       1 /usr/bin/python3 -s /usr/sb 43724
+    784       1 /usr/bin/python3 -Es /usr/s 28648
+    925       1 /usr/lib/polkit-1/polkitd - 25936
+   1568     801 postgres: automationhub aut 22896
+   1569     801 postgres: automationhub aut 22768
+   1618     801 postgres: automationhub aut 22256
+   1616     801 postgres: automationhub aut 22000
+   1617     801 postgres: automationhub aut 22000
+   1619     801 postgres: automationhub aut 22000
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1797       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       00:00
+Receptor Child Processes for PID 1797:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1797:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1797    1797  0.0  0.0  3328 bash
+Receptor Network Connections for PID 1797:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0       UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0       UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0       UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0       TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0       TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0       TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0       TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1599      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1599      postgres   11u  IPv4  24333      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60176 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+postmaste 1660      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1660      postgres   11u  IPv4  26761      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60494 (ESTABLISHED)
+postmaste 1684      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1684      postgres   11u  IPv4  24455      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:44070 (ESTABLISHED)
+postmaste 1685      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1685      postgres   11u  IPv4  26775      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:44076 (ESTABLISHED)
+sshd      1710          root    4u  IPv4  26026      0t0       TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+sshd      1729          root    4u  IPv4  26026      0t0       TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+bash      1797          root  cwd    DIR  253,0      142  67240070 /root
+bash      1797          root  rtd    DIR  253,0      235       128 /
+bash      1797          root  txt    REG  253,0  1389072  67333814 /usr/bin/bash
+bash      1797          root  mem    REG  253,0  2586930     36580 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1797          root  mem    REG  253,0  2544344 100688096 /usr/lib64/libc.so.6
+bash      1797          root  mem    REG  253,0   346132 100687773 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1797          root  mem    REG  253,0       54     36583 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1797          root  mem    REG  253,0     3284  33639493 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1797          root  mem    REG  253,0      286  33639491 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1797          root  mem    REG  253,0       57  33639504 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1797          root  mem    REG  253,0    26988  67334001 /usr/lib64/gconv/gconv-modules.cache
+bash      1797          root  mem    REG  253,0   195080 100687757 /usr/lib64/libtinfo.so.6.2
+bash      1797          root  mem    REG  253,0       34 100688074 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1797          root  mem    REG  253,0       77     36582 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1797          root  mem    REG  253,0      167  33639487 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1797          root  mem    REG  253,0       59  33639492 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1797          root  mem    REG  253,0       23  33639490 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1797          root  mem    REG  253,0      369  33639489 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1797          root  mem    REG  253,0   897856 100688092 /usr/lib64/ld-linux-x86-64.so.2
+bash      1797          root    0r   CHR    1,3      0t0         4 /dev/null
+bash      1797          root    1w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    2w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    3r  FIFO   0,13      0t0     25313 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 1805:
+  No child processes found
+Receptor Threads for PID 1805:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 1805:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0  UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0  UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0  TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0  TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0  TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1599      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1599      postgres   11u  IPv4  24333      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60176 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+postmaste 1660      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1660      postgres   11u  IPv4  26761      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60494 (ESTABLISHED)
+postmaste 1684      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1684      postgres   11u  IPv4  24455      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:44070 (ESTABLISHED)
+postmaste 1685      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1685      postgres   11u  IPv4  26775      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:44076 (ESTABLISHED)
+sshd      1710          root    4u  IPv4  26026      0t0  TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+sshd      1729          root    4u  IPv4  26026      0t0  TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1797)
+    PID    PPID CMD                           RSS
+   1797       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1797:
+    PID    PPID CMD                           RSS
+   1864    1797 bash -c  log_file="/tmp/mem  2080
+
+Process: bash (PID: 1864)
+    PID    PPID CMD                           RSS
+   1864    1797 bash -c  log_file="/tmp/mem  2080
+  Children of PID 1864:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1797)---pstree(1875)
+=== receptor Process Tree ===
+bash(1797)---pstree(1882)
+=== nginx Process Tree ===
+bash(1797)---pstree(1886)
+=== postgresql Process Tree ===
+bash(1797)---pstree(1890)
+=== redis Process Tree ===
+bash(1797)---pstree(1894)
+=== uwsgi Process Tree ===
+bash(1797)---pstree(1898)
+=== automation-hub Process Tree ===
+bash(1797)---pstree(1902)
+=== automation-eda Process Tree ===
+bash(1797)---pstree(1906)
+
+=================================================================================
+2025-06-27 14:04:44
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         566        7109          60         298        7114
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    801       1 /usr/bin/postmaster -D /var 61952
+    745       1 /usr/bin/python3 -s /usr/sb 43724
+    784       1 /usr/bin/python3 -Es /usr/s 28648
+   1086       1 /usr/local/bin/node_exporte 27300
+    925       1 /usr/lib/polkit-1/polkitd - 25936
+   1568     801 postgres: automationhub aut 23152
+   1569     801 postgres: automationhub aut 22896
+   1618     801 postgres: automationhub aut 22512
+   1959     801 postgres: awx awx 192.168.1 22384
+   1619     801 postgres: automationhub aut 22256
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1797       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       00:31
+Receptor Child Processes for PID 1797:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1797:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1797    1797  0.0  0.0  3456 bash
+Receptor Network Connections for PID 1797:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0       UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0       UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0       UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0       TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0       TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0       TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0       TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+sshd      1710          root    4u  IPv4  26026      0t0       TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+sshd      1729          root    4u  IPv4  26026      0t0       TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+bash      1797          root  cwd    DIR  253,0      142  67240070 /root
+bash      1797          root  rtd    DIR  253,0      235       128 /
+bash      1797          root  txt    REG  253,0  1389072  67333814 /usr/bin/bash
+bash      1797          root  mem    REG  253,0  2586930     36580 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1797          root  mem    REG  253,0  2544344 100688096 /usr/lib64/libc.so.6
+bash      1797          root  mem    REG  253,0   346132 100687773 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1797          root  mem    REG  253,0       54     36583 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1797          root  mem    REG  253,0     3284  33639493 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1797          root  mem    REG  253,0      286  33639491 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1797          root  mem    REG  253,0       57  33639504 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1797          root  mem    REG  253,0    26988  67334001 /usr/lib64/gconv/gconv-modules.cache
+bash      1797          root  mem    REG  253,0   195080 100687757 /usr/lib64/libtinfo.so.6.2
+bash      1797          root  mem    REG  253,0       34 100688074 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1797          root  mem    REG  253,0       77     36582 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1797          root  mem    REG  253,0      167  33639487 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1797          root  mem    REG  253,0       59  33639492 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1797          root  mem    REG  253,0       23  33639490 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1797          root  mem    REG  253,0      369  33639489 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1797          root  mem    REG  253,0   897856 100688092 /usr/lib64/ld-linux-x86-64.so.2
+bash      1797          root    0r   CHR    1,3      0t0         4 /dev/null
+bash      1797          root    1w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    2w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    3r  FIFO   0,13      0t0     29515 pipe
+postmaste 1954      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1954      postgres   11u  IPv4  27507      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59734 (ESTABLISHED)
+postmaste 1956      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1956      postgres   11u  IPv4  27509      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59746 (ESTABLISHED)
+postmaste 1957      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1957      postgres   11u  IPv4  31099      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59752 (ESTABLISHED)
+postmaste 1959      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1959      postgres   11u  IPv4  25508      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59774 (ESTABLISHED)
+postmaste 1960      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1960      postgres   11u  IPv4  25509      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59778 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 1989:
+  No child processes found
+Receptor Threads for PID 1989:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 1989:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0  UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0  UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0  TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0  TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0  TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+sshd      1710          root    4u  IPv4  26026      0t0  TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+sshd      1729          root    4u  IPv4  26026      0t0  TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+postmaste 1954      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1954      postgres   11u  IPv4  27507      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59734 (ESTABLISHED)
+postmaste 1956      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1956      postgres   11u  IPv4  27509      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59746 (ESTABLISHED)
+postmaste 1957      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1957      postgres   11u  IPv4  31099      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59752 (ESTABLISHED)
+postmaste 1959      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1959      postgres   11u  IPv4  25508      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59774 (ESTABLISHED)
+postmaste 1960      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1960      postgres   11u  IPv4  25509      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59778 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1797)
+    PID    PPID CMD                           RSS
+   1797       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1797:
+    PID    PPID CMD                           RSS
+   2054    1797 bash -c  log_file="/tmp/mem  2084
+
+Process: systemctl (PID: 2051)
+    PID    PPID CMD                           RSS
+
+Process: bash (PID: 2054)
+    PID    PPID CMD                           RSS
+   2054    1797 bash -c  log_file="/tmp/mem  2084
+  Children of PID 2054:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1797)---pstree(2073)
+=== receptor Process Tree ===
+bash(1797)---pstree(2077)
+=== nginx Process Tree ===
+bash(1797)---pstree(2081)
+=== postgresql Process Tree ===
+bash(1797)---pstree(2085)
+=== redis Process Tree ===
+bash(1797)---pstree(2089)
+=== uwsgi Process Tree ===
+bash(1797)---pstree(2093)
+=== automation-hub Process Tree ===
+bash(1797)---pstree(2097)
+=== automation-eda Process Tree ===
+bash(1797)---pstree(2101)
+
+=================================================================================
+2025-06-27 14:05:14
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         563        7112          60         298        7117
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    801       1 /usr/bin/postmaster -D /var 61952
+    745       1 /usr/bin/python3 -s /usr/sb 43724
+    784       1 /usr/bin/python3 -Es /usr/s 28648
+   1086       1 /usr/local/bin/node_exporte 27168
+    925       1 /usr/lib/polkit-1/polkitd - 25936
+   1568     801 postgres: automationhub aut 23280
+   1569     801 postgres: automationhub aut 22896
+   1613     801 postgres: automationhub aut 22512
+   1618     801 postgres: automationhub aut 22512
+   1616     801 postgres: automationhub aut 22384
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1797       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:01
+Receptor Child Processes for PID 1797:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1797:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1797    1797  0.0  0.0  3456 bash
+Receptor Network Connections for PID 1797:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0       UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0       UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0       UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0       TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0       TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0       TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0       TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+sshd      1710          root    4u  IPv4  26026      0t0       TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+sshd      1729          root    4u  IPv4  26026      0t0       TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+bash      1797          root  cwd    DIR  253,0      142  67240070 /root
+bash      1797          root  rtd    DIR  253,0      235       128 /
+bash      1797          root  txt    REG  253,0  1389072  67333814 /usr/bin/bash
+bash      1797          root  mem    REG  253,0  2586930     36580 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1797          root  mem    REG  253,0  2544344 100688096 /usr/lib64/libc.so.6
+bash      1797          root  mem    REG  253,0   346132 100687773 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1797          root  mem    REG  253,0       54     36583 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1797          root  mem    REG  253,0     3284  33639493 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1797          root  mem    REG  253,0      286  33639491 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1797          root  mem    REG  253,0       57  33639504 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1797          root  mem    REG  253,0    26988  67334001 /usr/lib64/gconv/gconv-modules.cache
+bash      1797          root  mem    REG  253,0   195080 100687757 /usr/lib64/libtinfo.so.6.2
+bash      1797          root  mem    REG  253,0       34 100688074 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1797          root  mem    REG  253,0       77     36582 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1797          root  mem    REG  253,0      167  33639487 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1797          root  mem    REG  253,0       59  33639492 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1797          root  mem    REG  253,0       23  33639490 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1797          root  mem    REG  253,0      369  33639489 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1797          root  mem    REG  253,0   897856 100688092 /usr/lib64/ld-linux-x86-64.so.2
+bash      1797          root    0r   CHR    1,3      0t0         4 /dev/null
+bash      1797          root    1w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    2w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    3r  FIFO   0,13      0t0     31967 pipe
+postmaste 1954      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1954      postgres   11u  IPv4  27507      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59734 (ESTABLISHED)
+postmaste 1959      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1959      postgres   11u  IPv4  25508      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59774 (ESTABLISHED)
+postmaste 2142      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2142      postgres   11u  IPv4  32930      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60464 (ESTABLISHED)
+postmaste 2192      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2192      postgres   11u  IPv4  31951      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:36740 (ESTABLISHED)
+postmaste 2193      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2193      postgres   11u  IPv4  31474      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:36754 (ESTABLISHED)
+postmaste 2194      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2194      postgres   11u  IPv4  31475      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:36764 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 2211:
+  No child processes found
+Receptor Threads for PID 2211:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 2211:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0  UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0  UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0  TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0  TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0  TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+sshd      1710          root    4u  IPv4  26026      0t0  TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+sshd      1729          root    4u  IPv4  26026      0t0  TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+postmaste 1954      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1954      postgres   11u  IPv4  27507      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59734 (ESTABLISHED)
+postmaste 1959      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1959      postgres   11u  IPv4  25508      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59774 (ESTABLISHED)
+postmaste 2142      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2142      postgres   11u  IPv4  32930      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60464 (ESTABLISHED)
+postmaste 2192      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2192      postgres   11u  IPv4  31951      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:36740 (ESTABLISHED)
+postmaste 2193      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2193      postgres   11u  IPv4  31474      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:36754 (ESTABLISHED)
+postmaste 2194      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2194      postgres   11u  IPv4  31475      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:36764 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1797)
+    PID    PPID CMD                           RSS
+   1797       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1797:
+    PID    PPID CMD                           RSS
+   2270    1797 bash -c  log_file="/tmp/mem  2104
+
+Process: bash (PID: 2270)
+    PID    PPID CMD                           RSS
+   2270    1797 bash -c  log_file="/tmp/mem  2104
+  Children of PID 2270:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1797)---pstree(2281)
+=== receptor Process Tree ===
+bash(1797)---pstree(2285)
+=== nginx Process Tree ===
+bash(1797)---pstree(2289)
+=== postgresql Process Tree ===
+bash(1797)---pstree(2293)
+=== redis Process Tree ===
+bash(1797)---pstree(2297)
+=== uwsgi Process Tree ===
+bash(1797)---pstree(2301)
+=== automation-hub Process Tree ===
+bash(1797)---pstree(2305)
+=== automation-eda Process Tree ===
+bash(1797)---pstree(2309)
+
+=================================================================================
+2025-06-27 14:05:45
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         555        7120          60         299        7125
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    801       1 /usr/bin/postmaster -D /var 61952
+    745       1 /usr/bin/python3 -s /usr/sb 43724
+    784       1 /usr/bin/python3 -Es /usr/s 28648
+   1086       1 /usr/local/bin/node_exporte 27424
+    925       1 /usr/lib/polkit-1/polkitd - 25936
+   1568     801 postgres: automationhub aut 23408
+   1569     801 postgres: automationhub aut 23024
+   1613     801 postgres: automationhub aut 22512
+   1614     801 postgres: automationhub aut 22512
+   1616     801 postgres: automationhub aut 22512
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1797       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:32
+Receptor Child Processes for PID 1797:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1797:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1797    1797  0.0  0.0  3456 bash
+Receptor Network Connections for PID 1797:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0       UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0       UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0       UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0       TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0       TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0       TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0       TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+sshd      1710          root    4u  IPv4  26026      0t0       TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+sshd      1729          root    4u  IPv4  26026      0t0       TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+bash      1797          root  cwd    DIR  253,0      142  67240070 /root
+bash      1797          root  rtd    DIR  253,0      235       128 /
+bash      1797          root  txt    REG  253,0  1389072  67333814 /usr/bin/bash
+bash      1797          root  mem    REG  253,0  2586930     36580 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1797          root  mem    REG  253,0  2544344 100688096 /usr/lib64/libc.so.6
+bash      1797          root  mem    REG  253,0   346132 100687773 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1797          root  mem    REG  253,0       54     36583 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1797          root  mem    REG  253,0     3284  33639493 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1797          root  mem    REG  253,0      286  33639491 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1797          root  mem    REG  253,0       57  33639504 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1797          root  mem    REG  253,0    26988  67334001 /usr/lib64/gconv/gconv-modules.cache
+bash      1797          root  mem    REG  253,0   195080 100687757 /usr/lib64/libtinfo.so.6.2
+bash      1797          root  mem    REG  253,0       34 100688074 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1797          root  mem    REG  253,0       77     36582 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1797          root  mem    REG  253,0      167  33639487 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1797          root  mem    REG  253,0       59  33639492 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1797          root  mem    REG  253,0       23  33639490 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1797          root  mem    REG  253,0      369  33639489 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1797          root  mem    REG  253,0   897856 100688092 /usr/lib64/ld-linux-x86-64.so.2
+bash      1797          root    0r   CHR    1,3      0t0         4 /dev/null
+bash      1797          root    1w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    2w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    3r  FIFO   0,13      0t0     32221 pipe
+postmaste 1954      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1954      postgres   11u  IPv4  27507      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59734 (ESTABLISHED)
+postmaste 2347      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2347      postgres   11u  IPv4  33252      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:34312 (ESTABLISHED)
+postmaste 2349      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2349      postgres   11u  IPv4  31717      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:34328 (ESTABLISHED)
+postmaste 2350      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2350      postgres   11u  IPv4  31718      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:34334 (ESTABLISHED)
+postmaste 2351      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2351      postgres   11u  IPv4  31719      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:34344 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 2391:
+  No child processes found
+Receptor Threads for PID 2391:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 2391:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0  UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0  UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0  TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0  TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0  TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+sshd      1710          root    4u  IPv4  26026      0t0  TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+sshd      1729          root    4u  IPv4  26026      0t0  TCP aap24-database.aap-test.local:ssh->192.168.1.49:41474 (ESTABLISHED)
+postmaste 1954      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1954      postgres   11u  IPv4  27507      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59734 (ESTABLISHED)
+postmaste 2347      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2347      postgres   11u  IPv4  33252      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:34312 (ESTABLISHED)
+postmaste 2349      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2349      postgres   11u  IPv4  31717      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:34328 (ESTABLISHED)
+postmaste 2350      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2350      postgres   11u  IPv4  31718      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:34334 (ESTABLISHED)
+postmaste 2351      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2351      postgres   11u  IPv4  31719      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:34344 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1797)
+    PID    PPID CMD                           RSS
+   1797       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1797:
+    PID    PPID CMD                           RSS
+   2450    1797 bash -c  log_file="/tmp/mem  2112
+
+Process: bash (PID: 2450)
+    PID    PPID CMD                           RSS
+   2450    1797 bash -c  log_file="/tmp/mem  2112
+  Children of PID 2450:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1797)---pstree(2461)
+=== receptor Process Tree ===
+bash(1797)---pstree(2465)
+=== nginx Process Tree ===
+bash(1797)---pstree(2469)
+=== postgresql Process Tree ===
+bash(1797)---pstree(2473)
+=== redis Process Tree ===
+bash(1797)---pstree(2477)
+=== uwsgi Process Tree ===
+bash(1797)---pstree(2481)
+=== automation-hub Process Tree ===
+bash(1797)---pstree(2485)
+=== automation-eda Process Tree ===
+bash(1797)---pstree(2489)
+
+=================================================================================
+2025-06-27 14:06:16
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         554        7121          60         299        7126
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    801       1 /usr/bin/postmaster -D /var 61952
+    745       1 /usr/bin/python3 -s /usr/sb 43724
+    784       1 /usr/bin/python3 -Es /usr/s 28648
+   1086       1 /usr/local/bin/node_exporte 27112
+    925       1 /usr/lib/polkit-1/polkitd - 25936
+   1568     801 postgres: automationhub aut 23408
+   1569     801 postgres: automationhub aut 23152
+   1613     801 postgres: automationhub aut 22640
+   1618     801 postgres: automationhub aut 22640
+   1614     801 postgres: automationhub aut 22512
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1797       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:02
+Receptor Child Processes for PID 1797:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1797:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1797    1797  0.0  0.0  3456 bash
+Receptor Network Connections for PID 1797:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0       UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0       UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0       UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0       TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0       TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0       TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0       TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+bash      1797          root  cwd    DIR  253,0      142  67240070 /root
+bash      1797          root  rtd    DIR  253,0      235       128 /
+bash      1797          root  txt    REG  253,0  1389072  67333814 /usr/bin/bash
+bash      1797          root  mem    REG  253,0  2586930     36580 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1797          root  mem    REG  253,0  2544344 100688096 /usr/lib64/libc.so.6
+bash      1797          root  mem    REG  253,0   346132 100687773 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1797          root  mem    REG  253,0       54     36583 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1797          root  mem    REG  253,0     3284  33639493 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1797          root  mem    REG  253,0      286  33639491 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1797          root  mem    REG  253,0       57  33639504 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1797          root  mem    REG  253,0    26988  67334001 /usr/lib64/gconv/gconv-modules.cache
+bash      1797          root  mem    REG  253,0   195080 100687757 /usr/lib64/libtinfo.so.6.2
+bash      1797          root  mem    REG  253,0       34 100688074 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1797          root  mem    REG  253,0       77     36582 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1797          root  mem    REG  253,0      167  33639487 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1797          root  mem    REG  253,0       59  33639492 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1797          root  mem    REG  253,0       23  33639490 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1797          root  mem    REG  253,0      369  33639489 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1797          root  mem    REG  253,0   897856 100688092 /usr/lib64/ld-linux-x86-64.so.2
+bash      1797          root    0r   CHR    1,3      0t0         4 /dev/null
+bash      1797          root    1w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    2w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    3r  FIFO   0,13      0t0     35183 pipe
+postmaste 1954      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1954      postgres   11u  IPv4  27507      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59734 (ESTABLISHED)
+postmaste 2351      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2351      postgres   11u  IPv4  31719      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:34344 (ESTABLISHED)
+postmaste 2504      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2504      postgres   11u  IPv4  35077      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:42482 (ESTABLISHED)
+postmaste 2506      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2506      postgres   11u  IPv4  35078      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:42492 (ESTABLISHED)
+postmaste 2554      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2554      postgres   11u  IPv4  35165      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59706 (ESTABLISHED)
+postmaste 2555      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2555      postgres   11u  IPv4  35166      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59712 (ESTABLISHED)
+postmaste 2556      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2556      postgres   11u  IPv4  35167      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59726 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 2573:
+  No child processes found
+Receptor Threads for PID 2573:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 2573:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0  UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0  UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0  TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0  TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0  TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+postmaste 1954      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1954      postgres   11u  IPv4  27507      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59734 (ESTABLISHED)
+postmaste 2351      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2351      postgres   11u  IPv4  31719      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:34344 (ESTABLISHED)
+postmaste 2504      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2504      postgres   11u  IPv4  35077      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:42482 (ESTABLISHED)
+postmaste 2506      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2506      postgres   11u  IPv4  35078      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:42492 (ESTABLISHED)
+postmaste 2554      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2554      postgres   11u  IPv4  35165      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59706 (ESTABLISHED)
+postmaste 2555      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2555      postgres   11u  IPv4  35166      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59712 (ESTABLISHED)
+postmaste 2556      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2556      postgres   11u  IPv4  35167      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59726 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1797)
+    PID    PPID CMD                           RSS
+   1797       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1797:
+    PID    PPID CMD                           RSS
+   2632    1797 bash -c  log_file="/tmp/mem  2120
+
+Process: bash (PID: 2632)
+    PID    PPID CMD                           RSS
+   2632    1797 bash -c  log_file="/tmp/mem  2120
+  Children of PID 2632:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1797)---pstree(2643)
+=== receptor Process Tree ===
+bash(1797)---pstree(2647)
+=== nginx Process Tree ===
+bash(1797)---pstree(2651)
+=== postgresql Process Tree ===
+bash(1797)---pstree(2655)
+=== redis Process Tree ===
+bash(1797)---pstree(2659)
+=== uwsgi Process Tree ===
+bash(1797)---pstree(2663)
+=== automation-hub Process Tree ===
+bash(1797)---pstree(2667)
+=== automation-eda Process Tree ===
+bash(1797)---pstree(2671)
+
+=================================================================================
+2025-06-27 14:06:46
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         551        7124          60         299        7129
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    801       1 /usr/bin/postmaster -D /var 61952
+    745       1 /usr/bin/python3 -s /usr/sb 43724
+    784       1 /usr/bin/python3 -Es /usr/s 28648
+   1086       1 /usr/local/bin/node_exporte 27356
+    925       1 /usr/lib/polkit-1/polkitd - 25936
+   1568     801 postgres: automationhub aut 23536
+   1569     801 postgres: automationhub aut 23408
+   1613     801 postgres: automationhub aut 22896
+   1614     801 postgres: automationhub aut 22640
+   1616     801 postgres: automationhub aut 22640
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1797       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:33
+Receptor Child Processes for PID 1797:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1797:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1797    1797  0.0  0.0  3456 bash
+Receptor Network Connections for PID 1797:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0       UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0       UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0       UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0       TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0       TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0       TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0       TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0       TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+bash      1797          root  cwd    DIR  253,0      142  67240070 /root
+bash      1797          root  rtd    DIR  253,0      235       128 /
+bash      1797          root  txt    REG  253,0  1389072  67333814 /usr/bin/bash
+bash      1797          root  mem    REG  253,0  2586930     36580 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1797          root  mem    REG  253,0  2544344 100688096 /usr/lib64/libc.so.6
+bash      1797          root  mem    REG  253,0   346132 100687773 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1797          root  mem    REG  253,0       54     36583 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1797          root  mem    REG  253,0     3284  33639493 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1797          root  mem    REG  253,0      286  33639491 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1797          root  mem    REG  253,0       57  33639504 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1797          root  mem    REG  253,0    26988  67334001 /usr/lib64/gconv/gconv-modules.cache
+bash      1797          root  mem    REG  253,0   195080 100687757 /usr/lib64/libtinfo.so.6.2
+bash      1797          root  mem    REG  253,0       34 100688074 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1797          root  mem    REG  253,0       77     36582 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1797          root  mem    REG  253,0      167  33639487 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1797          root  mem    REG  253,0       59  33639492 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1797          root  mem    REG  253,0       23  33639490 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1797          root  mem    REG  253,0      369  33639489 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1797          root  mem    REG  253,0   897856 100688092 /usr/lib64/ld-linux-x86-64.so.2
+bash      1797          root    0r   CHR    1,3      0t0         4 /dev/null
+bash      1797          root    1w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    2w   REG  253,0        0  34096961 /tmp/memory_monitor.log
+bash      1797          root    3r  FIFO   0,13      0t0     37174 pipe
+postmaste 1954      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 1954      postgres   11u  IPv4  27507      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59734 (ESTABLISHED)
+postmaste 2709      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2709      postgres   11u  IPv4  35321      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:46684 (ESTABLISHED)
+postmaste 2710      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2710      postgres   11u  IPv4  36018      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:46694 (ESTABLISHED)
+postmaste 2712      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2712      postgres   11u  IPv4  36020      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:46720 (ESTABLISHED)
+postmaste 2713      postgres   10u  IPv6  24817      0t0       UDP localhost:60802->localhost:60802 
+postmaste 2713      postgres   11u  IPv4  36021      0t0       TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:46724 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 2753:
+  No child processes found
+Receptor Threads for PID 2753:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 2753:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22139      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22140      0t0  UDP localhost:323 
+NetworkMa  756          root   26u  IPv4  24074      0t0  UDP aap24-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd       781          root    3u  IPv4  22290      0t0  TCP *:ssh (LISTEN)
+sshd       781          root    4u  IPv6  22292      0t0  TCP *:ssh (LISTEN)
+postmaste  801      postgres    6u  IPv4  24781      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres    7u  IPv6  24782      0t0  TCP *:postgres (LISTEN)
+postmaste  801      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  852      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  853      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  854      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  855      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  856      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste  857      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+node_expo 1086 node_exporter    3u  IPv6  25667      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1086 node_exporter    7u  IPv6  25847      0t0  TCP aap24-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:41738 (ESTABLISHED)
+postmaste 1568      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1568      postgres   11u  IPv4  24288      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59996 (ESTABLISHED)
+postmaste 1569      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1569      postgres   11u  IPv4  24289      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60002 (ESTABLISHED)
+postmaste 1591      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1591      postgres   11u  IPv4  24320      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60098 (ESTABLISHED)
+postmaste 1592      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1592      postgres   11u  IPv4  24321      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60106 (ESTABLISHED)
+postmaste 1595      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1595      postgres   11u  IPv4  24329      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60146 (ESTABLISHED)
+postmaste 1596      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1596      postgres   11u  IPv4  24330      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60152 (ESTABLISHED)
+postmaste 1597      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1597      postgres   11u  IPv4  24331      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60158 (ESTABLISHED)
+postmaste 1598      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1598      postgres   11u  IPv4  24332      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60162 (ESTABLISHED)
+postmaste 1612      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1612      postgres   11u  IPv4  24348      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60182 (ESTABLISHED)
+postmaste 1613      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1613      postgres   11u  IPv4  24349      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60184 (ESTABLISHED)
+postmaste 1614      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1614      postgres   11u  IPv4  24350      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60198 (ESTABLISHED)
+postmaste 1615      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1615      postgres   11u  IPv4  24351      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60206 (ESTABLISHED)
+postmaste 1616      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1616      postgres   11u  IPv4  24352      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60214 (ESTABLISHED)
+postmaste 1617      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1617      postgres   11u  IPv4  24353      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60220 (ESTABLISHED)
+postmaste 1618      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1618      postgres   11u  IPv4  24354      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60222 (ESTABLISHED)
+postmaste 1619      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1619      postgres   11u  IPv4  24355      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60230 (ESTABLISHED)
+postmaste 1620      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1620      postgres   11u  IPv4  24356      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:60236 (ESTABLISHED)
+postmaste 1954      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 1954      postgres   11u  IPv4  27507      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:59734 (ESTABLISHED)
+postmaste 2709      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2709      postgres   11u  IPv4  35321      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:46684 (ESTABLISHED)
+postmaste 2710      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2710      postgres   11u  IPv4  36018      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:46694 (ESTABLISHED)
+postmaste 2712      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2712      postgres   11u  IPv4  36020      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:46720 (ESTABLISHED)
+postmaste 2713      postgres   10u  IPv6  24817      0t0  UDP localhost:60802->localhost:60802 
+postmaste 2713      postgres   11u  IPv4  36021      0t0  TCP aap24-database.aap-test.local:postgres->aap24-control.aap-test.local:46724 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1797)
+    PID    PPID CMD                           RSS
+   1797       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1797:
+    PID    PPID CMD                           RSS
+   2812    1797 bash -c  log_file="/tmp/mem  2124
+
+Process: bash (PID: 2812)
+    PID    PPID CMD                           RSS
+   2812    1797 bash -c  log_file="/tmp/mem  2124
+  Children of PID 2812:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1797)---pstree(2823)
+=== receptor Process Tree ===
+bash(1797)---pstree(2827)
+=== nginx Process Tree ===
+bash(1797)---pstree(2831)
+=== postgresql Process Tree ===
+bash(1797)---pstree(2835)
+=== redis Process Tree ===
+bash(1797)---pstree(2839)
+=== uwsgi Process Tree ===
+bash(1797)---pstree(2843)
+=== automation-hub Process Tree ===
+bash(1797)---pstree(2847)
+=== automation-eda Process Tree ===
+bash(1797)---pstree(2851)
+
+Memory monitoring completed for aap24 baseline test at Fri Jun 27 02:07:17 PM PDT 2025

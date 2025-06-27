@@ -1,0 +1,728 @@
+Starting memory monitoring for aap25 baseline test at Fri Jun 27 02:56:57 PM PDT 2025
+=================================================================================
+2025-06-27 14:56:57
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         556        7128           8         235        7124
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    744       1 /usr/bin/python3 -s /usr/sb 40708
+    782       1 /usr/bin/python3 -Es /usr/s 28660
+    755       1 /usr/sbin/NetworkManager -- 23432
+   1005       1 /usr/lib/polkit-1/polkitd - 23420
+   1075       1 /usr/local/bin/node_exporte 19808
+      1       0 /usr/lib/systemd/systemd rh 16280
+   1664       1 /usr/lib/systemd/systemd -- 13716
+    641       1 /usr/lib/systemd/systemd-ud 12892
+   1660     777 sshd: root [priv]           11520
+    748       1 /usr/lib/systemd/systemd-lo 11248
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1842       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       00:00
+Receptor Child Processes for PID 1842:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1842:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1842    1842  0.0  0.0  3328 bash
+Receptor Network Connections for PID 1842:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0      UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0      UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0      UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0      TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0      TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0      TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+bash      1842          root  cwd    DIR  253,0      164 33685638 /root
+bash      1842          root  rtd    DIR  253,0      235      128 /
+bash      1842          root  txt    REG  253,0  1389072 33755766 /usr/bin/bash
+bash      1842          root  mem    REG  253,0  2586930   223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1842          root  mem    REG  253,0   346132 50590237 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1842          root  mem    REG  253,0  2544344 50590560 /usr/lib64/libc.so.6
+bash      1842          root  mem    REG  253,0       54   223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1842          root  mem    REG  253,0     3284 17219141 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1842          root  mem    REG  253,0      286 17219139 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1842          root  mem    REG  253,0       57 17219152 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1842          root  mem    REG  253,0    26988 33841777 /usr/lib64/gconv/gconv-modules.cache
+bash      1842          root  mem    REG  253,0   195080 50590221 /usr/lib64/libtinfo.so.6.2
+bash      1842          root  mem    REG  253,0       34 50590538 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1842          root  mem    REG  253,0       77   223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1842          root  mem    REG  253,0      167 17219135 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1842          root  mem    REG  253,0       59 17219140 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1842          root  mem    REG  253,0       23 17219138 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1842          root  mem    REG  253,0      369 17219137 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1842          root  mem    REG  253,0   897856 50590556 /usr/lib64/ld-linux-x86-64.so.2
+bash      1842          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      1842          root    1w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    2w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    3r  FIFO   0,13      0t0    26271 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 1850:
+  No child processes found
+Receptor Threads for PID 1850:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 1850:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0  UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0  UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0  TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0  TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0  TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3328 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1842)
+    PID    PPID CMD                           RSS
+   1842       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 1842:
+    PID    PPID CMD                           RSS
+   1909    1842 bash -c  log_file="/tmp/mem  2040
+
+Process: bash (PID: 1909)
+    PID    PPID CMD                           RSS
+   1909    1842 bash -c  log_file="/tmp/mem  2040
+  Children of PID 1909:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1842)---pstree(1920)
+=== receptor Process Tree ===
+bash(1842)---pstree(1924)
+=== nginx Process Tree ===
+bash(1842)---pstree(1928)
+=== postgresql Process Tree ===
+bash(1842)---pstree(1932)
+=== redis Process Tree ===
+bash(1842)---pstree(1936)
+=== uwsgi Process Tree ===
+bash(1842)---pstree(1940)
+=== automation-hub Process Tree ===
+bash(1842)---pstree(1944)
+=== automation-eda Process Tree ===
+bash(1842)---pstree(1948)
+
+=================================================================================
+2025-06-27 14:57:28
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         478        7204           8         239        7202
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    744       1 /usr/bin/python3 -s /usr/sb 40708
+    782       1 /usr/bin/python3 -Es /usr/s 28660
+   1075       1 /usr/local/bin/node_exporte 27448
+    755       1 /usr/sbin/NetworkManager -- 23432
+   1005       1 /usr/lib/polkit-1/polkitd - 23420
+      1       0 /usr/lib/systemd/systemd rh 16280
+   1664       1 /usr/lib/systemd/systemd -- 13716
+    641       1 /usr/lib/systemd/systemd-ud 12892
+   1660     777 sshd: root [priv]           11520
+    748       1 /usr/lib/systemd/systemd-lo 11248
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1842       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       00:31
+Receptor Child Processes for PID 1842:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1842:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1842    1842  0.0  0.0  3328 bash
+Receptor Network Connections for PID 1842:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0      UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0      UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0      UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0      TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0      TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0      TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+bash      1842          root  cwd    DIR  253,0      164 33685638 /root
+bash      1842          root  rtd    DIR  253,0      235      128 /
+bash      1842          root  txt    REG  253,0  1389072 33755766 /usr/bin/bash
+bash      1842          root  mem    REG  253,0  2586930   223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1842          root  mem    REG  253,0   346132 50590237 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1842          root  mem    REG  253,0  2544344 50590560 /usr/lib64/libc.so.6
+bash      1842          root  mem    REG  253,0       54   223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1842          root  mem    REG  253,0     3284 17219141 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1842          root  mem    REG  253,0      286 17219139 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1842          root  mem    REG  253,0       57 17219152 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1842          root  mem    REG  253,0    26988 33841777 /usr/lib64/gconv/gconv-modules.cache
+bash      1842          root  mem    REG  253,0   195080 50590221 /usr/lib64/libtinfo.so.6.2
+bash      1842          root  mem    REG  253,0       34 50590538 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1842          root  mem    REG  253,0       77   223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1842          root  mem    REG  253,0      167 17219135 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1842          root  mem    REG  253,0       59 17219140 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1842          root  mem    REG  253,0       23 17219138 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1842          root  mem    REG  253,0      369 17219137 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1842          root  mem    REG  253,0   897856 50590556 /usr/lib64/ld-linux-x86-64.so.2
+bash      1842          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      1842          root    1w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    2w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    3r  FIFO   0,13      0t0    27192 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 2022:
+  No child processes found
+Receptor Threads for PID 2022:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 2022:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0  UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0  UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0  TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0  TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0  TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3328 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1842)
+    PID    PPID CMD                           RSS
+   1842       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 1842:
+    PID    PPID CMD                           RSS
+   2081    1842 bash -c  log_file="/tmp/mem  2052
+
+Process: bash (PID: 2081)
+    PID    PPID CMD                           RSS
+   2081    1842 bash -c  log_file="/tmp/mem  2052
+  Children of PID 2081:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1842)---pstree(2092)
+=== receptor Process Tree ===
+bash(1842)---pstree(2096)
+=== nginx Process Tree ===
+bash(1842)---pstree(2100)
+=== postgresql Process Tree ===
+bash(1842)---pstree(2104)
+=== redis Process Tree ===
+bash(1842)---pstree(2108)
+=== uwsgi Process Tree ===
+bash(1842)---pstree(2112)
+=== automation-hub Process Tree ===
+bash(1842)---pstree(2116)
+=== automation-eda Process Tree ===
+bash(1842)---pstree(2120)
+
+=================================================================================
+2025-06-27 14:57:59
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         472        7210           8         239        7208
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    744       1 /usr/bin/python3 -s /usr/sb 40708
+    782       1 /usr/bin/python3 -Es /usr/s 28660
+   1075       1 /usr/local/bin/node_exporte 27260
+   2179    2160 /usr/bin/python3.11         24576
+    755       1 /usr/sbin/NetworkManager -- 23432
+   1005       1 /usr/lib/polkit-1/polkitd - 23420
+      1       0 /usr/lib/systemd/systemd rh 16280
+   1664       1 /usr/lib/systemd/systemd -- 13716
+    641       1 /usr/lib/systemd/systemd-ud 12892
+   1660     777 sshd: root [priv]           11520
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1842       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       01:01
+Receptor Child Processes for PID 1842:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1842:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1842    1842  0.0  0.0  3328 bash
+Receptor Network Connections for PID 1842:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0      UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0      UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0      UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0      TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0      TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0      TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+bash      1842          root  cwd    DIR  253,0      164 33685638 /root
+bash      1842          root  rtd    DIR  253,0      235      128 /
+bash      1842          root  txt    REG  253,0  1389072 33755766 /usr/bin/bash
+bash      1842          root  mem    REG  253,0  2586930   223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1842          root  mem    REG  253,0   346132 50590237 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1842          root  mem    REG  253,0  2544344 50590560 /usr/lib64/libc.so.6
+bash      1842          root  mem    REG  253,0       54   223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1842          root  mem    REG  253,0     3284 17219141 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1842          root  mem    REG  253,0      286 17219139 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1842          root  mem    REG  253,0       57 17219152 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1842          root  mem    REG  253,0    26988 33841777 /usr/lib64/gconv/gconv-modules.cache
+bash      1842          root  mem    REG  253,0   195080 50590221 /usr/lib64/libtinfo.so.6.2
+bash      1842          root  mem    REG  253,0       34 50590538 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1842          root  mem    REG  253,0       77   223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1842          root  mem    REG  253,0      167 17219135 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1842          root  mem    REG  253,0       59 17219140 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1842          root  mem    REG  253,0       23 17219138 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1842          root  mem    REG  253,0      369 17219137 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1842          root  mem    REG  253,0   897856 50590556 /usr/lib64/ld-linux-x86-64.so.2
+bash      1842          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      1842          root    1w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    2w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    3r  FIFO   0,13      0t0    31640 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 2242:
+  No child processes found
+Receptor Threads for PID 2242:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 2242:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0  UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0  UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0  TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0  TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0  TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3328 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1842)
+    PID    PPID CMD                           RSS
+   1842       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 1842:
+    PID    PPID CMD                           RSS
+   2301    1842 bash -c  log_file="/tmp/mem  2056
+
+Process: bash (PID: 2301)
+    PID    PPID CMD                           RSS
+   2301    1842 bash -c  log_file="/tmp/mem  2056
+  Children of PID 2301:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1842)---pstree(2312)
+=== receptor Process Tree ===
+bash(1842)---pstree(2316)
+=== nginx Process Tree ===
+bash(1842)---pstree(2320)
+=== postgresql Process Tree ===
+bash(1842)---pstree(2324)
+=== redis Process Tree ===
+bash(1842)---pstree(2328)
+=== uwsgi Process Tree ===
+bash(1842)---pstree(2332)
+=== automation-hub Process Tree ===
+bash(1842)---pstree(2336)
+=== automation-eda Process Tree ===
+bash(1842)---pstree(2340)
+
+=================================================================================
+2025-06-27 14:58:29
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         472        7210           8         239        7209
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    744       1 /usr/bin/python3 -s /usr/sb 40708
+    782       1 /usr/bin/python3 -Es /usr/s 28660
+   1075       1 /usr/local/bin/node_exporte 27116
+   2179    2160 /usr/bin/python3.11         24576
+    755       1 /usr/sbin/NetworkManager -- 23432
+   1005       1 /usr/lib/polkit-1/polkitd - 23420
+      1       0 /usr/lib/systemd/systemd rh 16280
+   1664       1 /usr/lib/systemd/systemd -- 13716
+    641       1 /usr/lib/systemd/systemd-ud 12892
+   1660     777 sshd: root [priv]           11520
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1842       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       01:32
+Receptor Child Processes for PID 1842:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1842:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1842    1842  0.0  0.0  3328 bash
+Receptor Network Connections for PID 1842:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0      UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0      UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0      UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0      TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0      TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0      TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+bash      1842          root  cwd    DIR  253,0      164 33685638 /root
+bash      1842          root  rtd    DIR  253,0      235      128 /
+bash      1842          root  txt    REG  253,0  1389072 33755766 /usr/bin/bash
+bash      1842          root  mem    REG  253,0  2586930   223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1842          root  mem    REG  253,0   346132 50590237 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1842          root  mem    REG  253,0  2544344 50590560 /usr/lib64/libc.so.6
+bash      1842          root  mem    REG  253,0       54   223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1842          root  mem    REG  253,0     3284 17219141 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1842          root  mem    REG  253,0      286 17219139 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1842          root  mem    REG  253,0       57 17219152 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1842          root  mem    REG  253,0    26988 33841777 /usr/lib64/gconv/gconv-modules.cache
+bash      1842          root  mem    REG  253,0   195080 50590221 /usr/lib64/libtinfo.so.6.2
+bash      1842          root  mem    REG  253,0       34 50590538 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1842          root  mem    REG  253,0       77   223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1842          root  mem    REG  253,0      167 17219135 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1842          root  mem    REG  253,0       59 17219140 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1842          root  mem    REG  253,0       23 17219138 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1842          root  mem    REG  253,0      369 17219137 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1842          root  mem    REG  253,0   897856 50590556 /usr/lib64/ld-linux-x86-64.so.2
+bash      1842          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      1842          root    1w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    2w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    3r  FIFO   0,13      0t0    31890 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 2414:
+  No child processes found
+Receptor Threads for PID 2414:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 2414:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0  UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0  UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0  TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0  TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0  TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3328 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1842)
+    PID    PPID CMD                           RSS
+   1842       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 1842:
+    PID    PPID CMD                           RSS
+   2473    1842 bash -c  log_file="/tmp/mem  2060
+
+Process: bash (PID: 2473)
+    PID    PPID CMD                           RSS
+   2473    1842 bash -c  log_file="/tmp/mem  2060
+  Children of PID 2473:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1842)---pstree(2484)
+=== receptor Process Tree ===
+bash(1842)---pstree(2488)
+=== nginx Process Tree ===
+bash(1842)---pstree(2492)
+=== postgresql Process Tree ===
+bash(1842)---pstree(2496)
+=== redis Process Tree ===
+bash(1842)---pstree(2500)
+=== uwsgi Process Tree ===
+bash(1842)---pstree(2504)
+=== automation-hub Process Tree ===
+bash(1842)---pstree(2508)
+=== automation-eda Process Tree ===
+bash(1842)---pstree(2512)
+
+=================================================================================
+2025-06-27 14:59:00
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         460        7222           8         239        7220
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    744       1 /usr/bin/python3 -s /usr/sb 40708
+    782       1 /usr/bin/python3 -Es /usr/s 28660
+   1075       1 /usr/local/bin/node_exporte 27116
+   2179    2160 /usr/bin/python3.11         24576
+    755       1 /usr/sbin/NetworkManager -- 23432
+   1005       1 /usr/lib/polkit-1/polkitd - 23420
+      1       0 /usr/lib/systemd/systemd rh 16280
+   1664       1 /usr/lib/systemd/systemd -- 13716
+    641       1 /usr/lib/systemd/systemd-ud 12892
+   1660     777 sshd: root [priv]           11520
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1842       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       02:02
+Receptor Child Processes for PID 1842:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1842:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1842    1842  0.0  0.0  3328 bash
+Receptor Network Connections for PID 1842:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0      UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0      UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0      UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0      TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0      TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0      TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+bash      1842          root  cwd    DIR  253,0      164 33685638 /root
+bash      1842          root  rtd    DIR  253,0      235      128 /
+bash      1842          root  txt    REG  253,0  1389072 33755766 /usr/bin/bash
+bash      1842          root  mem    REG  253,0  2586930   223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1842          root  mem    REG  253,0   346132 50590237 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1842          root  mem    REG  253,0  2544344 50590560 /usr/lib64/libc.so.6
+bash      1842          root  mem    REG  253,0       54   223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1842          root  mem    REG  253,0     3284 17219141 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1842          root  mem    REG  253,0      286 17219139 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1842          root  mem    REG  253,0       57 17219152 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1842          root  mem    REG  253,0    26988 33841777 /usr/lib64/gconv/gconv-modules.cache
+bash      1842          root  mem    REG  253,0   195080 50590221 /usr/lib64/libtinfo.so.6.2
+bash      1842          root  mem    REG  253,0       34 50590538 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1842          root  mem    REG  253,0       77   223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1842          root  mem    REG  253,0      167 17219135 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1842          root  mem    REG  253,0       59 17219140 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1842          root  mem    REG  253,0       23 17219138 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1842          root  mem    REG  253,0      369 17219137 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1842          root  mem    REG  253,0   897856 50590556 /usr/lib64/ld-linux-x86-64.so.2
+bash      1842          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      1842          root    1w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    2w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    3r  FIFO   0,13      0t0    34130 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 2586:
+  No child processes found
+Receptor Threads for PID 2586:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 2586:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0  UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0  UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0  TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0  TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0  TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3328 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1842)
+    PID    PPID CMD                           RSS
+   1842       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 1842:
+    PID    PPID CMD                           RSS
+   2645    1842 bash -c  log_file="/tmp/mem  2060
+
+Process: bash (PID: 2645)
+    PID    PPID CMD                           RSS
+   2645    1842 bash -c  log_file="/tmp/mem  2060
+  Children of PID 2645:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1842)---pstree(2656)
+=== receptor Process Tree ===
+bash(1842)---pstree(2660)
+=== nginx Process Tree ===
+bash(1842)---pstree(2664)
+=== postgresql Process Tree ===
+bash(1842)---pstree(2668)
+=== redis Process Tree ===
+bash(1842)---pstree(2672)
+=== uwsgi Process Tree ===
+bash(1842)---pstree(2676)
+=== automation-hub Process Tree ===
+bash(1842)---pstree(2680)
+=== automation-eda Process Tree ===
+bash(1842)---pstree(2684)
+
+=================================================================================
+2025-06-27 14:59:30
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         460        7221           8         239        7220
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    744       1 /usr/bin/python3 -s /usr/sb 40708
+    782       1 /usr/bin/python3 -Es /usr/s 28660
+   1075       1 /usr/local/bin/node_exporte 27460
+   2179    2160 /usr/bin/python3.11         24576
+    755       1 /usr/sbin/NetworkManager -- 23432
+   1005       1 /usr/lib/polkit-1/polkitd - 23420
+      1       0 /usr/lib/systemd/systemd rh 16280
+   1664       1 /usr/lib/systemd/systemd -- 13716
+    641       1 /usr/lib/systemd/systemd-ud 12892
+   1660     777 sshd: root [priv]           11520
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   1842       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       02:33
+Receptor Child Processes for PID 1842:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1842:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   1842    1842  0.0  0.0  3328 bash
+Receptor Network Connections for PID 1842:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0      UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0      UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0      UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0      TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0      TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0      TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0      TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+bash      1842          root  cwd    DIR  253,0      164 33685638 /root
+bash      1842          root  rtd    DIR  253,0      235      128 /
+bash      1842          root  txt    REG  253,0  1389072 33755766 /usr/bin/bash
+bash      1842          root  mem    REG  253,0  2586930   223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1842          root  mem    REG  253,0   346132 50590237 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1842          root  mem    REG  253,0  2544344 50590560 /usr/lib64/libc.so.6
+bash      1842          root  mem    REG  253,0       54   223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1842          root  mem    REG  253,0     3284 17219141 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1842          root  mem    REG  253,0      286 17219139 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1842          root  mem    REG  253,0       57 17219152 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1842          root  mem    REG  253,0    26988 33841777 /usr/lib64/gconv/gconv-modules.cache
+bash      1842          root  mem    REG  253,0   195080 50590221 /usr/lib64/libtinfo.so.6.2
+bash      1842          root  mem    REG  253,0       34 50590538 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1842          root  mem    REG  253,0       77   223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1842          root  mem    REG  253,0      167 17219135 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1842          root  mem    REG  253,0       59 17219140 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1842          root  mem    REG  253,0       23 17219138 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1842          root  mem    REG  253,0      369 17219137 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1842          root  mem    REG  253,0   897856 50590556 /usr/lib64/ld-linux-x86-64.so.2
+bash      1842          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      1842          root    1w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    2w   REG  253,0        0 18572042 /tmp/memory_monitor.log
+bash      1842          root    3r  FIFO   0,13      0t0    34408 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 2758:
+  No child processes found
+Receptor Threads for PID 2758:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 2758:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    752        chrony    5u  IPv4  22656      0t0  UDP localhost:323 
+chronyd    752        chrony    6u  IPv6  22657      0t0  UDP localhost:323 
+NetworkMa  755          root   26u  IPv4  24753      0t0  UDP aap25-control.aap-test.local:bootpc->pi.hole:bootps 
+sshd       777          root    3u  IPv4  23098      0t0  TCP *:ssh (LISTEN)
+sshd       777          root    4u  IPv6  23100      0t0  TCP *:ssh (LISTEN)
+node_expo 1075 node_exporter    3u  IPv6  25730      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1075 node_exporter    7u  IPv6  25859      0t0  TCP aap25-control.aap-test.local:jetdirect->monitoring-node.aap-test.local:37744 (ESTABLISHED)
+sshd      1660          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+sshd      1679          root    4u  IPv4  24362      0t0  TCP aap25-control.aap-test.local:ssh->192.168.1.49:34804 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3328 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1842)
+    PID    PPID CMD                           RSS
+   1842       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 1842:
+    PID    PPID CMD                           RSS
+   2817    1842 bash -c  log_file="/tmp/mem  2060
+
+Process: bash (PID: 2817)
+    PID    PPID CMD                           RSS
+   2817    1842 bash -c  log_file="/tmp/mem  2060
+  Children of PID 2817:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1842)---pstree(2828)
+=== receptor Process Tree ===
+bash(1842)---pstree(2832)
+=== nginx Process Tree ===
+bash(1842)---pstree(2836)
+=== postgresql Process Tree ===
+bash(1842)---pstree(2840)
+=== redis Process Tree ===
+bash(1842)---pstree(2844)
+=== uwsgi Process Tree ===
+bash(1842)---pstree(2848)
+=== automation-hub Process Tree ===
+bash(1842)---pstree(2852)
+=== automation-eda Process Tree ===
+bash(1842)---pstree(2856)
+
+Memory monitoring completed for aap25 baseline test at Fri Jun 27 03:00:01 PM PDT 2025
