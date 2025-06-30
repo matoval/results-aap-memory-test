@@ -20,6 +20,28 @@ def parse_memory_logs(log_file):
     
     with open(log_file, 'r') as f:
         content = f.read()
+    
+    # Parse receptor memory summary from entire file first
+    global_receptor_memory = None
+    all_lines = content.split('\n')
+    for i, line in enumerate(all_lines):
+        if 'RECEPTOR MEMORY SUMMARY' in line:
+            # Look for receptor memory information in next few lines
+            for j in range(i+1, min(i+10, len(all_lines))):
+                if 'Total Receptor RSS Memory:' in all_lines[j]:
+                    # Extract KB and MB values
+                    match = re.search(r'(\d+) KB \((\d+) MB\)', all_lines[j])
+                    if match:
+                        global_receptor_memory = {
+                            'rss_kb': int(match.group(1)),
+                            'rss_mb': int(match.group(2))
+                        }
+                elif 'Number of Receptor Processes:' in all_lines[j]:
+                    if global_receptor_memory:
+                        match = re.search(r'(\d+)', all_lines[j])
+                        if match:
+                            global_receptor_memory['process_count'] = int(match.group(1))
+            break
         
     # Extract timestamp and memory info patterns
     entries = re.split(r'=+', content)
@@ -31,27 +53,6 @@ def parse_memory_logs(log_file):
         memory_line = None
         top_processes = []
         aap_processes = []
-        receptor_memory = None
-        
-        # Parse receptor memory summary
-        for i, line in enumerate(lines):
-            if 'RECEPTOR MEMORY SUMMARY' in line:
-                # Look for receptor memory information in next few lines
-                for j in range(i+1, min(i+10, len(lines))):
-                    if 'Total Receptor RSS Memory:' in lines[j]:
-                        # Extract KB and MB values
-                        match = re.search(r'(\d+) KB \((\d+) MB\)', lines[j])
-                        if match:
-                            receptor_memory = {
-                                'rss_kb': int(match.group(1)),
-                                'rss_mb': int(match.group(2))
-                            }
-                    elif 'Number of Receptor Processes:' in lines[j]:
-                        if receptor_memory:
-                            match = re.search(r'(\d+)', lines[j])
-                            if match:
-                                receptor_memory['process_count'] = int(match.group(1))
-                break
         
         i = 0
         while i < len(lines):
@@ -59,7 +60,7 @@ def parse_memory_logs(log_file):
             
             if re.match(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}', line):
                 timestamp_line = line
-            elif 'Mem:' in line and 'total' in line:
+            elif line.strip().startswith('Mem:'):
                 memory_line = line
             elif 'Top 10 Processes by RSS Memory:' in line:
                 # Parse top processes section
@@ -144,8 +145,8 @@ def parse_memory_logs(log_file):
                     'top_processes': top_processes,
                     'aap_processes': aap_processes
                 }
-                if receptor_memory:
-                    memory_entry['receptor'] = receptor_memory
+                if global_receptor_memory:
+                    memory_entry['receptor'] = global_receptor_memory
                 memory_data.append(memory_entry)
     
     return memory_data
@@ -267,10 +268,10 @@ def generate_comparison_charts(aap24_data, aap25_data, output_dir):
         
         # Top processes chart for AAP 2.4
         plt.subplot(3, 3, 4)
-        top_procs = list(proc_analysis_24['top_memory_consumers'].items())[:5]
+        top_procs = list(proc_analysis_24['top_memory_consumers'].items())[:10]
         if top_procs:
-            processes = [item[0][:20] + '...' if len(item[0]) > 20 else item[0] for item, _ in top_procs]
-            memory_values = [item[1]['avg_rss'] / 1024 for _, item in top_procs]  # Convert to MB
+            processes = [proc_name[:20] + '...' if len(proc_name) > 20 else proc_name for proc_name, _ in top_procs]
+            memory_values = [data['avg_rss'] / 1024 for _, data in top_procs]  # Convert to MB
             
             plt.barh(processes, memory_values, color='lightblue')
             plt.title('AAP 2.4 Top Memory Processes')
@@ -282,10 +283,10 @@ def generate_comparison_charts(aap24_data, aap25_data, output_dir):
         
         # Top processes chart for AAP 2.5
         plt.subplot(3, 3, 5)
-        top_procs = list(proc_analysis_25['top_memory_consumers'].items())[:5]
+        top_procs = list(proc_analysis_25['top_memory_consumers'].items())[:10]
         if top_procs:
-            processes = [item[0][:20] + '...' if len(item[0]) > 20 else item[0] for item, _ in top_procs]
-            memory_values = [item[1]['avg_rss'] / 1024 for _, item in top_procs]  # Convert to MB
+            processes = [proc_name[:20] + '...' if len(proc_name) > 20 else proc_name for proc_name, _ in top_procs]
+            memory_values = [data['avg_rss'] / 1024 for _, data in top_procs]  # Convert to MB
             
             plt.barh(processes, memory_values, color='lightcoral')
             plt.title('AAP 2.5 Top Memory Processes')
@@ -378,6 +379,22 @@ def main():
         aap24_process_analysis = analyze_process_data(aap24_data) if aap24_data else {}
         aap25_process_analysis = analyze_process_data(aap25_data) if aap25_data else {}
         
+        # Generate receptor memory analysis
+        def analyze_receptor_data(data):
+            receptor_entries = [d for d in data if 'receptor' in d and d['receptor']]
+            if not receptor_entries:
+                return None
+            
+            return {
+                'samples': len(receptor_entries),
+                'avg_memory_mb': sum(d['receptor']['rss_mb'] for d in receptor_entries) / len(receptor_entries),
+                'peak_memory_mb': max(d['receptor']['rss_mb'] for d in receptor_entries),
+                'min_memory_mb': min(d['receptor']['rss_mb'] for d in receptor_entries)
+            }
+        
+        aap24_receptor_analysis = analyze_receptor_data(aap24_data) if aap24_data else None
+        aap25_receptor_analysis = analyze_receptor_data(aap25_data) if aap25_data else None
+        
         # Generate summary report
         summary = {
             'aap24': {
@@ -385,14 +402,16 @@ def main():
                 'avg_memory_mb': sum(d['used_mb'] for d in aap24_data) / len(aap24_data) if aap24_data else 0,
                 'peak_memory_mb': max(d['used_mb'] for d in aap24_data) if aap24_data else 0,
                 'min_memory_mb': min(d['used_mb'] for d in aap24_data) if aap24_data else 0,
-                'process_analysis': aap24_process_analysis
+                'process_analysis': aap24_process_analysis,
+                'receptor_memory': aap24_receptor_analysis
             },
             'aap25': {
                 'samples': len(aap25_data),
                 'avg_memory_mb': sum(d['used_mb'] for d in aap25_data) / len(aap25_data) if aap25_data else 0,
                 'peak_memory_mb': max(d['used_mb'] for d in aap25_data) if aap25_data else 0,
                 'min_memory_mb': min(d['used_mb'] for d in aap25_data) if aap25_data else 0,
-                'process_analysis': aap25_process_analysis
+                'process_analysis': aap25_process_analysis,
+                'receptor_memory': aap25_receptor_analysis
             }
         }
         
@@ -408,6 +427,16 @@ def main():
                 'avg_memory_diff_percent': avg_diff_percent,
                 'aap25_uses_more': avg_diff > 0
             }
+            
+            # Add receptor memory comparison
+            if aap24_receptor_analysis and aap25_receptor_analysis:
+                receptor_avg_diff = aap25_receptor_analysis['avg_memory_mb'] - aap24_receptor_analysis['avg_memory_mb']
+                receptor_avg_diff_percent = (receptor_avg_diff / aap24_receptor_analysis['avg_memory_mb']) * 100
+                
+                summary['comparison']['receptor'] = {
+                    'avg_memory_diff_mb': receptor_avg_diff,
+                    'avg_memory_diff_percent': receptor_avg_diff_percent
+                }
         
         # Save summary
         with open(os.path.join(analysis_dir, 'memory_analysis_summary.json'), 'w') as f:

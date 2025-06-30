@@ -1,7 +1,7 @@
 # AAP 2.4 vs 2.5 Memory Usage Comparison Report
 
 ## Test Summary
-Test completed: 2025-06-27T15:43:51Z
+Test completed: 2025-06-30T17:32:33Z
 
 ## Key Findings
 
@@ -10,6 +10,10 @@ Test completed: 2025-06-27T15:43:51Z
 - AAP 2.5 Average Memory: 722.4 MB
 - Memory Difference: -1050.5 MB (-59.3%)
 
+### Receptor Memory Analysis
+- AAP 2.4 Receptor Average: 32.9 MB
+- AAP 2.5 Receptor Average: 3.0 MB
+- Receptor Memory Difference: -29.9 MB (-90.9%)
 
 ### Top Memory Consuming Processes
 **AAP 2.4 Top Processes:**

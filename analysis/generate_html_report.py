@@ -111,7 +111,7 @@ def generate_html_report(analysis_data, analysis_dir):
 </head>
 <body>
     <div class="container">
-        <h1>🚀 Red Hat Ansible Automation Platform<br>Memory Usage Comparison Report</h1>
+        <h1>Red Hat Ansible Automation Platform<br>Memory Usage Comparison Report</h1>
         
         <div class="alert alert-info">
             <strong>Report Generated:</strong> {report_time}<br>
@@ -121,10 +121,10 @@ def generate_html_report(analysis_data, analysis_dir):
 
     if analysis_data:
         html_content += """
-        <h2>📊 Memory Usage Analysis Results</h2>
+        <h2>Memory Usage Analysis Results</h2>
         <p>Memory analysis data was found and processed successfully.</p>
         
-        <h3>🔍 Overall System Memory Comparison</h3>
+        <h3>Overall System Memory Comparison</h3>
         <div style="display: flex; gap: 20px; margin: 20px 0;">
             <div style="flex: 1; background: #e3f2fd; padding: 15px; border-radius: 8px;">
                 <h4 style="margin-top: 0; color: #1976d2;">AAP 2.4</h4>
@@ -172,7 +172,7 @@ def generate_html_report(analysis_data, analysis_dir):
             uses_more = comparison.get('aap25_uses_more', False)
             
             color = '#d32f2f' if uses_more else '#4caf50'
-            symbol = '📈' if uses_more else '📉'
+            symbol = '' if uses_more else ''
             direction = 'more' if uses_more else 'less'
             
             html_content += f"""
@@ -187,7 +187,7 @@ def generate_html_report(analysis_data, analysis_dir):
         
         # Add top processes comparison
         html_content += """
-        <h3>🔧 Top Memory Consuming Processes</h3>
+        <h3>Top Memory Consuming Processes</h3>
         <div style="display: flex; gap: 20px; margin: 20px 0;">
             <div style="flex: 1;">
                 <h4>AAP 2.4 Top Processes</h4>
@@ -249,7 +249,7 @@ def generate_html_report(analysis_data, analysis_dir):
         # Add receptor memory comparison if available
         if aap24.get('receptor_memory') and aap25.get('receptor_memory'):
             html_content += """
-            <h3>📡 Receptor Memory Analysis</h3>
+            <h3>Receptor Memory Analysis</h3>
             <div style="display: flex; gap: 20px; margin: 20px 0;">
                 <div style="flex: 1; background: #e8f5e8; padding: 15px; border-radius: 8px;">
                     <h4 style="margin-top: 0;">AAP 2.4 Receptor</h4>
@@ -293,7 +293,7 @@ def generate_html_report(analysis_data, analysis_dir):
         # Add charts if available
         if chart_base64:
             html_content += f"""
-            <h3>📊 Memory Usage Charts</h3>
+            <h3>Memory Usage Charts</h3>
             <div style="text-align: center; margin: 20px 0;">
                 <img src="data:image/png;base64,{chart_base64}" 
                      alt="Memory Comparison Charts" 
@@ -302,7 +302,7 @@ def generate_html_report(analysis_data, analysis_dir):
             """
         
         html_content += """
-        <h3>📁 Generated Files</h3>
+        <h3>Generated Files</h3>
         <ul>
             <li><strong>memory_comparison_charts.png</strong> - Visual comparison charts</li>
             <li><strong>memory_analysis_summary.json</strong> - Detailed numerical analysis</li>
@@ -321,7 +321,7 @@ def generate_html_report(analysis_data, analysis_dir):
             <p><strong>Recommendation:</strong> Check the memory monitoring service configuration and ensure tests run for sufficient duration.</p>
         </div>
         
-        <h2>📋 Available Log Files</h2>
+        <h2>Available Log Files</h2>
         <p>The following log files were found but contain no memory data:</p>
         <ul>
         """
