@@ -6,9 +6,9 @@ Test completed: 2025-06-30T17:32:33Z
 ## Key Findings
 
 ### Overall System Memory
-- AAP 2.4 Average Memory: 1929.2 MB
-- AAP 2.5 Average Memory: 866.6 MB
-- Memory Difference: -1062.6 MB (-55.1%)
+- AAP 2.4 Average Memory: 1766.8 MB
+- AAP 2.5 Average Memory: 737.1 MB
+- Memory Difference: -1029.7 MB (-58.3%)
 
 ### Receptor Memory Analysis
 - AAP 2.4 Receptor Average: 33.3 MB
@@ -17,15 +17,16 @@ Test completed: 2025-06-30T17:32:33Z
 
 ### Top Memory Consuming Processes
 **AAP 2.4 Top Processes:**
-- /var/lib/awx/venv/awx/bin/p: 127.2 MB avg
-- /usr/local/bin/node_exporte: 25.8 MB avg
-- /usr/lib/systemd/systemd-jo: 16.7 MB avg
+- /var/lib/awx/venv/awx/bin/p: 125.1 MB avg
+- /usr/local/bin/node_exporte: 26.9 MB avg
+- /usr/lib/systemd/systemd-ud: 12.3 MB avg
+- /usr/lib/systemd/systemd-lo: 10.9 MB avg
 
 **AAP 2.5 Top Processes:**
-- /usr/local/bin/node_exporte: 27.3 MB avg
+- /usr/local/bin/node_exporte: 26.7 MB avg
 - /usr/bin/python3.11: 24.0 MB avg
-- /usr/lib/systemd/systemd-jo: 16.0 MB avg
-- /usr/lib/systemd/systemd-ud: 12.1 MB avg
+- /usr/lib/systemd/systemd-ud: 12.5 MB avg
+- /usr/lib/systemd/systemd-jo: 11.8 MB avg
 - Analysis results available in /home/msandova/repos/results-aap-memory-test/analysis
 - Memory monitoring data collected from all nodes
 - Comparison charts generated
