@@ -1,0 +1,2279 @@
+Starting memory monitoring for aap24 baseline test at Thu Jul  3 08:34:19 AM PDT 2025
+=================================================================================
+2025-07-03 08:34:19
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1900        5459          11         594        5780
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1586     782 /var/lib/awx/venv/awx/bin/p 132884
+   1584     782 /var/lib/awx/venv/awx/bin/p 131264
+   1590     782 /var/lib/awx/venv/awx/bin/p 130864
+   4540    1586 /var/lib/awx/venv/awx/bin/p 128112
+   4561    1586 /var/lib/awx/venv/awx/bin/p 126216
+   4909    1586 /var/lib/awx/venv/awx/bin/p 124320
+   1608    1584 /var/lib/awx/venv/awx/bin/p 124256
+   4563    1586 /var/lib/awx/venv/awx/bin/p 124168
+   4907    1586 /var/lib/awx/venv/awx/bin/p 124064
+   1607    1584 /var/lib/awx/venv/awx/bin/p 123868
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 44432 1274172 0.0  0.5       25:12
+Receptor Child Processes for PID 751:
+  No child processes found
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.5 44432 receptor
+    751     763  0.0  0.5 44432 receptor
+    751     764  0.0  0.5 44432 receptor
+    751     765  0.0  0.5 44432 receptor
+    751     766  0.0  0.5 44432 receptor
+    751     775  0.0  0.5 44432 receptor
+    751     776  0.0  0.5 44432 receptor
+    751     777  0.0  0.5 44432 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 33689381 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50586836 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0  2544344 50358515 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   102552 50358537 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3255 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3255 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      961 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9]
+receptor   751    awx    5r     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    7u     unix 0xffff988907eb0f00      0t0     1023 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv6              26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u     IPv4               1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u     IPv6               1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u     IPv4              22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u     IPv4              23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u     IPv6              23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u     IPv4              27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u     IPv4              25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u     IPv4              25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u     IPv4              25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u     IPv4              24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u     IPv4              24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u     IPv4              51725      0t0      TCP aap24-control:50720->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u     IPv4              49802      0t0      TCP aap24-control:50736->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4561    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   44u     IPv4              49817      0t0      TCP aap24-control:50760->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   60u     IPv4              49809      0t0      TCP aap24-control:50750->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   36u     IPv4              50591      0t0      TCP aap24-control:50752->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4905    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u     IPv4              51736      0t0      TCP aap24-control:50756->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4956       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       00:00
+Receptor Child Processes for PID 4956:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4956:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4956    4956  0.0  0.0  3456 bash
+Receptor Network Connections for PID 4956:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  51725      0t0      TCP aap24-control:50720->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u  IPv4  49802      0t0      TCP aap24-control:50736->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4561    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   44u  IPv4  49817      0t0      TCP aap24-control:50760->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   60u  IPv4  49809      0t0      TCP aap24-control:50750->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   36u  IPv4  50591      0t0      TCP aap24-control:50752->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4905    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u  IPv4  51736      0t0      TCP aap24-control:50756->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+bash      4956   root  cwd    DIR  253,0      179 33685638 /root
+bash      4956   root  rtd    DIR  253,0      235      128 /
+bash      4956   root  txt    REG  253,0  1389072 33798112 /usr/bin/bash
+bash      4956   root  mem    REG  253,0  2586930 50358488 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4956   root  mem    REG  253,0  2544344 50358515 /usr/lib64/libc.so.6
+bash      4956   root  mem    REG  253,0   346132 33798229 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4956   root  mem    REG  253,0       54 50358491 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4956   root  mem    REG  253,0     3284    69567 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4956   root  mem    REG  253,0      286    69565 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4956   root  mem    REG  253,0       57    69450 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4956   root  mem    REG  253,0    26988 16907482 /usr/lib64/gconv/gconv-modules.cache
+bash      4956   root  mem    REG  253,0   195080 50358166 /usr/lib64/libtinfo.so.6.2
+bash      4956   root  mem    REG  253,0       34 33798531 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4956   root  mem    REG  253,0       77 50358490 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4956   root  mem    REG  253,0      167    69561 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4956   root  mem    REG  253,0       59    69566 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4956   root  mem    REG  253,0       23    69564 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4956   root  mem    REG  253,0      369    69563 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4956   root  mem    REG  253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+bash      4956   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4956   root    1w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    2w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    3r  FIFO   0,13      0t0    53302 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 4964:
+  No child processes found
+Receptor Threads for PID 4964:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 4964:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0  TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0  UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0  UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0  UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0  TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0  TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0  TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0  TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0  TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0  TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0  TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0  TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  51725      0t0  TCP aap24-control:50720->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u  IPv4  49802      0t0  TCP aap24-control:50736->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4561    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   44u  IPv4  49817      0t0  TCP aap24-control:50760->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   60u  IPv4  49809      0t0  TCP aap24-control:50750->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   36u  IPv4  50591      0t0  TCP aap24-control:50752->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4905    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u  IPv4  51736      0t0  TCP aap24-control:50756->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 47888 KB (46 MB)
+Total Receptor VSZ Memory: 1281432 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 44432
+
+Process: redis-server (PID: 1088)
+    PID    PPID CMD                           RSS
+   1088       1 /usr/bin/redis-server unixs 13568
+
+Process: nginx (PID: 1142)
+    PID    PPID CMD                           RSS
+   1142       1 nginx: master process /usr/  2124
+  Children of PID 1142:
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1144)
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1146)
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1147)
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+
+Process: nginx (PID: 1149)
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: uwsgi (PID: 1569)
+    PID    PPID CMD                           RSS
+   1569     782 /var/lib/awx/venv/awx/bin/u 103336
+  Children of PID 1569:
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 119664
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 119792
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 114928
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 120944
+
+Process: uwsgi (PID: 1579)
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 119664
+
+Process: uwsgi (PID: 1580)
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 119792
+
+Process: uwsgi (PID: 1581)
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 114928
+
+Process: uwsgi (PID: 1582)
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 120944
+
+Process: bash (PID: 4956)
+    PID    PPID CMD                           RSS
+   4956       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 4956:
+    PID    PPID CMD                           RSS
+   5044    4956 bash -c  log_file="/tmp/mem  2068
+
+Process: bash (PID: 5044)
+    PID    PPID CMD                           RSS
+   5044    4956 bash -c  log_file="/tmp/mem  2068
+  Children of PID 5044:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4956)---pstree(5099)
+=== receptor Process Tree ===
+receptor(751)-+-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(775)
+              |-{receptor}(776)
+              `-{receptor}(777)
+bash(4956)---pstree(5104)
+=== nginx Process Tree ===
+nginx(1142)-+-nginx(1144)
+            |-nginx(1146)
+            |-nginx(1147)
+            `-nginx(1149)
+nginx(1144)
+nginx(1146)
+nginx(1147)
+nginx(1149)
+bash(4956)---pstree(5113)
+=== postgresql Process Tree ===
+bash(4956)---pstree(5117)
+=== redis Process Tree ===
+redis-server(1088)-+-{redis-server}(1105)
+                   |-{redis-server}(1106)
+                   |-{redis-server}(1107)
+                   `-{redis-server}(1108)
+bash(4956)---pstree(5122)
+=== uwsgi Process Tree ===
+uwsgi(1569)-+-uwsgi(1579)
+            |-uwsgi(1580)
+            |-uwsgi(1581)
+            `-uwsgi(1582)
+uwsgi(1579)
+uwsgi(1580)
+uwsgi(1581)
+uwsgi(1582)
+bash(4956)---pstree(5131)
+=== automation-hub Process Tree ===
+bash(4956)---pstree(5135)
+=== automation-eda Process Tree ===
+bash(4956)---pstree(5139)
+
+=================================================================================
+2025-07-03 08:34:49
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1873        5485          11         595        5807
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1586     782 /var/lib/awx/venv/awx/bin/p 132884
+   1584     782 /var/lib/awx/venv/awx/bin/p 131264
+   1590     782 /var/lib/awx/venv/awx/bin/p 130864
+   4540    1586 /var/lib/awx/venv/awx/bin/p 128112
+   4561    1586 /var/lib/awx/venv/awx/bin/p 126344
+   4909    1586 /var/lib/awx/venv/awx/bin/p 126112
+   1608    1584 /var/lib/awx/venv/awx/bin/p 124256
+   4563    1586 /var/lib/awx/venv/awx/bin/p 124168
+   4907    1586 /var/lib/awx/venv/awx/bin/p 124064
+   1607    1584 /var/lib/awx/venv/awx/bin/p 123868
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 44560 1274172 0.0  0.5       25:43
+Receptor Child Processes for PID 751:
+  No child processes found
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.5 44560 receptor
+    751     763  0.0  0.5 44560 receptor
+    751     764  0.0  0.5 44560 receptor
+    751     765  0.0  0.5 44560 receptor
+    751     766  0.0  0.5 44560 receptor
+    751     775  0.0  0.5 44560 receptor
+    751     776  0.0  0.5 44560 receptor
+    751     777  0.0  0.5 44560 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 33689381 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50586836 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0  2544344 50358515 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   102552 50358537 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3255 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3255 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      961 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9]
+receptor   751    awx    5r     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    7u     unix 0xffff988907eb0f00      0t0     1023 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv6              26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u     IPv4               1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u     IPv6               1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u     IPv4              22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u     IPv4              23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u     IPv6              23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u     IPv4              27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u     IPv4              25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u     IPv4              25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u     IPv4              25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u     IPv4              24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u     IPv4              24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u     IPv4              50892      0t0      TCP aap24-control:49406->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u     IPv4              49802      0t0      TCP aap24-control:50736->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4561    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   44u     IPv4              50883      0t0      TCP aap24-control:50402->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   60u     IPv4              49809      0t0      TCP aap24-control:50750->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   36u     IPv4              50591      0t0      TCP aap24-control:50752->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4905    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u     IPv4              54553      0t0      TCP aap24-control:50388->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   61u     IPv4              50896      0t0      TCP aap24-control:49414->aap24-database.lan:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4956       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       00:31
+Receptor Child Processes for PID 4956:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4956:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4956    4956  0.0  0.0  3456 bash
+Receptor Network Connections for PID 4956:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  50892      0t0      TCP aap24-control:49406->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u  IPv4  49802      0t0      TCP aap24-control:50736->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4561    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   44u  IPv4  50883      0t0      TCP aap24-control:50402->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   60u  IPv4  49809      0t0      TCP aap24-control:50750->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   36u  IPv4  50591      0t0      TCP aap24-control:50752->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4905    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u  IPv4  54553      0t0      TCP aap24-control:50388->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   61u  IPv4  50896      0t0      TCP aap24-control:49414->aap24-database.lan:postgres (ESTABLISHED)
+bash      4956   root  cwd    DIR  253,0      179 33685638 /root
+bash      4956   root  rtd    DIR  253,0      235      128 /
+bash      4956   root  txt    REG  253,0  1389072 33798112 /usr/bin/bash
+bash      4956   root  mem    REG  253,0  2586930 50358488 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4956   root  mem    REG  253,0  2544344 50358515 /usr/lib64/libc.so.6
+bash      4956   root  mem    REG  253,0   346132 33798229 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4956   root  mem    REG  253,0       54 50358491 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4956   root  mem    REG  253,0     3284    69567 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4956   root  mem    REG  253,0      286    69565 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4956   root  mem    REG  253,0       57    69450 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4956   root  mem    REG  253,0    26988 16907482 /usr/lib64/gconv/gconv-modules.cache
+bash      4956   root  mem    REG  253,0   195080 50358166 /usr/lib64/libtinfo.so.6.2
+bash      4956   root  mem    REG  253,0       34 33798531 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4956   root  mem    REG  253,0       77 50358490 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4956   root  mem    REG  253,0      167    69561 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4956   root  mem    REG  253,0       59    69566 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4956   root  mem    REG  253,0       23    69564 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4956   root  mem    REG  253,0      369    69563 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4956   root  mem    REG  253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+bash      4956   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4956   root    1w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    2w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    3r  FIFO   0,13      0t0    55369 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 5147:
+  No child processes found
+Receptor Threads for PID 5147:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 5147:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0  TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0  UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0  UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0  UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0  TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0  TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0  TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0  TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0  TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0  TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0  TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0  TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  50892      0t0  TCP aap24-control:49406->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u  IPv4  49802      0t0  TCP aap24-control:50736->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4561    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4563    awx   44u  IPv4  50883      0t0  TCP aap24-control:50402->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4565    awx   60u  IPv4  49809      0t0  TCP aap24-control:50750->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   36u  IPv4  50591      0t0  TCP aap24-control:50752->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4905    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u  IPv4  54553      0t0  TCP aap24-control:50388->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   61u  IPv4  50896      0t0  TCP aap24-control:49414->aap24-database.lan:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 48016 KB (46 MB)
+Total Receptor VSZ Memory: 1281432 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 44688
+
+Process: redis-server (PID: 1088)
+    PID    PPID CMD                           RSS
+   1088       1 /usr/bin/redis-server unixs 13440
+
+Process: nginx (PID: 1142)
+    PID    PPID CMD                           RSS
+   1142       1 nginx: master process /usr/  2124
+  Children of PID 1142:
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1144)
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1146)
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1147)
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+
+Process: nginx (PID: 1149)
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: uwsgi (PID: 1569)
+    PID    PPID CMD                           RSS
+   1569     782 /var/lib/awx/venv/awx/bin/u 103336
+  Children of PID 1569:
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 119664
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 119792
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 114928
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 120944
+
+Process: uwsgi (PID: 1579)
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 119664
+
+Process: uwsgi (PID: 1580)
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 119792
+
+Process: uwsgi (PID: 1581)
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 114928
+
+Process: uwsgi (PID: 1582)
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 120944
+
+Process: bash (PID: 4956)
+    PID    PPID CMD                           RSS
+   4956       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 4956:
+    PID    PPID CMD                           RSS
+   5227    4956 bash -c  log_file="/tmp/mem  2088
+
+Process: bash (PID: 5227)
+    PID    PPID CMD                           RSS
+   5227    4956 bash -c  log_file="/tmp/mem  2088
+  Children of PID 5227:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4956)---pstree(5282)
+=== receptor Process Tree ===
+receptor(751)-+-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(775)
+              |-{receptor}(776)
+              `-{receptor}(777)
+bash(4956)---pstree(5287)
+=== nginx Process Tree ===
+nginx(1142)-+-nginx(1144)
+            |-nginx(1146)
+            |-nginx(1147)
+            `-nginx(1149)
+nginx(1144)
+nginx(1146)
+nginx(1147)
+nginx(1149)
+bash(4956)---pstree(5296)
+=== postgresql Process Tree ===
+bash(4956)---pstree(5300)
+=== redis Process Tree ===
+redis-server(1088)-+-{redis-server}(1105)
+                   |-{redis-server}(1106)
+                   |-{redis-server}(1107)
+                   `-{redis-server}(1108)
+bash(4956)---pstree(5305)
+=== uwsgi Process Tree ===
+uwsgi(1569)-+-uwsgi(1579)
+            |-uwsgi(1580)
+            |-uwsgi(1581)
+            `-uwsgi(1582)
+uwsgi(1579)
+uwsgi(1580)
+uwsgi(1581)
+uwsgi(1582)
+bash(4956)---pstree(5314)
+=== automation-hub Process Tree ===
+bash(4956)---pstree(5318)
+=== automation-eda Process Tree ===
+bash(4956)---pstree(5322)
+
+=================================================================================
+2025-07-03 08:35:19
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        2041        5316          11         596        5639
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1586     782 /var/lib/awx/venv/awx/bin/p 133012
+   1584     782 /var/lib/awx/venv/awx/bin/p 131264
+   1590     782 /var/lib/awx/venv/awx/bin/p 130864
+   4540    1586 /var/lib/awx/venv/awx/bin/p 129776
+   6917    1586 /var/lib/awx/venv/awx/bin/p 127668
+   4909    1586 /var/lib/awx/venv/awx/bin/p 127136
+   1605    1584 /var/lib/awx/venv/awx/bin/p 124744
+   1607    1584 /var/lib/awx/venv/awx/bin/p 124508
+   4907    1586 /var/lib/awx/venv/awx/bin/p 124448
+   1608    1584 /var/lib/awx/venv/awx/bin/p 124384
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 44944 1274172 0.0  0.5       26:13
+Receptor Child Processes for PID 751:
+  No child processes found
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.5 44944 receptor
+    751     763  0.0  0.5 44944 receptor
+    751     764  0.0  0.5 44944 receptor
+    751     765  0.0  0.5 44944 receptor
+    751     766  0.0  0.5 44944 receptor
+    751     775  0.0  0.5 44944 receptor
+    751     776  0.0  0.5 44944 receptor
+    751     777  0.0  0.5 44944 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 33689381 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50586836 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0  2544344 50358515 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   102552 50358537 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3827 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3827 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      961 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    7u     unix 0xffff988907eb0f00      0t0     1023 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv6              26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+receptor   751    awx   10u     unix 0xffff98890659f800      0t0    59103 /var/run/awx-receptor/receptor.sock type=STREAM (CONNECTED)
+receptor   751    awx   11r      REG              253,0    34079 18143728 /tmp/receptor/192.168.1.192/HMuSWedi/stdout
+receptor   751    awx   12w      REG              253,0    34079 18143728 /tmp/receptor/192.168.1.192/HMuSWedi/stdout
+chronyd    762 chrony    5u     IPv4               1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u     IPv6               1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u     IPv4              22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u     IPv4              23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u     IPv6              23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u     IPv4              27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u     IPv4              25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u     IPv4              25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u     IPv4              25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u     IPv4              24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u     IPv4              24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1608    awx   33u     IPv4              58097      0t0      TCP aap24-control:54646->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u     IPv4              57210      0t0      TCP aap24-control:37710->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u     IPv4              59096      0t0      TCP aap24-control:37780->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4905    awx   56u     IPv4              58004      0t0      TCP aap24-control:37764->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u     IPv4              59774      0t0      TCP aap24-control:37726->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   64u     IPv4              59090      0t0      TCP aap24-control:37766->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u     IPv4              59781      0t0      TCP aap24-control:37752->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   62u     IPv4              59074      0t0      TCP aap24-control:37758->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4956       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:01
+Receptor Child Processes for PID 4956:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4956:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4956    4956  0.0  0.0  3456 bash
+Receptor Network Connections for PID 4956:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1608    awx   33u  IPv4  58097      0t0      TCP aap24-control:54646->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  57210      0t0      TCP aap24-control:37710->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u  IPv4  59096      0t0      TCP aap24-control:37780->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4905    awx   56u  IPv4  58004      0t0      TCP aap24-control:37764->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u  IPv4  59774      0t0      TCP aap24-control:37726->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   64u  IPv4  59090      0t0      TCP aap24-control:37766->aap24-database.lan:postgres (ESTABLISHED)
+bash      4956   root  cwd    DIR  253,0      179 33685638 /root
+bash      4956   root  rtd    DIR  253,0      235      128 /
+bash      4956   root  txt    REG  253,0  1389072 33798112 /usr/bin/bash
+bash      4956   root  mem    REG  253,0  2586930 50358488 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4956   root  mem    REG  253,0  2544344 50358515 /usr/lib64/libc.so.6
+bash      4956   root  mem    REG  253,0   346132 33798229 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4956   root  mem    REG  253,0       54 50358491 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4956   root  mem    REG  253,0     3284    69567 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4956   root  mem    REG  253,0      286    69565 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4956   root  mem    REG  253,0       57    69450 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4956   root  mem    REG  253,0    26988 16907482 /usr/lib64/gconv/gconv-modules.cache
+bash      4956   root  mem    REG  253,0   195080 50358166 /usr/lib64/libtinfo.so.6.2
+bash      4956   root  mem    REG  253,0       34 33798531 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4956   root  mem    REG  253,0       77 50358490 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4956   root  mem    REG  253,0      167    69561 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4956   root  mem    REG  253,0       59    69566 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4956   root  mem    REG  253,0       23    69564 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4956   root  mem    REG  253,0      369    69563 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4956   root  mem    REG  253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+bash      4956   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4956   root    1w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    2w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    3r  FIFO   0,13      0t0    60549 pipe
+awx-manag 6915    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u  IPv4  59781      0t0      TCP aap24-control:37752->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   62u  IPv4  59074      0t0      TCP aap24-control:37758->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 7020:
+  No child processes found
+Receptor Threads for PID 7020:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 7020:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0  TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0  UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0  UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0  UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0  TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0  TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0  TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0  TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0  TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0  TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0  TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0  TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1608    awx   33u  IPv4  58097      0t0  TCP aap24-control:54646->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  57210      0t0  TCP aap24-control:37710->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u  IPv4  59096      0t0  TCP aap24-control:37780->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4905    awx   56u  IPv4  58004      0t0  TCP aap24-control:37764->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u  IPv4  59774      0t0  TCP aap24-control:37726->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   64u  IPv4  59090      0t0  TCP aap24-control:37766->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u  IPv4  59781      0t0  TCP aap24-control:37752->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   62u  IPv4  59074      0t0  TCP aap24-control:37758->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 48400 KB (47 MB)
+Total Receptor VSZ Memory: 1281432 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 44944
+
+Process: redis-server (PID: 1088)
+    PID    PPID CMD                           RSS
+   1088       1 /usr/bin/redis-server unixs 13568
+
+Process: nginx (PID: 1142)
+    PID    PPID CMD                           RSS
+   1142       1 nginx: master process /usr/  2124
+  Children of PID 1142:
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1144)
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1146)
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1147)
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+
+Process: nginx (PID: 1149)
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: uwsgi (PID: 1569)
+    PID    PPID CMD                           RSS
+   1569     782 /var/lib/awx/venv/awx/bin/u 103336
+  Children of PID 1569:
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 122224
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 122608
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 124144
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 121200
+
+Process: uwsgi (PID: 1579)
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 122224
+
+Process: uwsgi (PID: 1580)
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 122608
+
+Process: uwsgi (PID: 1581)
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 124144
+
+Process: uwsgi (PID: 1582)
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 121200
+
+Process: bash (PID: 4956)
+    PID    PPID CMD                           RSS
+   4956       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 4956:
+    PID    PPID CMD                           RSS
+   7100    4956 bash -c  log_file="/tmp/mem  2100
+
+Process: bash (PID: 7100)
+    PID    PPID CMD                           RSS
+   7100    4956 bash -c  log_file="/tmp/mem  2100
+  Children of PID 7100:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4956)---pstree(7155)
+=== receptor Process Tree ===
+receptor(751)-+-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(775)
+              |-{receptor}(776)
+              `-{receptor}(777)
+bash(4956)---pstree(7160)
+=== nginx Process Tree ===
+nginx(1142)-+-nginx(1144)
+            |-nginx(1146)
+            |-nginx(1147)
+            `-nginx(1149)
+nginx(1144)
+nginx(1146)
+nginx(1147)
+nginx(1149)
+bash(4956)---pstree(7169)
+=== postgresql Process Tree ===
+bash(4956)---pstree(7173)
+=== redis Process Tree ===
+redis-server(1088)-+-{redis-server}(1105)
+                   |-{redis-server}(1106)
+                   |-{redis-server}(1107)
+                   `-{redis-server}(1108)
+bash(4956)---pstree(7178)
+=== uwsgi Process Tree ===
+uwsgi(1569)-+-uwsgi(1579)
+            |-uwsgi(1580)
+            |-uwsgi(1581)
+            `-uwsgi(1582)
+uwsgi(1579)
+uwsgi(1580)
+uwsgi(1581)
+uwsgi(1582)
+bash(4956)---pstree(7187)
+=== automation-hub Process Tree ===
+bash(4956)---pstree(7191)
+=== automation-eda Process Tree ===
+bash(4956)---pstree(7195)
+
+=================================================================================
+2025-07-03 08:35:50
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1974        5383          11         597        5706
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1586     782 /var/lib/awx/venv/awx/bin/p 133012
+   1584     782 /var/lib/awx/venv/awx/bin/p 131264
+   1590     782 /var/lib/awx/venv/awx/bin/p 130864
+   4540    1586 /var/lib/awx/venv/awx/bin/p 129776
+   6917    1586 /var/lib/awx/venv/awx/bin/p 127668
+   4909    1586 /var/lib/awx/venv/awx/bin/p 127136
+   4905    1586 /var/lib/awx/venv/awx/bin/p 126368
+   1605    1584 /var/lib/awx/venv/awx/bin/p 124744
+   1607    1584 /var/lib/awx/venv/awx/bin/p 124508
+   4907    1586 /var/lib/awx/venv/awx/bin/p 124448
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 44668 1274172 0.0  0.5       26:43
+Receptor Child Processes for PID 751:
+  No child processes found
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.5 44668 receptor
+    751     763  0.0  0.5 44668 receptor
+    751     764  0.0  0.5 44668 receptor
+    751     765  0.0  0.5 44668 receptor
+    751     766  0.0  0.5 44668 receptor
+    751     775  0.0  0.5 44668 receptor
+    751     776  0.0  0.5 44668 receptor
+    751     777  0.0  0.5 44668 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 33689381 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50586836 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0  2544344 50358515 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   102552 50358537 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3827 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3827 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      961 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    7u     unix 0xffff988907eb0f00      0t0     1023 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv6              26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+receptor   751    awx   10u     unix 0xffff98890659f800      0t0    59103 /var/run/awx-receptor/receptor.sock type=STREAM (CONNECTED)
+receptor   751    awx   11r      REG              253,0    34079 18143728 /tmp/receptor/192.168.1.192/HMuSWedi/stdout
+receptor   751    awx   12w      REG              253,0    34079 18143728 /tmp/receptor/192.168.1.192/HMuSWedi/stdout
+chronyd    762 chrony    5u     IPv4               1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u     IPv6               1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u     IPv4              22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u     IPv4              23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u     IPv6              23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u     IPv4              27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u     IPv4              25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u     IPv4              25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u     IPv4              25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u     IPv4              24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u     IPv4              24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u     IPv4              60918      0t0      TCP aap24-control:35878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u     IPv4              59096      0t0      TCP aap24-control:37780->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u     IPv4              62759      0t0      TCP aap24-control:48628->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   61u     IPv4              63763      0t0      TCP aap24-control:35882->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u     IPv4              61785      0t0      TCP aap24-control:48632->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   62u     IPv4              59074      0t0      TCP aap24-control:37758->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4956       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:31
+Receptor Child Processes for PID 4956:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4956:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4956    4956  0.0  0.0  3456 bash
+Receptor Network Connections for PID 4956:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  60918      0t0      TCP aap24-control:35878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u  IPv4  59096      0t0      TCP aap24-control:37780->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u  IPv4  62759      0t0      TCP aap24-control:48628->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   61u  IPv4  63763      0t0      TCP aap24-control:35882->aap24-database.lan:postgres (ESTABLISHED)
+bash      4956   root  cwd    DIR  253,0      179 33685638 /root
+bash      4956   root  rtd    DIR  253,0      235      128 /
+bash      4956   root  txt    REG  253,0  1389072 33798112 /usr/bin/bash
+bash      4956   root  mem    REG  253,0  2586930 50358488 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4956   root  mem    REG  253,0  2544344 50358515 /usr/lib64/libc.so.6
+bash      4956   root  mem    REG  253,0   346132 33798229 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4956   root  mem    REG  253,0       54 50358491 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4956   root  mem    REG  253,0     3284    69567 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4956   root  mem    REG  253,0      286    69565 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4956   root  mem    REG  253,0       57    69450 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4956   root  mem    REG  253,0    26988 16907482 /usr/lib64/gconv/gconv-modules.cache
+bash      4956   root  mem    REG  253,0   195080 50358166 /usr/lib64/libtinfo.so.6.2
+bash      4956   root  mem    REG  253,0       34 33798531 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4956   root  mem    REG  253,0       77 50358490 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4956   root  mem    REG  253,0      167    69561 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4956   root  mem    REG  253,0       59    69566 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4956   root  mem    REG  253,0       23    69564 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4956   root  mem    REG  253,0      369    69563 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4956   root  mem    REG  253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+bash      4956   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4956   root    1w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    2w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    3r  FIFO   0,13      0t0    61920 pipe
+awx-manag 6915    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u  IPv4  61785      0t0      TCP aap24-control:48632->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   62u  IPv4  59074      0t0      TCP aap24-control:37758->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 7624:
+  No child processes found
+Receptor Threads for PID 7624:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 7624:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0  TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0  UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0  UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0  UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0  TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0  TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0  TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0  TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0  TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0  TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0  TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0  TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  60918      0t0  TCP aap24-control:35878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4540    awx   46u  IPv4  59096      0t0  TCP aap24-control:37780->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 4905    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   34u  IPv4  62759      0t0  TCP aap24-control:48628->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4907    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 4909    awx   61u  IPv4  63763      0t0  TCP aap24-control:35882->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u  IPv4  61785      0t0  TCP aap24-control:48632->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   62u  IPv4  59074      0t0  TCP aap24-control:37758->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 48124 KB (46 MB)
+Total Receptor VSZ Memory: 1281432 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 44668
+
+Process: redis-server (PID: 1088)
+    PID    PPID CMD                           RSS
+   1088       1 /usr/bin/redis-server unixs 13440
+
+Process: nginx (PID: 1142)
+    PID    PPID CMD                           RSS
+   1142       1 nginx: master process /usr/  2124
+  Children of PID 1142:
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1144)
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1146)
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1147)
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+
+Process: nginx (PID: 1149)
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: uwsgi (PID: 1569)
+    PID    PPID CMD                           RSS
+   1569     782 /var/lib/awx/venv/awx/bin/u 103336
+  Children of PID 1569:
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 122224
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 122608
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 124272
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 121584
+
+Process: uwsgi (PID: 1579)
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 122224
+
+Process: uwsgi (PID: 1580)
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 122608
+
+Process: uwsgi (PID: 1581)
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 124272
+
+Process: uwsgi (PID: 1582)
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 121584
+
+Process: bash (PID: 4956)
+    PID    PPID CMD                           RSS
+   4956       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 4956:
+    PID    PPID CMD                           RSS
+   7704    4956 bash -c  log_file="/tmp/mem  2104
+
+Process: bash (PID: 7704)
+    PID    PPID CMD                           RSS
+   7704    4956 bash -c  log_file="/tmp/mem  2104
+  Children of PID 7704:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4956)---pstree(7778)
+=== receptor Process Tree ===
+receptor(751)-+-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(775)
+              |-{receptor}(776)
+              `-{receptor}(777)
+bash(4956)---pstree(7802)
+=== nginx Process Tree ===
+nginx(1142)-+-nginx(1144)
+            |-nginx(1146)
+            |-nginx(1147)
+            `-nginx(1149)
+nginx(1144)
+nginx(1146)
+nginx(1147)
+nginx(1149)
+bash(4956)---pstree(7817)
+=== postgresql Process Tree ===
+bash(4956)---pstree(7840)
+=== redis Process Tree ===
+redis-server(1088)-+-{redis-server}(1105)
+                   |-{redis-server}(1106)
+                   |-{redis-server}(1107)
+                   `-{redis-server}(1108)
+bash(4956)---pstree(7846)
+=== uwsgi Process Tree ===
+uwsgi(1569)-+-uwsgi(1579)
+            |-uwsgi(1580)
+            |-uwsgi(1581)
+            `-uwsgi(1582)
+uwsgi(1579)
+uwsgi(1580)
+uwsgi(1581)
+uwsgi(1582)
+bash(4956)---pstree(7855)
+=== automation-hub Process Tree ===
+bash(4956)---pstree(7859)
+=== automation-eda Process Tree ===
+bash(4956)---pstree(7863)
+
+=================================================================================
+2025-07-03 08:36:20
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1923        5434          11         596        5758
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1586     782 /var/lib/awx/venv/awx/bin/p 133012
+   1584     782 /var/lib/awx/venv/awx/bin/p 131264
+   1590     782 /var/lib/awx/venv/awx/bin/p 130864
+   6917    1586 /var/lib/awx/venv/awx/bin/p 127668
+   6919    1586 /var/lib/awx/venv/awx/bin/p 126004
+   1605    1584 /var/lib/awx/venv/awx/bin/p 124744
+   1581    1569 /var/lib/awx/venv/awx/bin/u 124656
+   1607    1584 /var/lib/awx/venv/awx/bin/p 124508
+   6915    1586 /var/lib/awx/venv/awx/bin/p 124468
+   1608    1584 /var/lib/awx/venv/awx/bin/p 124384
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 44796 1274172 0.0  0.5       27:14
+Receptor Child Processes for PID 751:
+  No child processes found
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.5 44796 receptor
+    751     763  0.0  0.5 44796 receptor
+    751     764  0.0  0.5 44796 receptor
+    751     765  0.0  0.5 44796 receptor
+    751     766  0.0  0.5 44796 receptor
+    751     775  0.0  0.5 44796 receptor
+    751     776  0.0  0.5 44796 receptor
+    751     777  0.0  0.5 44796 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 33689381 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50586836 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0  2544344 50358515 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   102552 50358537 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3827 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3827 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      961 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    7u     unix 0xffff988907eb0f00      0t0     1023 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv6              26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+receptor   751    awx   10u     unix 0xffff98890659f800      0t0    59103 /var/run/awx-receptor/receptor.sock type=STREAM (CONNECTED)
+receptor   751    awx   11r      REG              253,0    34079 18143728 /tmp/receptor/192.168.1.192/HMuSWedi/stdout
+receptor   751    awx   12w      REG              253,0    34079 18143728 /tmp/receptor/192.168.1.192/HMuSWedi/stdout
+chronyd    762 chrony    5u     IPv4               1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u     IPv6               1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u     IPv4              22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u     IPv4              23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u     IPv6              23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u     IPv4              27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u     IPv4              25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u     IPv4              25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u     IPv4              25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u     IPv4              24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u     IPv4              24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u     IPv4              63364      0t0      TCP aap24-control:54662->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 6915    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u     IPv4              63369      0t0      TCP aap24-control:54700->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   65u     IPv4              63375      0t0      TCP aap24-control:54714->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   67u     IPv4              61388      0t0      TCP aap24-control:54668->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8222    awx   27u     IPv4              62384      0t0      TCP aap24-control:54684->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8222    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   32u     IPv4              61405      0t0      TCP aap24-control:54706->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8226    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4956       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:02
+Receptor Child Processes for PID 4956:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4956:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4956    4956  0.0  0.0  3456 bash
+Receptor Network Connections for PID 4956:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  63364      0t0      TCP aap24-control:54662->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+bash      4956   root  cwd    DIR  253,0      179 33685638 /root
+bash      4956   root  rtd    DIR  253,0      235      128 /
+bash      4956   root  txt    REG  253,0  1389072 33798112 /usr/bin/bash
+bash      4956   root  mem    REG  253,0  2586930 50358488 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4956   root  mem    REG  253,0  2544344 50358515 /usr/lib64/libc.so.6
+bash      4956   root  mem    REG  253,0   346132 33798229 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4956   root  mem    REG  253,0       54 50358491 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4956   root  mem    REG  253,0     3284    69567 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4956   root  mem    REG  253,0      286    69565 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4956   root  mem    REG  253,0       57    69450 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4956   root  mem    REG  253,0    26988 16907482 /usr/lib64/gconv/gconv-modules.cache
+bash      4956   root  mem    REG  253,0   195080 50358166 /usr/lib64/libtinfo.so.6.2
+bash      4956   root  mem    REG  253,0       34 33798531 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4956   root  mem    REG  253,0       77 50358490 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4956   root  mem    REG  253,0      167    69561 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4956   root  mem    REG  253,0       59    69566 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4956   root  mem    REG  253,0       23    69564 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4956   root  mem    REG  253,0      369    69563 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4956   root  mem    REG  253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+bash      4956   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4956   root    1w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    2w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    3r  FIFO   0,13      0t0    64382 pipe
+awx-manag 6915    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u  IPv4  63369      0t0      TCP aap24-control:54700->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   65u  IPv4  63375      0t0      TCP aap24-control:54714->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   67u  IPv4  61388      0t0      TCP aap24-control:54668->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8222    awx   27u  IPv4  62384      0t0      TCP aap24-control:54684->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8222    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   32u  IPv4  61405      0t0      TCP aap24-control:54706->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8226    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 8320:
+  No child processes found
+Receptor Threads for PID 8320:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 8320:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0  TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0  UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0  UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0  UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0  TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0  TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0  TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0  TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0  TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0  TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0  TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0  TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  63364      0t0  TCP aap24-control:54662->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 6915    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u  IPv4  63369      0t0  TCP aap24-control:54700->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   65u  IPv4  63375      0t0  TCP aap24-control:54714->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   67u  IPv4  61388      0t0  TCP aap24-control:54668->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8222    awx   27u  IPv4  62384      0t0  TCP aap24-control:54684->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8222    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   32u  IPv4  61405      0t0  TCP aap24-control:54706->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8226    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 48252 KB (47 MB)
+Total Receptor VSZ Memory: 1281432 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 44796
+
+Process: redis-server (PID: 1088)
+    PID    PPID CMD                           RSS
+   1088       1 /usr/bin/redis-server unixs 13304
+
+Process: nginx (PID: 1142)
+    PID    PPID CMD                           RSS
+   1142       1 nginx: master process /usr/  2124
+  Children of PID 1142:
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1144)
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1146)
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1147)
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+
+Process: nginx (PID: 1149)
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: uwsgi (PID: 1569)
+    PID    PPID CMD                           RSS
+   1569     782 /var/lib/awx/venv/awx/bin/u 103336
+  Children of PID 1569:
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 122224
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 122608
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 124656
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 121968
+
+Process: uwsgi (PID: 1579)
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 122224
+
+Process: uwsgi (PID: 1580)
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 122608
+
+Process: uwsgi (PID: 1581)
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 124656
+
+Process: uwsgi (PID: 1582)
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 121968
+
+Process: bash (PID: 4956)
+    PID    PPID CMD                           RSS
+   4956       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 4956:
+    PID    PPID CMD                           RSS
+   8400    4956 bash -c  log_file="/tmp/mem  2108
+
+Process: bash (PID: 8400)
+    PID    PPID CMD                           RSS
+   8400    4956 bash -c  log_file="/tmp/mem  2108
+  Children of PID 8400:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4956)---pstree(8455)
+=== receptor Process Tree ===
+receptor(751)-+-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(775)
+              |-{receptor}(776)
+              `-{receptor}(777)
+bash(4956)---pstree(8460)
+=== nginx Process Tree ===
+nginx(1142)-+-nginx(1144)
+            |-nginx(1146)
+            |-nginx(1147)
+            `-nginx(1149)
+nginx(1144)
+nginx(1146)
+nginx(1147)
+nginx(1149)
+bash(4956)---pstree(8469)
+=== postgresql Process Tree ===
+bash(4956)---pstree(8473)
+=== redis Process Tree ===
+redis-server(1088)-+-{redis-server}(1105)
+                   |-{redis-server}(1106)
+                   |-{redis-server}(1107)
+                   `-{redis-server}(1108)
+bash(4956)---pstree(8478)
+=== uwsgi Process Tree ===
+uwsgi(1569)-+-uwsgi(1579)
+            |-uwsgi(1580)
+            |-uwsgi(1581)
+            `-uwsgi(1582)
+uwsgi(1579)
+uwsgi(1580)
+uwsgi(1581)
+uwsgi(1582)
+bash(4956)---pstree(8487)
+=== automation-hub Process Tree ===
+bash(4956)---pstree(8491)
+=== automation-eda Process Tree ===
+bash(4956)---pstree(8495)
+
+=================================================================================
+2025-07-03 08:36:51
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1940        5417          11         596        5740
+Swap:           3071           0        3071
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1586     782 /var/lib/awx/venv/awx/bin/p 133012
+   1584     782 /var/lib/awx/venv/awx/bin/p 131264
+   1590     782 /var/lib/awx/venv/awx/bin/p 130864
+   6917    1586 /var/lib/awx/venv/awx/bin/p 127668
+   8226    1586 /var/lib/awx/venv/awx/bin/p 126168
+   6919    1586 /var/lib/awx/venv/awx/bin/p 126132
+   8222    1586 /var/lib/awx/venv/awx/bin/p 126040
+   1581    1569 /var/lib/awx/venv/awx/bin/u 124912
+   1605    1584 /var/lib/awx/venv/awx/bin/p 124744
+   1607    1584 /var/lib/awx/venv/awx/bin/p 124508
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 44536 1274172 0.0  0.5       27:44
+Receptor Child Processes for PID 751:
+  No child processes found
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.5 44536 receptor
+    751     763  0.0  0.5 44536 receptor
+    751     764  0.0  0.5 44536 receptor
+    751     765  0.0  0.5 44536 receptor
+    751     766  0.0  0.5 44536 receptor
+    751     775  0.0  0.5 44536 receptor
+    751     776  0.0  0.5 44536 receptor
+    751     777  0.0  0.5 44536 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 33689381 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50586836 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0  2544344 50358515 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   102552 50358537 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3827 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3827 52290437 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      961 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    23313 pipe
+receptor   751    awx    7u     unix 0xffff988907eb0f00      0t0     1023 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv6              26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+receptor   751    awx   10u     unix 0xffff98890659f800      0t0    59103 /var/run/awx-receptor/receptor.sock type=STREAM (CONNECTED)
+receptor   751    awx   11r      REG              253,0    34079 18143728 /tmp/receptor/192.168.1.192/HMuSWedi/stdout
+receptor   751    awx   12w      REG              253,0    34079 18143728 /tmp/receptor/192.168.1.192/HMuSWedi/stdout
+chronyd    762 chrony    5u     IPv4               1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u     IPv6               1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u     IPv4              22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u     IPv4              23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u     IPv6              23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u     IPv4              22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u     IPv4              22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u     IPv6              22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u     IPv6              22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u     IPv4              27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u     IPv4              25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u     IPv4              25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u     IPv4              25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u     IPv4              24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u     IPv4              24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u     IPv4              66093      0t0      TCP aap24-control:57054->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u     IPv4              51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 6915    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u     IPv4              63369      0t0      TCP aap24-control:54700->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   62u     IPv4              65100      0t0      TCP aap24-control:34634->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   67u     IPv4              61388      0t0      TCP aap24-control:54668->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8222    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   32u     IPv4              65992      0t0      TCP aap24-control:34620->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8226    awx   38u     IPv4              26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8226    awx   53u     IPv4              65188      0t0      TCP aap24-control:57062->aap24-database.lan:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4956       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:32
+Receptor Child Processes for PID 4956:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4956:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4956    4956  0.0  0.0  3456 bash
+Receptor Network Connections for PID 4956:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0      TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0      UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0      UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0      UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0      TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0      TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0      TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0      TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0      TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0      TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0      TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0      TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0      TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0      TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0      TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  66093      0t0      TCP aap24-control:57054->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0      TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+bash      4956   root  cwd    DIR  253,0      179 33685638 /root
+bash      4956   root  rtd    DIR  253,0      235      128 /
+bash      4956   root  txt    REG  253,0  1389072 33798112 /usr/bin/bash
+bash      4956   root  mem    REG  253,0  2586930 50358488 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4956   root  mem    REG  253,0  2544344 50358515 /usr/lib64/libc.so.6
+bash      4956   root  mem    REG  253,0   346132 33798229 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4956   root  mem    REG  253,0       54 50358491 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4956   root  mem    REG  253,0     3284    69567 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4956   root  mem    REG  253,0      286    69565 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4956   root  mem    REG  253,0       57    69450 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4956   root  mem    REG  253,0    26988 16907482 /usr/lib64/gconv/gconv-modules.cache
+bash      4956   root  mem    REG  253,0   195080 50358166 /usr/lib64/libtinfo.so.6.2
+bash      4956   root  mem    REG  253,0       34 33798531 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4956   root  mem    REG  253,0       77 50358490 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4956   root  mem    REG  253,0      167    69561 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4956   root  mem    REG  253,0       59    69566 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4956   root  mem    REG  253,0       23    69564 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4956   root  mem    REG  253,0      369    69563 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4956   root  mem    REG  253,0   897856 50358511 /usr/lib64/ld-linux-x86-64.so.2
+bash      4956   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4956   root    1w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    2w   REG  253,0        0 17518385 /tmp/memory_monitor.log
+bash      4956   root    3r  FIFO   0,13      0t0    65256 pipe
+awx-manag 6915    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u  IPv4  63369      0t0      TCP aap24-control:54700->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   62u  IPv4  65100      0t0      TCP aap24-control:34634->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   67u  IPv4  61388      0t0      TCP aap24-control:54668->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8222    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   32u  IPv4  65992      0t0      TCP aap24-control:34620->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8226    awx   38u  IPv4  26715      0t0      TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8226    awx   53u  IPv4  65188      0t0      TCP aap24-control:57062->aap24-database.lan:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 9008:
+  No child processes found
+Receptor Threads for PID 9008:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 9008:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  23557      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv6  26083      0t0  TCP aap24-control:27199->aap24-execution.lan:34570 (ESTABLISHED)
+chronyd    762 chrony    5u  IPv4   1017      0t0  UDP localhost:323 
+chronyd    762 chrony    6u  IPv6   1018      0t0  UDP localhost:323 
+NetworkMa  779   root   26u  IPv4  22251      0t0  UDP aap24-control:bootpc->pi.hole:bootps 
+sshd       802   root    3u  IPv4  23407      0t0  TCP *:ssh (LISTEN)
+sshd       802   root    4u  IPv6  23409      0t0  TCP *:ssh (LISTEN)
+nginx     1142   root    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1142   root    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1142   root   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1142   root   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1144  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1144  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1146  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1146  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1147  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1147  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx    8u  IPv4  22300      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx    9u  IPv4  22301      0t0  TCP *:http (LISTEN)
+nginx     1149  nginx   10u  IPv6  22302      0t0  TCP *:https (LISTEN)
+nginx     1149  nginx   11u  IPv6  22303      0t0  TCP *:http (LISTEN)
+awx-manag 1584    awx   29u  IPv4  27072      0t0  TCP aap24-control:53570->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1585    awx   17u  IPv4  25371      0t0  TCP aap24-control:51926->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1586    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx    8u  IPv4  25342      0t0  TCP aap24-control:51878->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1587    awx   14u  IPv4  25362      0t0  TCP aap24-control:51884->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root    8u  IPv4  24375      0t0  TCP aap24-control:51904->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1590   root   14u  IPv4  24380      0t0  TCP aap24-control:51920->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 1610    awx   16u  IPv4  66093      0t0  TCP aap24-control:57054->aap24-database.lan:postgres (ESTABLISHED)
+sshd      4569   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+sshd      4589   root    4u  IPv4  51474      0t0  TCP aap24-control:ssh->192.168.1.49:58844 (ESTABLISHED)
+awx-manag 6915    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6915    awx   45u  IPv4  63369      0t0  TCP aap24-control:54700->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6917    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6919    awx   62u  IPv4  65100      0t0  TCP aap24-control:34634->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 6921    awx   67u  IPv4  61388      0t0  TCP aap24-control:54668->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8222    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   32u  IPv4  65992      0t0  TCP aap24-control:34620->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8224    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8226    awx   38u  IPv4  26715      0t0  TCP aap24-control:51940->aap24-database.lan:postgres (ESTABLISHED)
+awx-manag 8226    awx   53u  IPv4  65188      0t0  TCP aap24-control:57062->aap24-database.lan:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 47992 KB (46 MB)
+Total Receptor VSZ Memory: 1281432 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 44536
+
+Process: redis-server (PID: 1088)
+    PID    PPID CMD                           RSS
+   1088       1 /usr/bin/redis-server unixs 13432
+
+Process: nginx (PID: 1142)
+    PID    PPID CMD                           RSS
+   1142       1 nginx: master process /usr/  2124
+  Children of PID 1142:
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1144)
+    PID    PPID CMD                           RSS
+   1144    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1146)
+    PID    PPID CMD                           RSS
+   1146    1142 nginx: worker process        3660
+
+Process: nginx (PID: 1147)
+    PID    PPID CMD                           RSS
+   1147    1142 nginx: worker process        7884
+
+Process: nginx (PID: 1149)
+    PID    PPID CMD                           RSS
+   1149    1142 nginx: worker process        3660
+
+Process: uwsgi (PID: 1569)
+    PID    PPID CMD                           RSS
+   1569     782 /var/lib/awx/venv/awx/bin/u 103336
+  Children of PID 1569:
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 122224
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 122608
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 124912
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 123120
+
+Process: uwsgi (PID: 1579)
+    PID    PPID CMD                           RSS
+   1579    1569 /var/lib/awx/venv/awx/bin/u 122224
+
+Process: uwsgi (PID: 1580)
+    PID    PPID CMD                           RSS
+   1580    1569 /var/lib/awx/venv/awx/bin/u 122608
+
+Process: uwsgi (PID: 1581)
+    PID    PPID CMD                           RSS
+   1581    1569 /var/lib/awx/venv/awx/bin/u 124912
+
+Process: uwsgi (PID: 1582)
+    PID    PPID CMD                           RSS
+   1582    1569 /var/lib/awx/venv/awx/bin/u 123120
+
+Process: bash (PID: 4956)
+    PID    PPID CMD                           RSS
+   4956       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 4956:
+    PID    PPID CMD                           RSS
+   9088    4956 bash -c  log_file="/tmp/mem  2108
+
+Process: bash (PID: 9088)
+    PID    PPID CMD                           RSS
+   9088    4956 bash -c  log_file="/tmp/mem  2108
+  Children of PID 9088:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4956)---pstree(9143)
+=== receptor Process Tree ===
+receptor(751)-+-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(775)
+              |-{receptor}(776)
+              `-{receptor}(777)
+bash(4956)---pstree(9148)
+=== nginx Process Tree ===
+nginx(1142)-+-nginx(1144)
+            |-nginx(1146)
+            |-nginx(1147)
+            `-nginx(1149)
+nginx(1144)
+nginx(1146)
+nginx(1147)
+nginx(1149)
+bash(4956)---pstree(9157)
+=== postgresql Process Tree ===
+bash(4956)---pstree(9161)
+=== redis Process Tree ===
+redis-server(1088)-+-{redis-server}(1105)
+                   |-{redis-server}(1106)
+                   |-{redis-server}(1107)
+                   `-{redis-server}(1108)
+bash(4956)---pstree(9166)
+=== uwsgi Process Tree ===
+uwsgi(1569)-+-uwsgi(1579)
+            |-uwsgi(1580)
+            |-uwsgi(1581)
+            `-uwsgi(1582)
+uwsgi(1579)
+uwsgi(1580)
+uwsgi(1581)
+uwsgi(1582)
+bash(4956)---pstree(9175)
+=== automation-hub Process Tree ===
+bash(4956)---pstree(9179)
+=== automation-eda Process Tree ===
+bash(4956)---pstree(9183)
+
+Memory monitoring completed for aap24 baseline test at Thu Jul  3 08:37:21 AM PDT 2025

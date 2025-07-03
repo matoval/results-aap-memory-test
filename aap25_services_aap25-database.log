@@ -1,0 +1,8 @@
+AAP 2.5 Service Information
+Timestamp: 2025-07-03T15:10:24Z
+
+--- Memory usage by AAP services ---
+postgres    4708  0.0  0.2 2554828 22592 ?       Ss   08:20   0:00 postgres: awx automationgateway 192.168.1.30(36124) idle
+postgres    1988  0.0  0.2 2554828 22464 ?       Ss   08:10   0:00 postgres: awx automationgateway 192.168.1.30(49120) idle
+root        7368  0.0  0.0   7124  3200 ?        S    08:34   0:00 /bin/sh -c systemctl list-units --type=service --state=running | grep -E "(automation|receptor|platform)" || true echo "--- Memory usage by AAP services ---" ps aux --sort=-%mem | grep -E "(automation|receptor|platform|postgresql)" | head -10 || true 
+root        7372  0.0  0.0   6424  2176 ?        S    08:34   0:00 grep -E (automation|receptor|platform|postgresql)

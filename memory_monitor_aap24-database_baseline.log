@@ -1,0 +1,1136 @@
+Starting memory monitoring for aap24 baseline test at Thu Jul  3 11:34:19 AM EDT 2025
+=================================================================================
+2025-07-03 11:34:19
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         539        7082          28         321        7142
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    749       1 /usr/bin/python3 -s /usr/sb 42744
+   1016       1 /usr/lib/polkit-1/polkitd - 27784
+    801       1 /usr/bin/postmaster -D /var 26880
+    785       1 /usr/bin/python3 -Es /usr/s 26656
+   3104    3085 /usr/bin/python3.9          23720
+    760       1 /usr/sbin/NetworkManager -- 21420
+   3062     801 postgres: awx awx 192.168.1 18820
+   3059     801 postgres: awx awx 192.168.1 18436
+   3063     801 postgres: awx awx 192.168.1 18180
+   3061     801 postgres: awx awx 192.168.1 18052
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   3106       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       00:00
+Receptor Child Processes for PID 3106:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 3106:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   3106    3106  0.0  0.0  3328 bash
+Receptor Network Connections for PID 3106:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0       UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0       UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0       UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0       TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0       TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0       TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0       TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0       TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0       TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0       TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0       TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0       TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+sshd      2981     root    4u  IPv4  37280      0t0       TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+sshd      3002     root    4u  IPv4  37280      0t0       TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+postmaste 3058 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3058 postgres   11u  IPv4  37473      0t0       TCP aap24-database:postgres->aap24-control.lan:50720 (ESTABLISHED)
+postmaste 3059 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3059 postgres   11u  IPv4  37474      0t0       TCP aap24-database:postgres->aap24-control.lan:50736 (ESTABLISHED)
+postmaste 3061 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3061 postgres   11u  IPv4  38375      0t0       TCP aap24-database:postgres->aap24-control.lan:50750 (ESTABLISHED)
+postmaste 3062 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3062 postgres   11u  IPv4  38376      0t0       TCP aap24-database:postgres->aap24-control.lan:50752 (ESTABLISHED)
+postmaste 3063 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3063 postgres   11u  IPv4  38377      0t0       TCP aap24-database:postgres->aap24-control.lan:50756 (ESTABLISHED)
+postmaste 3064 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3064 postgres   11u  IPv4  38378      0t0       TCP aap24-database:postgres->aap24-control.lan:50760 (ESTABLISHED)
+bash      3106     root  cwd    DIR  253,0      163  67240070 /root
+bash      3106     root  rtd    DIR  253,0      235       128 /
+bash      3106     root  txt    REG  253,0  1389072  67354550 /usr/bin/bash
+bash      3106     root  mem    REG  253,0  2586930     90660 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      3106     root  mem    REG  253,0  2544344 100696864 /usr/lib64/libc.so.6
+bash      3106     root  mem    REG  253,0   346132 100696541 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      3106     root  mem    REG  253,0       54     90663 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      3106     root  mem    REG  253,0     3284  33732933 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      3106     root  mem    REG  253,0      286  33732931 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      3106     root  mem    REG  253,0       57  33732944 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      3106     root  mem    REG  253,0    26988  67354737 /usr/lib64/gconv/gconv-modules.cache
+bash      3106     root  mem    REG  253,0   195080 100696525 /usr/lib64/libtinfo.so.6.2
+bash      3106     root  mem    REG  253,0       34 100696842 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      3106     root  mem    REG  253,0       77     90662 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      3106     root  mem    REG  253,0      167  33732927 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      3106     root  mem    REG  253,0       59  33732932 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      3106     root  mem    REG  253,0       23  33732930 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      3106     root  mem    REG  253,0      369  33732929 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      3106     root  mem    REG  253,0   897856 100696860 /usr/lib64/ld-linux-x86-64.so.2
+bash      3106     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      3106     root    1w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    2w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    3r  FIFO   0,13      0t0     38458 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 3114:
+  No child processes found
+Receptor Threads for PID 3114:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 3114:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0  UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0  UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0  UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0  TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0  TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0  TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0  TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0  TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0  TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0  TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0  TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0  TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+sshd      2981     root    4u  IPv4  37280      0t0  TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+sshd      3002     root    4u  IPv4  37280      0t0  TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+postmaste 3058 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3058 postgres   11u  IPv4  37473      0t0  TCP aap24-database:postgres->aap24-control.lan:50720 (ESTABLISHED)
+postmaste 3059 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3059 postgres   11u  IPv4  37474      0t0  TCP aap24-database:postgres->aap24-control.lan:50736 (ESTABLISHED)
+postmaste 3061 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3061 postgres   11u  IPv4  38375      0t0  TCP aap24-database:postgres->aap24-control.lan:50750 (ESTABLISHED)
+postmaste 3062 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3062 postgres   11u  IPv4  38376      0t0  TCP aap24-database:postgres->aap24-control.lan:50752 (ESTABLISHED)
+postmaste 3063 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3063 postgres   11u  IPv4  38377      0t0  TCP aap24-database:postgres->aap24-control.lan:50756 (ESTABLISHED)
+postmaste 3064 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3064 postgres   11u  IPv4  38378      0t0  TCP aap24-database:postgres->aap24-control.lan:50760 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3328 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 3106)
+    PID    PPID CMD                           RSS
+   3106       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 3106:
+    PID    PPID CMD                           RSS
+   3173    3106 bash -c  log_file="/tmp/mem  2060
+
+Process: bash (PID: 3173)
+    PID    PPID CMD                           RSS
+   3173    3106 bash -c  log_file="/tmp/mem  2060
+  Children of PID 3173:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(3106)---pstree(3184)
+=== receptor Process Tree ===
+bash(3106)---pstree(3188)
+=== nginx Process Tree ===
+bash(3106)---pstree(3192)
+=== postgresql Process Tree ===
+bash(3106)---pstree(3196)
+=== redis Process Tree ===
+bash(3106)---pstree(3200)
+=== uwsgi Process Tree ===
+bash(3106)---pstree(3204)
+=== automation-hub Process Tree ===
+bash(3106)---pstree(3208)
+=== automation-eda Process Tree ===
+bash(3106)---pstree(3212)
+
+=================================================================================
+2025-07-03 11:34:49
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         491        7129          28         321        7189
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    749       1 /usr/bin/python3 -s /usr/sb 42744
+   1016       1 /usr/lib/polkit-1/polkitd - 27784
+    801       1 /usr/bin/postmaster -D /var 26880
+    785       1 /usr/bin/python3 -Es /usr/s 26656
+    760       1 /usr/sbin/NetworkManager -- 21420
+   3062     801 postgres: awx awx 192.168.1 18820
+   3220     801 postgres: awx awx 192.168.1 18820
+   3059     801 postgres: awx awx 192.168.1 18436
+   3216     801 postgres: awx awx 192.168.1 18308
+   3061     801 postgres: awx awx 192.168.1 18052
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   3106       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       00:31
+Receptor Child Processes for PID 3106:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 3106:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   3106    3106  0.0  0.0  3328 bash
+Receptor Network Connections for PID 3106:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0       UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0       UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0       UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0       TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0       TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0       TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0       TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0       TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0       TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0       TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0       TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0       TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+sshd      2981     root    4u  IPv4  37280      0t0       TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+sshd      3002     root    4u  IPv4  37280      0t0       TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+postmaste 3059 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3059 postgres   11u  IPv4  37474      0t0       TCP aap24-database:postgres->aap24-control.lan:50736 (ESTABLISHED)
+postmaste 3061 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3061 postgres   11u  IPv4  38375      0t0       TCP aap24-database:postgres->aap24-control.lan:50750 (ESTABLISHED)
+postmaste 3062 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3062 postgres   11u  IPv4  38376      0t0       TCP aap24-database:postgres->aap24-control.lan:50752 (ESTABLISHED)
+bash      3106     root  cwd    DIR  253,0      163  67240070 /root
+bash      3106     root  rtd    DIR  253,0      235       128 /
+bash      3106     root  txt    REG  253,0  1389072  67354550 /usr/bin/bash
+bash      3106     root  mem    REG  253,0  2586930     90660 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      3106     root  mem    REG  253,0  2544344 100696864 /usr/lib64/libc.so.6
+bash      3106     root  mem    REG  253,0   346132 100696541 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      3106     root  mem    REG  253,0       54     90663 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      3106     root  mem    REG  253,0     3284  33732933 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      3106     root  mem    REG  253,0      286  33732931 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      3106     root  mem    REG  253,0       57  33732944 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      3106     root  mem    REG  253,0    26988  67354737 /usr/lib64/gconv/gconv-modules.cache
+bash      3106     root  mem    REG  253,0   195080 100696525 /usr/lib64/libtinfo.so.6.2
+bash      3106     root  mem    REG  253,0       34 100696842 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      3106     root  mem    REG  253,0       77     90662 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      3106     root  mem    REG  253,0      167  33732927 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      3106     root  mem    REG  253,0       59  33732932 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      3106     root  mem    REG  253,0       23  33732930 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      3106     root  mem    REG  253,0      369  33732929 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      3106     root  mem    REG  253,0   897856 100696860 /usr/lib64/ld-linux-x86-64.so.2
+bash      3106     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      3106     root    1w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    2w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    3r  FIFO   0,13      0t0     38662 pipe
+postmaste 3216 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3216 postgres   11u  IPv4  38614      0t0       TCP aap24-database:postgres->aap24-control.lan:50388 (ESTABLISHED)
+postmaste 3217 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3217 postgres   11u  IPv4  38615      0t0       TCP aap24-database:postgres->aap24-control.lan:50402 (ESTABLISHED)
+postmaste 3219 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3219 postgres   11u  IPv4  38616      0t0       TCP aap24-database:postgres->aap24-control.lan:49406 (ESTABLISHED)
+postmaste 3220 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3220 postgres   11u  IPv4  38617      0t0       TCP aap24-database:postgres->aap24-control.lan:49414 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 3226:
+  No child processes found
+Receptor Threads for PID 3226:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 3226:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0  UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0  UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0  UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0  TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0  TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0  TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0  TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0  TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0  TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0  TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0  TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0  TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+sshd      2981     root    4u  IPv4  37280      0t0  TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+sshd      3002     root    4u  IPv4  37280      0t0  TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+postmaste 3059 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3059 postgres   11u  IPv4  37474      0t0  TCP aap24-database:postgres->aap24-control.lan:50736 (ESTABLISHED)
+postmaste 3061 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3061 postgres   11u  IPv4  38375      0t0  TCP aap24-database:postgres->aap24-control.lan:50750 (ESTABLISHED)
+postmaste 3062 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3062 postgres   11u  IPv4  38376      0t0  TCP aap24-database:postgres->aap24-control.lan:50752 (ESTABLISHED)
+postmaste 3216 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3216 postgres   11u  IPv4  38614      0t0  TCP aap24-database:postgres->aap24-control.lan:50388 (ESTABLISHED)
+postmaste 3217 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3217 postgres   11u  IPv4  38615      0t0  TCP aap24-database:postgres->aap24-control.lan:50402 (ESTABLISHED)
+postmaste 3219 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3219 postgres   11u  IPv4  38616      0t0  TCP aap24-database:postgres->aap24-control.lan:49406 (ESTABLISHED)
+postmaste 3220 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3220 postgres   11u  IPv4  38617      0t0  TCP aap24-database:postgres->aap24-control.lan:49414 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3328 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 3106)
+    PID    PPID CMD                           RSS
+   3106       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 3106:
+    PID    PPID CMD                           RSS
+   3285    3106 bash -c  log_file="/tmp/mem  2076
+
+Process: bash (PID: 3285)
+    PID    PPID CMD                           RSS
+   3285    3106 bash -c  log_file="/tmp/mem  2076
+  Children of PID 3285:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(3106)---pstree(3296)
+=== receptor Process Tree ===
+bash(3106)---pstree(3300)
+=== nginx Process Tree ===
+bash(3106)---pstree(3304)
+=== postgresql Process Tree ===
+bash(3106)---pstree(3308)
+=== redis Process Tree ===
+bash(3106)---pstree(3312)
+=== uwsgi Process Tree ===
+bash(3106)---pstree(3316)
+=== automation-hub Process Tree ===
+bash(3106)---pstree(3320)
+=== automation-eda Process Tree ===
+bash(3106)---pstree(3324)
+
+=================================================================================
+2025-07-03 11:35:19
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         516        7102          31         327        7164
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    749       1 /usr/bin/python3 -s /usr/sb 42744
+   1016       1 /usr/lib/polkit-1/polkitd - 27784
+    801       1 /usr/bin/postmaster -D /var 26880
+    785       1 /usr/bin/python3 -Es /usr/s 26656
+   3410     801 postgres: awx awx 192.168.1 22660
+    760       1 /usr/sbin/NetworkManager -- 21420
+   3409     801 postgres: awx awx 192.168.1 21380
+   3406     801 postgres: awx awx 192.168.1 18692
+   3422     801 postgres: awx awx 192.168.1 18436
+   3423     801 postgres: awx awx 192.168.1 17668
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   3106       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       01:01
+Receptor Child Processes for PID 3106:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 3106:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   3106    3106  0.0  0.0  3328 bash
+Receptor Network Connections for PID 3106:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0       UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0       UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0       UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0       TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0       TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0       TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0       TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0       TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0       TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0       TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0       TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0       TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+sshd      2981     root    4u  IPv4  37280      0t0       TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+sshd      3002     root    4u  IPv4  37280      0t0       TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+bash      3106     root  cwd    DIR  253,0      163  67240070 /root
+bash      3106     root  rtd    DIR  253,0      235       128 /
+bash      3106     root  txt    REG  253,0  1389072  67354550 /usr/bin/bash
+bash      3106     root  mem    REG  253,0  2586930     90660 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      3106     root  mem    REG  253,0  2544344 100696864 /usr/lib64/libc.so.6
+bash      3106     root  mem    REG  253,0   346132 100696541 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      3106     root  mem    REG  253,0       54     90663 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      3106     root  mem    REG  253,0     3284  33732933 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      3106     root  mem    REG  253,0      286  33732931 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      3106     root  mem    REG  253,0       57  33732944 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      3106     root  mem    REG  253,0    26988  67354737 /usr/lib64/gconv/gconv-modules.cache
+bash      3106     root  mem    REG  253,0   195080 100696525 /usr/lib64/libtinfo.so.6.2
+bash      3106     root  mem    REG  253,0       34 100696842 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      3106     root  mem    REG  253,0       77     90662 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      3106     root  mem    REG  253,0      167  33732927 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      3106     root  mem    REG  253,0       59  33732932 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      3106     root  mem    REG  253,0       23  33732930 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      3106     root  mem    REG  253,0      369  33732929 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      3106     root  mem    REG  253,0   897856 100696860 /usr/lib64/ld-linux-x86-64.so.2
+bash      3106     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      3106     root    1w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    2w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    3r  FIFO   0,13      0t0     40355 pipe
+postmaste 3402 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3402 postgres   11u  IPv4  39589      0t0       TCP aap24-database:postgres->aap24-control.lan:37710 (ESTABLISHED)
+postmaste 3404 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3404 postgres   11u  IPv4  40335      0t0       TCP aap24-database:postgres->aap24-control.lan:37726 (ESTABLISHED)
+postmaste 3406 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3406 postgres   11u  IPv4  40337      0t0       TCP aap24-database:postgres->aap24-control.lan:37752 (ESTABLISHED)
+postmaste 3407 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3407 postgres   11u  IPv4  40338      0t0       TCP aap24-database:postgres->aap24-control.lan:37758 (ESTABLISHED)
+postmaste 3408 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3408 postgres   11u  IPv4  40339      0t0       TCP aap24-database:postgres->aap24-control.lan:37764 (ESTABLISHED)
+postmaste 3409 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3409 postgres   11u  IPv4  40340      0t0       TCP aap24-database:postgres->aap24-control.lan:37766 (ESTABLISHED)
+postmaste 3410 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3410 postgres   11u  IPv4  42019      0t0       TCP aap24-database:postgres->aap24-control.lan:37780 (ESTABLISHED)
+postmaste 3422 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3422 postgres   11u  IPv4  42033      0t0       TCP aap24-database:postgres->aap24-control.lan:54606 (ESTABLISHED)
+postmaste 3423 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3423 postgres   11u  IPv4  42034      0t0       TCP aap24-database:postgres->aap24-control.lan:54620 (ESTABLISHED)
+postmaste 3425 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3425 postgres   11u  IPv4  40354      0t0       TCP aap24-database:postgres->aap24-control.lan:54630 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 3431:
+  No child processes found
+Receptor Threads for PID 3431:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 3431:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0  UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0  UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0  UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0  TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0  TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0  TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0  TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0  TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0  TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0  TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0  TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0  TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+sshd      2981     root    4u  IPv4  37280      0t0  TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+sshd      3002     root    4u  IPv4  37280      0t0  TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+postmaste 3402 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3402 postgres   11u  IPv4  39589      0t0  TCP aap24-database:postgres->aap24-control.lan:37710 (ESTABLISHED)
+postmaste 3404 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3404 postgres   11u  IPv4  40335      0t0  TCP aap24-database:postgres->aap24-control.lan:37726 (ESTABLISHED)
+postmaste 3406 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3406 postgres   11u  IPv4  40337      0t0  TCP aap24-database:postgres->aap24-control.lan:37752 (ESTABLISHED)
+postmaste 3407 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3407 postgres   11u  IPv4  40338      0t0  TCP aap24-database:postgres->aap24-control.lan:37758 (ESTABLISHED)
+postmaste 3408 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3408 postgres   11u  IPv4  40339      0t0  TCP aap24-database:postgres->aap24-control.lan:37764 (ESTABLISHED)
+postmaste 3409 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3409 postgres   11u  IPv4  40340      0t0  TCP aap24-database:postgres->aap24-control.lan:37766 (ESTABLISHED)
+postmaste 3410 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3410 postgres   11u  IPv4  42019      0t0  TCP aap24-database:postgres->aap24-control.lan:37780 (ESTABLISHED)
+postmaste 3422 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3422 postgres   11u  IPv4  42033      0t0  TCP aap24-database:postgres->aap24-control.lan:54606 (ESTABLISHED)
+postmaste 3423 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3423 postgres   11u  IPv4  42034      0t0  TCP aap24-database:postgres->aap24-control.lan:54620 (ESTABLISHED)
+postmaste 3425 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3425 postgres   11u  IPv4  40354      0t0  TCP aap24-database:postgres->aap24-control.lan:54630 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 3106)
+    PID    PPID CMD                           RSS
+   3106       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 3106:
+    PID    PPID CMD                           RSS
+   3490    3106 bash -c  log_file="/tmp/mem  2084
+
+Process: bash (PID: 3490)
+    PID    PPID CMD                           RSS
+   3490    3106 bash -c  log_file="/tmp/mem  2084
+  Children of PID 3490:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(3106)---pstree(3501)
+=== receptor Process Tree ===
+bash(3106)---pstree(3505)
+=== nginx Process Tree ===
+bash(3106)---pstree(3509)
+=== postgresql Process Tree ===
+bash(3106)---pstree(3513)
+=== redis Process Tree ===
+bash(3106)---pstree(3517)
+=== uwsgi Process Tree ===
+bash(3106)---pstree(3521)
+=== automation-hub Process Tree ===
+bash(3106)---pstree(3525)
+=== automation-eda Process Tree ===
+bash(3106)---pstree(3529)
+
+=================================================================================
+2025-07-03 11:35:49
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         503        7114          31         328        7177
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    749       1 /usr/bin/python3 -s /usr/sb 42744
+   1016       1 /usr/lib/polkit-1/polkitd - 27784
+    801       1 /usr/bin/postmaster -D /var 26880
+    785       1 /usr/bin/python3 -Es /usr/s 26656
+   3410     801 postgres: awx awx 192.168.1 22660
+    760       1 /usr/sbin/NetworkManager -- 21420
+   3537     801 postgres: awx awx 192.168.1 19972
+   3543     801 postgres: awx awx 192.168.1 18948
+   3407     801 postgres: awx awx 192.168.1 17540
+   3538     801 postgres: awx awx 192.168.1 17540
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   3106       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:31
+Receptor Child Processes for PID 3106:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 3106:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   3106    3106  0.0  0.0  3456 bash
+Receptor Network Connections for PID 3106:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0       UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0       UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0       UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0       TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0       TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0       TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0       TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0       TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0       TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0       TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0       TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0       TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+sshd      2981     root    4u  IPv4  37280      0t0       TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+sshd      3002     root    4u  IPv4  37280      0t0       TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+bash      3106     root  cwd    DIR  253,0      163  67240070 /root
+bash      3106     root  rtd    DIR  253,0      235       128 /
+bash      3106     root  txt    REG  253,0  1389072  67354550 /usr/bin/bash
+bash      3106     root  mem    REG  253,0  2586930     90660 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      3106     root  mem    REG  253,0  2544344 100696864 /usr/lib64/libc.so.6
+bash      3106     root  mem    REG  253,0   346132 100696541 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      3106     root  mem    REG  253,0       54     90663 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      3106     root  mem    REG  253,0     3284  33732933 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      3106     root  mem    REG  253,0      286  33732931 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      3106     root  mem    REG  253,0       57  33732944 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      3106     root  mem    REG  253,0    26988  67354737 /usr/lib64/gconv/gconv-modules.cache
+bash      3106     root  mem    REG  253,0   195080 100696525 /usr/lib64/libtinfo.so.6.2
+bash      3106     root  mem    REG  253,0       34 100696842 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      3106     root  mem    REG  253,0       77     90662 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      3106     root  mem    REG  253,0      167  33732927 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      3106     root  mem    REG  253,0       59  33732932 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      3106     root  mem    REG  253,0       23  33732930 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      3106     root  mem    REG  253,0      369  33732929 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      3106     root  mem    REG  253,0   897856 100696860 /usr/lib64/ld-linux-x86-64.so.2
+bash      3106     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      3106     root    1w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    2w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    3r  FIFO   0,13      0t0     42744 pipe
+postmaste 3407 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3407 postgres   11u  IPv4  40338      0t0       TCP aap24-database:postgres->aap24-control.lan:37758 (ESTABLISHED)
+postmaste 3410 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3410 postgres   11u  IPv4  42019      0t0       TCP aap24-database:postgres->aap24-control.lan:37780 (ESTABLISHED)
+postmaste 3537 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3537 postgres   11u  IPv4  40586      0t0       TCP aap24-database:postgres->aap24-control.lan:48628 (ESTABLISHED)
+postmaste 3538 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3538 postgres   11u  IPv4  40587      0t0       TCP aap24-database:postgres->aap24-control.lan:48632 (ESTABLISHED)
+postmaste 3542 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3542 postgres   11u  IPv4  40591      0t0       TCP aap24-database:postgres->aap24-control.lan:35878 (ESTABLISHED)
+postmaste 3543 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3543 postgres   11u  IPv4  40592      0t0       TCP aap24-database:postgres->aap24-control.lan:35882 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 3549:
+  No child processes found
+Receptor Threads for PID 3549:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 3549:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0  UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0  UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0  UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0  TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0  TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0  TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0  TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0  TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0  TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0  TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0  TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0  TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+sshd      2981     root    4u  IPv4  37280      0t0  TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+sshd      3002     root    4u  IPv4  37280      0t0  TCP aap24-database:ssh->192.168.1.49:54140 (ESTABLISHED)
+postmaste 3407 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3407 postgres   11u  IPv4  40338      0t0  TCP aap24-database:postgres->aap24-control.lan:37758 (ESTABLISHED)
+postmaste 3410 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3410 postgres   11u  IPv4  42019      0t0  TCP aap24-database:postgres->aap24-control.lan:37780 (ESTABLISHED)
+postmaste 3537 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3537 postgres   11u  IPv4  40586      0t0  TCP aap24-database:postgres->aap24-control.lan:48628 (ESTABLISHED)
+postmaste 3538 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3538 postgres   11u  IPv4  40587      0t0  TCP aap24-database:postgres->aap24-control.lan:48632 (ESTABLISHED)
+postmaste 3542 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3542 postgres   11u  IPv4  40591      0t0  TCP aap24-database:postgres->aap24-control.lan:35878 (ESTABLISHED)
+postmaste 3543 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3543 postgres   11u  IPv4  40592      0t0  TCP aap24-database:postgres->aap24-control.lan:35882 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 3106)
+    PID    PPID CMD                           RSS
+   3106       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 3106:
+    PID    PPID CMD                           RSS
+   3608    3106 bash -c  log_file="/tmp/mem  2084
+
+Process: bash (PID: 3608)
+    PID    PPID CMD                           RSS
+   3608    3106 bash -c  log_file="/tmp/mem  2084
+  Children of PID 3608:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(3106)---pstree(3619)
+=== receptor Process Tree ===
+bash(3106)---pstree(3623)
+=== nginx Process Tree ===
+bash(3106)---pstree(3627)
+=== postgresql Process Tree ===
+bash(3106)---pstree(3631)
+=== redis Process Tree ===
+bash(3106)---pstree(3635)
+=== uwsgi Process Tree ===
+bash(3106)---pstree(3639)
+=== automation-hub Process Tree ===
+bash(3106)---pstree(3643)
+=== automation-eda Process Tree ===
+bash(3106)---pstree(3647)
+
+=================================================================================
+2025-07-03 11:36:20
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         496        7121          31         328        7184
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    749       1 /usr/bin/python3 -s /usr/sb 42744
+   1016       1 /usr/lib/polkit-1/polkitd - 27784
+    801       1 /usr/bin/postmaster -D /var 26880
+    785       1 /usr/bin/python3 -Es /usr/s 26656
+    760       1 /usr/sbin/NetworkManager -- 21420
+   3664     801 postgres: awx awx 192.168.1 19972
+   3662     801 postgres: awx awx 192.168.1 18948
+   3660     801 postgres: awx awx 192.168.1 18052
+   3665     801 postgres: awx awx 192.168.1 17412
+   3663     801 postgres: awx awx 192.168.1 17284
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   3106       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:01
+Receptor Child Processes for PID 3106:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 3106:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   3106    3106  0.0  0.0  3456 bash
+Receptor Network Connections for PID 3106:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0       UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0       UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0       UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0       TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0       TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0       TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0       TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0       TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0       TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0       TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0       TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0       TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+bash      3106     root  cwd    DIR  253,0      163  67240070 /root
+bash      3106     root  rtd    DIR  253,0      235       128 /
+bash      3106     root  txt    REG  253,0  1389072  67354550 /usr/bin/bash
+bash      3106     root  mem    REG  253,0  2586930     90660 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      3106     root  mem    REG  253,0  2544344 100696864 /usr/lib64/libc.so.6
+bash      3106     root  mem    REG  253,0   346132 100696541 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      3106     root  mem    REG  253,0       54     90663 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      3106     root  mem    REG  253,0     3284  33732933 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      3106     root  mem    REG  253,0      286  33732931 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      3106     root  mem    REG  253,0       57  33732944 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      3106     root  mem    REG  253,0    26988  67354737 /usr/lib64/gconv/gconv-modules.cache
+bash      3106     root  mem    REG  253,0   195080 100696525 /usr/lib64/libtinfo.so.6.2
+bash      3106     root  mem    REG  253,0       34 100696842 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      3106     root  mem    REG  253,0       77     90662 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      3106     root  mem    REG  253,0      167  33732927 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      3106     root  mem    REG  253,0       59  33732932 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      3106     root  mem    REG  253,0       23  33732930 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      3106     root  mem    REG  253,0      369  33732929 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      3106     root  mem    REG  253,0   897856 100696860 /usr/lib64/ld-linux-x86-64.so.2
+bash      3106     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      3106     root    1w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    2w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    3r  FIFO   0,13      0t0     43124 pipe
+postmaste 3659 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3659 postgres   11u  IPv4  40724      0t0       TCP aap24-database:postgres->aap24-control.lan:54662 (ESTABLISHED)
+postmaste 3660 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3660 postgres   11u  IPv4  40725      0t0       TCP aap24-database:postgres->aap24-control.lan:54668 (ESTABLISHED)
+postmaste 3662 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3662 postgres   11u  IPv4  40726      0t0       TCP aap24-database:postgres->aap24-control.lan:54684 (ESTABLISHED)
+postmaste 3663 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3663 postgres   11u  IPv4  40727      0t0       TCP aap24-database:postgres->aap24-control.lan:54700 (ESTABLISHED)
+postmaste 3664 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3664 postgres   11u  IPv4  40728      0t0       TCP aap24-database:postgres->aap24-control.lan:54706 (ESTABLISHED)
+postmaste 3665 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3665 postgres   11u  IPv4  43093      0t0       TCP aap24-database:postgres->aap24-control.lan:54714 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 3672:
+  No child processes found
+Receptor Threads for PID 3672:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 3672:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0  UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0  UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0  UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0  TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0  TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0  TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0  TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0  TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0  TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0  TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0  TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0  TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+postmaste 3659 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3659 postgres   11u  IPv4  40724      0t0  TCP aap24-database:postgres->aap24-control.lan:54662 (ESTABLISHED)
+postmaste 3660 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3660 postgres   11u  IPv4  40725      0t0  TCP aap24-database:postgres->aap24-control.lan:54668 (ESTABLISHED)
+postmaste 3662 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3662 postgres   11u  IPv4  40726      0t0  TCP aap24-database:postgres->aap24-control.lan:54684 (ESTABLISHED)
+postmaste 3663 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3663 postgres   11u  IPv4  40727      0t0  TCP aap24-database:postgres->aap24-control.lan:54700 (ESTABLISHED)
+postmaste 3664 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3664 postgres   11u  IPv4  40728      0t0  TCP aap24-database:postgres->aap24-control.lan:54706 (ESTABLISHED)
+postmaste 3665 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3665 postgres   11u  IPv4  43093      0t0  TCP aap24-database:postgres->aap24-control.lan:54714 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 3106)
+    PID    PPID CMD                           RSS
+   3106       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 3106:
+    PID    PPID CMD                           RSS
+   3731    3106 bash -c  log_file="/tmp/mem  2084
+
+Process: bash (PID: 3731)
+    PID    PPID CMD                           RSS
+   3731    3106 bash -c  log_file="/tmp/mem  2084
+  Children of PID 3731:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(3106)---pstree(3742)
+=== receptor Process Tree ===
+bash(3106)---pstree(3746)
+=== nginx Process Tree ===
+bash(3106)---pstree(3750)
+=== postgresql Process Tree ===
+bash(3106)---pstree(3754)
+=== redis Process Tree ===
+bash(3106)---pstree(3758)
+=== uwsgi Process Tree ===
+bash(3106)---pstree(3762)
+=== automation-hub Process Tree ===
+bash(3106)---pstree(3766)
+=== automation-eda Process Tree ===
+bash(3106)---pstree(3770)
+
+=================================================================================
+2025-07-03 11:36:50
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         493        7124          31         328        7187
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    749       1 /usr/bin/python3 -s /usr/sb 42744
+   1016       1 /usr/lib/polkit-1/polkitd - 27784
+    801       1 /usr/bin/postmaster -D /var 26880
+    785       1 /usr/bin/python3 -Es /usr/s 26656
+    760       1 /usr/sbin/NetworkManager -- 21420
+   3777     801 postgres: awx awx 192.168.1 19972
+   3783     801 postgres: awx awx 192.168.1 18948
+   3660     801 postgres: awx awx 192.168.1 18052
+   3663     801 postgres: awx awx 192.168.1 17284
+   3778     801 postgres: awx awx 192.168.1 17284
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   3106       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:31
+Receptor Child Processes for PID 3106:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 3106:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   3106    3106  0.0  0.0  3456 bash
+Receptor Network Connections for PID 3106:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0       UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0       UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0       UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0       TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0       TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0       TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0       TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0       TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0       TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0       TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0       TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0       TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0       TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+bash      3106     root  cwd    DIR  253,0      163  67240070 /root
+bash      3106     root  rtd    DIR  253,0      235       128 /
+bash      3106     root  txt    REG  253,0  1389072  67354550 /usr/bin/bash
+bash      3106     root  mem    REG  253,0  2586930     90660 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      3106     root  mem    REG  253,0  2544344 100696864 /usr/lib64/libc.so.6
+bash      3106     root  mem    REG  253,0   346132 100696541 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      3106     root  mem    REG  253,0       54     90663 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      3106     root  mem    REG  253,0     3284  33732933 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      3106     root  mem    REG  253,0      286  33732931 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      3106     root  mem    REG  253,0       57  33732944 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      3106     root  mem    REG  253,0    26988  67354737 /usr/lib64/gconv/gconv-modules.cache
+bash      3106     root  mem    REG  253,0   195080 100696525 /usr/lib64/libtinfo.so.6.2
+bash      3106     root  mem    REG  253,0       34 100696842 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      3106     root  mem    REG  253,0       77     90662 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      3106     root  mem    REG  253,0      167  33732927 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      3106     root  mem    REG  253,0       59  33732932 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      3106     root  mem    REG  253,0       23  33732930 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      3106     root  mem    REG  253,0      369  33732929 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      3106     root  mem    REG  253,0   897856 100696860 /usr/lib64/ld-linux-x86-64.so.2
+bash      3106     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      3106     root    1w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    2w   REG  253,0        0  34093573 /tmp/memory_monitor.log
+bash      3106     root    3r  FIFO   0,13      0t0     41796 pipe
+postmaste 3660 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3660 postgres   11u  IPv4  40725      0t0       TCP aap24-database:postgres->aap24-control.lan:54668 (ESTABLISHED)
+postmaste 3663 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3663 postgres   11u  IPv4  40727      0t0       TCP aap24-database:postgres->aap24-control.lan:54700 (ESTABLISHED)
+postmaste 3777 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3777 postgres   11u  IPv4  43562      0t0       TCP aap24-database:postgres->aap24-control.lan:34620 (ESTABLISHED)
+postmaste 3778 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3778 postgres   11u  IPv4  43563      0t0       TCP aap24-database:postgres->aap24-control.lan:34634 (ESTABLISHED)
+postmaste 3782 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3782 postgres   11u  IPv4  40869      0t0       TCP aap24-database:postgres->aap24-control.lan:57054 (ESTABLISHED)
+postmaste 3783 postgres   10u  IPv6  24607      0t0       UDP localhost:37593->localhost:37593 
+postmaste 3783 postgres   11u  IPv4  40870      0t0       TCP aap24-database:postgres->aap24-control.lan:57062 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 3790:
+  No child processes found
+Receptor Threads for PID 3790:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 3790:
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd    756   chrony    5u  IPv4  23408      0t0  UDP localhost:323 
+chronyd    756   chrony    6u  IPv6  23409      0t0  UDP localhost:323 
+NetworkMa  760     root   26u  IPv4  23907      0t0  UDP aap24-database:bootpc->pi.hole:bootps 
+sshd       782     root    3u  IPv4  24578      0t0  TCP *:ssh (LISTEN)
+sshd       782     root    4u  IPv6  23741      0t0  TCP *:ssh (LISTEN)
+postmaste  801 postgres    6u  IPv4  24598      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres    7u  IPv6  24599      0t0  TCP *:postgres (LISTEN)
+postmaste  801 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  837 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  838 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  839 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  840 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  841 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste  842 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1546 postgres   11u  IPv4  24910      0t0  TCP aap24-database:postgres->aap24-control.lan:51878 (ESTABLISHED)
+postmaste 1547 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1547 postgres   11u  IPv4  24911      0t0  TCP aap24-database:postgres->aap24-control.lan:51884 (ESTABLISHED)
+postmaste 1549 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1549 postgres   11u  IPv4  24913      0t0  TCP aap24-database:postgres->aap24-control.lan:51904 (ESTABLISHED)
+postmaste 1550 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1550 postgres   11u  IPv4  24914      0t0  TCP aap24-database:postgres->aap24-control.lan:51920 (ESTABLISHED)
+postmaste 1551 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1551 postgres   11u  IPv4  24915      0t0  TCP aap24-database:postgres->aap24-control.lan:51926 (ESTABLISHED)
+postmaste 1552 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1552 postgres   11u  IPv4  24916      0t0  TCP aap24-database:postgres->aap24-control.lan:51940 (ESTABLISHED)
+postmaste 1573 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 1573 postgres   11u  IPv4  24953      0t0  TCP aap24-database:postgres->aap24-control.lan:53570 (ESTABLISHED)
+postmaste 3660 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3660 postgres   11u  IPv4  40725      0t0  TCP aap24-database:postgres->aap24-control.lan:54668 (ESTABLISHED)
+postmaste 3663 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3663 postgres   11u  IPv4  40727      0t0  TCP aap24-database:postgres->aap24-control.lan:54700 (ESTABLISHED)
+postmaste 3777 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3777 postgres   11u  IPv4  43562      0t0  TCP aap24-database:postgres->aap24-control.lan:34620 (ESTABLISHED)
+postmaste 3778 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3778 postgres   11u  IPv4  43563      0t0  TCP aap24-database:postgres->aap24-control.lan:34634 (ESTABLISHED)
+postmaste 3782 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3782 postgres   11u  IPv4  40869      0t0  TCP aap24-database:postgres->aap24-control.lan:57054 (ESTABLISHED)
+postmaste 3783 postgres   10u  IPv6  24607      0t0  UDP localhost:37593->localhost:37593 
+postmaste 3783 postgres   11u  IPv4  40870      0t0  TCP aap24-database:postgres->aap24-control.lan:57062 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 3106)
+    PID    PPID CMD                           RSS
+   3106       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 3106:
+    PID    PPID CMD                           RSS
+   3849    3106 bash -c  log_file="/tmp/mem  2088
+
+Process: bash (PID: 3849)
+    PID    PPID CMD                           RSS
+   3849    3106 bash -c  log_file="/tmp/mem  2088
+  Children of PID 3849:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(3106)---pstree(3860)
+=== receptor Process Tree ===
+bash(3106)---pstree(3864)
+=== nginx Process Tree ===
+bash(3106)---pstree(3868)
+=== postgresql Process Tree ===
+bash(3106)---pstree(3872)
+=== redis Process Tree ===
+bash(3106)---pstree(3876)
+=== uwsgi Process Tree ===
+bash(3106)---pstree(3880)
+=== automation-hub Process Tree ===
+bash(3106)---pstree(3884)
+=== automation-eda Process Tree ===
+bash(3106)---pstree(3888)
+
+Memory monitoring completed for aap24 baseline test at Thu Jul  3 11:37:20 AM EDT 2025

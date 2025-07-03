@@ -1,0 +1,23 @@
+Receptor Version Information - AAP 2.5
+Timestamp: 2025-07-03T15:10:26Z
+Hostname: aap25-execution
+
+--- Receptor Version Information ---
+1.4.8
+--- Receptor Package Information ---
+receptorctl-1.4.8-3.el9ap.noarch
+receptor-1.4.8-3.el9ap.x86_64
+--- Receptor Process Information ---
+awx          754  0.0  0.5 1790028 40200 ?       Ssl  08:09   0:00 /usr/bin/receptor -c /etc/receptor/receptor.conf
+root        6588  0.0  0.0   7124  3328 ?        S    08:34   0:00 /bin/sh -c echo "--- Receptor Version Information ---" if command -v receptor &> /dev/null; then   receptor --version 2>&1 || echo "receptor --version failed" else   echo "receptor command not found" fi echo "--- Receptor Package Information ---" rpm -qa | grep -i receptor || echo "No receptor packages found" echo "--- Receptor Process Information ---" ps aux | grep -E "[r]eceptor" | head -5 || echo "No receptor processes found" echo "--- Receptor Service Status ---" systemctl status receptor 2>&1 | head -10 || echo "Receptor service status unavailable" 
+--- Receptor Service Status ---
+● receptor.service - Receptor
+     Loaded: loaded (/usr/lib/systemd/system/receptor.service; enabled; preset: disabled)
+    Drop-In: /etc/systemd/system/receptor.service.d
+             └─override.conf
+     Active: active (running) since Thu 2025-07-03 08:09:14 PDT; 25min ago
+   Main PID: 754 (receptor)
+      Tasks: 8 (limit: 48868)
+     Memory: 43.3M
+        CPU: 1.144s
+     CGroup: /system.slice/receptor.service

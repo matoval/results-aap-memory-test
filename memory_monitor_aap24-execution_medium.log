@@ -1,0 +1,3043 @@
+Starting memory monitoring for aap24 medium test at Thu Jul  3 08:57:42 AM PDT 2025
+=================================================================================
+2025-07-03 08:57:42
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         665        6792           8         481        7015
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47796
+    747       1 /usr/bin/python3 -s /usr/sb 43204
+   6557    6318 /usr/bin/python3 /usr/lib/p 35252
+   6318       1 /usr/bin/python3 /usr/bin/i 35104
+    797       1 /usr/bin/python3 -Es /usr/s 26792
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+    773       1 /usr/sbin/NetworkManager -- 21596
+      1       0 /usr/lib/systemd/systemd rh 16308
+   6353       1 /usr/lib/systemd/systemd -- 13712
+    644       1 /usr/lib/systemd/systemd-ud 12376
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 47796 1273916 0.0  0.6       48:33
+Receptor Child Processes for PID 751:
+  No child processes found
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 47796 receptor
+    751     762  0.0  0.6 47796 receptor
+    751     763  0.0  0.6 47796 receptor
+    751     764  0.0  0.6 47796 receptor
+    751     765  0.0  0.6 47796 receptor
+    751     766  0.0  0.6 47796 receptor
+    751     770  0.0  0.6 47796 receptor
+    751     771  0.0  0.6 47796 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+sshd      6317   root    4u     IPv4              61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u     IPv4              61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       00:00
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+sshd      6317   root    4u  IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u  IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    65087 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 6608:
+  No child processes found
+Receptor Threads for PID 6608:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 6608:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+sshd      6317   root    4u  IPv4  61893      0t0  TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u  IPv4  61893      0t0  TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 51124 KB (49 MB)
+Total Receptor VSZ Memory: 1281176 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47796
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+   6688    6600 bash -c  log_file="/tmp/mem  2052
+
+Process: bash (PID: 6688)
+    PID    PPID CMD                           RSS
+   6688    6600 bash -c  log_file="/tmp/mem  2052
+  Children of PID 6688:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(6704)
+=== receptor Process Tree ===
+receptor(751)-+-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(6709)
+=== nginx Process Tree ===
+bash(6600)---pstree(6713)
+=== postgresql Process Tree ===
+bash(6600)---pstree(6717)
+=== redis Process Tree ===
+bash(6600)---pstree(6721)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(6725)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(6729)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(6733)
+
+=================================================================================
+2025-07-03 08:58:12
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         864        6353           8         731        6816
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   7851       1 /usr/bin/python3 -Es /usr/s 74552
+    751       1 /usr/bin/receptor -c /etc/r 47796
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+   7955       1 /usr/bin/python3 /usr/bin/i 35396
+   8026    7955 /usr/bin/python3 /usr/lib/p 32180
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+    773       1 /usr/sbin/NetworkManager -- 21596
+      1       0 /usr/lib/systemd/systemd rh 16436
+   6353       1 /usr/lib/systemd/systemd -- 13712
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 47796 1273916 0.0  0.6       49:04
+Receptor Child Processes for PID 751:
+  No child processes found
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 47796 receptor
+    751     762  0.0  0.6 47796 receptor
+    751     763  0.0  0.6 47796 receptor
+    751     764  0.0  0.6 47796 receptor
+    751     765  0.0  0.6 47796 receptor
+    751     766  0.0  0.6 47796 receptor
+    751     770  0.0  0.6 47796 receptor
+    751     771  0.0  0.6 47796 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+sshd      6317   root    4u     IPv4              61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u     IPv4              61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       00:31
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+sshd      6317   root    4u  IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u  IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    78328 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 8033:
+  No child processes found
+Receptor Threads for PID 8033:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 8033:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+sshd      6317   root    4u  IPv4  61893      0t0  TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u  IPv4  61893      0t0  TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+python3   8026   root    4u  IPv4  77382      0t0  TCP aap24-execution:49796->a184-29-70-182.deploy.static.akamaitechnologies.com:https (SYN_SENT)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 51124 KB (49 MB)
+Total Receptor VSZ Memory: 1281176 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47796
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+   8113    6600 bash -c  log_file="/tmp/mem  2064
+
+Process: bash (PID: 8113)
+    PID    PPID CMD                           RSS
+   8113    6600 bash -c  log_file="/tmp/mem  2064
+  Children of PID 8113:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(8127)
+=== receptor Process Tree ===
+receptor(751)-+-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(8132)
+=== nginx Process Tree ===
+bash(6600)---pstree(8136)
+=== postgresql Process Tree ===
+bash(6600)---pstree(8140)
+=== redis Process Tree ===
+bash(6600)---pstree(8144)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(8148)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(8152)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(8156)
+
+=================================================================================
+2025-07-03 08:58:42
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         783        6429           8         737        6897
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   8299    8276 /usr/bin/python3.9 /usr/bin 63588
+   8347    8299 /usr/bin/python3.9 /usr/bin 57188
+   8256    8248 /usr/bin/podman run --rm -- 55764
+   8248    8238 /usr/bin/podman run --rm -- 49160
+    751       1 /usr/bin/receptor -c /etc/r 47528
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+   8229     751 /usr/bin/receptor --node id 35748
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 47528 1273916 0.0  0.6       49:34
+Receptor Child Processes for PID 751:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 35748 1346752 0.0  0.4       00:05
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 47528 receptor
+    751     762  0.0  0.6 47528 receptor
+    751     763  0.0  0.6 47528 receptor
+    751     764  0.0  0.6 47528 receptor
+    751     765  0.0  0.6 47528 receptor
+    751     766  0.0  0.6 47528 receptor
+    751     770  0.0  0.6 47528 receptor
+    751     771  0.0  0.6 47528 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+receptor   751    awx   10r  a_inode               0,14        0       59 inotify
+receptor   751    awx   11r      REG              253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+sshd      6317   root    4u     IPv4              61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u     IPv4              61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+slirp4net 8271    awx    3u     IPv4              75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       01:01
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+sshd      6317   root    4u  IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u  IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    81062 pipe
+slirp4net 8271    awx    3u  IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 35748 1346752 0.0  0.4       00:05
+Receptor Child Processes for PID 8229:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572 103616  1.8  0.3       00:05
+Receptor Threads for PID 8229:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   8229    8229  0.0  0.4 35748 receptor
+   8229    8230  0.0  0.4 35748 receptor
+   8229    8231  0.0  0.4 35748 receptor
+   8229    8232  0.0  0.4 35748 receptor
+   8229    8233  0.0  0.4 35748 receptor
+   8229    8234  0.0  0.4 35748 receptor
+   8229    8235  0.0  0.4 35748 receptor
+   8229    8236  0.0  0.4 35748 receptor
+   8229    8237  0.0  0.4 35748 receptor
+Receptor Network Connections for PID 8229:
+COMMAND    PID   USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u     IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6  22837      0t0      TCP *:ssh (LISTEN)
+sshd      6317   root    4u     IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u     IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+receptor  8229    awx  cwd       DIR  253,0      235      128 /
+receptor  8229    awx  rtd       DIR  253,0      235      128 /
+receptor  8229    awx  txt       REG  253,0 54652712 34164275 /usr/bin/receptor
+receptor  8229    awx  mem       REG  253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor  8229    awx  mem       REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor  8229    awx  mem       REG  253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor  8229    awx  mem       REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor  8229    awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  8229    awx    1w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    2w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    3r      REG  253,0    61311 50594263 /tmp/receptor/192.168.1.23/ZVstRYyz/stdin
+receptor  8229    awx    4u  a_inode   0,14        0       59 [eventpoll:5]
+receptor  8229    awx    5r     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    6w     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    7w      REG  253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+slirp4net 8271    awx    3u     IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 8365:
+  No child processes found
+Receptor Threads for PID 8365:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 8365:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+sshd      6317   root    4u  IPv4  61893      0t0  TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u  IPv4  61893      0t0  TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+slirp4net 8271    awx    3u  IPv4  75683      0t0  TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 147924 KB (144 MB)
+Total Receptor VSZ Memory: 4078296 KB (3982 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47528
+  Children of PID 751:
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 35748
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+   8486    6600 bash -c  log_file="/tmp/mem  2068
+
+Process: receptor (PID: 8229)
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 35748
+  Children of PID 8229:
+    PID    PPID CMD                           RSS
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+
+Process: bash (PID: 8486)
+    PID    PPID CMD                           RSS
+   8486    6600 bash -c  log_file="/tmp/mem  2068
+  Children of PID 8486:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(8505)
+=== receptor Process Tree ===
+receptor(751)-+-receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+              |                |                                     |           |-{exe}(8258)
+              |                |                                     |           |-{exe}(8260)
+              |                |                                     |           |-{exe}(8261)
+              |                |                                     |           |-{exe}(8262)
+              |                |                                     |           |-{exe}(8264)
+              |                |                                     |           |-{exe}(8265)
+              |                |                                     |           |-{exe}(8266)
+              |                |                                     |           |-{exe}(8267)
+              |                |                                     |           `-{exe}(8270)
+              |                |                                     |-{podman}(8249)
+              |                |                                     |-{podman}(8250)
+              |                |                                     |-{podman}(8251)
+              |                |                                     |-{podman}(8252)
+              |                |                                     |-{podman}(8253)
+              |                |                                     |-{podman}(8254)
+              |                |                                     |-{podman}(8255)
+              |                |                                     `-{podman}(8257)
+              |                |-{receptor}(8230)
+              |                |-{receptor}(8231)
+              |                |-{receptor}(8232)
+              |                |-{receptor}(8233)
+              |                |-{receptor}(8234)
+              |                |-{receptor}(8235)
+              |                |-{receptor}(8236)
+              |                `-{receptor}(8237)
+              |-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(8510)
+receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+               |                                     |           |-{exe}(8258)
+               |                                     |           |-{exe}(8260)
+               |                                     |           |-{exe}(8261)
+               |                                     |           |-{exe}(8262)
+               |                                     |           |-{exe}(8264)
+               |                                     |           |-{exe}(8265)
+               |                                     |           |-{exe}(8266)
+               |                                     |           |-{exe}(8267)
+               |                                     |           `-{exe}(8270)
+               |                                     |-{podman}(8249)
+               |                                     |-{podman}(8250)
+               |                                     |-{podman}(8251)
+               |                                     |-{podman}(8252)
+               |                                     |-{podman}(8253)
+               |                                     |-{podman}(8254)
+               |                                     |-{podman}(8255)
+               |                                     `-{podman}(8257)
+               |-{receptor}(8230)
+               |-{receptor}(8231)
+               |-{receptor}(8232)
+               |-{receptor}(8233)
+               |-{receptor}(8234)
+               |-{receptor}(8235)
+               |-{receptor}(8236)
+               `-{receptor}(8237)
+=== nginx Process Tree ===
+bash(6600)---pstree(8515)
+=== postgresql Process Tree ===
+bash(6600)---pstree(8519)
+=== redis Process Tree ===
+bash(6600)---pstree(8523)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(8527)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(8531)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(8535)
+
+=================================================================================
+2025-07-03 08:59:13
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         711        6502           8         738        6969
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   8299    8276 /usr/bin/python3.9 /usr/bin 64100
+   8347    8299 /usr/bin/python3.9 /usr/bin 57188
+   8256    8248 /usr/bin/podman run --rm -- 55764
+   8248    8238 /usr/bin/podman run --rm -- 49160
+    751       1 /usr/bin/receptor -c /etc/r 47636
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+   8229     751 /usr/bin/receptor --node id 36772
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 47636 1273916 0.0  0.6       50:04
+Receptor Child Processes for PID 751:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 36772 1421060 0.0  0.4       00:35
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 47636 receptor
+    751     762  0.0  0.6 47636 receptor
+    751     763  0.0  0.6 47636 receptor
+    751     764  0.0  0.6 47636 receptor
+    751     765  0.0  0.6 47636 receptor
+    751     766  0.0  0.6 47636 receptor
+    751     770  0.0  0.6 47636 receptor
+    751     771  0.0  0.6 47636 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+receptor   751    awx   10r  a_inode               0,14        0       59 inotify
+receptor   751    awx   11r      REG              253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+sshd      6317   root    4u     IPv4              61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u     IPv4              61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+slirp4net 8271    awx    3u     IPv4              75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       01:31
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+sshd      6317   root    4u  IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u  IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    81433 pipe
+slirp4net 8271    awx    3u  IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 36772 1421060 0.0  0.4       00:35
+Receptor Child Processes for PID 8229:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572 103616  0.2  0.3       00:35
+Receptor Threads for PID 8229:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   8229    8229  0.0  0.4 36772 receptor
+   8229    8230  0.0  0.4 36772 receptor
+   8229    8231  0.0  0.4 36772 receptor
+   8229    8232  0.0  0.4 36772 receptor
+   8229    8233  0.0  0.4 36772 receptor
+   8229    8234  0.0  0.4 36772 receptor
+   8229    8235  0.0  0.4 36772 receptor
+   8229    8236  0.0  0.4 36772 receptor
+   8229    8237  0.0  0.4 36772 receptor
+   8229    8538  0.0  0.4 36772 receptor
+Receptor Network Connections for PID 8229:
+COMMAND    PID   USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u     IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6  22837      0t0      TCP *:ssh (LISTEN)
+sshd      6317   root    4u     IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u     IPv4  61893      0t0      TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+receptor  8229    awx  cwd       DIR  253,0      235      128 /
+receptor  8229    awx  rtd       DIR  253,0      235      128 /
+receptor  8229    awx  txt       REG  253,0 54652712 34164275 /usr/bin/receptor
+receptor  8229    awx  mem       REG  253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor  8229    awx  mem       REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor  8229    awx  mem       REG  253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor  8229    awx  mem       REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor  8229    awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  8229    awx    1w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    2w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    3r      REG  253,0    61311 50594263 /tmp/receptor/192.168.1.23/ZVstRYyz/stdin
+receptor  8229    awx    4u  a_inode   0,14        0       59 [eventpoll:5]
+receptor  8229    awx    5r     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    6w     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    7w      REG  253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+slirp4net 8271    awx    3u     IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 8544:
+  No child processes found
+Receptor Threads for PID 8544:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 8544:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+sshd      6317   root    4u  IPv4  61893      0t0  TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+sshd      6368   root    4u  IPv4  61893      0t0  TCP aap24-execution:ssh->192.168.1.49:36738 (ESTABLISHED)
+slirp4net 8271    awx    3u  IPv4  75683      0t0  TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 150080 KB (146 MB)
+Total Receptor VSZ Memory: 4226912 KB (4127 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47636
+  Children of PID 751:
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 36772
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+   8665    6600 bash -c  log_file="/tmp/mem  2080
+
+Process: receptor (PID: 8229)
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 36772
+  Children of PID 8229:
+    PID    PPID CMD                           RSS
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+
+Process: bash (PID: 8665)
+    PID    PPID CMD                           RSS
+   8665    6600 bash -c  log_file="/tmp/mem  2080
+  Children of PID 8665:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(8684)
+=== receptor Process Tree ===
+receptor(751)-+-receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+              |                |                                     |           |-{exe}(8258)
+              |                |                                     |           |-{exe}(8260)
+              |                |                                     |           |-{exe}(8261)
+              |                |                                     |           |-{exe}(8262)
+              |                |                                     |           |-{exe}(8264)
+              |                |                                     |           |-{exe}(8265)
+              |                |                                     |           |-{exe}(8266)
+              |                |                                     |           |-{exe}(8267)
+              |                |                                     |           `-{exe}(8270)
+              |                |                                     |-{podman}(8249)
+              |                |                                     |-{podman}(8250)
+              |                |                                     |-{podman}(8251)
+              |                |                                     |-{podman}(8252)
+              |                |                                     |-{podman}(8253)
+              |                |                                     |-{podman}(8254)
+              |                |                                     |-{podman}(8255)
+              |                |                                     `-{podman}(8257)
+              |                |-{receptor}(8230)
+              |                |-{receptor}(8231)
+              |                |-{receptor}(8232)
+              |                |-{receptor}(8233)
+              |                |-{receptor}(8234)
+              |                |-{receptor}(8235)
+              |                |-{receptor}(8236)
+              |                |-{receptor}(8237)
+              |                `-{receptor}(8538)
+              |-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(8689)
+receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+               |                                     |           |-{exe}(8258)
+               |                                     |           |-{exe}(8260)
+               |                                     |           |-{exe}(8261)
+               |                                     |           |-{exe}(8262)
+               |                                     |           |-{exe}(8264)
+               |                                     |           |-{exe}(8265)
+               |                                     |           |-{exe}(8266)
+               |                                     |           |-{exe}(8267)
+               |                                     |           `-{exe}(8270)
+               |                                     |-{podman}(8249)
+               |                                     |-{podman}(8250)
+               |                                     |-{podman}(8251)
+               |                                     |-{podman}(8252)
+               |                                     |-{podman}(8253)
+               |                                     |-{podman}(8254)
+               |                                     |-{podman}(8255)
+               |                                     `-{podman}(8257)
+               |-{receptor}(8230)
+               |-{receptor}(8231)
+               |-{receptor}(8232)
+               |-{receptor}(8233)
+               |-{receptor}(8234)
+               |-{receptor}(8235)
+               |-{receptor}(8236)
+               |-{receptor}(8237)
+               `-{receptor}(8538)
+=== nginx Process Tree ===
+bash(6600)---pstree(8694)
+=== postgresql Process Tree ===
+bash(6600)---pstree(8698)
+=== redis Process Tree ===
+bash(6600)---pstree(8702)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(8706)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(8710)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(8714)
+
+=================================================================================
+2025-07-03 08:59:43
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         678        6534           8         738        7002
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   8299    8276 /usr/bin/python3.9 /usr/bin 64868
+   8347    8299 /usr/bin/python3.9 /usr/bin 57188
+   8256    8248 /usr/bin/podman run --rm -- 55764
+   8248    8238 /usr/bin/podman run --rm -- 49160
+    751       1 /usr/bin/receptor -c /etc/r 47888
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+   8229     751 /usr/bin/receptor --node id 36772
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 47888 1273916 0.0  0.6       50:34
+Receptor Child Processes for PID 751:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 36772 1421060 0.0  0.4       01:05
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 47888 receptor
+    751     762  0.0  0.6 47888 receptor
+    751     763  0.0  0.6 47888 receptor
+    751     764  0.0  0.6 47888 receptor
+    751     765  0.0  0.6 47888 receptor
+    751     766  0.0  0.6 47888 receptor
+    751     770  0.0  0.6 47888 receptor
+    751     771  0.0  0.6 47888 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+receptor   751    awx   10r  a_inode               0,14        0       59 inotify
+receptor   751    awx   11r      REG              253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+slirp4net 8271    awx    3u     IPv4              75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       02:02
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    84053 pipe
+slirp4net 8271    awx    3u  IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 36772 1421060 0.0  0.4       01:06
+Receptor Child Processes for PID 8229:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572 103616  0.1  0.3       01:06
+Receptor Threads for PID 8229:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   8229    8229  0.0  0.4 36772 receptor
+   8229    8230  0.0  0.4 36772 receptor
+   8229    8231  0.0  0.4 36772 receptor
+   8229    8232  0.0  0.4 36772 receptor
+   8229    8233  0.0  0.4 36772 receptor
+   8229    8234  0.0  0.4 36772 receptor
+   8229    8235  0.0  0.4 36772 receptor
+   8229    8236  0.0  0.4 36772 receptor
+   8229    8237  0.0  0.4 36772 receptor
+   8229    8538  0.0  0.4 36772 receptor
+Receptor Network Connections for PID 8229:
+COMMAND    PID   USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u     IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6  22837      0t0      TCP *:ssh (LISTEN)
+receptor  8229    awx  cwd       DIR  253,0      235      128 /
+receptor  8229    awx  rtd       DIR  253,0      235      128 /
+receptor  8229    awx  txt       REG  253,0 54652712 34164275 /usr/bin/receptor
+receptor  8229    awx  mem       REG  253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor  8229    awx  mem       REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor  8229    awx  mem       REG  253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor  8229    awx  mem       REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor  8229    awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  8229    awx    1w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    2w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    3r      REG  253,0    61311 50594263 /tmp/receptor/192.168.1.23/ZVstRYyz/stdin
+receptor  8229    awx    4u  a_inode   0,14        0       59 [eventpoll:5]
+receptor  8229    awx    5r     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    6w     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    7w      REG  253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+slirp4net 8271    awx    3u     IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 8722:
+  No child processes found
+Receptor Threads for PID 8722:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 8722:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+slirp4net 8271    awx    3u  IPv4  75683      0t0  TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 150332 KB (146 MB)
+Total Receptor VSZ Memory: 4226912 KB (4127 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47888
+  Children of PID 751:
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 36772
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+   8843    6600 bash -c  log_file="/tmp/mem  2080
+
+Process: receptor (PID: 8229)
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 36772
+  Children of PID 8229:
+    PID    PPID CMD                           RSS
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+
+Process: bash (PID: 8843)
+    PID    PPID CMD                           RSS
+   8843    6600 bash -c  log_file="/tmp/mem  2080
+  Children of PID 8843:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(8862)
+=== receptor Process Tree ===
+receptor(751)-+-receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+              |                |                                     |           |-{exe}(8258)
+              |                |                                     |           |-{exe}(8260)
+              |                |                                     |           |-{exe}(8261)
+              |                |                                     |           |-{exe}(8262)
+              |                |                                     |           |-{exe}(8264)
+              |                |                                     |           |-{exe}(8265)
+              |                |                                     |           |-{exe}(8266)
+              |                |                                     |           |-{exe}(8267)
+              |                |                                     |           `-{exe}(8270)
+              |                |                                     |-{podman}(8249)
+              |                |                                     |-{podman}(8250)
+              |                |                                     |-{podman}(8251)
+              |                |                                     |-{podman}(8252)
+              |                |                                     |-{podman}(8253)
+              |                |                                     |-{podman}(8254)
+              |                |                                     |-{podman}(8255)
+              |                |                                     `-{podman}(8257)
+              |                |-{receptor}(8230)
+              |                |-{receptor}(8231)
+              |                |-{receptor}(8232)
+              |                |-{receptor}(8233)
+              |                |-{receptor}(8234)
+              |                |-{receptor}(8235)
+              |                |-{receptor}(8236)
+              |                |-{receptor}(8237)
+              |                `-{receptor}(8538)
+              |-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(8867)
+receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+               |                                     |           |-{exe}(8258)
+               |                                     |           |-{exe}(8260)
+               |                                     |           |-{exe}(8261)
+               |                                     |           |-{exe}(8262)
+               |                                     |           |-{exe}(8264)
+               |                                     |           |-{exe}(8265)
+               |                                     |           |-{exe}(8266)
+               |                                     |           |-{exe}(8267)
+               |                                     |           `-{exe}(8270)
+               |                                     |-{podman}(8249)
+               |                                     |-{podman}(8250)
+               |                                     |-{podman}(8251)
+               |                                     |-{podman}(8252)
+               |                                     |-{podman}(8253)
+               |                                     |-{podman}(8254)
+               |                                     |-{podman}(8255)
+               |                                     `-{podman}(8257)
+               |-{receptor}(8230)
+               |-{receptor}(8231)
+               |-{receptor}(8232)
+               |-{receptor}(8233)
+               |-{receptor}(8234)
+               |-{receptor}(8235)
+               |-{receptor}(8236)
+               |-{receptor}(8237)
+               `-{receptor}(8538)
+=== nginx Process Tree ===
+bash(6600)---pstree(8872)
+=== postgresql Process Tree ===
+bash(6600)---pstree(8876)
+=== redis Process Tree ===
+bash(6600)---pstree(8880)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(8884)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(8888)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(8892)
+
+=================================================================================
+2025-07-03 09:00:13
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         677        6536           8         737        7004
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   8299    8276 /usr/bin/python3.9 /usr/bin 65380
+   8347    8299 /usr/bin/python3.9 /usr/bin 57188
+   8256    8248 /usr/bin/podman run --rm -- 55764
+   8248    8238 /usr/bin/podman run --rm -- 49160
+    751       1 /usr/bin/receptor -c /etc/r 47836
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+   8229     751 /usr/bin/receptor --node id 36900
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 47836 1273916 0.0  0.6       51:05
+Receptor Child Processes for PID 751:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 36900 1421060 0.0  0.4       01:36
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 47836 receptor
+    751     762  0.0  0.6 47836 receptor
+    751     763  0.0  0.6 47836 receptor
+    751     764  0.0  0.6 47836 receptor
+    751     765  0.0  0.6 47836 receptor
+    751     766  0.0  0.6 47836 receptor
+    751     770  0.0  0.6 47836 receptor
+    751     771  0.0  0.6 47836 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+receptor   751    awx   10r  a_inode               0,14        0       59 inotify
+receptor   751    awx   11r      REG              253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+slirp4net 8271    awx    3u     IPv4              75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       02:32
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    83679 pipe
+slirp4net 8271    awx    3u  IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 36900 1421060 0.0  0.4       01:36
+Receptor Child Processes for PID 8229:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572 103616  0.0  0.3       01:36
+Receptor Threads for PID 8229:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   8229    8229  0.0  0.4 36900 receptor
+   8229    8230  0.0  0.4 36900 receptor
+   8229    8231  0.0  0.4 36900 receptor
+   8229    8232  0.0  0.4 36900 receptor
+   8229    8233  0.0  0.4 36900 receptor
+   8229    8234  0.0  0.4 36900 receptor
+   8229    8235  0.0  0.4 36900 receptor
+   8229    8236  0.0  0.4 36900 receptor
+   8229    8237  0.0  0.4 36900 receptor
+   8229    8538  0.0  0.4 36900 receptor
+Receptor Network Connections for PID 8229:
+COMMAND    PID   USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u     IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6  22837      0t0      TCP *:ssh (LISTEN)
+receptor  8229    awx  cwd       DIR  253,0      235      128 /
+receptor  8229    awx  rtd       DIR  253,0      235      128 /
+receptor  8229    awx  txt       REG  253,0 54652712 34164275 /usr/bin/receptor
+receptor  8229    awx  mem       REG  253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor  8229    awx  mem       REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor  8229    awx  mem       REG  253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor  8229    awx  mem       REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor  8229    awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  8229    awx    1w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    2w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    3r      REG  253,0    61311 50594263 /tmp/receptor/192.168.1.23/ZVstRYyz/stdin
+receptor  8229    awx    4u  a_inode   0,14        0       59 [eventpoll:5]
+receptor  8229    awx    5r     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    6w     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    7w      REG  253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+slirp4net 8271    awx    3u     IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 8900:
+  No child processes found
+Receptor Threads for PID 8900:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 8900:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+slirp4net 8271    awx    3u  IPv4  75683      0t0  TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 150536 KB (147 MB)
+Total Receptor VSZ Memory: 4226912 KB (4127 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47836
+  Children of PID 751:
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 36900
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+   9021    6600 bash -c  log_file="/tmp/mem  2084
+
+Process: receptor (PID: 8229)
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 36900
+  Children of PID 8229:
+    PID    PPID CMD                           RSS
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+
+Process: bash (PID: 9021)
+    PID    PPID CMD                           RSS
+   9021    6600 bash -c  log_file="/tmp/mem  2084
+  Children of PID 9021:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(9040)
+=== receptor Process Tree ===
+receptor(751)-+-receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+              |                |                                     |           |-{exe}(8258)
+              |                |                                     |           |-{exe}(8260)
+              |                |                                     |           |-{exe}(8261)
+              |                |                                     |           |-{exe}(8262)
+              |                |                                     |           |-{exe}(8264)
+              |                |                                     |           |-{exe}(8265)
+              |                |                                     |           |-{exe}(8266)
+              |                |                                     |           |-{exe}(8267)
+              |                |                                     |           `-{exe}(8270)
+              |                |                                     |-{podman}(8249)
+              |                |                                     |-{podman}(8250)
+              |                |                                     |-{podman}(8251)
+              |                |                                     |-{podman}(8252)
+              |                |                                     |-{podman}(8253)
+              |                |                                     |-{podman}(8254)
+              |                |                                     |-{podman}(8255)
+              |                |                                     `-{podman}(8257)
+              |                |-{receptor}(8230)
+              |                |-{receptor}(8231)
+              |                |-{receptor}(8232)
+              |                |-{receptor}(8233)
+              |                |-{receptor}(8234)
+              |                |-{receptor}(8235)
+              |                |-{receptor}(8236)
+              |                |-{receptor}(8237)
+              |                `-{receptor}(8538)
+              |-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(9045)
+receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+               |                                     |           |-{exe}(8258)
+               |                                     |           |-{exe}(8260)
+               |                                     |           |-{exe}(8261)
+               |                                     |           |-{exe}(8262)
+               |                                     |           |-{exe}(8264)
+               |                                     |           |-{exe}(8265)
+               |                                     |           |-{exe}(8266)
+               |                                     |           |-{exe}(8267)
+               |                                     |           `-{exe}(8270)
+               |                                     |-{podman}(8249)
+               |                                     |-{podman}(8250)
+               |                                     |-{podman}(8251)
+               |                                     |-{podman}(8252)
+               |                                     |-{podman}(8253)
+               |                                     |-{podman}(8254)
+               |                                     |-{podman}(8255)
+               |                                     `-{podman}(8257)
+               |-{receptor}(8230)
+               |-{receptor}(8231)
+               |-{receptor}(8232)
+               |-{receptor}(8233)
+               |-{receptor}(8234)
+               |-{receptor}(8235)
+               |-{receptor}(8236)
+               |-{receptor}(8237)
+               `-{receptor}(8538)
+=== nginx Process Tree ===
+bash(6600)---pstree(9050)
+=== postgresql Process Tree ===
+bash(6600)---pstree(9054)
+=== redis Process Tree ===
+bash(6600)---pstree(9058)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(9062)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(9066)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(9070)
+
+=================================================================================
+2025-07-03 09:00:43
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         677        6536           8         738        7004
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   8299    8276 /usr/bin/python3.9 /usr/bin 66020
+   8347    8299 /usr/bin/python3.9 /usr/bin 57188
+   8256    8248 /usr/bin/podman run --rm -- 54836
+   8248    8238 /usr/bin/podman run --rm -- 49544
+    751       1 /usr/bin/receptor -c /etc/r 47616
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+   8229     751 /usr/bin/receptor --node id 36900
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 47616 1273916 0.0  0.6       51:35
+Receptor Child Processes for PID 751:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 36900 1421060 0.0  0.4       02:06
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 47616 receptor
+    751     762  0.0  0.6 47616 receptor
+    751     763  0.0  0.6 47616 receptor
+    751     764  0.0  0.6 47616 receptor
+    751     765  0.0  0.6 47616 receptor
+    751     766  0.0  0.6 47616 receptor
+    751     770  0.0  0.6 47616 receptor
+    751     771  0.0  0.6 47616 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+receptor   751    awx   10r  a_inode               0,14        0       59 inotify
+receptor   751    awx   11r      REG              253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+slirp4net 8271    awx    3u     IPv4              75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       03:02
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    87133 pipe
+slirp4net 8271    awx    3u  IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 36900 1421060 0.0  0.4       02:06
+Receptor Child Processes for PID 8229:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572 103616  0.0  0.3       02:06
+Receptor Threads for PID 8229:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   8229    8229  0.0  0.4 36900 receptor
+   8229    8230  0.0  0.4 36900 receptor
+   8229    8231  0.0  0.4 36900 receptor
+   8229    8232  0.0  0.4 36900 receptor
+   8229    8233  0.0  0.4 36900 receptor
+   8229    8234  0.0  0.4 36900 receptor
+   8229    8235  0.0  0.4 36900 receptor
+   8229    8236  0.0  0.4 36900 receptor
+   8229    8237  0.0  0.4 36900 receptor
+   8229    8538  0.0  0.4 36900 receptor
+Receptor Network Connections for PID 8229:
+COMMAND    PID   USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u     IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6  22837      0t0      TCP *:ssh (LISTEN)
+receptor  8229    awx  cwd       DIR  253,0      235      128 /
+receptor  8229    awx  rtd       DIR  253,0      235      128 /
+receptor  8229    awx  txt       REG  253,0 54652712 34164275 /usr/bin/receptor
+receptor  8229    awx  mem       REG  253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor  8229    awx  mem       REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor  8229    awx  mem       REG  253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor  8229    awx  mem       REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor  8229    awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  8229    awx    1w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    2w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    3r      REG  253,0    61311 50594263 /tmp/receptor/192.168.1.23/ZVstRYyz/stdin
+receptor  8229    awx    4u  a_inode   0,14        0       59 [eventpoll:5]
+receptor  8229    awx    5r     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    6w     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    7w      REG  253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+slirp4net 8271    awx    3u     IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 9079:
+  No child processes found
+Receptor Threads for PID 9079:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 9079:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+slirp4net 8271    awx    3u  IPv4  75683      0t0  TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 150316 KB (146 MB)
+Total Receptor VSZ Memory: 4226912 KB (4127 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47616
+  Children of PID 751:
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 36900
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+   9200    6600 bash -c  log_file="/tmp/mem  2088
+
+Process: receptor (PID: 8229)
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 36900
+  Children of PID 8229:
+    PID    PPID CMD                           RSS
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+
+Process: bash (PID: 9200)
+    PID    PPID CMD                           RSS
+   9200    6600 bash -c  log_file="/tmp/mem  2088
+  Children of PID 9200:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(9219)
+=== receptor Process Tree ===
+receptor(751)-+-receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+              |                |                                     |           |-{exe}(8258)
+              |                |                                     |           |-{exe}(8260)
+              |                |                                     |           |-{exe}(8261)
+              |                |                                     |           |-{exe}(8262)
+              |                |                                     |           |-{exe}(8264)
+              |                |                                     |           |-{exe}(8265)
+              |                |                                     |           |-{exe}(8266)
+              |                |                                     |           |-{exe}(8267)
+              |                |                                     |           `-{exe}(8270)
+              |                |                                     |-{podman}(8249)
+              |                |                                     |-{podman}(8250)
+              |                |                                     |-{podman}(8251)
+              |                |                                     |-{podman}(8252)
+              |                |                                     |-{podman}(8253)
+              |                |                                     |-{podman}(8254)
+              |                |                                     |-{podman}(8255)
+              |                |                                     `-{podman}(8257)
+              |                |-{receptor}(8230)
+              |                |-{receptor}(8231)
+              |                |-{receptor}(8232)
+              |                |-{receptor}(8233)
+              |                |-{receptor}(8234)
+              |                |-{receptor}(8235)
+              |                |-{receptor}(8236)
+              |                |-{receptor}(8237)
+              |                `-{receptor}(8538)
+              |-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(9224)
+receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+               |                                     |           |-{exe}(8258)
+               |                                     |           |-{exe}(8260)
+               |                                     |           |-{exe}(8261)
+               |                                     |           |-{exe}(8262)
+               |                                     |           |-{exe}(8264)
+               |                                     |           |-{exe}(8265)
+               |                                     |           |-{exe}(8266)
+               |                                     |           |-{exe}(8267)
+               |                                     |           `-{exe}(8270)
+               |                                     |-{podman}(8249)
+               |                                     |-{podman}(8250)
+               |                                     |-{podman}(8251)
+               |                                     |-{podman}(8252)
+               |                                     |-{podman}(8253)
+               |                                     |-{podman}(8254)
+               |                                     |-{podman}(8255)
+               |                                     `-{podman}(8257)
+               |-{receptor}(8230)
+               |-{receptor}(8231)
+               |-{receptor}(8232)
+               |-{receptor}(8233)
+               |-{receptor}(8234)
+               |-{receptor}(8235)
+               |-{receptor}(8236)
+               |-{receptor}(8237)
+               `-{receptor}(8538)
+=== nginx Process Tree ===
+bash(6600)---pstree(9229)
+=== postgresql Process Tree ===
+bash(6600)---pstree(9233)
+=== redis Process Tree ===
+bash(6600)---pstree(9237)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(9241)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(9245)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(9249)
+
+=================================================================================
+2025-07-03 09:01:14
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         697        6515           8         738        6983
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   8299    8276 /usr/bin/python3.9 /usr/bin 65660
+   8347    8299 /usr/bin/python3.9 /usr/bin 57188
+   8256    8248 /usr/bin/podman run --rm -- 54836
+   8248    8238 /usr/bin/podman run --rm -- 49544
+    751       1 /usr/bin/receptor -c /etc/r 47684
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+   8229     751 /usr/bin/receptor --node id 37412
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 47684 1273916 0.0  0.6       52:05
+Receptor Child Processes for PID 751:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 37412 1421380 0.0  0.4       02:36
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 47684 receptor
+    751     762  0.0  0.6 47684 receptor
+    751     763  0.0  0.6 47684 receptor
+    751     764  0.0  0.6 47684 receptor
+    751     765  0.0  0.6 47684 receptor
+    751     766  0.0  0.6 47684 receptor
+    751     770  0.0  0.6 47684 receptor
+    751     771  0.0  0.6 47684 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+receptor   751    awx   10r  a_inode               0,14        0       59 inotify
+receptor   751    awx   11r      REG              253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+slirp4net 8271    awx    3u     IPv4              75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       03:32
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    88207 pipe
+slirp4net 8271    awx    3u  IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8229     751 /usr/bin/receptor --node id 37412 1421380 0.0  0.4       02:36
+Receptor Child Processes for PID 8229:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572 103616  0.0  0.3       02:36
+Receptor Threads for PID 8229:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   8229    8229  0.0  0.4 37412 receptor
+   8229    8230  0.0  0.4 37412 receptor
+   8229    8231  0.0  0.4 37412 receptor
+   8229    8232  0.0  0.4 37412 receptor
+   8229    8233  0.0  0.4 37412 receptor
+   8229    8234  0.0  0.4 37412 receptor
+   8229    8235  0.0  0.4 37412 receptor
+   8229    8236  0.0  0.4 37412 receptor
+   8229    8237  0.0  0.4 37412 receptor
+   8229    8538  0.0  0.4 37412 receptor
+Receptor Network Connections for PID 8229:
+COMMAND    PID   USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u     IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6  22837      0t0      TCP *:ssh (LISTEN)
+receptor  8229    awx  cwd       DIR  253,0      235      128 /
+receptor  8229    awx  rtd       DIR  253,0      235      128 /
+receptor  8229    awx  txt       REG  253,0 54652712 34164275 /usr/bin/receptor
+receptor  8229    awx  mem       REG  253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor  8229    awx  mem       REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor  8229    awx  mem       REG  253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor  8229    awx  mem       REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor  8229    awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  8229    awx    1w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    2w      REG  253,0     3086 51775135 /var/log/receptor/receptor.log
+receptor  8229    awx    3r      REG  253,0    61311 50594263 /tmp/receptor/192.168.1.23/ZVstRYyz/stdin
+receptor  8229    awx    4u  a_inode   0,14        0       59 [eventpoll:5]
+receptor  8229    awx    5r     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    6w     FIFO   0,13      0t0    78660 pipe
+receptor  8229    awx    7w      REG  253,0    34121 50594264 /tmp/receptor/192.168.1.23/ZVstRYyz/stdout
+slirp4net 8271    awx    3u     IPv4  75683      0t0      TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 9272:
+  No child processes found
+Receptor Threads for PID 9272:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 9272:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+slirp4net 8271    awx    3u  IPv4  75683      0t0  TCP aap24-execution:59134->aap25-execution.lan:ssh (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 151408 KB (147 MB)
+Total Receptor VSZ Memory: 4227552 KB (4128 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47684
+  Children of PID 751:
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 37412
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+   9393    6600 bash -c  log_file="/tmp/mem  2088
+
+Process: receptor (PID: 8229)
+    PID    PPID CMD                           RSS
+   8229     751 /usr/bin/receptor --node id 37412
+  Children of PID 8229:
+    PID    PPID CMD                           RSS
+   8238    8229 /usr/bin/python3 /usr/bin/a 25572
+
+Process: bash (PID: 9393)
+    PID    PPID CMD                           RSS
+   9393    6600 bash -c  log_file="/tmp/mem  2088
+  Children of PID 9393:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(9412)
+=== receptor Process Tree ===
+receptor(751)-+-receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+              |                |                                     |           |-{exe}(8258)
+              |                |                                     |           |-{exe}(8260)
+              |                |                                     |           |-{exe}(8261)
+              |                |                                     |           |-{exe}(8262)
+              |                |                                     |           |-{exe}(8264)
+              |                |                                     |           |-{exe}(8265)
+              |                |                                     |           |-{exe}(8266)
+              |                |                                     |           |-{exe}(8267)
+              |                |                                     |           `-{exe}(8270)
+              |                |                                     |-{podman}(8249)
+              |                |                                     |-{podman}(8250)
+              |                |                                     |-{podman}(8251)
+              |                |                                     |-{podman}(8252)
+              |                |                                     |-{podman}(8253)
+              |                |                                     |-{podman}(8254)
+              |                |                                     |-{podman}(8255)
+              |                |                                     `-{podman}(8257)
+              |                |-{receptor}(8230)
+              |                |-{receptor}(8231)
+              |                |-{receptor}(8232)
+              |                |-{receptor}(8233)
+              |                |-{receptor}(8234)
+              |                |-{receptor}(8235)
+              |                |-{receptor}(8236)
+              |                |-{receptor}(8237)
+              |                `-{receptor}(8538)
+              |-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(9417)
+receptor(8229)-+-ansible-runner(8238)---podman(8248)-+-exe(8256)-+-slirp4netns(8271)
+               |                                     |           |-{exe}(8258)
+               |                                     |           |-{exe}(8260)
+               |                                     |           |-{exe}(8261)
+               |                                     |           |-{exe}(8262)
+               |                                     |           |-{exe}(8264)
+               |                                     |           |-{exe}(8265)
+               |                                     |           |-{exe}(8266)
+               |                                     |           |-{exe}(8267)
+               |                                     |           `-{exe}(8270)
+               |                                     |-{podman}(8249)
+               |                                     |-{podman}(8250)
+               |                                     |-{podman}(8251)
+               |                                     |-{podman}(8252)
+               |                                     |-{podman}(8253)
+               |                                     |-{podman}(8254)
+               |                                     |-{podman}(8255)
+               |                                     `-{podman}(8257)
+               |-{receptor}(8230)
+               |-{receptor}(8231)
+               |-{receptor}(8232)
+               |-{receptor}(8233)
+               |-{receptor}(8234)
+               |-{receptor}(8235)
+               |-{receptor}(8236)
+               |-{receptor}(8237)
+               `-{receptor}(8538)
+=== nginx Process Tree ===
+bash(6600)---pstree(9422)
+=== postgresql Process Tree ===
+bash(6600)---pstree(9426)
+=== redis Process Tree ===
+bash(6600)---pstree(9430)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(9434)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(9438)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(9442)
+
+=================================================================================
+2025-07-03 09:01:44
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         592        6623           8         733        7088
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47368
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+    773       1 /usr/sbin/NetworkManager -- 21596
+      1       0 /usr/lib/systemd/systemd rh 16436
+   6353       1 /usr/lib/systemd/systemd -- 13712
+    644       1 /usr/lib/systemd/systemd-ud 12504
+    752       1 /usr/lib/systemd/systemd-lo 11124
+    629       1 /usr/lib/systemd/systemd-jo 10368
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 47368 1273916 0.0  0.6       52:36
+Receptor Child Processes for PID 751:
+  No child processes found
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 47368 receptor
+    751     762  0.0  0.6 47368 receptor
+    751     763  0.0  0.6 47368 receptor
+    751     764  0.0  0.6 47368 receptor
+    751     765  0.0  0.6 47368 receptor
+    751     766  0.0  0.6 47368 receptor
+    751     770  0.0  0.6 47368 receptor
+    751     771  0.0  0.6 47368 receptor
+Receptor Network Connections for PID 751:
+COMMAND   PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor  751    awx  cwd       DIR              253,0      235      128 /
+receptor  751    awx  rtd       DIR              253,0      235      128 /
+receptor  751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor  751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor  751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor  751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor  751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor  751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor  751    awx    1w      REG              253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor  751    awx    2w      REG              253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor  751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor  751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9]
+receptor  751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor  751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor  751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor  751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor  751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd   761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd   761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa 773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd      794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd      794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       04:03
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    86464 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 9472:
+  No child processes found
+Receptor Threads for PID 9472:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 9472:
+COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor  751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor  751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd   761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd   761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa 773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd      794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd      794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 50696 KB (49 MB)
+Total Receptor VSZ Memory: 1281176 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47368
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+   9552    6600 bash -c  log_file="/tmp/mem  2088
+
+Process: bash (PID: 9552)
+    PID    PPID CMD                           RSS
+   9552    6600 bash -c  log_file="/tmp/mem  2088
+  Children of PID 9552:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(9566)
+=== receptor Process Tree ===
+receptor(751)-+-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(9571)
+=== nginx Process Tree ===
+bash(6600)---pstree(9575)
+=== postgresql Process Tree ===
+bash(6600)---pstree(9579)
+=== redis Process Tree ===
+bash(6600)---pstree(9583)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(9587)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(9591)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(9595)
+
+=================================================================================
+2025-07-03 09:02:14
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         741        6472           8         737        6940
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   9665    9644 /usr/bin/python3.9 /usr/bin 63720
+   9625    9617 /usr/bin/podman run --rm -- 57116
+   9713    9665 /usr/bin/python3.9 /usr/bin 56388
+   9617    9607 /usr/bin/podman run --rm -- 49968
+    751       1 /usr/bin/receptor -c /etc/r 48308
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+   9599     751 /usr/bin/receptor --node id 31784
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+   9607    9599 /usr/bin/python3 /usr/bin/a 25444
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 48308 1273916 0.0  0.6       53:06
+Receptor Child Processes for PID 751:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   9599     751 /usr/bin/receptor --node id 31784 1273020 0.0  0.4       00:18
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 48308 receptor
+    751     762  0.0  0.6 48308 receptor
+    751     763  0.0  0.6 48308 receptor
+    751     764  0.0  0.6 48308 receptor
+    751     765  0.0  0.6 48308 receptor
+    751     766  0.0  0.6 48308 receptor
+    751     770  0.0  0.6 48308 receptor
+    751     771  0.0  0.6 48308 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+receptor   751    awx   10r  a_inode               0,14        0       59 inotify
+receptor   751    awx   11r      REG              253,0    34120 34075348 /tmp/receptor/192.168.1.23/iQibq4cF/stdout
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+slirp4net 9639    awx    3u     IPv4              86852      0t0      TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       04:33
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    89513 pipe
+slirp4net 9639    awx    3u  IPv4  86852      0t0      TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   9599     751 /usr/bin/receptor --node id 31784 1273020 0.0  0.4       00:18
+Receptor Child Processes for PID 9599:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   9607    9599 /usr/bin/python3 /usr/bin/a 25444 103616  0.4  0.3       00:18
+Receptor Threads for PID 9599:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   9599    9599  0.0  0.4 31784 receptor
+   9599    9600  0.0  0.4 31784 receptor
+   9599    9601  0.0  0.4 31784 receptor
+   9599    9602  0.0  0.4 31784 receptor
+   9599    9603  0.0  0.4 31784 receptor
+   9599    9604  0.0  0.4 31784 receptor
+   9599    9605  0.0  0.4 31784 receptor
+   9599    9606  0.0  0.4 31784 receptor
+Receptor Network Connections for PID 9599:
+COMMAND    PID   USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u     IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6  22837      0t0      TCP *:ssh (LISTEN)
+receptor  9599    awx  cwd       DIR  253,0      235      128 /
+receptor  9599    awx  rtd       DIR  253,0      235      128 /
+receptor  9599    awx  txt       REG  253,0 54652712 34164275 /usr/bin/receptor
+receptor  9599    awx  mem       REG  253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor  9599    awx  mem       REG  253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor  9599    awx  mem       REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor  9599    awx  mem       REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor  9599    awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  9599    awx    1w      REG  253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor  9599    awx    2w      REG  253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor  9599    awx    3r      REG  253,0    61311 33687176 /tmp/receptor/192.168.1.23/iQibq4cF/stdin
+receptor  9599    awx    4u  a_inode   0,14        0       59 [eventpoll:5]
+receptor  9599    awx    5r     FIFO   0,13      0t0    87999 pipe
+receptor  9599    awx    6w     FIFO   0,13      0t0    87999 pipe
+receptor  9599    awx    7w      REG  253,0    34120 34075348 /tmp/receptor/192.168.1.23/iQibq4cF/stdout
+slirp4net 9639    awx    3u     IPv4  86852      0t0      TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 9731:
+  No child processes found
+Receptor Threads for PID 9731:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 9731:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+slirp4net 9639    awx    3u  IPv4  86852      0t0  TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 140648 KB (137 MB)
+Total Receptor VSZ Memory: 3930832 KB (3838 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 48308
+  Children of PID 751:
+    PID    PPID CMD                           RSS
+   9599     751 /usr/bin/receptor --node id 31784
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+   9852    6600 bash -c  log_file="/tmp/mem  2092
+
+Process: receptor (PID: 9599)
+    PID    PPID CMD                           RSS
+   9599     751 /usr/bin/receptor --node id 31784
+  Children of PID 9599:
+    PID    PPID CMD                           RSS
+   9607    9599 /usr/bin/python3 /usr/bin/a 25444
+
+Process: bash (PID: 9852)
+    PID    PPID CMD                           RSS
+   9852    6600 bash -c  log_file="/tmp/mem  2092
+  Children of PID 9852:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(9871)
+=== receptor Process Tree ===
+receptor(751)-+-receptor(9599)-+-ansible-runner(9607)---podman(9617)-+-exe(9625)-+-slirp4netns(9639)
+              |                |                                     |           |-{exe}(9626)
+              |                |                                     |           |-{exe}(9627)
+              |                |                                     |           |-{exe}(9628)
+              |                |                                     |           |-{exe}(9629)
+              |                |                                     |           |-{exe}(9632)
+              |                |                                     |           |-{exe}(9633)
+              |                |                                     |           |-{exe}(9634)
+              |                |                                     |           |-{exe}(9637)
+              |                |                                     |           `-{exe}(9638)
+              |                |                                     |-{podman}(9618)
+              |                |                                     |-{podman}(9619)
+              |                |                                     |-{podman}(9620)
+              |                |                                     |-{podman}(9621)
+              |                |                                     |-{podman}(9622)
+              |                |                                     |-{podman}(9623)
+              |                |                                     `-{podman}(9624)
+              |                |-{receptor}(9600)
+              |                |-{receptor}(9601)
+              |                |-{receptor}(9602)
+              |                |-{receptor}(9603)
+              |                |-{receptor}(9604)
+              |                |-{receptor}(9605)
+              |                `-{receptor}(9606)
+              |-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(9876)
+receptor(9599)-+-ansible-runner(9607)---podman(9617)-+-exe(9625)-+-slirp4netns(9639)
+               |                                     |           |-{exe}(9626)
+               |                                     |           |-{exe}(9627)
+               |                                     |           |-{exe}(9628)
+               |                                     |           |-{exe}(9629)
+               |                                     |           |-{exe}(9632)
+               |                                     |           |-{exe}(9633)
+               |                                     |           |-{exe}(9634)
+               |                                     |           |-{exe}(9637)
+               |                                     |           `-{exe}(9638)
+               |                                     |-{podman}(9618)
+               |                                     |-{podman}(9619)
+               |                                     |-{podman}(9620)
+               |                                     |-{podman}(9621)
+               |                                     |-{podman}(9622)
+               |                                     |-{podman}(9623)
+               |                                     `-{podman}(9624)
+               |-{receptor}(9600)
+               |-{receptor}(9601)
+               |-{receptor}(9602)
+               |-{receptor}(9603)
+               |-{receptor}(9604)
+               |-{receptor}(9605)
+               `-{receptor}(9606)
+=== nginx Process Tree ===
+bash(6600)---pstree(9881)
+=== postgresql Process Tree ===
+bash(6600)---pstree(9885)
+=== redis Process Tree ===
+bash(6600)---pstree(9889)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(9893)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(9897)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(9901)
+
+=================================================================================
+2025-07-03 09:02:45
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         690        6522           8         738        6990
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   9665    9644 /usr/bin/python3.9 /usr/bin 64488
+   9625    9617 /usr/bin/podman run --rm -- 57116
+   9713    9665 /usr/bin/python3.9 /usr/bin 56388
+   9617    9607 /usr/bin/podman run --rm -- 49968
+    751       1 /usr/bin/receptor -c /etc/r 48140
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+   9599     751 /usr/bin/receptor --node id 34616
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+   9607    9599 /usr/bin/python3 /usr/bin/a 25444
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 48140 1273916 0.0  0.6       53:36
+Receptor Child Processes for PID 751:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   9599     751 /usr/bin/receptor --node id 34616 1494536 0.0  0.4       00:48
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 48140 receptor
+    751     762  0.0  0.6 48140 receptor
+    751     763  0.0  0.6 48140 receptor
+    751     764  0.0  0.6 48140 receptor
+    751     765  0.0  0.6 48140 receptor
+    751     766  0.0  0.6 48140 receptor
+    751     770  0.0  0.6 48140 receptor
+    751     771  0.0  0.6 48140 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+receptor   751    awx   10r  a_inode               0,14        0       59 inotify
+receptor   751    awx   11r      REG              253,0    34120 34075348 /tmp/receptor/192.168.1.23/iQibq4cF/stdout
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+slirp4net 9639    awx    3u     IPv4              86852      0t0      TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       05:03
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    91707 pipe
+slirp4net 9639    awx    3u  IPv4  86852      0t0      TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   9599     751 /usr/bin/receptor --node id 34616 1494536 0.0  0.4       00:48
+Receptor Child Processes for PID 9599:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   9607    9599 /usr/bin/python3 /usr/bin/a 25444 103616  0.1  0.3       00:48
+Receptor Threads for PID 9599:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   9599    9599  0.0  0.4 34616 receptor
+   9599    9600  0.0  0.4 34616 receptor
+   9599    9601  0.0  0.4 34616 receptor
+   9599    9602  0.0  0.4 34616 receptor
+   9599    9603  0.0  0.4 34616 receptor
+   9599    9604  0.0  0.4 34616 receptor
+   9599    9605  0.0  0.4 34616 receptor
+   9599    9606  0.0  0.4 34616 receptor
+   9599    9904  0.0  0.4 34616 receptor
+   9599    9905  0.0  0.4 34616 receptor
+   9599    9906  0.0  0.4 34616 receptor
+Receptor Network Connections for PID 9599:
+COMMAND    PID   USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u     IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6  22837      0t0      TCP *:ssh (LISTEN)
+receptor  9599    awx  cwd       DIR  253,0      235      128 /
+receptor  9599    awx  rtd       DIR  253,0      235      128 /
+receptor  9599    awx  txt       REG  253,0 54652712 34164275 /usr/bin/receptor
+receptor  9599    awx  mem       REG  253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor  9599    awx  mem       REG  253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor  9599    awx  mem       REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor  9599    awx  mem       REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor  9599    awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  9599    awx    1w      REG  253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor  9599    awx    2w      REG  253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor  9599    awx    3r      REG  253,0    61311 33687176 /tmp/receptor/192.168.1.23/iQibq4cF/stdin
+receptor  9599    awx    4u  a_inode   0,14        0       59 [eventpoll:5]
+receptor  9599    awx    5r     FIFO   0,13      0t0    87999 pipe
+receptor  9599    awx    6w     FIFO   0,13      0t0    87999 pipe
+receptor  9599    awx    7w      REG  253,0    34120 34075348 /tmp/receptor/192.168.1.23/iQibq4cF/stdout
+slirp4net 9639    awx    3u     IPv4  86852      0t0      TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 9912:
+  No child processes found
+Receptor Threads for PID 9912:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 9912:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+slirp4net 9639    awx    3u  IPv4  86852      0t0  TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 146144 KB (142 MB)
+Total Receptor VSZ Memory: 4373864 KB (4271 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 48140
+  Children of PID 751:
+    PID    PPID CMD                           RSS
+   9599     751 /usr/bin/receptor --node id 34616
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+  10033    6600 bash -c  log_file="/tmp/mem  2092
+
+Process: receptor (PID: 9599)
+    PID    PPID CMD                           RSS
+   9599     751 /usr/bin/receptor --node id 34616
+  Children of PID 9599:
+    PID    PPID CMD                           RSS
+   9607    9599 /usr/bin/python3 /usr/bin/a 25444
+
+Process: bash (PID: 10033)
+    PID    PPID CMD                           RSS
+  10033    6600 bash -c  log_file="/tmp/mem  2092
+  Children of PID 10033:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(10052)
+=== receptor Process Tree ===
+receptor(751)-+-receptor(9599)-+-ansible-runner(9607)---podman(9617)-+-exe(9625)-+-slirp4netns(9639)
+              |                |                                     |           |-{exe}(9626)
+              |                |                                     |           |-{exe}(9627)
+              |                |                                     |           |-{exe}(9628)
+              |                |                                     |           |-{exe}(9629)
+              |                |                                     |           |-{exe}(9632)
+              |                |                                     |           |-{exe}(9633)
+              |                |                                     |           |-{exe}(9634)
+              |                |                                     |           |-{exe}(9637)
+              |                |                                     |           `-{exe}(9638)
+              |                |                                     |-{podman}(9618)
+              |                |                                     |-{podman}(9619)
+              |                |                                     |-{podman}(9620)
+              |                |                                     |-{podman}(9621)
+              |                |                                     |-{podman}(9622)
+              |                |                                     |-{podman}(9623)
+              |                |                                     `-{podman}(9624)
+              |                |-{receptor}(9600)
+              |                |-{receptor}(9601)
+              |                |-{receptor}(9602)
+              |                |-{receptor}(9603)
+              |                |-{receptor}(9604)
+              |                |-{receptor}(9605)
+              |                |-{receptor}(9606)
+              |                |-{receptor}(9904)
+              |                |-{receptor}(9905)
+              |                `-{receptor}(9906)
+              |-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(10057)
+receptor(9599)-+-ansible-runner(9607)---podman(9617)-+-exe(9625)-+-slirp4netns(9639)
+               |                                     |           |-{exe}(9626)
+               |                                     |           |-{exe}(9627)
+               |                                     |           |-{exe}(9628)
+               |                                     |           |-{exe}(9629)
+               |                                     |           |-{exe}(9632)
+               |                                     |           |-{exe}(9633)
+               |                                     |           |-{exe}(9634)
+               |                                     |           |-{exe}(9637)
+               |                                     |           `-{exe}(9638)
+               |                                     |-{podman}(9618)
+               |                                     |-{podman}(9619)
+               |                                     |-{podman}(9620)
+               |                                     |-{podman}(9621)
+               |                                     |-{podman}(9622)
+               |                                     |-{podman}(9623)
+               |                                     `-{podman}(9624)
+               |-{receptor}(9600)
+               |-{receptor}(9601)
+               |-{receptor}(9602)
+               |-{receptor}(9603)
+               |-{receptor}(9604)
+               |-{receptor}(9605)
+               |-{receptor}(9606)
+               |-{receptor}(9904)
+               |-{receptor}(9905)
+               `-{receptor}(9906)
+=== nginx Process Tree ===
+bash(6600)---pstree(10062)
+=== postgresql Process Tree ===
+bash(6600)---pstree(10066)
+=== redis Process Tree ===
+bash(6600)---pstree(10070)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(10074)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(10078)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(10082)
+
+=================================================================================
+2025-07-03 09:03:15
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         675        6537           8         738        7005
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   9665    9644 /usr/bin/python3.9 /usr/bin 65000
+   9625    9617 /usr/bin/podman run --rm -- 57116
+   9713    9665 /usr/bin/python3.9 /usr/bin 56388
+   9617    9607 /usr/bin/podman run --rm -- 49968
+    751       1 /usr/bin/receptor -c /etc/r 47956
+    747       1 /usr/bin/python3 -s /usr/sb 44356
+   9599     751 /usr/bin/receptor --node id 34744
+    797       1 /usr/bin/python3 -Es /usr/s 26920
+   9607    9599 /usr/bin/python3 /usr/bin/a 25444
+    970       1 /usr/lib/polkit-1/polkitd - 23912
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    751       1 /usr/bin/receptor -c /etc/r 47956 1273916 0.0  0.6       54:07
+Receptor Child Processes for PID 751:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   9599     751 /usr/bin/receptor --node id 34744 1494536 0.0  0.4       01:19
+Receptor Threads for PID 751:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    751     751  0.0  0.6 47956 receptor
+    751     762  0.0  0.6 47956 receptor
+    751     763  0.0  0.6 47956 receptor
+    751     764  0.0  0.6 47956 receptor
+    751     765  0.0  0.6 47956 receptor
+    751     766  0.0  0.6 47956 receptor
+    751     770  0.0  0.6 47956 receptor
+    751     771  0.0  0.6 47956 receptor
+Receptor Network Connections for PID 751:
+COMMAND    PID   USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx  cwd       DIR              253,0      235      128 /
+receptor   751    awx  rtd       DIR              253,0      235      128 /
+receptor   751    awx  txt       REG              253,0 54652712 34164275 /usr/bin/receptor
+receptor   751    awx  mem       REG              253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor   751    awx  mem       REG              253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor   751    awx  mem       REG              253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor   751    awx  mem       REG              253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor   751    awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   751    awx    1w      REG              253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    2w      REG              253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor   751    awx    3rW     REG               0,24        0      953 /run/awx-receptor/receptor.sock.lock
+receptor   751    awx    4u  a_inode               0,14        0       59 [eventpoll:5,7,8,9,10]
+receptor   751    awx    5r     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    6w     FIFO               0,13      0t0    16353 pipe
+receptor   751    awx    7u     unix 0xffff9a08c7bba300      0t0    16354 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   751    awx    8u     IPv6              16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4              26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+receptor   751    awx   10r  a_inode               0,14        0       59 inotify
+receptor   751    awx   11r      REG              253,0    34120 34075348 /tmp/receptor/192.168.1.23/iQibq4cF/stdout
+chronyd    761 chrony    5u     IPv4              16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6              16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4              24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4              22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6              22837      0t0      TCP *:ssh (LISTEN)
+slirp4net 9639    awx    3u     IPv4              86852      0t0      TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6600       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       05:34
+Receptor Child Processes for PID 6600:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6600:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6600    6600  0.0  0.0  3328 bash
+Receptor Network Connections for PID 6600:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0      TCP *:ssh (LISTEN)
+bash      6600   root  cwd    DIR  253,0      163 33685638 /root
+bash      6600   root  rtd    DIR  253,0      235      128 /
+bash      6600   root  txt    REG  253,0  1389072 33799734 /usr/bin/bash
+bash      6600   root  mem    REG  253,0  2586930    87396 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6600   root  mem    REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+bash      6600   root  mem    REG  253,0   346132 50364893 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6600   root  mem    REG  253,0       54    87399 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6600   root  mem    REG  253,0     3284 16956037 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6600   root  mem    REG  253,0      286 16956035 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6600   root  mem    REG  253,0       57 16956048 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6600   root  mem    REG  253,0    26988 33799921 /usr/lib64/gconv/gconv-modules.cache
+bash      6600   root  mem    REG  253,0   195080 50364877 /usr/lib64/libtinfo.so.6.2
+bash      6600   root  mem    REG  253,0       34 50365194 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6600   root  mem    REG  253,0       77    87398 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6600   root  mem    REG  253,0      167 16956031 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6600   root  mem    REG  253,0       59 16956036 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6600   root  mem    REG  253,0       23 16956034 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6600   root  mem    REG  253,0      369 16956033 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6600   root  mem    REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+bash      6600   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6600   root    1w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    2w   REG  253,0        0 17219671 /tmp/memory_monitor.log
+bash      6600   root    3r  FIFO   0,13      0t0    90908 pipe
+slirp4net 9639    awx    3u  IPv4  86852      0t0      TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   9599     751 /usr/bin/receptor --node id 34744 1494536 0.0  0.4       01:19
+Receptor Child Processes for PID 9599:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   9607    9599 /usr/bin/python3 /usr/bin/a 25444 103616  0.1  0.3       01:19
+Receptor Threads for PID 9599:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   9599    9599  0.0  0.4 34744 receptor
+   9599    9600  0.0  0.4 34744 receptor
+   9599    9601  0.0  0.4 34744 receptor
+   9599    9602  0.0  0.4 34744 receptor
+   9599    9603  0.0  0.4 34744 receptor
+   9599    9604  0.0  0.4 34744 receptor
+   9599    9605  0.0  0.4 34744 receptor
+   9599    9606  0.0  0.4 34744 receptor
+   9599    9904  0.0  0.4 34744 receptor
+   9599    9905  0.0  0.4 34744 receptor
+   9599    9906  0.0  0.4 34744 receptor
+Receptor Network Connections for PID 9599:
+COMMAND    PID   USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+receptor   751    awx    8u     IPv6  16359      0t0      TCP *:27199 (LISTEN)
+receptor   751    awx    9u     IPv4  26092      0t0      TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u     IPv4  16348      0t0      UDP localhost:323 
+chronyd    761 chrony    6u     IPv6  16349      0t0      UDP localhost:323 
+NetworkMa  773   root   26u     IPv4  24869      0t0      UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u     IPv4  22835      0t0      TCP *:ssh (LISTEN)
+sshd       794   root    4u     IPv6  22837      0t0      TCP *:ssh (LISTEN)
+receptor  9599    awx  cwd       DIR  253,0      235      128 /
+receptor  9599    awx  rtd       DIR  253,0      235      128 /
+receptor  9599    awx  txt       REG  253,0 54652712 34164275 /usr/bin/receptor
+receptor  9599    awx  mem       REG  253,0  5436640 50366199 /usr/lib64/libcrypto.so.3.2.2
+receptor  9599    awx  mem       REG  253,0   102552 50365236 /usr/lib64/libz.so.1.2.11
+receptor  9599    awx  mem       REG  253,0  2544344 50365216 /usr/lib64/libc.so.6
+receptor  9599    awx  mem       REG  253,0   897856 50365212 /usr/lib64/ld-linux-x86-64.so.2
+receptor  9599    awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  9599    awx    1w      REG  253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor  9599    awx    2w      REG  253,0     3195 51775135 /var/log/receptor/receptor.log
+receptor  9599    awx    3r      REG  253,0    61311 33687176 /tmp/receptor/192.168.1.23/iQibq4cF/stdin
+receptor  9599    awx    4u  a_inode   0,14        0       59 [eventpoll:5]
+receptor  9599    awx    5r     FIFO   0,13      0t0    87999 pipe
+receptor  9599    awx    6w     FIFO   0,13      0t0    87999 pipe
+receptor  9599    awx    7w      REG  253,0    34120 34075348 /tmp/receptor/192.168.1.23/iQibq4cF/stdout
+slirp4net 9639    awx    3u     IPv4  86852      0t0      TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 10091:
+  No child processes found
+Receptor Threads for PID 10091:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 10091:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+receptor   751    awx    8u  IPv6  16359      0t0  TCP *:27199 (LISTEN)
+receptor   751    awx    9u  IPv4  26092      0t0  TCP aap24-execution:34570->aap24-control.lan:27199 (ESTABLISHED)
+chronyd    761 chrony    5u  IPv4  16348      0t0  UDP localhost:323 
+chronyd    761 chrony    6u  IPv6  16349      0t0  UDP localhost:323 
+NetworkMa  773   root   26u  IPv4  24869      0t0  UDP aap24-execution:bootpc->pi.hole:bootps 
+sshd       794   root    3u  IPv4  22835      0t0  TCP *:ssh (LISTEN)
+sshd       794   root    4u  IPv6  22837      0t0  TCP *:ssh (LISTEN)
+slirp4net 9639    awx    3u  IPv4  86852      0t0  TCP aap24-execution:36826->aap25-execution.lan:ssh (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 146216 KB (142 MB)
+Total Receptor VSZ Memory: 4373864 KB (4271 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 751)
+    PID    PPID CMD                           RSS
+    751       1 /usr/bin/receptor -c /etc/r 47956
+  Children of PID 751:
+    PID    PPID CMD                           RSS
+   9599     751 /usr/bin/receptor --node id 34744
+
+Process: bash (PID: 6600)
+    PID    PPID CMD                           RSS
+   6600       1 bash -c  log_file="/tmp/mem  3328
+  Children of PID 6600:
+    PID    PPID CMD                           RSS
+  10212    6600 bash -c  log_file="/tmp/mem  2092
+
+Process: receptor (PID: 9599)
+    PID    PPID CMD                           RSS
+   9599     751 /usr/bin/receptor --node id 34744
+  Children of PID 9599:
+    PID    PPID CMD                           RSS
+   9607    9599 /usr/bin/python3 /usr/bin/a 25444
+
+Process: bash (PID: 10212)
+    PID    PPID CMD                           RSS
+  10212    6600 bash -c  log_file="/tmp/mem  2092
+  Children of PID 10212:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6600)---pstree(10231)
+=== receptor Process Tree ===
+receptor(751)-+-receptor(9599)-+-ansible-runner(9607)---podman(9617)-+-exe(9625)-+-slirp4netns(9639)
+              |                |                                     |           |-{exe}(9626)
+              |                |                                     |           |-{exe}(9627)
+              |                |                                     |           |-{exe}(9628)
+              |                |                                     |           |-{exe}(9629)
+              |                |                                     |           |-{exe}(9632)
+              |                |                                     |           |-{exe}(9633)
+              |                |                                     |           |-{exe}(9634)
+              |                |                                     |           |-{exe}(9637)
+              |                |                                     |           `-{exe}(9638)
+              |                |                                     |-{podman}(9618)
+              |                |                                     |-{podman}(9619)
+              |                |                                     |-{podman}(9620)
+              |                |                                     |-{podman}(9621)
+              |                |                                     |-{podman}(9622)
+              |                |                                     |-{podman}(9623)
+              |                |                                     `-{podman}(9624)
+              |                |-{receptor}(9600)
+              |                |-{receptor}(9601)
+              |                |-{receptor}(9602)
+              |                |-{receptor}(9603)
+              |                |-{receptor}(9604)
+              |                |-{receptor}(9605)
+              |                |-{receptor}(9606)
+              |                |-{receptor}(9904)
+              |                |-{receptor}(9905)
+              |                `-{receptor}(9906)
+              |-{receptor}(762)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(770)
+              `-{receptor}(771)
+bash(6600)---pstree(10236)
+receptor(9599)-+-ansible-runner(9607)---podman(9617)-+-exe(9625)-+-slirp4netns(9639)
+               |                                     |           |-{exe}(9626)
+               |                                     |           |-{exe}(9627)
+               |                                     |           |-{exe}(9628)
+               |                                     |           |-{exe}(9629)
+               |                                     |           |-{exe}(9632)
+               |                                     |           |-{exe}(9633)
+               |                                     |           |-{exe}(9634)
+               |                                     |           |-{exe}(9637)
+               |                                     |           `-{exe}(9638)
+               |                                     |-{podman}(9618)
+               |                                     |-{podman}(9619)
+               |                                     |-{podman}(9620)
+               |                                     |-{podman}(9621)
+               |                                     |-{podman}(9622)
+               |                                     |-{podman}(9623)
+               |                                     `-{podman}(9624)
+               |-{receptor}(9600)
+               |-{receptor}(9601)
+               |-{receptor}(9602)
+               |-{receptor}(9603)
+               |-{receptor}(9604)
+               |-{receptor}(9605)
+               |-{receptor}(9606)
+               |-{receptor}(9904)
+               |-{receptor}(9905)
+               `-{receptor}(9906)
+=== nginx Process Tree ===
+bash(6600)---pstree(10241)
+=== postgresql Process Tree ===
+bash(6600)---pstree(10245)
+=== redis Process Tree ===
+bash(6600)---pstree(10249)
+=== uwsgi Process Tree ===
+bash(6600)---pstree(10253)
+=== automation-hub Process Tree ===
+bash(6600)---pstree(10257)
+=== automation-eda Process Tree ===
+bash(6600)---pstree(10261)
+
+Memory monitoring completed for aap24 medium test at Thu Jul  3 09:03:45 AM PDT 2025

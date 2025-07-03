@@ -1,0 +1,1704 @@
+Starting memory monitoring for aap25 baseline test at Thu Jul  3 11:34:40 AM EDT 2025
+=================================================================================
+2025-07-03 11:34:40
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7555        1204        5878           9         739        6350
+Swap:           5327           0        5327
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+   1167    1123 uwsgi /etc/ansible-automati 116536
+   1166    1123 uwsgi /etc/ansible-automati 116496
+   1163    1123 uwsgi /etc/ansible-automati 116332
+   1164    1123 uwsgi /etc/ansible-automati 115932
+   1124     774 /usr/bin/python3.11 -sP /us 114040
+   1579    1124 /usr/bin/python3.11 -sP /us 110412
+   1575    1124 /usr/bin/python3.11 -sP /us 110408
+   1578    1124 /usr/bin/python3.11 -sP /us 99016
+   1576    1124 /usr/bin/python3.11 -sP /us 98888
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4449       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       00:00
+Receptor Child Processes for PID 4449:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4449:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4449    4449  0.0  0.0  3456 bash
+Receptor Network Connections for PID 4449:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0      TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0      TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0      TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0      TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0      TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0      TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0      TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0      TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0      TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0      UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0      UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0      UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0      TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0      TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0      TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0      TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0      TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0      TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0      TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0      TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0      TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0      TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0      TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0      TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0      TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0      TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0      TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0      TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+sshd      4333   root    4u  IPv4  57218      0t0      TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+sshd      4353   root    4u  IPv4  57218      0t0      TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+bash      4449   root  cwd    DIR  253,0      185 50331782 /root
+bash      4449   root  rtd    DIR  253,0      235      128 /
+bash      4449   root  txt    REG  253,0  1389072 50367435 /usr/bin/bash
+bash      4449   root  mem    REG  253,0  2586930 50367720 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4449   root  mem    REG  253,0  2544344     2597 /usr/lib64/libc.so.6
+bash      4449   root  mem    REG  253,0   346132 33699956 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4449   root  mem    REG  253,0       54 50367723 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4449   root  mem    REG  253,0     3284     2565 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4449   root  mem    REG  253,0      286     2563 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4449   root  mem    REG  253,0       57     2576 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4449   root  mem    REG  253,0    26988 16780452 /usr/lib64/gconv/gconv-modules.cache
+bash      4449   root  mem    REG  253,0   195080     2316 /usr/lib64/libtinfo.so.6.2
+bash      4449   root  mem    REG  253,0       34 33700259 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4449   root  mem    REG  253,0       77 50367722 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4449   root  mem    REG  253,0      167     2559 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4449   root  mem    REG  253,0       59     2564 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4449   root  mem    REG  253,0       23     2562 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4449   root  mem    REG  253,0      369     2561 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4449   root  mem    REG  253,0   897856     2593 /usr/lib64/ld-linux-x86-64.so.2
+bash      4449   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4449   root    1w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    2w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    3r  FIFO   0,13      0t0    57873 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 4457:
+  No child processes found
+Receptor Threads for PID 4457:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 4457:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0  TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0  TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0  TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0  TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0  TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0  TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0  TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0  TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0  TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0  UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0  UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0  TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0  TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0  TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0  TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0  TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0  TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0  TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0  TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0  TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0  TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0  TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0  TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0  TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0  TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0  TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0  TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+sshd      4333   root    4u  IPv4  57218      0t0  TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+sshd      4353   root    4u  IPv4  57218      0t0  TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 1074)
+    PID    PPID CMD                           RSS
+   1074       1 /usr/bin/redis-server *:637 15956
+
+Process: nginx (PID: 1112)
+    PID    PPID CMD                           RSS
+   1112       1 nginx: master process /usr/  2104
+  Children of PID 1112:
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: nginx (PID: 1113)
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+
+Process: nginx (PID: 1114)
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: uwsgi (PID: 1123)
+    PID    PPID CMD                           RSS
+   1123     774 uwsgi /etc/ansible-automati 13952
+  Children of PID 1123:
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116536
+
+Process: uwsgi (PID: 1163)
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+
+Process: uwsgi (PID: 1164)
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+
+Process: uwsgi (PID: 1165)
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+
+Process: uwsgi (PID: 1166)
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+
+Process: uwsgi (PID: 1167)
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116536
+
+Process: bash (PID: 4449)
+    PID    PPID CMD                           RSS
+   4449       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 4449:
+    PID    PPID CMD                           RSS
+   4516    4449 bash -c  log_file="/tmp/mem  2324
+
+Process: bash (PID: 4516)
+    PID    PPID CMD                           RSS
+   4516    4449 bash -c  log_file="/tmp/mem  2324
+  Children of PID 4516:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4449)---pstree(4564)
+=== receptor Process Tree ===
+bash(4449)---pstree(4568)
+=== nginx Process Tree ===
+nginx(1112)-+-nginx(1113)
+            `-nginx(1114)
+nginx(1113)
+nginx(1114)
+bash(4449)---pstree(4575)
+=== postgresql Process Tree ===
+bash(4449)---pstree(4579)
+=== redis Process Tree ===
+redis-server(1074)-+-{redis-server}(1083)
+                   |-{redis-server}(1084)
+                   |-{redis-server}(1085)
+                   `-{redis-server}(1086)
+bash(4449)---pstree(4584)
+=== uwsgi Process Tree ===
+uwsgi(1123)-+-uwsgi(1163)
+            |-uwsgi(1164)
+            |-uwsgi(1165)
+            |-uwsgi(1166)
+            `-uwsgi(1167)
+uwsgi(1163)
+uwsgi(1164)
+uwsgi(1165)
+uwsgi(1166)
+uwsgi(1167)
+bash(4449)---pstree(4594)
+=== automation-hub Process Tree ===
+bash(4449)---pstree(4598)
+=== automation-eda Process Tree ===
+bash(4449)---pstree(4602)
+
+=================================================================================
+2025-07-03 11:35:11
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7555        1162        5920           9         739        6392
+Swap:           5327           0        5327
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+   1167    1123 uwsgi /etc/ansible-automati 116664
+   1166    1123 uwsgi /etc/ansible-automati 116496
+   1163    1123 uwsgi /etc/ansible-automati 116332
+   1164    1123 uwsgi /etc/ansible-automati 115932
+   1124     774 /usr/bin/python3.11 -sP /us 114040
+   1579    1124 /usr/bin/python3.11 -sP /us 110412
+   1575    1124 /usr/bin/python3.11 -sP /us 110408
+   1578    1124 /usr/bin/python3.11 -sP /us 99016
+   1576    1124 /usr/bin/python3.11 -sP /us 98888
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4449       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       00:31
+Receptor Child Processes for PID 4449:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4449:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4449    4449  0.0  0.0  3456 bash
+Receptor Network Connections for PID 4449:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0      TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0      TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0      TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0      TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0      TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0      TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0      TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0      TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0      TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0      UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0      UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0      UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0      TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0      TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0      TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0      TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0      TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0      TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0      TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0      TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0      TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0      TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0      TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0      TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0      TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0      TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0      TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0      TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+sshd      4333   root    4u  IPv4  57218      0t0      TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+sshd      4353   root    4u  IPv4  57218      0t0      TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+bash      4449   root  cwd    DIR  253,0      185 50331782 /root
+bash      4449   root  rtd    DIR  253,0      235      128 /
+bash      4449   root  txt    REG  253,0  1389072 50367435 /usr/bin/bash
+bash      4449   root  mem    REG  253,0  2586930 50367720 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4449   root  mem    REG  253,0  2544344     2597 /usr/lib64/libc.so.6
+bash      4449   root  mem    REG  253,0   346132 33699956 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4449   root  mem    REG  253,0       54 50367723 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4449   root  mem    REG  253,0     3284     2565 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4449   root  mem    REG  253,0      286     2563 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4449   root  mem    REG  253,0       57     2576 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4449   root  mem    REG  253,0    26988 16780452 /usr/lib64/gconv/gconv-modules.cache
+bash      4449   root  mem    REG  253,0   195080     2316 /usr/lib64/libtinfo.so.6.2
+bash      4449   root  mem    REG  253,0       34 33700259 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4449   root  mem    REG  253,0       77 50367722 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4449   root  mem    REG  253,0      167     2559 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4449   root  mem    REG  253,0       59     2564 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4449   root  mem    REG  253,0       23     2562 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4449   root  mem    REG  253,0      369     2561 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4449   root  mem    REG  253,0   897856     2593 /usr/lib64/ld-linux-x86-64.so.2
+bash      4449   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4449   root    1w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    2w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    3r  FIFO   0,13      0t0    59613 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 4610:
+  No child processes found
+Receptor Threads for PID 4610:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 4610:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0  TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0  TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0  TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0  TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0  TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0  TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0  TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0  TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0  TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0  UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0  UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0  TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0  TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0  TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0  TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0  TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0  TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0  TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0  TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0  TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0  TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0  TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0  TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0  TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0  TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0  TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0  TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+sshd      4333   root    4u  IPv4  57218      0t0  TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+sshd      4353   root    4u  IPv4  57218      0t0  TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 1074)
+    PID    PPID CMD                           RSS
+   1074       1 /usr/bin/redis-server *:637 15956
+
+Process: nginx (PID: 1112)
+    PID    PPID CMD                           RSS
+   1112       1 nginx: master process /usr/  2104
+  Children of PID 1112:
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: nginx (PID: 1113)
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+
+Process: nginx (PID: 1114)
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: uwsgi (PID: 1123)
+    PID    PPID CMD                           RSS
+   1123     774 uwsgi /etc/ansible-automati 13952
+  Children of PID 1123:
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116664
+
+Process: uwsgi (PID: 1163)
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+
+Process: uwsgi (PID: 1164)
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+
+Process: uwsgi (PID: 1165)
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+
+Process: uwsgi (PID: 1166)
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+
+Process: uwsgi (PID: 1167)
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116664
+
+Process: bash (PID: 4449)
+    PID    PPID CMD                           RSS
+   4449       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 4449:
+    PID    PPID CMD                           RSS
+   4669    4449 bash -c  log_file="/tmp/mem  2328
+
+Process: bash (PID: 4669)
+    PID    PPID CMD                           RSS
+   4669    4449 bash -c  log_file="/tmp/mem  2328
+  Children of PID 4669:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4449)---pstree(4717)
+=== receptor Process Tree ===
+bash(4449)---pstree(4721)
+=== nginx Process Tree ===
+nginx(1112)-+-nginx(1113)
+            `-nginx(1114)
+nginx(1113)
+nginx(1114)
+bash(4449)---pstree(4728)
+=== postgresql Process Tree ===
+bash(4449)---pstree(4732)
+=== redis Process Tree ===
+redis-server(1074)-+-{redis-server}(1083)
+                   |-{redis-server}(1084)
+                   |-{redis-server}(1085)
+                   `-{redis-server}(1086)
+bash(4449)---pstree(4737)
+=== uwsgi Process Tree ===
+uwsgi(1123)-+-uwsgi(1163)
+            |-uwsgi(1164)
+            |-uwsgi(1165)
+            |-uwsgi(1166)
+            `-uwsgi(1167)
+uwsgi(1163)
+uwsgi(1164)
+uwsgi(1165)
+uwsgi(1166)
+uwsgi(1167)
+bash(4449)---pstree(4747)
+=== automation-hub Process Tree ===
+bash(4449)---pstree(4751)
+=== automation-eda Process Tree ===
+bash(4449)---pstree(4755)
+
+=================================================================================
+2025-07-03 11:35:42
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7555        1176        5906           9         739        6378
+Swap:           5327           0        5327
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+   1167    1123 uwsgi /etc/ansible-automati 116664
+   1166    1123 uwsgi /etc/ansible-automati 116496
+   1163    1123 uwsgi /etc/ansible-automati 116332
+   1164    1123 uwsgi /etc/ansible-automati 115932
+   1124     774 /usr/bin/python3.11 -sP /us 114040
+   1579    1124 /usr/bin/python3.11 -sP /us 110412
+   1575    1124 /usr/bin/python3.11 -sP /us 110408
+   1578    1124 /usr/bin/python3.11 -sP /us 99016
+   1576    1124 /usr/bin/python3.11 -sP /us 98888
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4449       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:02
+Receptor Child Processes for PID 4449:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4449:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4449    4449  0.0  0.0  3456 bash
+Receptor Network Connections for PID 4449:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0      TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0      TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0      TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0      TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0      TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0      TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0      TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0      TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0      TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0      UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0      UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0      UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0      TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0      TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0      TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0      TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0      TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0      TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0      TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0      TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0      TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0      TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0      TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0      TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0      TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0      TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0      TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0      TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+sshd      4333   root    4u  IPv4  57218      0t0      TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+sshd      4353   root    4u  IPv4  57218      0t0      TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+bash      4449   root  cwd    DIR  253,0      185 50331782 /root
+bash      4449   root  rtd    DIR  253,0      235      128 /
+bash      4449   root  txt    REG  253,0  1389072 50367435 /usr/bin/bash
+bash      4449   root  mem    REG  253,0  2586930 50367720 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4449   root  mem    REG  253,0  2544344     2597 /usr/lib64/libc.so.6
+bash      4449   root  mem    REG  253,0   346132 33699956 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4449   root  mem    REG  253,0       54 50367723 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4449   root  mem    REG  253,0     3284     2565 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4449   root  mem    REG  253,0      286     2563 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4449   root  mem    REG  253,0       57     2576 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4449   root  mem    REG  253,0    26988 16780452 /usr/lib64/gconv/gconv-modules.cache
+bash      4449   root  mem    REG  253,0   195080     2316 /usr/lib64/libtinfo.so.6.2
+bash      4449   root  mem    REG  253,0       34 33700259 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4449   root  mem    REG  253,0       77 50367722 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4449   root  mem    REG  253,0      167     2559 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4449   root  mem    REG  253,0       59     2564 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4449   root  mem    REG  253,0       23     2562 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4449   root  mem    REG  253,0      369     2561 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4449   root  mem    REG  253,0   897856     2593 /usr/lib64/ld-linux-x86-64.so.2
+bash      4449   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4449   root    1w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    2w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    3r  FIFO   0,13      0t0    60621 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 4789:
+  No child processes found
+Receptor Threads for PID 4789:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 4789:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0  TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0  TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0  TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0  TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0  TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0  TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0  TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0  TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0  TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0  UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0  UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0  TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0  TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0  TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0  TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0  TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0  TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0  TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0  TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0  TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0  TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0  TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0  TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0  TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0  TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0  TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0  TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+sshd      4333   root    4u  IPv4  57218      0t0  TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+sshd      4353   root    4u  IPv4  57218      0t0  TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3584 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 1074)
+    PID    PPID CMD                           RSS
+   1074       1 /usr/bin/redis-server *:637 15956
+
+Process: nginx (PID: 1112)
+    PID    PPID CMD                           RSS
+   1112       1 nginx: master process /usr/  2104
+  Children of PID 1112:
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: nginx (PID: 1113)
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+
+Process: nginx (PID: 1114)
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: uwsgi (PID: 1123)
+    PID    PPID CMD                           RSS
+   1123     774 uwsgi /etc/ansible-automati 13952
+  Children of PID 1123:
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116664
+
+Process: uwsgi (PID: 1163)
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+
+Process: uwsgi (PID: 1164)
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+
+Process: uwsgi (PID: 1165)
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+
+Process: uwsgi (PID: 1166)
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+
+Process: uwsgi (PID: 1167)
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116664
+
+Process: bash (PID: 4449)
+    PID    PPID CMD                           RSS
+   4449       1 bash -c  log_file="/tmp/mem  3584
+  Children of PID 4449:
+    PID    PPID CMD                           RSS
+   4848    4449 bash -c  log_file="/tmp/mem  2340
+
+Process: bash (PID: 4848)
+    PID    PPID CMD                           RSS
+   4848    4449 bash -c  log_file="/tmp/mem  2340
+  Children of PID 4848:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4449)---pstree(4896)
+=== receptor Process Tree ===
+bash(4449)---pstree(4900)
+=== nginx Process Tree ===
+nginx(1112)-+-nginx(1113)
+            `-nginx(1114)
+nginx(1113)
+nginx(1114)
+bash(4449)---pstree(4907)
+=== postgresql Process Tree ===
+bash(4449)---pstree(4911)
+=== redis Process Tree ===
+redis-server(1074)-+-{redis-server}(1083)
+                   |-{redis-server}(1084)
+                   |-{redis-server}(1085)
+                   `-{redis-server}(1086)
+bash(4449)---pstree(4916)
+=== uwsgi Process Tree ===
+uwsgi(1123)-+-uwsgi(1163)
+            |-uwsgi(1164)
+            |-uwsgi(1165)
+            |-uwsgi(1166)
+            `-uwsgi(1167)
+uwsgi(1163)
+uwsgi(1164)
+uwsgi(1165)
+uwsgi(1166)
+uwsgi(1167)
+bash(4449)---pstree(4926)
+=== automation-hub Process Tree ===
+bash(4449)---pstree(4930)
+=== automation-eda Process Tree ===
+bash(4449)---pstree(4934)
+
+=================================================================================
+2025-07-03 11:36:13
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7555        1163        5919           9         739        6392
+Swap:           5327           0        5327
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+   1167    1123 uwsgi /etc/ansible-automati 116792
+   1166    1123 uwsgi /etc/ansible-automati 116496
+   1163    1123 uwsgi /etc/ansible-automati 116332
+   1164    1123 uwsgi /etc/ansible-automati 115932
+   1124     774 /usr/bin/python3.11 -sP /us 114040
+   1579    1124 /usr/bin/python3.11 -sP /us 110412
+   1575    1124 /usr/bin/python3.11 -sP /us 110408
+   1578    1124 /usr/bin/python3.11 -sP /us 99016
+   1576    1124 /usr/bin/python3.11 -sP /us 98888
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4449       1 bash -c  log_file="/tmp/mem  3584   7260  0.0  0.0       01:33
+Receptor Child Processes for PID 4449:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4449:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4449    4449  0.0  0.0  3584 bash
+Receptor Network Connections for PID 4449:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0      TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0      TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0      TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0      TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0      TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0      TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0      TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0      TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0      TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0      UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0      UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0      UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0      TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0      TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0      TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0      TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0      TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0      TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0      TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0      TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0      TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0      TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0      TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0      TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0      TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0      TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0      TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0      TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+sshd      4333   root    4u  IPv4  57218      0t0      TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+sshd      4353   root    4u  IPv4  57218      0t0      TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+bash      4449   root  cwd    DIR  253,0      185 50331782 /root
+bash      4449   root  rtd    DIR  253,0      235      128 /
+bash      4449   root  txt    REG  253,0  1389072 50367435 /usr/bin/bash
+bash      4449   root  mem    REG  253,0  2586930 50367720 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4449   root  mem    REG  253,0  2544344     2597 /usr/lib64/libc.so.6
+bash      4449   root  mem    REG  253,0   346132 33699956 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4449   root  mem    REG  253,0       54 50367723 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4449   root  mem    REG  253,0     3284     2565 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4449   root  mem    REG  253,0      286     2563 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4449   root  mem    REG  253,0       57     2576 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4449   root  mem    REG  253,0    26988 16780452 /usr/lib64/gconv/gconv-modules.cache
+bash      4449   root  mem    REG  253,0   195080     2316 /usr/lib64/libtinfo.so.6.2
+bash      4449   root  mem    REG  253,0       34 33700259 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4449   root  mem    REG  253,0       77 50367722 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4449   root  mem    REG  253,0      167     2559 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4449   root  mem    REG  253,0       59     2564 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4449   root  mem    REG  253,0       23     2562 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4449   root  mem    REG  253,0      369     2561 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4449   root  mem    REG  253,0   897856     2593 /usr/lib64/ld-linux-x86-64.so.2
+bash      4449   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4449   root    1w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    2w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    3r  FIFO   0,13      0t0    61872 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 4943:
+  No child processes found
+Receptor Threads for PID 4943:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 4943:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0  TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0  TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0  TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0  TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0  TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0  TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0  TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0  TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0  TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0  UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0  UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0  TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0  TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0  TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0  TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0  TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0  TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0  TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0  TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0  TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0  TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0  TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0  TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0  TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0  TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0  TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0  TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+sshd      4333   root    4u  IPv4  57218      0t0  TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+sshd      4353   root    4u  IPv4  57218      0t0  TCP localhost.localdomain:ssh->192.168.1.49:51232 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3584 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 1074)
+    PID    PPID CMD                           RSS
+   1074       1 /usr/bin/redis-server *:637 15956
+
+Process: nginx (PID: 1112)
+    PID    PPID CMD                           RSS
+   1112       1 nginx: master process /usr/  2104
+  Children of PID 1112:
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: nginx (PID: 1113)
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+
+Process: nginx (PID: 1114)
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: uwsgi (PID: 1123)
+    PID    PPID CMD                           RSS
+   1123     774 uwsgi /etc/ansible-automati 13952
+  Children of PID 1123:
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116792
+
+Process: uwsgi (PID: 1163)
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+
+Process: uwsgi (PID: 1164)
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+
+Process: uwsgi (PID: 1165)
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+
+Process: uwsgi (PID: 1166)
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+
+Process: uwsgi (PID: 1167)
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116792
+
+Process: bash (PID: 4449)
+    PID    PPID CMD                           RSS
+   4449       1 bash -c  log_file="/tmp/mem  3584
+  Children of PID 4449:
+    PID    PPID CMD                           RSS
+   5002    4449 bash -c  log_file="/tmp/mem  2340
+
+Process: bash (PID: 5002)
+    PID    PPID CMD                           RSS
+   5002    4449 bash -c  log_file="/tmp/mem  2340
+  Children of PID 5002:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4449)---pstree(5050)
+=== receptor Process Tree ===
+bash(4449)---pstree(5054)
+=== nginx Process Tree ===
+nginx(1112)-+-nginx(1113)
+            `-nginx(1114)
+nginx(1113)
+nginx(1114)
+bash(4449)---pstree(5061)
+=== postgresql Process Tree ===
+bash(4449)---pstree(5065)
+=== redis Process Tree ===
+redis-server(1074)-+-{redis-server}(1083)
+                   |-{redis-server}(1084)
+                   |-{redis-server}(1085)
+                   `-{redis-server}(1086)
+bash(4449)---pstree(5070)
+=== uwsgi Process Tree ===
+uwsgi(1123)-+-uwsgi(1163)
+            |-uwsgi(1164)
+            |-uwsgi(1165)
+            |-uwsgi(1166)
+            `-uwsgi(1167)
+uwsgi(1163)
+uwsgi(1164)
+uwsgi(1165)
+uwsgi(1166)
+uwsgi(1167)
+bash(4449)---pstree(5080)
+=== automation-hub Process Tree ===
+bash(4449)---pstree(5084)
+=== automation-eda Process Tree ===
+bash(4449)---pstree(5088)
+
+=================================================================================
+2025-07-03 11:36:44
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7555        1256        5825           9         739        6298
+Swap:           5327           0        5327
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+   1167    1123 uwsgi /etc/ansible-automati 116792
+   1166    1123 uwsgi /etc/ansible-automati 116496
+   1163    1123 uwsgi /etc/ansible-automati 116332
+   1164    1123 uwsgi /etc/ansible-automati 115932
+   1124     774 /usr/bin/python3.11 -sP /us 114040
+   1579    1124 /usr/bin/python3.11 -sP /us 110412
+   1575    1124 /usr/bin/python3.11 -sP /us 110408
+   1578    1124 /usr/bin/python3.11 -sP /us 99016
+   1576    1124 /usr/bin/python3.11 -sP /us 98888
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4449       1 bash -c  log_file="/tmp/mem  3584   7260  0.0  0.0       02:04
+Receptor Child Processes for PID 4449:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4449:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4449    4449  0.0  0.0  3584 bash
+Receptor Network Connections for PID 4449:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0      TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0      TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0      TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0      TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0      TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0      TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0      TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0      TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0      TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0      UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0      UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0      UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0      TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0      TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0      TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0      TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0      TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0      TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0      TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0      TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0      TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0      TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0      TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0      TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0      TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0      TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0      TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0      TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+bash      4449   root  cwd    DIR  253,0      185 50331782 /root
+bash      4449   root  rtd    DIR  253,0      235      128 /
+bash      4449   root  txt    REG  253,0  1389072 50367435 /usr/bin/bash
+bash      4449   root  mem    REG  253,0  2586930 50367720 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4449   root  mem    REG  253,0  2544344     2597 /usr/lib64/libc.so.6
+bash      4449   root  mem    REG  253,0   346132 33699956 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4449   root  mem    REG  253,0       54 50367723 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4449   root  mem    REG  253,0     3284     2565 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4449   root  mem    REG  253,0      286     2563 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4449   root  mem    REG  253,0       57     2576 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4449   root  mem    REG  253,0    26988 16780452 /usr/lib64/gconv/gconv-modules.cache
+bash      4449   root  mem    REG  253,0   195080     2316 /usr/lib64/libtinfo.so.6.2
+bash      4449   root  mem    REG  253,0       34 33700259 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4449   root  mem    REG  253,0       77 50367722 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4449   root  mem    REG  253,0      167     2559 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4449   root  mem    REG  253,0       59     2564 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4449   root  mem    REG  253,0       23     2562 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4449   root  mem    REG  253,0      369     2561 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4449   root  mem    REG  253,0   897856     2593 /usr/lib64/ld-linux-x86-64.so.2
+bash      4449   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4449   root    1w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    2w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    3r  FIFO   0,13      0t0    63753 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 5299:
+  No child processes found
+Receptor Threads for PID 5299:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 5299:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0  TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0  TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0  TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0  TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0  TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0  TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0  TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0  TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0  TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0  UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0  UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0  TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0  TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0  TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0  TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0  TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0  TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0  TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0  TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0  TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0  TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0  TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0  TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0  TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0  TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0  TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0  TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3584 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 1074)
+    PID    PPID CMD                           RSS
+   1074       1 /usr/bin/redis-server *:637 15956
+
+Process: nginx (PID: 1112)
+    PID    PPID CMD                           RSS
+   1112       1 nginx: master process /usr/  2104
+  Children of PID 1112:
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: nginx (PID: 1113)
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+
+Process: nginx (PID: 1114)
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: uwsgi (PID: 1123)
+    PID    PPID CMD                           RSS
+   1123     774 uwsgi /etc/ansible-automati 13952
+  Children of PID 1123:
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116792
+
+Process: uwsgi (PID: 1163)
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+
+Process: uwsgi (PID: 1164)
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+
+Process: uwsgi (PID: 1165)
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117548
+
+Process: uwsgi (PID: 1166)
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+
+Process: uwsgi (PID: 1167)
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116792
+
+Process: bash (PID: 4449)
+    PID    PPID CMD                           RSS
+   4449       1 bash -c  log_file="/tmp/mem  3584
+  Children of PID 4449:
+    PID    PPID CMD                           RSS
+   5358    4449 bash -c  log_file="/tmp/mem  2340
+
+Process: bash (PID: 5358)
+    PID    PPID CMD                           RSS
+   5358    4449 bash -c  log_file="/tmp/mem  2340
+  Children of PID 5358:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4449)---pstree(5406)
+=== receptor Process Tree ===
+bash(4449)---pstree(5410)
+=== nginx Process Tree ===
+nginx(1112)-+-nginx(1113)
+            `-nginx(1114)
+nginx(1113)
+nginx(1114)
+bash(4449)---pstree(5417)
+=== postgresql Process Tree ===
+bash(4449)---pstree(5421)
+=== redis Process Tree ===
+redis-server(1074)-+-{redis-server}(1083)
+                   |-{redis-server}(1084)
+                   |-{redis-server}(1085)
+                   `-{redis-server}(1086)
+bash(4449)---pstree(5426)
+=== uwsgi Process Tree ===
+uwsgi(1123)-+-uwsgi(1163)
+            |-uwsgi(1164)
+            |-uwsgi(1165)
+            |-uwsgi(1166)
+            `-uwsgi(1167)
+uwsgi(1163)
+uwsgi(1164)
+uwsgi(1165)
+uwsgi(1166)
+uwsgi(1167)
+bash(4449)---pstree(5436)
+=== automation-hub Process Tree ===
+bash(4449)---pstree(5440)
+=== automation-eda Process Tree ===
+bash(4449)---pstree(5444)
+
+=================================================================================
+2025-07-03 11:37:15
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7555        1210        5872           9         739        6345
+Swap:           5327           0        5327
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117676
+   1167    1123 uwsgi /etc/ansible-automati 116792
+   1166    1123 uwsgi /etc/ansible-automati 116496
+   1163    1123 uwsgi /etc/ansible-automati 116332
+   1164    1123 uwsgi /etc/ansible-automati 115932
+   1124     774 /usr/bin/python3.11 -sP /us 114040
+   1579    1124 /usr/bin/python3.11 -sP /us 110412
+   1575    1124 /usr/bin/python3.11 -sP /us 110408
+   1578    1124 /usr/bin/python3.11 -sP /us 99016
+   1576    1124 /usr/bin/python3.11 -sP /us 98888
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   4449       1 bash -c  log_file="/tmp/mem  3584   7260  0.0  0.0       02:35
+Receptor Child Processes for PID 4449:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 4449:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   4449    4449  0.0  0.0  3584 bash
+Receptor Network Connections for PID 4449:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0      TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0      TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0      TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0      TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0      TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0      TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0      TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0      TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0      TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0      UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0      UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0      UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0      TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0      TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0      TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0      TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0      TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0      TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0      TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0      TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0      TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0      TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0      TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0      TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0      TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0      TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0      TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0      TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0      TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0      TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0      TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0      TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+bash      4449   root  cwd    DIR  253,0      185 50331782 /root
+bash      4449   root  rtd    DIR  253,0      235      128 /
+bash      4449   root  txt    REG  253,0  1389072 50367435 /usr/bin/bash
+bash      4449   root  mem    REG  253,0  2586930 50367720 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      4449   root  mem    REG  253,0  2544344     2597 /usr/lib64/libc.so.6
+bash      4449   root  mem    REG  253,0   346132 33699956 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      4449   root  mem    REG  253,0       54 50367723 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      4449   root  mem    REG  253,0     3284     2565 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      4449   root  mem    REG  253,0      286     2563 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      4449   root  mem    REG  253,0       57     2576 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      4449   root  mem    REG  253,0    26988 16780452 /usr/lib64/gconv/gconv-modules.cache
+bash      4449   root  mem    REG  253,0   195080     2316 /usr/lib64/libtinfo.so.6.2
+bash      4449   root  mem    REG  253,0       34 33700259 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      4449   root  mem    REG  253,0       77 50367722 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      4449   root  mem    REG  253,0      167     2559 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      4449   root  mem    REG  253,0       59     2564 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      4449   root  mem    REG  253,0       23     2562 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      4449   root  mem    REG  253,0      369     2561 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      4449   root  mem    REG  253,0   897856     2593 /usr/lib64/ld-linux-x86-64.so.2
+bash      4449   root    0r   CHR    1,3      0t0        4 /dev/null
+bash      4449   root    1w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    2w   REG  253,0        0 34669828 /tmp/memory_monitor.log
+bash      4449   root    3r  FIFO   0,13      0t0    64674 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 5452:
+  No child processes found
+Receptor Threads for PID 5452:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 5452:
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      727   root   31u  IPv4  23339      0t0  TCP localhost.localdomain:60444->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   32u  IPv4  23341      0t0  TCP localhost.localdomain:41216->aap25-control.lan:https (ESTABLISHED)
+envoy      727   root   34u  IPv4  23358      0t0  TCP *:https (LISTEN)
+envoy      727   root   35u  IPv4  23359      0t0  TCP *:https (LISTEN)
+envoy      727   root   36u  IPv4  56105      0t0  TCP localhost.localdomain:51230->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   37u  IPv4  24888      0t0  TCP localhost:49764->localhost:50051 (ESTABLISHED)
+envoy      727   root   38u  IPv4  56689      0t0  TCP localhost.localdomain:41542->localhost.localdomain:pcsync-https (ESTABLISHED)
+envoy      727   root   39u  IPv4  27862      0t0  TCP localhost:50600->localhost:50051 (ESTABLISHED)
+envoy      727   root   40u  IPv4  55217      0t0  TCP localhost.localdomain:46088->localhost.localdomain:pcsync-https (ESTABLISHED)
+chronyd    745 chrony    5u  IPv4  21055      0t0  UDP localhost:323 
+chronyd    745 chrony    6u  IPv6  21056      0t0  UDP localhost:323 
+NetworkMa  764   root   26u  IPv4  22715      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd       795   root    3u  IPv4  21297      0t0  TCP *:ssh (LISTEN)
+sshd       795   root    4u  IPv6  21299      0t0  TCP *:ssh (LISTEN)
+redis-ser 1074  redis    6u  IPv4  22809      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    7u  IPv6  22810      0t0  TCP *:redis (LISTEN)
+redis-ser 1074  redis    8u  IPv4  23343      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39864 (ESTABLISHED)
+redis-ser 1074  redis    9u  IPv4  23381      0t0  TCP localhost.localdomain:redis->localhost.localdomain:39870 (ESTABLISHED)
+redis-ser 1074  redis   10u  IPv4  24388      0t0  TCP localhost.localdomain:redis->localhost.localdomain:37148 (ESTABLISHED)
+redis-ser 1074  redis   11u  IPv4  24882      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59062 (ESTABLISHED)
+redis-ser 1074  redis   12u  IPv4  26422      0t0  TCP localhost.localdomain:redis->localhost.localdomain:59074 (ESTABLISHED)
+redis-ser 1074  redis   13u  IPv4  31079      0t0  TCP localhost.localdomain:redis->localhost.localdomain:54200 (ESTABLISHED)
+redis-ser 1074  redis   14u  IPv4  27889      0t0  TCP localhost.localdomain:redis->localhost.localdomain:47160 (ESTABLISHED)
+nginx     1112   root    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1113  nginx   11u  IPv4  24240      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:60444 (ESTABLISHED)
+nginx     1114  nginx    6u  IPv4  22847      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1114  nginx    8u  IPv4  56011      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:41542 (ESTABLISHED)
+nginx     1114  nginx   13u  IPv4  55578      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:46088 (ESTABLISHED)
+nginx     1114  nginx   16u  IPv4  56764      0t0  TCP localhost.localdomain:pcsync-https->localhost.localdomain:51230 (ESTABLISHED)
+uwsgi     1123   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1163   root    9u  IPv4  24329      0t0  TCP localhost.localdomain:39870->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1164   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1164   root    8u  IPv4  26415      0t0  TCP localhost.localdomain:59062->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1165   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1165   root    7u  IPv4  24248      0t0  TCP localhost.localdomain:39864->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1166   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1166   root    8u  IPv4  31108      0t0  TCP localhost.localdomain:47160->localhost.localdomain:redis (ESTABLISHED)
+uwsgi     1167   root    3u  IPv4  24000      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1167   root    8u  IPv4  23458      0t0  TCP localhost.localdomain:37148->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root    9u  IPv6  24217      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1575   root   10u  IPv6  31077      0t0  TCP localhost:50051->localhost:50600 (ESTABLISHED)
+aap-gatew 1575   root   11u  IPv4  27863      0t0  TCP localhost.localdomain:54200->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1575   root   12u  IPv4  54461      0t0  TCP localhost.localdomain:36124->aap25-database.lan:postgres (ESTABLISHED)
+aap-gatew 1576   root   11u  IPv6  24220      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1577   root   13u  IPv6  24223      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1578   root   15u  IPv6  23305      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   17u  IPv6  23302      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1579   root   18u  IPv6  26420      0t0  TCP localhost:50051->localhost:49764 (ESTABLISHED)
+aap-gatew 1579   root   19u  IPv4  24889      0t0  TCP localhost.localdomain:59074->localhost.localdomain:redis (ESTABLISHED)
+aap-gatew 1579   root   20u  IPv4  24890      0t0  TCP localhost.localdomain:49120->aap25-database.lan:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3584 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 1074)
+    PID    PPID CMD                           RSS
+   1074       1 /usr/bin/redis-server *:637 15956
+
+Process: nginx (PID: 1112)
+    PID    PPID CMD                           RSS
+   1112       1 nginx: master process /usr/  2104
+  Children of PID 1112:
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: nginx (PID: 1113)
+    PID    PPID CMD                           RSS
+   1113    1112 nginx: worker process        8120
+
+Process: nginx (PID: 1114)
+    PID    PPID CMD                           RSS
+   1114    1112 nginx: worker process        8376
+
+Process: uwsgi (PID: 1123)
+    PID    PPID CMD                           RSS
+   1123     774 uwsgi /etc/ansible-automati 13952
+  Children of PID 1123:
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117676
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116792
+
+Process: uwsgi (PID: 1163)
+    PID    PPID CMD                           RSS
+   1163    1123 uwsgi /etc/ansible-automati 116332
+
+Process: uwsgi (PID: 1164)
+    PID    PPID CMD                           RSS
+   1164    1123 uwsgi /etc/ansible-automati 115932
+
+Process: uwsgi (PID: 1165)
+    PID    PPID CMD                           RSS
+   1165    1123 uwsgi /etc/ansible-automati 117676
+
+Process: uwsgi (PID: 1166)
+    PID    PPID CMD                           RSS
+   1166    1123 uwsgi /etc/ansible-automati 116496
+
+Process: uwsgi (PID: 1167)
+    PID    PPID CMD                           RSS
+   1167    1123 uwsgi /etc/ansible-automati 116792
+
+Process: bash (PID: 4449)
+    PID    PPID CMD                           RSS
+   4449       1 bash -c  log_file="/tmp/mem  3584
+  Children of PID 4449:
+    PID    PPID CMD                           RSS
+   5511    4449 bash -c  log_file="/tmp/mem  2340
+
+Process: bash (PID: 5511)
+    PID    PPID CMD                           RSS
+   5511    4449 bash -c  log_file="/tmp/mem  2340
+  Children of PID 5511:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(4449)---pstree(5559)
+=== receptor Process Tree ===
+bash(4449)---pstree(5563)
+=== nginx Process Tree ===
+nginx(1112)-+-nginx(1113)
+            `-nginx(1114)
+nginx(1113)
+nginx(1114)
+bash(4449)---pstree(5570)
+=== postgresql Process Tree ===
+bash(4449)---pstree(5574)
+=== redis Process Tree ===
+redis-server(1074)-+-{redis-server}(1083)
+                   |-{redis-server}(1084)
+                   |-{redis-server}(1085)
+                   `-{redis-server}(1086)
+bash(4449)---pstree(5579)
+=== uwsgi Process Tree ===
+uwsgi(1123)-+-uwsgi(1163)
+            |-uwsgi(1164)
+            |-uwsgi(1165)
+            |-uwsgi(1166)
+            `-uwsgi(1167)
+uwsgi(1163)
+uwsgi(1164)
+uwsgi(1165)
+uwsgi(1166)
+uwsgi(1167)
+bash(4449)---pstree(5589)
+=== automation-hub Process Tree ===
+bash(4449)---pstree(5593)
+=== automation-eda Process Tree ===
+bash(4449)---pstree(5597)
+
+Memory monitoring completed for aap25 baseline test at Thu Jul  3 11:37:46 AM EDT 2025

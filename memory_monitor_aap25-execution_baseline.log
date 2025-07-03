@@ -1,0 +1,2653 @@
+Starting memory monitoring for aap25 baseline test at Thu Jul  3 08:34:40 AM PDT 2025
+=================================================================================
+2025-07-03 08:34:40
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1323        6107           9         525        6357
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1190     797 /usr/bin/python3.11 -sP /us 116156
+   1215    1187 uwsgi /etc/ansible-automati 115708
+   1219    1187 uwsgi /etc/ansible-automati 115496
+   1216    1187 uwsgi /etc/ansible-automati 115444
+   1214    1187 uwsgi /etc/ansible-automati 115260
+   1217    1187 uwsgi /etc/ansible-automati 115248
+   1643    1190 /usr/bin/python3.11 -sP /us 103072
+   1642    1190 /usr/bin/python3.11 -sP /us 101116
+   1650    1190 /usr/bin/python3.11 -sP /us 101116
+   1640    1190 /usr/bin/python3.11 -sP /us 100988
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    754       1 /usr/bin/receptor -c /etc/r 40200 1790028 0.0  0.5       25:26
+Receptor Child Processes for PID 754:
+  No child processes found
+Receptor Threads for PID 754:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    754     754  0.0  0.5 40200 receptor
+    754     763  0.0  0.5 40200 receptor
+    754     764  0.0  0.5 40200 receptor
+    754     765  0.0  0.5 40200 receptor
+    754     766  0.0  0.5 40200 receptor
+    754     767  0.0  0.5 40200 receptor
+    754     774  0.0  0.5 40200 receptor
+    754    1841  0.0  0.5 40200 receptor
+Receptor Network Connections for PID 754:
+COMMAND    PID          USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u     IPv4              63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx  cwd       DIR              253,0      235      128 /
+receptor   754           awx  rtd       DIR              253,0      235      128 /
+receptor   754           awx  txt       REG              253,0 55920336 33686933 /usr/bin/receptor
+receptor   754           awx  mem       REG              253,0  5436640 50527991 /usr/lib64/libcrypto.so.3.2.2
+receptor   754           awx  mem       REG              253,0  2544344 50356320 /usr/lib64/libc.so.6
+receptor   754           awx  mem       REG              253,0   102552 50356340 /usr/lib64/libz.so.1.2.11
+receptor   754           awx  mem       REG              253,0    70520 50356331 /usr/lib64/libresolv.so.2
+receptor   754           awx  mem       REG              253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+receptor   754           awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   754           awx    1w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    2w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    3rW     REG               0,24        0      963 /run/awx-receptor/receptor.sock.lock
+receptor   754           awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9]
+receptor   754           awx    5r     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    6w     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    7u     unix 0xffff88ca87760f00      0t0    13225 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   754           awx    8u     IPv6              13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u     IPv4              22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u     IPv4              13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u     IPv6              13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u     IPv4              24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u     IPv4              22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u     IPv6              24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u     IPv6              25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u     IPv6              24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u     IPv4              24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u     IPv6              24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u     IPv4              64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u     IPv6              26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u     IPv6              25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u     IPv6              26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u     IPv6              25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u     IPv6              22368      0t0      TCP *:50051 (LISTEN)
+sshd      6509          root    4u     IPv4              64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u     IPv4              64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6665       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       00:00
+Receptor Child Processes for PID 6665:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6665:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6665    6665  0.0  0.0  3456 bash
+Receptor Network Connections for PID 6665:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0      TCP *:50051 (LISTEN)
+sshd      6509          root    4u  IPv4  64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u  IPv4  64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+bash      6665          root  cwd    DIR  253,0      179 33685638 /root
+bash      6665          root  rtd    DIR  253,0      235      128 /
+bash      6665          root  txt    REG  253,0  1389072 33779126 /usr/bin/bash
+bash      6665          root  mem    REG  253,0  2586930    30692 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6665          root  mem    REG  253,0  2544344 50356320 /usr/lib64/libc.so.6
+bash      6665          root  mem    REG  253,0   346132 50355997 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6665          root  mem    REG  253,0       54    30695 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6665          root  mem    REG  253,0     3284 16862149 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6665          root  mem    REG  253,0      286 16862147 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6665          root  mem    REG  253,0       57 16862160 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6665          root  mem    REG  253,0    26988 33779313 /usr/lib64/gconv/gconv-modules.cache
+bash      6665          root  mem    REG  253,0   195080 50355981 /usr/lib64/libtinfo.so.6.2
+bash      6665          root  mem    REG  253,0       34 50356298 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6665          root  mem    REG  253,0       77    30694 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6665          root  mem    REG  253,0      167 16862143 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6665          root  mem    REG  253,0       59 16862148 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6665          root  mem    REG  253,0       23 16862146 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6665          root  mem    REG  253,0      369 16862145 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6665          root  mem    REG  253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+bash      6665          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6665          root    1w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    2w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    3r  FIFO   0,13      0t0    64424 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 6673:
+  No child processes found
+Receptor Threads for PID 6673:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 6673:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0  TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0  TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0  TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0  UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0  UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0  UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0  TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0  TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0  TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0  TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0  TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0  TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0  TCP *:50051 (LISTEN)
+sshd      6509          root    4u  IPv4  64187      0t0  TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u  IPv4  64187      0t0  TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 43656 KB (42 MB)
+Total Receptor VSZ Memory: 1797288 KB (1755 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 754)
+    PID    PPID CMD                           RSS
+    754       1 /usr/bin/receptor -c /etc/r 40200
+
+Process: redis-server (PID: 1131)
+    PID    PPID CMD                           RSS
+   1131       1 /usr/bin/redis-server *:637 15012
+
+Process: nginx (PID: 1174)
+    PID    PPID CMD                           RSS
+   1174       1 nginx: master process /usr/  2224
+  Children of PID 1174:
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: nginx (PID: 1178)
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+
+Process: nginx (PID: 1179)
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+
+Process: nginx (PID: 1180)
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+
+Process: nginx (PID: 1181)
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: uwsgi (PID: 1187)
+    PID    PPID CMD                           RSS
+   1187     797 uwsgi /etc/ansible-automati 14208
+  Children of PID 1187:
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115260
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115708
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: uwsgi (PID: 1214)
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115260
+
+Process: uwsgi (PID: 1215)
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115708
+
+Process: uwsgi (PID: 1216)
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+
+Process: uwsgi (PID: 1217)
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+
+Process: uwsgi (PID: 1219)
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: bash (PID: 6665)
+    PID    PPID CMD                           RSS
+   6665       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 6665:
+    PID    PPID CMD                           RSS
+   6753    6665 bash -c  log_file="/tmp/mem  2064
+
+Process: bash (PID: 6753)
+    PID    PPID CMD                           RSS
+   6753    6665 bash -c  log_file="/tmp/mem  2064
+  Children of PID 6753:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6665)---pstree(6812)
+=== receptor Process Tree ===
+receptor(754)-+-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(767)
+              |-{receptor}(774)
+              `-{receptor}(1841)
+bash(6665)---pstree(6817)
+=== nginx Process Tree ===
+nginx(1174)-+-nginx(1178)
+            |-nginx(1179)
+            |-nginx(1180)
+            `-nginx(1181)
+nginx(1178)
+nginx(1179)
+nginx(1180)
+nginx(1181)
+bash(6665)---pstree(6826)
+=== postgresql Process Tree ===
+bash(6665)---pstree(6830)
+=== redis Process Tree ===
+redis-server(1131)-+-{redis-server}(1167)
+                   |-{redis-server}(1169)
+                   |-{redis-server}(1170)
+                   `-{redis-server}(1171)
+bash(6665)---pstree(6835)
+=== uwsgi Process Tree ===
+uwsgi(1187)-+-uwsgi(1214)
+            |-uwsgi(1215)
+            |-uwsgi(1216)
+            |-uwsgi(1217)
+            `-uwsgi(1219)
+uwsgi(1214)
+uwsgi(1215)
+uwsgi(1216)
+uwsgi(1217)
+uwsgi(1219)
+bash(6665)---pstree(6845)
+=== automation-hub Process Tree ===
+bash(6665)---pstree(6849)
+=== automation-eda Process Tree ===
+bash(6665)---pstree(6853)
+
+=================================================================================
+2025-07-03 08:35:12
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1269        6162           9         525        6411
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1190     797 /usr/bin/python3.11 -sP /us 116156
+   1215    1187 uwsgi /etc/ansible-automati 115708
+   1219    1187 uwsgi /etc/ansible-automati 115496
+   1216    1187 uwsgi /etc/ansible-automati 115444
+   1214    1187 uwsgi /etc/ansible-automati 115388
+   1217    1187 uwsgi /etc/ansible-automati 115248
+   1643    1190 /usr/bin/python3.11 -sP /us 103072
+   1642    1190 /usr/bin/python3.11 -sP /us 101116
+   1650    1190 /usr/bin/python3.11 -sP /us 101116
+   1640    1190 /usr/bin/python3.11 -sP /us 100988
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    754       1 /usr/bin/receptor -c /etc/r 39248 1790028 0.0  0.4       25:57
+Receptor Child Processes for PID 754:
+  No child processes found
+Receptor Threads for PID 754:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    754     754  0.0  0.4 39248 receptor
+    754     763  0.0  0.4 39248 receptor
+    754     764  0.0  0.4 39248 receptor
+    754     765  0.0  0.4 39248 receptor
+    754     766  0.0  0.4 39248 receptor
+    754     767  0.0  0.4 39248 receptor
+    754     774  0.0  0.4 39248 receptor
+    754    1841  0.0  0.4 39248 receptor
+Receptor Network Connections for PID 754:
+COMMAND    PID          USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u     IPv4              63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx  cwd       DIR              253,0      235      128 /
+receptor   754           awx  rtd       DIR              253,0      235      128 /
+receptor   754           awx  txt       REG              253,0 55920336 33686933 /usr/bin/receptor
+receptor   754           awx  mem       REG              253,0  5436640 50527991 /usr/lib64/libcrypto.so.3.2.2
+receptor   754           awx  mem       REG              253,0  2544344 50356320 /usr/lib64/libc.so.6
+receptor   754           awx  mem       REG              253,0   102552 50356340 /usr/lib64/libz.so.1.2.11
+receptor   754           awx  mem       REG              253,0    70520 50356331 /usr/lib64/libresolv.so.2
+receptor   754           awx  mem       REG              253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+receptor   754           awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   754           awx    1w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    2w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    3rW     REG               0,24        0      963 /run/awx-receptor/receptor.sock.lock
+receptor   754           awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9]
+receptor   754           awx    5r     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    6w     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    7u     unix 0xffff88ca87760f00      0t0    13225 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   754           awx    8u     IPv6              13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u     IPv4              22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u     IPv4              13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u     IPv6              13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u     IPv4              24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u     IPv4              22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u     IPv6              24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u     IPv6              25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u     IPv6              24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u     IPv4              24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u     IPv6              24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u     IPv4              64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u     IPv6              26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u     IPv6              25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u     IPv6              26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u     IPv6              25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u     IPv6              22368      0t0      TCP *:50051 (LISTEN)
+sshd      6509          root    4u     IPv4              64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u     IPv4              64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6665       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       00:32
+Receptor Child Processes for PID 6665:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6665:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6665    6665  0.0  0.0  3456 bash
+Receptor Network Connections for PID 6665:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0      TCP *:50051 (LISTEN)
+sshd      6509          root    4u  IPv4  64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u  IPv4  64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+bash      6665          root  cwd    DIR  253,0      179 33685638 /root
+bash      6665          root  rtd    DIR  253,0      235      128 /
+bash      6665          root  txt    REG  253,0  1389072 33779126 /usr/bin/bash
+bash      6665          root  mem    REG  253,0  2586930    30692 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6665          root  mem    REG  253,0  2544344 50356320 /usr/lib64/libc.so.6
+bash      6665          root  mem    REG  253,0   346132 50355997 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6665          root  mem    REG  253,0       54    30695 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6665          root  mem    REG  253,0     3284 16862149 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6665          root  mem    REG  253,0      286 16862147 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6665          root  mem    REG  253,0       57 16862160 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6665          root  mem    REG  253,0    26988 33779313 /usr/lib64/gconv/gconv-modules.cache
+bash      6665          root  mem    REG  253,0   195080 50355981 /usr/lib64/libtinfo.so.6.2
+bash      6665          root  mem    REG  253,0       34 50356298 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6665          root  mem    REG  253,0       77    30694 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6665          root  mem    REG  253,0      167 16862143 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6665          root  mem    REG  253,0       59 16862148 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6665          root  mem    REG  253,0       23 16862146 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6665          root  mem    REG  253,0      369 16862145 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6665          root  mem    REG  253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+bash      6665          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6665          root    1w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    2w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    3r  FIFO   0,13      0t0    69735 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 6927:
+  No child processes found
+Receptor Threads for PID 6927:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 6927:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0  TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0  TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0  TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0  UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0  UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0  UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0  TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0  TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0  TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0  TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0  TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0  TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0  TCP *:50051 (LISTEN)
+sshd      6509          root    4u  IPv4  64187      0t0  TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u  IPv4  64187      0t0  TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 42704 KB (41 MB)
+Total Receptor VSZ Memory: 1797288 KB (1755 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 754)
+    PID    PPID CMD                           RSS
+    754       1 /usr/bin/receptor -c /etc/r 39248
+
+Process: redis-server (PID: 1131)
+    PID    PPID CMD                           RSS
+   1131       1 /usr/bin/redis-server *:637 15012
+
+Process: nginx (PID: 1174)
+    PID    PPID CMD                           RSS
+   1174       1 nginx: master process /usr/  2224
+  Children of PID 1174:
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: nginx (PID: 1178)
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+
+Process: nginx (PID: 1179)
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+
+Process: nginx (PID: 1180)
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+
+Process: nginx (PID: 1181)
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: uwsgi (PID: 1187)
+    PID    PPID CMD                           RSS
+   1187     797 uwsgi /etc/ansible-automati 14208
+  Children of PID 1187:
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115388
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115708
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: uwsgi (PID: 1214)
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115388
+
+Process: uwsgi (PID: 1215)
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115708
+
+Process: uwsgi (PID: 1216)
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+
+Process: uwsgi (PID: 1217)
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+
+Process: uwsgi (PID: 1219)
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: bash (PID: 6665)
+    PID    PPID CMD                           RSS
+   6665       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 6665:
+    PID    PPID CMD                           RSS
+   7007    6665 bash -c  log_file="/tmp/mem  2080
+
+Process: bash (PID: 7007)
+    PID    PPID CMD                           RSS
+   7007    6665 bash -c  log_file="/tmp/mem  2080
+  Children of PID 7007:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6665)---pstree(7066)
+=== receptor Process Tree ===
+receptor(754)-+-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(767)
+              |-{receptor}(774)
+              `-{receptor}(1841)
+bash(6665)---pstree(7071)
+=== nginx Process Tree ===
+nginx(1174)-+-nginx(1178)
+            |-nginx(1179)
+            |-nginx(1180)
+            `-nginx(1181)
+nginx(1178)
+nginx(1179)
+nginx(1180)
+nginx(1181)
+bash(6665)---pstree(7080)
+=== postgresql Process Tree ===
+bash(6665)---pstree(7084)
+=== redis Process Tree ===
+redis-server(1131)-+-{redis-server}(1167)
+                   |-{redis-server}(1169)
+                   |-{redis-server}(1170)
+                   `-{redis-server}(1171)
+bash(6665)---pstree(7089)
+=== uwsgi Process Tree ===
+uwsgi(1187)-+-uwsgi(1214)
+            |-uwsgi(1215)
+            |-uwsgi(1216)
+            |-uwsgi(1217)
+            `-uwsgi(1219)
+uwsgi(1214)
+uwsgi(1215)
+uwsgi(1216)
+uwsgi(1217)
+uwsgi(1219)
+bash(6665)---pstree(7099)
+=== automation-hub Process Tree ===
+bash(6665)---pstree(7103)
+=== automation-eda Process Tree ===
+bash(6665)---pstree(7107)
+
+=================================================================================
+2025-07-03 08:35:43
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1304        6123           9         528        6376
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1190     797 /usr/bin/python3.11 -sP /us 116156
+   1215    1187 uwsgi /etc/ansible-automati 115708
+   1219    1187 uwsgi /etc/ansible-automati 115496
+   1216    1187 uwsgi /etc/ansible-automati 115444
+   1214    1187 uwsgi /etc/ansible-automati 115388
+   1217    1187 uwsgi /etc/ansible-automati 115248
+   1643    1190 /usr/bin/python3.11 -sP /us 103072
+   1642    1190 /usr/bin/python3.11 -sP /us 101116
+   1650    1190 /usr/bin/python3.11 -sP /us 101116
+   1640    1190 /usr/bin/python3.11 -sP /us 100988
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    754       1 /usr/bin/receptor -c /etc/r 39760 1790028 0.0  0.5       26:29
+Receptor Child Processes for PID 754:
+  No child processes found
+Receptor Threads for PID 754:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    754     754  0.0  0.5 39760 receptor
+    754     763  0.0  0.5 39760 receptor
+    754     764  0.0  0.5 39760 receptor
+    754     765  0.0  0.5 39760 receptor
+    754     766  0.0  0.5 39760 receptor
+    754     767  0.0  0.5 39760 receptor
+    754     774  0.0  0.5 39760 receptor
+    754    1841  0.0  0.5 39760 receptor
+Receptor Network Connections for PID 754:
+COMMAND    PID          USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u     IPv4              63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx  cwd       DIR              253,0      235      128 /
+receptor   754           awx  rtd       DIR              253,0      235      128 /
+receptor   754           awx  txt       REG              253,0 55920336 33686933 /usr/bin/receptor
+receptor   754           awx  mem       REG              253,0  5436640 50527991 /usr/lib64/libcrypto.so.3.2.2
+receptor   754           awx  mem       REG              253,0  2544344 50356320 /usr/lib64/libc.so.6
+receptor   754           awx  mem       REG              253,0   102552 50356340 /usr/lib64/libz.so.1.2.11
+receptor   754           awx  mem       REG              253,0    70520 50356331 /usr/lib64/libresolv.so.2
+receptor   754           awx  mem       REG              253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+receptor   754           awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   754           awx    1w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    2w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    3rW     REG               0,24        0      963 /run/awx-receptor/receptor.sock.lock
+receptor   754           awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9]
+receptor   754           awx    5r     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    6w     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    7u     unix 0xffff88ca87760f00      0t0    13225 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   754           awx    8u     IPv6              13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u     IPv4              22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u     IPv4              13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u     IPv6              13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u     IPv4              24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u     IPv4              22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u     IPv6              24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u     IPv6              25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u     IPv6              24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u     IPv4              24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u     IPv6              24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u     IPv4              64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u     IPv6              26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u     IPv6              25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u     IPv6              26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u     IPv6              25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u     IPv6              22368      0t0      TCP *:50051 (LISTEN)
+sshd      6509          root    4u     IPv4              64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u     IPv4              64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      7147          root    4u     IPv4              68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u     IPv4              68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6665       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:03
+Receptor Child Processes for PID 6665:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6665:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6665    6665  0.0  0.0  3456 bash
+Receptor Network Connections for PID 6665:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0      TCP *:50051 (LISTEN)
+sshd      6509          root    4u  IPv4  64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u  IPv4  64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+bash      6665          root  cwd    DIR  253,0      179 33685638 /root
+bash      6665          root  rtd    DIR  253,0      235      128 /
+bash      6665          root  txt    REG  253,0  1389072 33779126 /usr/bin/bash
+bash      6665          root  mem    REG  253,0  2586930    30692 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6665          root  mem    REG  253,0  2544344 50356320 /usr/lib64/libc.so.6
+bash      6665          root  mem    REG  253,0   346132 50355997 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6665          root  mem    REG  253,0       54    30695 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6665          root  mem    REG  253,0     3284 16862149 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6665          root  mem    REG  253,0      286 16862147 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6665          root  mem    REG  253,0       57 16862160 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6665          root  mem    REG  253,0    26988 33779313 /usr/lib64/gconv/gconv-modules.cache
+bash      6665          root  mem    REG  253,0   195080 50355981 /usr/lib64/libtinfo.so.6.2
+bash      6665          root  mem    REG  253,0       34 50356298 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6665          root  mem    REG  253,0       77    30694 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6665          root  mem    REG  253,0      167 16862143 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6665          root  mem    REG  253,0       59 16862148 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6665          root  mem    REG  253,0       23 16862146 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6665          root  mem    REG  253,0      369 16862145 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6665          root  mem    REG  253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+bash      6665          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6665          root    1w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    2w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    3r  FIFO   0,13      0t0    70456 pipe
+sshd      7147          root    4u  IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u  IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 7664:
+  No child processes found
+Receptor Threads for PID 7664:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 7664:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0  TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0  TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0  TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0  UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0  UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0  UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0  TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0  TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0  TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0  TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0  TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0  TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0  TCP *:50051 (LISTEN)
+sshd      6509          root    4u  IPv4  64187      0t0  TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u  IPv4  64187      0t0  TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      7147          root    4u  IPv4  68535      0t0  TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u  IPv4  68535      0t0  TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 43216 KB (42 MB)
+Total Receptor VSZ Memory: 1797288 KB (1755 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 754)
+    PID    PPID CMD                           RSS
+    754       1 /usr/bin/receptor -c /etc/r 39760
+
+Process: redis-server (PID: 1131)
+    PID    PPID CMD                           RSS
+   1131       1 /usr/bin/redis-server *:637 15012
+
+Process: nginx (PID: 1174)
+    PID    PPID CMD                           RSS
+   1174       1 nginx: master process /usr/  2224
+  Children of PID 1174:
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: nginx (PID: 1178)
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+
+Process: nginx (PID: 1179)
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+
+Process: nginx (PID: 1180)
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+
+Process: nginx (PID: 1181)
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: uwsgi (PID: 1187)
+    PID    PPID CMD                           RSS
+   1187     797 uwsgi /etc/ansible-automati 14208
+  Children of PID 1187:
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115388
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115708
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: uwsgi (PID: 1214)
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115388
+
+Process: uwsgi (PID: 1215)
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115708
+
+Process: uwsgi (PID: 1216)
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+
+Process: uwsgi (PID: 1217)
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+
+Process: uwsgi (PID: 1219)
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: bash (PID: 6665)
+    PID    PPID CMD                           RSS
+   6665       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 6665:
+    PID    PPID CMD                           RSS
+   7744    6665 bash -c  log_file="/tmp/mem  2092
+
+Process: bash (PID: 7744)
+    PID    PPID CMD                           RSS
+   7744    6665 bash -c  log_file="/tmp/mem  2092
+  Children of PID 7744:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6665)---pstree(7803)
+=== receptor Process Tree ===
+receptor(754)-+-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(767)
+              |-{receptor}(774)
+              `-{receptor}(1841)
+bash(6665)---pstree(7808)
+=== nginx Process Tree ===
+nginx(1174)-+-nginx(1178)
+            |-nginx(1179)
+            |-nginx(1180)
+            `-nginx(1181)
+nginx(1178)
+nginx(1179)
+nginx(1180)
+nginx(1181)
+bash(6665)---pstree(7817)
+=== postgresql Process Tree ===
+bash(6665)---pstree(7821)
+=== redis Process Tree ===
+redis-server(1131)-+-{redis-server}(1167)
+                   |-{redis-server}(1169)
+                   |-{redis-server}(1170)
+                   `-{redis-server}(1171)
+bash(6665)---pstree(7826)
+=== uwsgi Process Tree ===
+uwsgi(1187)-+-uwsgi(1214)
+            |-uwsgi(1215)
+            |-uwsgi(1216)
+            |-uwsgi(1217)
+            `-uwsgi(1219)
+uwsgi(1214)
+uwsgi(1215)
+uwsgi(1216)
+uwsgi(1217)
+uwsgi(1219)
+bash(6665)---pstree(7836)
+=== automation-hub Process Tree ===
+bash(6665)---pstree(7840)
+=== automation-eda Process Tree ===
+bash(6665)---pstree(7844)
+
+=================================================================================
+2025-07-03 08:36:14
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1538        5751          10         670        6142
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1190     797 /usr/bin/python3.11 -sP /us 116156
+   1215    1187 uwsgi /etc/ansible-automati 115836
+   1219    1187 uwsgi /etc/ansible-automati 115496
+   1216    1187 uwsgi /etc/ansible-automati 115444
+   1214    1187 uwsgi /etc/ansible-automati 115388
+   1217    1187 uwsgi /etc/ansible-automati 115248
+   1643    1190 /usr/bin/python3.11 -sP /us 103072
+   1642    1190 /usr/bin/python3.11 -sP /us 101116
+   1650    1190 /usr/bin/python3.11 -sP /us 101116
+   1640    1190 /usr/bin/python3.11 -sP /us 100988
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    754       1 /usr/bin/receptor -c /etc/r 39884 1790028 0.0  0.5       27:00
+Receptor Child Processes for PID 754:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   7858     754 /usr/bin/receptor --node id 35716 1936660 0.1  0.4       00:26
+Receptor Threads for PID 754:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    754     754  0.0  0.5 39884 receptor
+    754     763  0.0  0.5 39884 receptor
+    754     764  0.0  0.5 39884 receptor
+    754     765  0.0  0.5 39884 receptor
+    754     766  0.0  0.5 39884 receptor
+    754     767  0.0  0.5 39884 receptor
+    754     774  0.0  0.5 39884 receptor
+    754    1841  0.0  0.5 39884 receptor
+Receptor Network Connections for PID 754:
+COMMAND    PID          USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u     IPv4              63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx  cwd       DIR              253,0      235      128 /
+receptor   754           awx  rtd       DIR              253,0      235      128 /
+receptor   754           awx  txt       REG              253,0 55920336 33686933 /usr/bin/receptor
+receptor   754           awx  mem       REG              253,0  5436640 50527991 /usr/lib64/libcrypto.so.3.2.2
+receptor   754           awx  mem       REG              253,0  2544344 50356320 /usr/lib64/libc.so.6
+receptor   754           awx  mem       REG              253,0   102552 50356340 /usr/lib64/libz.so.1.2.11
+receptor   754           awx  mem       REG              253,0    70520 50356331 /usr/lib64/libresolv.so.2
+receptor   754           awx  mem       REG              253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+receptor   754           awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   754           awx    1w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    2w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    3rW     REG               0,24        0      963 /run/awx-receptor/receptor.sock.lock
+receptor   754           awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9,10]
+receptor   754           awx    5r     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    6w     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    7u     unix 0xffff88ca87760f00      0t0    13225 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   754           awx    8u     IPv6              13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u     IPv4              22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+receptor   754           awx   10r  a_inode               0,14        0       62 inotify
+receptor   754           awx   11r      REG              253,0    38021 53075718 /tmp/receptor/192.168.1.20/dvNvAM0h/stdout
+chronyd    770        chrony    5u     IPv4              13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u     IPv6              13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u     IPv4              24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u     IPv4              22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u     IPv6              24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u     IPv6              25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u     IPv6              24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u     IPv4              24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u     IPv6              24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u     IPv4              64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u     IPv6              26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u     IPv6              25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u     IPv6              26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u     IPv6              25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u     IPv6              22368      0t0      TCP *:50051 (LISTEN)
+sshd      6509          root    4u     IPv4              64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u     IPv4              64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      7147          root    4u     IPv4              68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u     IPv4              68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+slirp4net 7910           awx    3u     IPv4              72639      0t0      TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u     IPv4              73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u     IPv4              73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6665       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:34
+Receptor Child Processes for PID 6665:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6665:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6665    6665  0.0  0.0  3456 bash
+Receptor Network Connections for PID 6665:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0      TCP *:50051 (LISTEN)
+sshd      6509          root    4u  IPv4  64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u  IPv4  64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+bash      6665          root  cwd    DIR  253,0      179 33685638 /root
+bash      6665          root  rtd    DIR  253,0      235      128 /
+bash      6665          root  txt    REG  253,0  1389072 33779126 /usr/bin/bash
+bash      6665          root  mem    REG  253,0  2586930    30692 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6665          root  mem    REG  253,0  2544344 50356320 /usr/lib64/libc.so.6
+bash      6665          root  mem    REG  253,0   346132 50355997 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6665          root  mem    REG  253,0       54    30695 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6665          root  mem    REG  253,0     3284 16862149 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6665          root  mem    REG  253,0      286 16862147 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6665          root  mem    REG  253,0       57 16862160 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6665          root  mem    REG  253,0    26988 33779313 /usr/lib64/gconv/gconv-modules.cache
+bash      6665          root  mem    REG  253,0   195080 50355981 /usr/lib64/libtinfo.so.6.2
+bash      6665          root  mem    REG  253,0       34 50356298 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6665          root  mem    REG  253,0       77    30694 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6665          root  mem    REG  253,0      167 16862143 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6665          root  mem    REG  253,0       59 16862148 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6665          root  mem    REG  253,0       23 16862146 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6665          root  mem    REG  253,0      369 16862145 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6665          root  mem    REG  253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+bash      6665          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6665          root    1w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    2w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    3r  FIFO   0,13      0t0    77008 pipe
+sshd      7147          root    4u  IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u  IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+slirp4net 7910           awx    3u  IPv4  72639      0t0      TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u  IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u  IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   7858     754 /usr/bin/receptor --node id 35716 1936660 0.1  0.4       00:26
+Receptor Child Processes for PID 7858:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   7866    7858 /usr/bin/python3.11 -sP /us 57548 137472  0.5  0.7       00:26
+Receptor Threads for PID 7858:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   7858    7858  0.0  0.4 35716 receptor
+   7858    7859  0.0  0.4 35716 receptor
+   7858    7860  0.0  0.4 35716 receptor
+   7858    7861  0.0  0.4 35716 receptor
+   7858    7862  0.0  0.4 35716 receptor
+   7858    7863  0.0  0.4 35716 receptor
+   7858    7864  0.0  0.4 35716 receptor
+   7858    7865  0.0  0.4 35716 receptor
+   7858    8517  0.0  0.4 35716 receptor
+   7858    8518  0.0  0.4 35716 receptor
+Receptor Network Connections for PID 7858:
+COMMAND    PID          USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u     IPv4  63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u     IPv6  13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u     IPv4  22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u     IPv4  13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u     IPv6  13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u     IPv4  24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u     IPv4  22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u     IPv6  24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u     IPv6  25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u     IPv6  24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u     IPv4  24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u     IPv6  24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u     IPv4  64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+nginx     1181         nginx   13u     IPv4  77925      0t0      TCP localhost:58776->localhost:8050 (ESTABLISHED)
+uwsgi     1187          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    6u     IPv4  77926      0t0      TCP localhost:8050->localhost:58776 (ESTABLISHED)
+uwsgi     1217          root    7u     IPv4  77927      0t0      TCP aap25-execution.aap-test.local:45928->aap25-database.aap-test.local:postgres (ESTABLISHED)
+uwsgi     1219          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u     IPv6  26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u     IPv6  25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u     IPv6  26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u     IPv6  25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u     IPv6  22368      0t0      TCP *:50051 (LISTEN)
+sshd      6509          root    4u     IPv4  64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u     IPv4  64187      0t0      TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      7147          root    4u     IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u     IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+receptor  7858           awx  cwd       DIR  253,0      235      128 /
+receptor  7858           awx  rtd       DIR  253,0      235      128 /
+receptor  7858           awx  txt       REG  253,0 55920336 33686933 /usr/bin/receptor
+receptor  7858           awx  mem       REG  253,0  5436640 50527991 /usr/lib64/libcrypto.so.3.2.2
+receptor  7858           awx  mem       REG  253,0   102552 50356340 /usr/lib64/libz.so.1.2.11
+receptor  7858           awx  mem       REG  253,0  2544344 50356320 /usr/lib64/libc.so.6
+receptor  7858           awx  mem       REG  253,0    70520 50356331 /usr/lib64/libresolv.so.2
+receptor  7858           awx  mem       REG  253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+receptor  7858           awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  7858           awx    1w      REG  253,0      559 17327669 /var/log/receptor/receptor.log
+receptor  7858           awx    2w      REG  253,0      559 17327669 /var/log/receptor/receptor.log
+receptor  7858           awx    3r      REG  253,0    63881 53075717 /tmp/receptor/192.168.1.20/dvNvAM0h/stdin
+receptor  7858           awx    4u  a_inode   0,14        0       62 [eventpoll:5]
+receptor  7858           awx    5r     FIFO   0,13      0t0    72498 pipe
+receptor  7858           awx    6w     FIFO   0,13      0t0    72498 pipe
+receptor  7858           awx    7w      REG  253,0    38021 53075718 /tmp/receptor/192.168.1.20/dvNvAM0h/stdout
+slirp4net 7910           awx    3u     IPv4  72639      0t0      TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u     IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u     IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 8529:
+  No child processes found
+Receptor Threads for PID 8529:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 8529:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0  TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0  TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0  TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0  UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0  UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0  UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0  TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0  TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0  TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0  TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0  TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0  TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0  TCP *:50051 (LISTEN)
+sshd      6509          root    4u  IPv4  64187      0t0  TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      6541          root    4u  IPv4  64187      0t0  TCP aap25-execution.aap-test.local:ssh->192.168.1.49:47852 (ESTABLISHED)
+sshd      7147          root    4u  IPv4  68535      0t0  TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u  IPv4  68535      0t0  TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+slirp4net 7910           awx    3u  IPv4  72639      0t0  TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u  IPv4  73137      0t0  TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u  IPv4  73137      0t0  TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 172320 KB (168 MB)
+Total Receptor VSZ Memory: 5808080 KB (5671 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 754)
+    PID    PPID CMD                           RSS
+    754       1 /usr/bin/receptor -c /etc/r 39884
+  Children of PID 754:
+    PID    PPID CMD                           RSS
+   7858     754 /usr/bin/receptor --node id 35716
+
+Process: redis-server (PID: 1131)
+    PID    PPID CMD                           RSS
+   1131       1 /usr/bin/redis-server *:637 15012
+
+Process: nginx (PID: 1174)
+    PID    PPID CMD                           RSS
+   1174       1 nginx: master process /usr/  2224
+  Children of PID 1174:
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: nginx (PID: 1178)
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+
+Process: nginx (PID: 1179)
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+
+Process: nginx (PID: 1180)
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+
+Process: nginx (PID: 1181)
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: uwsgi (PID: 1187)
+    PID    PPID CMD                           RSS
+   1187     797 uwsgi /etc/ansible-automati 14208
+  Children of PID 1187:
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115388
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115836
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: uwsgi (PID: 1214)
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115388
+
+Process: uwsgi (PID: 1215)
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115836
+
+Process: uwsgi (PID: 1216)
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+
+Process: uwsgi (PID: 1217)
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+
+Process: uwsgi (PID: 1219)
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: bash (PID: 6665)
+    PID    PPID CMD                           RSS
+   6665       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 6665:
+    PID    PPID CMD                           RSS
+   8650    6665 bash -c  log_file="/tmp/mem  2100
+
+Process: receptor (PID: 7858)
+    PID    PPID CMD                           RSS
+   7858     754 /usr/bin/receptor --node id 35716
+  Children of PID 7858:
+    PID    PPID CMD                           RSS
+   7866    7858 /usr/bin/python3.11 -sP /us 57548
+
+Process: bash (PID: 8650)
+    PID    PPID CMD                           RSS
+   8650    6665 bash -c  log_file="/tmp/mem  2100
+  Children of PID 8650:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6665)---pstree(8725)
+=== receptor Process Tree ===
+receptor(754)-+-receptor(7858)-+-ansible-runner(7866)---podman(7876)-+-exe(7885)-+-slirp4netns(7910)
+              |                |                                     |           |-{exe}(7892)
+              |                |                                     |           |-{exe}(7893)
+              |                |                                     |           |-{exe}(7895)
+              |                |                                     |           |-{exe}(7896)
+              |                |                                     |           |-{exe}(7897)
+              |                |                                     |           |-{exe}(7898)
+              |                |                                     |           |-{exe}(7904)
+              |                |                                     |           |-{exe}(7906)
+              |                |                                     |           `-{exe}(7909)
+              |                |                                     |-{podman}(7877)
+              |                |                                     |-{podman}(7878)
+              |                |                                     |-{podman}(7879)
+              |                |                                     |-{podman}(7880)
+              |                |                                     |-{podman}(7881)
+              |                |                                     |-{podman}(7882)
+              |                |                                     |-{podman}(7883)
+              |                |                                     |-{podman}(7884)
+              |                |                                     `-{podman}(7891)
+              |                |-{receptor}(7859)
+              |                |-{receptor}(7860)
+              |                |-{receptor}(7861)
+              |                |-{receptor}(7862)
+              |                |-{receptor}(7863)
+              |                |-{receptor}(7864)
+              |                |-{receptor}(7865)
+              |                |-{receptor}(8517)
+              |                `-{receptor}(8518)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(767)
+              |-{receptor}(774)
+              `-{receptor}(1841)
+bash(6665)---pstree(8730)
+receptor(7858)-+-ansible-runner(7866)---podman(7876)-+-exe(7885)-+-slirp4netns(7910)
+               |                                     |           |-{exe}(7892)
+               |                                     |           |-{exe}(7893)
+               |                                     |           |-{exe}(7895)
+               |                                     |           |-{exe}(7896)
+               |                                     |           |-{exe}(7897)
+               |                                     |           |-{exe}(7898)
+               |                                     |           |-{exe}(7904)
+               |                                     |           |-{exe}(7906)
+               |                                     |           `-{exe}(7909)
+               |                                     |-{podman}(7877)
+               |                                     |-{podman}(7878)
+               |                                     |-{podman}(7879)
+               |                                     |-{podman}(7880)
+               |                                     |-{podman}(7881)
+               |                                     |-{podman}(7882)
+               |                                     |-{podman}(7883)
+               |                                     |-{podman}(7884)
+               |                                     `-{podman}(7891)
+               |-{receptor}(7859)
+               |-{receptor}(7860)
+               |-{receptor}(7861)
+               |-{receptor}(7862)
+               |-{receptor}(7863)
+               |-{receptor}(7864)
+               |-{receptor}(7865)
+               |-{receptor}(8517)
+               `-{receptor}(8518)
+=== nginx Process Tree ===
+nginx(1174)-+-nginx(1178)
+            |-nginx(1179)
+            |-nginx(1180)
+            `-nginx(1181)
+nginx(1178)
+nginx(1179)
+nginx(1180)
+nginx(1181)
+bash(6665)---pstree(8740)
+=== postgresql Process Tree ===
+bash(6665)---pstree(8744)
+=== redis Process Tree ===
+redis-server(1131)-+-{redis-server}(1167)
+                   |-{redis-server}(1169)
+                   |-{redis-server}(1170)
+                   `-{redis-server}(1171)
+bash(6665)---pstree(8749)
+=== uwsgi Process Tree ===
+uwsgi(1187)-+-uwsgi(1214)
+            |-uwsgi(1215)
+            |-uwsgi(1216)
+            |-uwsgi(1217)
+            `-uwsgi(1219)
+uwsgi(1214)
+uwsgi(1215)
+uwsgi(1216)
+uwsgi(1217)
+uwsgi(1219)
+bash(6665)---pstree(8759)
+=== automation-hub Process Tree ===
+bash(6665)---pstree(8763)
+=== automation-eda Process Tree ===
+bash(6665)---pstree(8767)
+
+=================================================================================
+2025-07-03 08:36:46
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1511        5778          10         671        6169
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1190     797 /usr/bin/python3.11 -sP /us 116156
+   1215    1187 uwsgi /etc/ansible-automati 115836
+   1214    1187 uwsgi /etc/ansible-automati 115516
+   1219    1187 uwsgi /etc/ansible-automati 115496
+   1216    1187 uwsgi /etc/ansible-automati 115444
+   1217    1187 uwsgi /etc/ansible-automati 115248
+   1643    1190 /usr/bin/python3.11 -sP /us 103072
+   1642    1190 /usr/bin/python3.11 -sP /us 101116
+   1650    1190 /usr/bin/python3.11 -sP /us 101116
+   1640    1190 /usr/bin/python3.11 -sP /us 100988
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    754       1 /usr/bin/receptor -c /etc/r 39856 1790028 0.0  0.5       27:32
+Receptor Child Processes for PID 754:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   7858     754 /usr/bin/receptor --node id 35716 1936660 0.1  0.4       00:58
+Receptor Threads for PID 754:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    754     754  0.0  0.5 39856 receptor
+    754     763  0.0  0.5 39856 receptor
+    754     764  0.0  0.5 39856 receptor
+    754     765  0.0  0.5 39856 receptor
+    754     766  0.0  0.5 39856 receptor
+    754     767  0.0  0.5 39856 receptor
+    754     774  0.0  0.5 39856 receptor
+    754    1841  0.0  0.5 39856 receptor
+Receptor Network Connections for PID 754:
+COMMAND    PID          USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u     IPv4              63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx  cwd       DIR              253,0      235      128 /
+receptor   754           awx  rtd       DIR              253,0      235      128 /
+receptor   754           awx  txt       REG              253,0 55920336 33686933 /usr/bin/receptor
+receptor   754           awx  mem       REG              253,0  5436640 50527991 /usr/lib64/libcrypto.so.3.2.2
+receptor   754           awx  mem       REG              253,0  2544344 50356320 /usr/lib64/libc.so.6
+receptor   754           awx  mem       REG              253,0   102552 50356340 /usr/lib64/libz.so.1.2.11
+receptor   754           awx  mem       REG              253,0    70520 50356331 /usr/lib64/libresolv.so.2
+receptor   754           awx  mem       REG              253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+receptor   754           awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   754           awx    1w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    2w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    3rW     REG               0,24        0      963 /run/awx-receptor/receptor.sock.lock
+receptor   754           awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9,10]
+receptor   754           awx    5r     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    6w     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    7u     unix 0xffff88ca87760f00      0t0    13225 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   754           awx    8u     IPv6              13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u     IPv4              22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+receptor   754           awx   10r  a_inode               0,14        0       62 inotify
+receptor   754           awx   11r      REG              253,0    38021 53075718 /tmp/receptor/192.168.1.20/dvNvAM0h/stdout
+chronyd    770        chrony    5u     IPv4              13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u     IPv6              13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u     IPv4              24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u     IPv4              22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u     IPv6              24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u     IPv6              25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u     IPv6              24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u     IPv4              24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u     IPv6              24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u     IPv4              64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u     IPv6              26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u     IPv6              25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u     IPv6              26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u     IPv6              25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u     IPv6              22368      0t0      TCP *:50051 (LISTEN)
+sshd      7147          root    4u     IPv4              68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u     IPv4              68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+slirp4net 7910           awx    3u     IPv4              72639      0t0      TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u     IPv4              73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u     IPv4              73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6665       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:06
+Receptor Child Processes for PID 6665:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6665:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6665    6665  0.0  0.0  3456 bash
+Receptor Network Connections for PID 6665:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0      TCP *:50051 (LISTEN)
+bash      6665          root  cwd    DIR  253,0      179 33685638 /root
+bash      6665          root  rtd    DIR  253,0      235      128 /
+bash      6665          root  txt    REG  253,0  1389072 33779126 /usr/bin/bash
+bash      6665          root  mem    REG  253,0  2586930    30692 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6665          root  mem    REG  253,0  2544344 50356320 /usr/lib64/libc.so.6
+bash      6665          root  mem    REG  253,0   346132 50355997 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6665          root  mem    REG  253,0       54    30695 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6665          root  mem    REG  253,0     3284 16862149 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6665          root  mem    REG  253,0      286 16862147 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6665          root  mem    REG  253,0       57 16862160 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6665          root  mem    REG  253,0    26988 33779313 /usr/lib64/gconv/gconv-modules.cache
+bash      6665          root  mem    REG  253,0   195080 50355981 /usr/lib64/libtinfo.so.6.2
+bash      6665          root  mem    REG  253,0       34 50356298 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6665          root  mem    REG  253,0       77    30694 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6665          root  mem    REG  253,0      167 16862143 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6665          root  mem    REG  253,0       59 16862148 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6665          root  mem    REG  253,0       23 16862146 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6665          root  mem    REG  253,0      369 16862145 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6665          root  mem    REG  253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+bash      6665          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6665          root    1w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    2w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    3r  FIFO   0,13      0t0    78418 pipe
+sshd      7147          root    4u  IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u  IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+slirp4net 7910           awx    3u  IPv4  72639      0t0      TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u  IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u  IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   7858     754 /usr/bin/receptor --node id 35716 1936660 0.1  0.4       00:58
+Receptor Child Processes for PID 7858:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   7866    7858 /usr/bin/python3.11 -sP /us 57548 137472  0.2  0.7       00:58
+Receptor Threads for PID 7858:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   7858    7858  0.0  0.4 35716 receptor
+   7858    7859  0.0  0.4 35716 receptor
+   7858    7860  0.0  0.4 35716 receptor
+   7858    7861  0.0  0.4 35716 receptor
+   7858    7862  0.0  0.4 35716 receptor
+   7858    7863  0.0  0.4 35716 receptor
+   7858    7864  0.0  0.4 35716 receptor
+   7858    7865  0.0  0.4 35716 receptor
+   7858    8517  0.0  0.4 35716 receptor
+   7858    8518  0.0  0.4 35716 receptor
+Receptor Network Connections for PID 7858:
+COMMAND    PID          USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u     IPv4  63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u     IPv6  13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u     IPv4  22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u     IPv4  13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u     IPv6  13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u     IPv4  24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u     IPv4  22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u     IPv6  24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u     IPv6  25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u     IPv6  24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u     IPv4  24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u     IPv6  24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u     IPv4  64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u     IPv6  26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u     IPv6  25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u     IPv6  26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u     IPv6  25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u     IPv6  22368      0t0      TCP *:50051 (LISTEN)
+sshd      7147          root    4u     IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u     IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+receptor  7858           awx  cwd       DIR  253,0      235      128 /
+receptor  7858           awx  rtd       DIR  253,0      235      128 /
+receptor  7858           awx  txt       REG  253,0 55920336 33686933 /usr/bin/receptor
+receptor  7858           awx  mem       REG  253,0  5436640 50527991 /usr/lib64/libcrypto.so.3.2.2
+receptor  7858           awx  mem       REG  253,0   102552 50356340 /usr/lib64/libz.so.1.2.11
+receptor  7858           awx  mem       REG  253,0  2544344 50356320 /usr/lib64/libc.so.6
+receptor  7858           awx  mem       REG  253,0    70520 50356331 /usr/lib64/libresolv.so.2
+receptor  7858           awx  mem       REG  253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+receptor  7858           awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  7858           awx    1w      REG  253,0      559 17327669 /var/log/receptor/receptor.log
+receptor  7858           awx    2w      REG  253,0      559 17327669 /var/log/receptor/receptor.log
+receptor  7858           awx    3r      REG  253,0    63881 53075717 /tmp/receptor/192.168.1.20/dvNvAM0h/stdin
+receptor  7858           awx    4u  a_inode   0,14        0       62 [eventpoll:5]
+receptor  7858           awx    5r     FIFO   0,13      0t0    72498 pipe
+receptor  7858           awx    6w     FIFO   0,13      0t0    72498 pipe
+receptor  7858           awx    7w      REG  253,0    38021 53075718 /tmp/receptor/192.168.1.20/dvNvAM0h/stdout
+slirp4net 7910           awx    3u     IPv4  72639      0t0      TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u     IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u     IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 8871:
+  No child processes found
+Receptor Threads for PID 8871:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 8871:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0  TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0  TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0  TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0  UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0  UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0  UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0  TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0  TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0  TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0  TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0  TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0  TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0  TCP *:50051 (LISTEN)
+sshd      7147          root    4u  IPv4  68535      0t0  TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u  IPv4  68535      0t0  TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+slirp4net 7910           awx    3u  IPv4  72639      0t0  TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u  IPv4  73137      0t0  TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u  IPv4  73137      0t0  TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 172292 KB (168 MB)
+Total Receptor VSZ Memory: 5808080 KB (5671 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 754)
+    PID    PPID CMD                           RSS
+    754       1 /usr/bin/receptor -c /etc/r 39856
+  Children of PID 754:
+    PID    PPID CMD                           RSS
+   7858     754 /usr/bin/receptor --node id 35716
+
+Process: redis-server (PID: 1131)
+    PID    PPID CMD                           RSS
+   1131       1 /usr/bin/redis-server *:637 15012
+
+Process: nginx (PID: 1174)
+    PID    PPID CMD                           RSS
+   1174       1 nginx: master process /usr/  2224
+  Children of PID 1174:
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: nginx (PID: 1178)
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+
+Process: nginx (PID: 1179)
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+
+Process: nginx (PID: 1180)
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+
+Process: nginx (PID: 1181)
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: uwsgi (PID: 1187)
+    PID    PPID CMD                           RSS
+   1187     797 uwsgi /etc/ansible-automati 14208
+  Children of PID 1187:
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115516
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115836
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: uwsgi (PID: 1214)
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115516
+
+Process: uwsgi (PID: 1215)
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115836
+
+Process: uwsgi (PID: 1216)
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+
+Process: uwsgi (PID: 1217)
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+
+Process: uwsgi (PID: 1219)
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: bash (PID: 6665)
+    PID    PPID CMD                           RSS
+   6665       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 6665:
+    PID    PPID CMD                           RSS
+   8992    6665 bash -c  log_file="/tmp/mem  2100
+
+Process: receptor (PID: 7858)
+    PID    PPID CMD                           RSS
+   7858     754 /usr/bin/receptor --node id 35716
+  Children of PID 7858:
+    PID    PPID CMD                           RSS
+   7866    7858 /usr/bin/python3.11 -sP /us 57548
+
+Process: bash (PID: 8992)
+    PID    PPID CMD                           RSS
+   8992    6665 bash -c  log_file="/tmp/mem  2100
+  Children of PID 8992:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6665)---pstree(9056)
+=== receptor Process Tree ===
+receptor(754)-+-receptor(7858)-+-ansible-runner(7866)---podman(7876)-+-exe(7885)-+-slirp4netns(7910)
+              |                |                                     |           |-{exe}(7892)
+              |                |                                     |           |-{exe}(7893)
+              |                |                                     |           |-{exe}(7895)
+              |                |                                     |           |-{exe}(7896)
+              |                |                                     |           |-{exe}(7897)
+              |                |                                     |           |-{exe}(7898)
+              |                |                                     |           |-{exe}(7904)
+              |                |                                     |           |-{exe}(7906)
+              |                |                                     |           `-{exe}(7909)
+              |                |                                     |-{podman}(7877)
+              |                |                                     |-{podman}(7878)
+              |                |                                     |-{podman}(7879)
+              |                |                                     |-{podman}(7880)
+              |                |                                     |-{podman}(7881)
+              |                |                                     |-{podman}(7882)
+              |                |                                     |-{podman}(7883)
+              |                |                                     |-{podman}(7884)
+              |                |                                     `-{podman}(7891)
+              |                |-{receptor}(7859)
+              |                |-{receptor}(7860)
+              |                |-{receptor}(7861)
+              |                |-{receptor}(7862)
+              |                |-{receptor}(7863)
+              |                |-{receptor}(7864)
+              |                |-{receptor}(7865)
+              |                |-{receptor}(8517)
+              |                `-{receptor}(8518)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(767)
+              |-{receptor}(774)
+              `-{receptor}(1841)
+bash(6665)---pstree(9061)
+receptor(7858)-+-ansible-runner(7866)---podman(7876)-+-exe(7885)-+-slirp4netns(7910)
+               |                                     |           |-{exe}(7892)
+               |                                     |           |-{exe}(7893)
+               |                                     |           |-{exe}(7895)
+               |                                     |           |-{exe}(7896)
+               |                                     |           |-{exe}(7897)
+               |                                     |           |-{exe}(7898)
+               |                                     |           |-{exe}(7904)
+               |                                     |           |-{exe}(7906)
+               |                                     |           `-{exe}(7909)
+               |                                     |-{podman}(7877)
+               |                                     |-{podman}(7878)
+               |                                     |-{podman}(7879)
+               |                                     |-{podman}(7880)
+               |                                     |-{podman}(7881)
+               |                                     |-{podman}(7882)
+               |                                     |-{podman}(7883)
+               |                                     |-{podman}(7884)
+               |                                     `-{podman}(7891)
+               |-{receptor}(7859)
+               |-{receptor}(7860)
+               |-{receptor}(7861)
+               |-{receptor}(7862)
+               |-{receptor}(7863)
+               |-{receptor}(7864)
+               |-{receptor}(7865)
+               |-{receptor}(8517)
+               `-{receptor}(8518)
+=== nginx Process Tree ===
+nginx(1174)-+-nginx(1178)
+            |-nginx(1179)
+            |-nginx(1180)
+            `-nginx(1181)
+nginx(1178)
+nginx(1179)
+nginx(1180)
+nginx(1181)
+bash(6665)---pstree(9071)
+=== postgresql Process Tree ===
+bash(6665)---pstree(9075)
+=== redis Process Tree ===
+redis-server(1131)-+-{redis-server}(1167)
+                   |-{redis-server}(1169)
+                   |-{redis-server}(1170)
+                   `-{redis-server}(1171)
+bash(6665)---pstree(9080)
+=== uwsgi Process Tree ===
+uwsgi(1187)-+-uwsgi(1214)
+            |-uwsgi(1215)
+            |-uwsgi(1216)
+            |-uwsgi(1217)
+            `-uwsgi(1219)
+uwsgi(1214)
+uwsgi(1215)
+uwsgi(1216)
+uwsgi(1217)
+uwsgi(1219)
+bash(6665)---pstree(9090)
+=== automation-hub Process Tree ===
+bash(6665)---pstree(9094)
+=== automation-eda Process Tree ===
+bash(6665)---pstree(9098)
+
+=================================================================================
+2025-07-03 08:37:17
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        1503        5785          10         671        6177
+Swap:           2047           0        2047
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1190     797 /usr/bin/python3.11 -sP /us 116156
+   1215    1187 uwsgi /etc/ansible-automati 115836
+   1214    1187 uwsgi /etc/ansible-automati 115516
+   1219    1187 uwsgi /etc/ansible-automati 115496
+   1216    1187 uwsgi /etc/ansible-automati 115444
+   1217    1187 uwsgi /etc/ansible-automati 115248
+   1643    1190 /usr/bin/python3.11 -sP /us 103072
+   1642    1190 /usr/bin/python3.11 -sP /us 101116
+   1650    1190 /usr/bin/python3.11 -sP /us 101116
+   1640    1190 /usr/bin/python3.11 -sP /us 100988
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+    754       1 /usr/bin/receptor -c /etc/r 39856 1790028 0.0  0.5       28:03
+Receptor Child Processes for PID 754:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   7858     754 /usr/bin/receptor --node id 35972 1936660 0.1  0.4       01:29
+Receptor Threads for PID 754:
+    PID    SPID %CPU %MEM   RSS COMMAND
+    754     754  0.0  0.5 39856 receptor
+    754     763  0.0  0.5 39856 receptor
+    754     764  0.0  0.5 39856 receptor
+    754     765  0.0  0.5 39856 receptor
+    754     766  0.0  0.5 39856 receptor
+    754     767  0.0  0.5 39856 receptor
+    754     774  0.0  0.5 39856 receptor
+    754    1841  0.0  0.5 39856 receptor
+Receptor Network Connections for PID 754:
+COMMAND    PID          USER   FD      TYPE             DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u     IPv4              63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx  cwd       DIR              253,0      235      128 /
+receptor   754           awx  rtd       DIR              253,0      235      128 /
+receptor   754           awx  txt       REG              253,0 55920336 33686933 /usr/bin/receptor
+receptor   754           awx  mem       REG              253,0  5436640 50527991 /usr/lib64/libcrypto.so.3.2.2
+receptor   754           awx  mem       REG              253,0  2544344 50356320 /usr/lib64/libc.so.6
+receptor   754           awx  mem       REG              253,0   102552 50356340 /usr/lib64/libz.so.1.2.11
+receptor   754           awx  mem       REG              253,0    70520 50356331 /usr/lib64/libresolv.so.2
+receptor   754           awx  mem       REG              253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+receptor   754           awx    0r      CHR                1,3      0t0        4 /dev/null
+receptor   754           awx    1w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    2w      REG              253,0      559 17327669 /var/log/receptor/receptor.log
+receptor   754           awx    3rW     REG               0,24        0      963 /run/awx-receptor/receptor.sock.lock
+receptor   754           awx    4u  a_inode               0,14        0       62 [eventpoll:5,7,8,9,10]
+receptor   754           awx    5r     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    6w     FIFO               0,13      0t0    23675 pipe
+receptor   754           awx    7u     unix 0xffff88ca87760f00      0t0    13225 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor   754           awx    8u     IPv6              13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u     IPv4              22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+receptor   754           awx   10r  a_inode               0,14        0       62 inotify
+receptor   754           awx   11r      REG              253,0    38021 53075718 /tmp/receptor/192.168.1.20/dvNvAM0h/stdout
+chronyd    770        chrony    5u     IPv4              13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u     IPv6              13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u     IPv4              24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u     IPv4              22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u     IPv6              24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u     IPv6              25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u     IPv6              24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u     IPv4              24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u     IPv6              24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u     IPv4              25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u     IPv4              25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u     IPv6              25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u     IPv4              64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u     IPv4              24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u     IPv6              26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u     IPv6              25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u     IPv6              26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u     IPv6              25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u     IPv6              22368      0t0      TCP *:50051 (LISTEN)
+sshd      7147          root    4u     IPv4              68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u     IPv4              68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+slirp4net 7910           awx    3u     IPv4              72639      0t0      TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u     IPv4              73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u     IPv4              73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   6665       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:37
+Receptor Child Processes for PID 6665:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 6665:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   6665    6665  0.0  0.0  3456 bash
+Receptor Network Connections for PID 6665:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0      TCP *:50051 (LISTEN)
+bash      6665          root  cwd    DIR  253,0      179 33685638 /root
+bash      6665          root  rtd    DIR  253,0      235      128 /
+bash      6665          root  txt    REG  253,0  1389072 33779126 /usr/bin/bash
+bash      6665          root  mem    REG  253,0  2586930    30692 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      6665          root  mem    REG  253,0  2544344 50356320 /usr/lib64/libc.so.6
+bash      6665          root  mem    REG  253,0   346132 50355997 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      6665          root  mem    REG  253,0       54    30695 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      6665          root  mem    REG  253,0     3284 16862149 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      6665          root  mem    REG  253,0      286 16862147 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      6665          root  mem    REG  253,0       57 16862160 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      6665          root  mem    REG  253,0    26988 33779313 /usr/lib64/gconv/gconv-modules.cache
+bash      6665          root  mem    REG  253,0   195080 50355981 /usr/lib64/libtinfo.so.6.2
+bash      6665          root  mem    REG  253,0       34 50356298 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      6665          root  mem    REG  253,0       77    30694 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      6665          root  mem    REG  253,0      167 16862143 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      6665          root  mem    REG  253,0       59 16862148 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      6665          root  mem    REG  253,0       23 16862146 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      6665          root  mem    REG  253,0      369 16862145 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      6665          root  mem    REG  253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+bash      6665          root    0r   CHR    1,3      0t0        4 /dev/null
+bash      6665          root    1w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    2w   REG  253,0        0 17893681 /tmp/memory_monitor.log
+bash      6665          root    3r  FIFO   0,13      0t0    81716 pipe
+sshd      7147          root    4u  IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u  IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+slirp4net 7910           awx    3u  IPv4  72639      0t0      TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u  IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u  IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   7858     754 /usr/bin/receptor --node id 35972 1936660 0.1  0.4       01:29
+Receptor Child Processes for PID 7858:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+   7866    7858 /usr/bin/python3.11 -sP /us 57548 137472  0.1  0.7       01:29
+Receptor Threads for PID 7858:
+    PID    SPID %CPU %MEM   RSS COMMAND
+   7858    7858  0.0  0.4 35972 receptor
+   7858    7859  0.0  0.4 35972 receptor
+   7858    7860  0.0  0.4 35972 receptor
+   7858    7861  0.0  0.4 35972 receptor
+   7858    7862  0.0  0.4 35972 receptor
+   7858    7863  0.0  0.4 35972 receptor
+   7858    7864  0.0  0.4 35972 receptor
+   7858    7865  0.0  0.4 35972 receptor
+   7858    8517  0.0  0.4 35972 receptor
+   7858    8518  0.0  0.4 35972 receptor
+Receptor Network Connections for PID 7858:
+COMMAND    PID          USER   FD      TYPE DEVICE SIZE/OFF     NODE NAME
+envoy      747          root   39u     IPv4  63156      0t0      TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u     IPv6  13230      0t0      TCP *:27199 (LISTEN)
+receptor   754           awx    9u     IPv4  22304      0t0      TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u     IPv4  13203      0t0      UDP localhost:323 
+chronyd    770        chrony    6u     IPv6  13204      0t0      UDP localhost:323 
+NetworkMa  793          root   26u     IPv4  24007      0t0      UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u     IPv4  22011      0t0      TCP *:ssh (LISTEN)
+sshd       819          root    4u     IPv6  24885      0t0      TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u     IPv6  25209      0t0      TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u     IPv6  24339      0t0      TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u     IPv4  24078      0t0      TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u     IPv6  24079      0t0      TCP *:redis (LISTEN)
+nginx     1174          root    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1174          root    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1178         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1179         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1180         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    6u     IPv4  25950      0t0      TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u     IPv4  25951      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    8u     IPv6  25952      0t0      TCP *:http (LISTEN)
+nginx     1181         nginx    9u     IPv4  64596      0t0      TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u     IPv4  24123      0t0      TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u     IPv6  26168      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u     IPv6  25410      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u     IPv6  26176      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u     IPv6  25413      0t0      TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u     IPv6  22368      0t0      TCP *:50051 (LISTEN)
+sshd      7147          root    4u     IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u     IPv4  68535      0t0      TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+receptor  7858           awx  cwd       DIR  253,0      235      128 /
+receptor  7858           awx  rtd       DIR  253,0      235      128 /
+receptor  7858           awx  txt       REG  253,0 55920336 33686933 /usr/bin/receptor
+receptor  7858           awx  mem       REG  253,0  5436640 50527991 /usr/lib64/libcrypto.so.3.2.2
+receptor  7858           awx  mem       REG  253,0   102552 50356340 /usr/lib64/libz.so.1.2.11
+receptor  7858           awx  mem       REG  253,0  2544344 50356320 /usr/lib64/libc.so.6
+receptor  7858           awx  mem       REG  253,0    70520 50356331 /usr/lib64/libresolv.so.2
+receptor  7858           awx  mem       REG  253,0   897856 50356316 /usr/lib64/ld-linux-x86-64.so.2
+receptor  7858           awx    0r      CHR    1,3      0t0        4 /dev/null
+receptor  7858           awx    1w      REG  253,0      559 17327669 /var/log/receptor/receptor.log
+receptor  7858           awx    2w      REG  253,0      559 17327669 /var/log/receptor/receptor.log
+receptor  7858           awx    3r      REG  253,0    63881 53075717 /tmp/receptor/192.168.1.20/dvNvAM0h/stdin
+receptor  7858           awx    4u  a_inode   0,14        0       62 [eventpoll:5]
+receptor  7858           awx    5r     FIFO   0,13      0t0    72498 pipe
+receptor  7858           awx    6w     FIFO   0,13      0t0    72498 pipe
+receptor  7858           awx    7w      REG  253,0    38021 53075718 /tmp/receptor/192.168.1.20/dvNvAM0h/stdout
+slirp4net 7910           awx    3u     IPv4  72639      0t0      TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u     IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u     IPv4  73137      0t0      TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 9202:
+  No child processes found
+Receptor Threads for PID 9202:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 9202:
+COMMAND    PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+envoy      747          root   39u  IPv4  63156      0t0  TCP aap25-execution.aap-test.local:33346->aap25-execution.aap-test.local:pcsync-https (ESTABLISHED)
+receptor   754           awx    8u  IPv6  13230      0t0  TCP *:27199 (LISTEN)
+receptor   754           awx    9u  IPv4  22304      0t0  TCP aap25-execution.aap-test.local:39384->aap25-control.aap-test.local:27199 (ESTABLISHED)
+chronyd    770        chrony    5u  IPv4  13203      0t0  UDP localhost:323 
+chronyd    770        chrony    6u  IPv6  13204      0t0  UDP localhost:323 
+NetworkMa  793          root   26u  IPv4  24007      0t0  UDP aap25-execution.aap-test.local:bootpc->pi.hole:bootps 
+sshd       819          root    3u  IPv4  22011      0t0  TCP *:ssh (LISTEN)
+sshd       819          root    4u  IPv6  24885      0t0  TCP *:ssh (LISTEN)
+node_expo 1129 node_exporter    3u  IPv6  25209      0t0  TCP *:jetdirect (LISTEN)
+node_expo 1129 node_exporter    7u  IPv6  24339      0t0  TCP aap25-execution.aap-test.local:jetdirect->monitoring-node.aap-test.local:41334 (ESTABLISHED)
+redis-ser 1131         redis    6u  IPv4  24078      0t0  TCP *:redis (LISTEN)
+redis-ser 1131         redis    7u  IPv6  24079      0t0  TCP *:redis (LISTEN)
+nginx     1174          root    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1174          root    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1174          root    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1178         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1178         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1179         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1179         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1180         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1180         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    6u  IPv4  25950      0t0  TCP *:pcsync-https (LISTEN)
+nginx     1181         nginx    7u  IPv4  25951      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    8u  IPv6  25952      0t0  TCP *:http (LISTEN)
+nginx     1181         nginx    9u  IPv4  64596      0t0  TCP aap25-execution.aap-test.local:pcsync-https->aap25-execution.aap-test.local:33346 (ESTABLISHED)
+uwsgi     1187          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1214          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1215          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1216          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1217          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+uwsgi     1219          root    3u  IPv4  24123      0t0  TCP localhost:8050 (LISTEN)
+aap-gatew 1640          root    9u  IPv6  26168      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1641          root   11u  IPv6  25410      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1642          root   13u  IPv6  26176      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1643          root   15u  IPv6  25413      0t0  TCP *:50051 (LISTEN)
+aap-gatew 1650          root   17u  IPv6  22368      0t0  TCP *:50051 (LISTEN)
+sshd      7147          root    4u  IPv4  68535      0t0  TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+sshd      7151          root    4u  IPv4  68535      0t0  TCP aap25-execution.aap-test.local:ssh->aap24-execution.lan:41762 (ESTABLISHED)
+slirp4net 7910           awx    3u  IPv4  72639      0t0  TCP aap25-execution.aap-test.local:32984->aap25-execution.aap-test.local:ssh (ESTABLISHED)
+sshd      7962          root    4u  IPv4  73137      0t0  TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+sshd      7969          root    4u  IPv4  73137      0t0  TCP aap25-execution.aap-test.local:ssh->aap25-execution.aap-test.local:32984 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 172804 KB (168 MB)
+Total Receptor VSZ Memory: 5808080 KB (5671 MB)
+Number of Receptor Processes: 4
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: receptor (PID: 754)
+    PID    PPID CMD                           RSS
+    754       1 /usr/bin/receptor -c /etc/r 39856
+  Children of PID 754:
+    PID    PPID CMD                           RSS
+   7858     754 /usr/bin/receptor --node id 35972
+
+Process: redis-server (PID: 1131)
+    PID    PPID CMD                           RSS
+   1131       1 /usr/bin/redis-server *:637 15012
+
+Process: nginx (PID: 1174)
+    PID    PPID CMD                           RSS
+   1174       1 nginx: master process /usr/  2224
+  Children of PID 1174:
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: nginx (PID: 1178)
+    PID    PPID CMD                           RSS
+   1178    1174 nginx: worker process        7472
+
+Process: nginx (PID: 1179)
+    PID    PPID CMD                           RSS
+   1179    1174 nginx: worker process        7984
+
+Process: nginx (PID: 1180)
+    PID    PPID CMD                           RSS
+   1180    1174 nginx: worker process        7856
+
+Process: nginx (PID: 1181)
+    PID    PPID CMD                           RSS
+   1181    1174 nginx: worker process        7600
+
+Process: uwsgi (PID: 1187)
+    PID    PPID CMD                           RSS
+   1187     797 uwsgi /etc/ansible-automati 14208
+  Children of PID 1187:
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115516
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115836
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: uwsgi (PID: 1214)
+    PID    PPID CMD                           RSS
+   1214    1187 uwsgi /etc/ansible-automati 115516
+
+Process: uwsgi (PID: 1215)
+    PID    PPID CMD                           RSS
+   1215    1187 uwsgi /etc/ansible-automati 115836
+
+Process: uwsgi (PID: 1216)
+    PID    PPID CMD                           RSS
+   1216    1187 uwsgi /etc/ansible-automati 115444
+
+Process: uwsgi (PID: 1217)
+    PID    PPID CMD                           RSS
+   1217    1187 uwsgi /etc/ansible-automati 115248
+
+Process: uwsgi (PID: 1219)
+    PID    PPID CMD                           RSS
+   1219    1187 uwsgi /etc/ansible-automati 115496
+
+Process: bash (PID: 6665)
+    PID    PPID CMD                           RSS
+   6665       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 6665:
+    PID    PPID CMD                           RSS
+   9323    6665 bash -c  log_file="/tmp/mem  2112
+
+Process: receptor (PID: 7858)
+    PID    PPID CMD                           RSS
+   7858     754 /usr/bin/receptor --node id 35972
+  Children of PID 7858:
+    PID    PPID CMD                           RSS
+   7866    7858 /usr/bin/python3.11 -sP /us 57548
+
+Process: bash (PID: 9323)
+    PID    PPID CMD                           RSS
+   9323    6665 bash -c  log_file="/tmp/mem  2112
+  Children of PID 9323:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(6665)---pstree(9387)
+=== receptor Process Tree ===
+receptor(754)-+-receptor(7858)-+-ansible-runner(7866)---podman(7876)-+-exe(7885)-+-slirp4netns(7910)
+              |                |                                     |           |-{exe}(7892)
+              |                |                                     |           |-{exe}(7893)
+              |                |                                     |           |-{exe}(7895)
+              |                |                                     |           |-{exe}(7896)
+              |                |                                     |           |-{exe}(7897)
+              |                |                                     |           |-{exe}(7898)
+              |                |                                     |           |-{exe}(7904)
+              |                |                                     |           |-{exe}(7906)
+              |                |                                     |           `-{exe}(7909)
+              |                |                                     |-{podman}(7877)
+              |                |                                     |-{podman}(7878)
+              |                |                                     |-{podman}(7879)
+              |                |                                     |-{podman}(7880)
+              |                |                                     |-{podman}(7881)
+              |                |                                     |-{podman}(7882)
+              |                |                                     |-{podman}(7883)
+              |                |                                     |-{podman}(7884)
+              |                |                                     `-{podman}(7891)
+              |                |-{receptor}(7859)
+              |                |-{receptor}(7860)
+              |                |-{receptor}(7861)
+              |                |-{receptor}(7862)
+              |                |-{receptor}(7863)
+              |                |-{receptor}(7864)
+              |                |-{receptor}(7865)
+              |                |-{receptor}(8517)
+              |                `-{receptor}(8518)
+              |-{receptor}(763)
+              |-{receptor}(764)
+              |-{receptor}(765)
+              |-{receptor}(766)
+              |-{receptor}(767)
+              |-{receptor}(774)
+              `-{receptor}(1841)
+bash(6665)---pstree(9392)
+receptor(7858)-+-ansible-runner(7866)---podman(7876)-+-exe(7885)-+-slirp4netns(7910)
+               |                                     |           |-{exe}(7892)
+               |                                     |           |-{exe}(7893)
+               |                                     |           |-{exe}(7895)
+               |                                     |           |-{exe}(7896)
+               |                                     |           |-{exe}(7897)
+               |                                     |           |-{exe}(7898)
+               |                                     |           |-{exe}(7904)
+               |                                     |           |-{exe}(7906)
+               |                                     |           `-{exe}(7909)
+               |                                     |-{podman}(7877)
+               |                                     |-{podman}(7878)
+               |                                     |-{podman}(7879)
+               |                                     |-{podman}(7880)
+               |                                     |-{podman}(7881)
+               |                                     |-{podman}(7882)
+               |                                     |-{podman}(7883)
+               |                                     |-{podman}(7884)
+               |                                     `-{podman}(7891)
+               |-{receptor}(7859)
+               |-{receptor}(7860)
+               |-{receptor}(7861)
+               |-{receptor}(7862)
+               |-{receptor}(7863)
+               |-{receptor}(7864)
+               |-{receptor}(7865)
+               |-{receptor}(8517)
+               `-{receptor}(8518)
+=== nginx Process Tree ===
+nginx(1174)-+-nginx(1178)
+            |-nginx(1179)
+            |-nginx(1180)
+            `-nginx(1181)
+nginx(1178)
+nginx(1179)
+nginx(1180)
+nginx(1181)
+bash(6665)---pstree(9402)
+=== postgresql Process Tree ===
+bash(6665)---pstree(9406)
+=== redis Process Tree ===
+redis-server(1131)-+-{redis-server}(1167)
+                   |-{redis-server}(1169)
+                   |-{redis-server}(1170)
+                   `-{redis-server}(1171)
+bash(6665)---pstree(9411)
+=== uwsgi Process Tree ===
+uwsgi(1187)-+-uwsgi(1214)
+            |-uwsgi(1215)
+            |-uwsgi(1216)
+            |-uwsgi(1217)
+            `-uwsgi(1219)
+uwsgi(1214)
+uwsgi(1215)
+uwsgi(1216)
+uwsgi(1217)
+uwsgi(1219)
+bash(6665)---pstree(9421)
+=== automation-hub Process Tree ===
+bash(6665)---pstree(9425)
+=== automation-eda Process Tree ===
+bash(6665)---pstree(9429)
+
+Memory monitoring completed for aap25 baseline test at Thu Jul  3 08:37:49 AM PDT 2025
