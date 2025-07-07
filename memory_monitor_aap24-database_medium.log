@@ -1,0 +1,2182 @@
+Starting memory monitoring for aap24 medium test at Mon Jul  7 09:05:54 AM PDT 2025
+=================================================================================
+2025-07-07 09:05:54
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         606        3957          37        3416        7074
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  55086       1 /usr/bin/postmaster -D /var 27648
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25456
+  64851   55086 postgres: awx awx 192.168.1 23792
+  64849   55086 postgres: awx awx 192.168.1 23664
+  64848   55086 postgres: awx awx 192.168.1 22896
+    799       1 /usr/sbin/NetworkManager -- 21776
+  64852   55086 postgres: awx awx 192.168.1 21360
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       00:00
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 64848 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 64848 postgres   11u  IPv4 161188      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33070 (ESTABLISHED)
+postmaste 64849 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 64849 postgres   11u  IPv4 161189      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33084 (ESTABLISHED)
+postmaste 64850 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 64850 postgres   11u  IPv4 161190      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33096 (ESTABLISHED)
+postmaste 64851 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 64851 postgres   11u  IPv4 161191      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33102 (ESTABLISHED)
+postmaste 64852 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 64852 postgres   11u  IPv4 161192      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33106 (ESTABLISHED)
+sshd      64853     root    4u  IPv4 159614      0t0       TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+sshd      64856     root    4u  IPv4 159614      0t0       TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    161856 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 64991:
+  No child processes found
+Receptor Threads for PID 64991:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 64991:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 64848 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 64848 postgres   11u  IPv4 161188      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33070 (ESTABLISHED)
+postmaste 64849 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 64849 postgres   11u  IPv4 161189      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33084 (ESTABLISHED)
+postmaste 64850 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 64850 postgres   11u  IPv4 161190      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33096 (ESTABLISHED)
+postmaste 64851 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 64851 postgres   11u  IPv4 161191      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33102 (ESTABLISHED)
+postmaste 64852 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 64852 postgres   11u  IPv4 161192      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33106 (ESTABLISHED)
+sshd      64853     root    4u  IPv4 159614      0t0  TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+sshd      64856     root    4u  IPv4 159614      0t0  TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  65050   64983 bash -c  log_file="/tmp/mem  2316
+
+Process: bash (PID: 65050)
+    PID    PPID CMD                           RSS
+  65050   64983 bash -c  log_file="/tmp/mem  2316
+  Children of PID 65050:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(65061)
+=== receptor Process Tree ===
+bash(64983)---pstree(65065)
+=== nginx Process Tree ===
+bash(64983)---pstree(65069)
+=== postgresql Process Tree ===
+bash(64983)---pstree(65073)
+=== redis Process Tree ===
+bash(64983)---pstree(65077)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(65081)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(65085)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(65089)
+
+=================================================================================
+2025-07-07 09:06:25
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         569        3994          37        3416        7111
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  55086       1 /usr/bin/postmaster -D /var 27648
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25584
+  64851   55086 postgres: awx awx 192.168.1 23792
+  65097   55086 postgres: awx awx 192.168.1 23792
+  65099   55086 postgres: awx awx 192.168.1 23536
+    799       1 /usr/sbin/NetworkManager -- 21776
+  65094   55086 postgres: awx awx 192.168.1 21488
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       00:30
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 64851 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 64851 postgres   11u  IPv4 161191      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33102 (ESTABLISHED)
+sshd      64853     root    4u  IPv4 159614      0t0       TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+sshd      64856     root    4u  IPv4 159614      0t0       TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    162877 pipe
+postmaste 65094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65094 postgres   11u  IPv4 162014      0t0       TCP localhost.localdomain:postgres->192.168.1.104:39662 (ESTABLISHED)
+postmaste 65097 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65097 postgres   11u  IPv4 162016      0t0       TCP localhost.localdomain:postgres->192.168.1.104:48734 (ESTABLISHED)
+postmaste 65098 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65098 postgres   11u  IPv4 162017      0t0       TCP localhost.localdomain:postgres->192.168.1.104:55134 (ESTABLISHED)
+postmaste 65099 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65099 postgres   11u  IPv4 162018      0t0       TCP localhost.localdomain:postgres->192.168.1.104:55140 (ESTABLISHED)
+postmaste 65100 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65100 postgres   11u  IPv4 162019      0t0       TCP localhost.localdomain:postgres->192.168.1.104:55146 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 65106:
+  No child processes found
+Receptor Threads for PID 65106:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 65106:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 64851 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 64851 postgres   11u  IPv4 161191      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33102 (ESTABLISHED)
+sshd      64853     root    4u  IPv4 159614      0t0  TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+sshd      64856     root    4u  IPv4 159614      0t0  TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+postmaste 65094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65094 postgres   11u  IPv4 162014      0t0  TCP localhost.localdomain:postgres->192.168.1.104:39662 (ESTABLISHED)
+postmaste 65097 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65097 postgres   11u  IPv4 162016      0t0  TCP localhost.localdomain:postgres->192.168.1.104:48734 (ESTABLISHED)
+postmaste 65098 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65098 postgres   11u  IPv4 162017      0t0  TCP localhost.localdomain:postgres->192.168.1.104:55134 (ESTABLISHED)
+postmaste 65099 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65099 postgres   11u  IPv4 162018      0t0  TCP localhost.localdomain:postgres->192.168.1.104:55140 (ESTABLISHED)
+postmaste 65100 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65100 postgres   11u  IPv4 162019      0t0  TCP localhost.localdomain:postgres->192.168.1.104:55146 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  65165   64983 bash -c  log_file="/tmp/mem  2332
+
+Process: bash (PID: 65165)
+    PID    PPID CMD                           RSS
+  65165   64983 bash -c  log_file="/tmp/mem  2332
+  Children of PID 65165:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(65176)
+=== receptor Process Tree ===
+bash(64983)---pstree(65180)
+=== nginx Process Tree ===
+bash(64983)---pstree(65184)
+=== postgresql Process Tree ===
+bash(64983)---pstree(65188)
+=== redis Process Tree ===
+bash(64983)---pstree(65192)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(65196)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(65200)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(65204)
+
+=================================================================================
+2025-07-07 09:06:55
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         595        3967          37        3417        7085
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  65326   55086 postgres: awx awx 192.168.1 28912
+  55086       1 /usr/bin/postmaster -D /var 27648
+  65307   55086 postgres: awx awx 192.168.1 26736
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25584
+  65313   55086 postgres: awx awx 192.168.1 25200
+  65318   55086 postgres: awx awx 192.168.1 25200
+  65311   55086 postgres: awx awx 192.168.1 23536
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:01
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+sshd      64853     root    4u  IPv4 159614      0t0       TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+sshd      64856     root    4u  IPv4 159614      0t0       TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    164119 pipe
+postmaste 65307 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65307 postgres   11u  IPv4 162523      0t0       TCP localhost.localdomain:postgres->192.168.1.104:54576 (ESTABLISHED)
+postmaste 65311 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65311 postgres   11u  IPv4 163182      0t0       TCP localhost.localdomain:postgres->192.168.1.104:54622 (ESTABLISHED)
+postmaste 65313 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65313 postgres   11u  IPv4 162528      0t0       TCP localhost.localdomain:postgres->192.168.1.104:54644 (ESTABLISHED)
+postmaste 65316 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65316 postgres   11u  IPv4 162531      0t0       TCP localhost.localdomain:postgres->192.168.1.104:54666 (ESTABLISHED)
+postmaste 65318 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65318 postgres   11u  IPv4 163187      0t0       TCP localhost.localdomain:postgres->192.168.1.104:54674 (ESTABLISHED)
+postmaste 65326 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65326 postgres   11u  IPv4 162544      0t0       TCP localhost.localdomain:postgres->192.168.1.104:54740 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 65347:
+  No child processes found
+Receptor Threads for PID 65347:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 65347:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+sshd      64853     root    4u  IPv4 159614      0t0  TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+sshd      64856     root    4u  IPv4 159614      0t0  TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+postmaste 65307 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65307 postgres   11u  IPv4 162523      0t0  TCP localhost.localdomain:postgres->192.168.1.104:54576 (ESTABLISHED)
+postmaste 65311 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65311 postgres   11u  IPv4 163182      0t0  TCP localhost.localdomain:postgres->192.168.1.104:54622 (ESTABLISHED)
+postmaste 65313 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65313 postgres   11u  IPv4 162528      0t0  TCP localhost.localdomain:postgres->192.168.1.104:54644 (ESTABLISHED)
+postmaste 65316 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65316 postgres   11u  IPv4 162531      0t0  TCP localhost.localdomain:postgres->192.168.1.104:54666 (ESTABLISHED)
+postmaste 65318 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65318 postgres   11u  IPv4 163187      0t0  TCP localhost.localdomain:postgres->192.168.1.104:54674 (ESTABLISHED)
+postmaste 65326 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65326 postgres   11u  IPv4 162544      0t0  TCP localhost.localdomain:postgres->192.168.1.104:54740 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  65406   64983 bash -c  log_file="/tmp/mem  2336
+
+Process: bash (PID: 65406)
+    PID    PPID CMD                           RSS
+  65406   64983 bash -c  log_file="/tmp/mem  2336
+  Children of PID 65406:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(65417)
+=== receptor Process Tree ===
+bash(64983)---pstree(65421)
+=== nginx Process Tree ===
+bash(64983)---pstree(65425)
+=== postgresql Process Tree ===
+bash(64983)---pstree(65429)
+=== redis Process Tree ===
+bash(64983)---pstree(65433)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(65437)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(65441)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(65445)
+
+=================================================================================
+2025-07-07 09:07:25
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         577        3985          37        3417        7103
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  55086       1 /usr/bin/postmaster -D /var 27648
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25584
+  65313   55086 postgres: awx awx 192.168.1 25200
+  65459   55086 postgres: awx awx 192.168.1 25200
+  65316   55086 postgres: awx awx 192.168.1 23536
+    799       1 /usr/sbin/NetworkManager -- 21776
+  65460   55086 postgres: awx awx 192.168.1 21232
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:31
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+sshd      64853     root    4u  IPv4 159614      0t0       TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+sshd      64856     root    4u  IPv4 159614      0t0       TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    165113 pipe
+postmaste 65313 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65313 postgres   11u  IPv4 162528      0t0       TCP localhost.localdomain:postgres->192.168.1.104:54644 (ESTABLISHED)
+postmaste 65316 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65316 postgres   11u  IPv4 162531      0t0       TCP localhost.localdomain:postgres->192.168.1.104:54666 (ESTABLISHED)
+postmaste 65458 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65458 postgres   11u  IPv4 163356      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47904 (ESTABLISHED)
+postmaste 65459 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65459 postgres   11u  IPv4 163357      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47920 (ESTABLISHED)
+postmaste 65460 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65460 postgres   11u  IPv4 162634      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47934 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 65467:
+  No child processes found
+Receptor Threads for PID 65467:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 65467:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+sshd      64853     root    4u  IPv4 159614      0t0  TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+sshd      64856     root    4u  IPv4 159614      0t0  TCP localhost.localdomain:ssh->192.168.1.49:60340 (ESTABLISHED)
+postmaste 65313 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65313 postgres   11u  IPv4 162528      0t0  TCP localhost.localdomain:postgres->192.168.1.104:54644 (ESTABLISHED)
+postmaste 65316 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65316 postgres   11u  IPv4 162531      0t0  TCP localhost.localdomain:postgres->192.168.1.104:54666 (ESTABLISHED)
+postmaste 65458 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65458 postgres   11u  IPv4 163356      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47904 (ESTABLISHED)
+postmaste 65459 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65459 postgres   11u  IPv4 163357      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47920 (ESTABLISHED)
+postmaste 65460 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65460 postgres   11u  IPv4 162634      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47934 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  65526   64983 bash -c  log_file="/tmp/mem  2336
+
+Process: bash (PID: 65526)
+    PID    PPID CMD                           RSS
+  65526   64983 bash -c  log_file="/tmp/mem  2336
+  Children of PID 65526:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(65537)
+=== receptor Process Tree ===
+bash(64983)---pstree(65541)
+=== nginx Process Tree ===
+bash(64983)---pstree(65545)
+=== postgresql Process Tree ===
+bash(64983)---pstree(65549)
+=== redis Process Tree ===
+bash(64983)---pstree(65553)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(65557)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(65561)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(65565)
+
+=================================================================================
+2025-07-07 09:07:56
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         576        3986          37        3417        7104
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  55086       1 /usr/bin/postmaster -D /var 27648
+  65577   55086 postgres: awx awx 192.168.1 25840
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25584
+  65575   55086 postgres: awx awx 192.168.1 23664
+  65573   55086 postgres: awx awx 192.168.1 23152
+  65572   55086 postgres: awx awx 192.168.1 21872
+    799       1 /usr/sbin/NetworkManager -- 21776
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:01
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    165462 pipe
+postmaste 65572 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65572 postgres   11u  IPv4 166930      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33278 (ESTABLISHED)
+postmaste 65573 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65573 postgres   11u  IPv4 166931      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33294 (ESTABLISHED)
+postmaste 65575 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65575 postgres   11u  IPv4 166934      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33316 (ESTABLISHED)
+postmaste 65576 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65576 postgres   11u  IPv4 166935      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33320 (ESTABLISHED)
+postmaste 65577 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65577 postgres   11u  IPv4 166936      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33326 (ESTABLISHED)
+postmaste 65578 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65578 postgres   11u  IPv4 163534      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33338 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 65589:
+  No child processes found
+Receptor Threads for PID 65589:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 65589:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 65572 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65572 postgres   11u  IPv4 166930      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33278 (ESTABLISHED)
+postmaste 65573 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65573 postgres   11u  IPv4 166931      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33294 (ESTABLISHED)
+postmaste 65575 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65575 postgres   11u  IPv4 166934      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33316 (ESTABLISHED)
+postmaste 65576 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65576 postgres   11u  IPv4 166935      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33320 (ESTABLISHED)
+postmaste 65577 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65577 postgres   11u  IPv4 166936      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33326 (ESTABLISHED)
+postmaste 65578 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65578 postgres   11u  IPv4 163534      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33338 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  65648   64983 bash -c  log_file="/tmp/mem  2340
+
+Process: bash (PID: 65648)
+    PID    PPID CMD                           RSS
+  65648   64983 bash -c  log_file="/tmp/mem  2340
+  Children of PID 65648:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(65659)
+=== receptor Process Tree ===
+bash(64983)---pstree(65663)
+=== nginx Process Tree ===
+bash(64983)---pstree(65667)
+=== postgresql Process Tree ===
+bash(64983)---pstree(65671)
+=== redis Process Tree ===
+bash(64983)---pstree(65675)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(65679)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(65683)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(65687)
+
+=================================================================================
+2025-07-07 09:08:26
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         572        3991          37        3417        7109
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  55086       1 /usr/bin/postmaster -D /var 27648
+  65577   55086 postgres: awx awx 192.168.1 25840
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25584
+  65701   55086 postgres: awx awx 192.168.1 25200
+  65697   55086 postgres: awx awx 192.168.1 23792
+    799       1 /usr/sbin/NetworkManager -- 21776
+  65702   55086 postgres: awx awx 192.168.1 21232
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:32
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    167158 pipe
+postmaste 65576 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65576 postgres   11u  IPv4 166935      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33320 (ESTABLISHED)
+postmaste 65577 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65577 postgres   11u  IPv4 166936      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33326 (ESTABLISHED)
+postmaste 65697 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65697 postgres   11u  IPv4 167120      0t0       TCP localhost.localdomain:postgres->192.168.1.104:39264 (ESTABLISHED)
+postmaste 65700 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65700 postgres   11u  IPv4 167123      0t0       TCP localhost.localdomain:postgres->192.168.1.104:51826 (ESTABLISHED)
+postmaste 65701 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65701 postgres   11u  IPv4 168011      0t0       TCP localhost.localdomain:postgres->192.168.1.104:51838 (ESTABLISHED)
+postmaste 65702 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65702 postgres   11u  IPv4 168012      0t0       TCP localhost.localdomain:postgres->192.168.1.104:51852 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 65710:
+  No child processes found
+Receptor Threads for PID 65710:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 65710:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 65576 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65576 postgres   11u  IPv4 166935      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33320 (ESTABLISHED)
+postmaste 65577 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65577 postgres   11u  IPv4 166936      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33326 (ESTABLISHED)
+postmaste 65697 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65697 postgres   11u  IPv4 167120      0t0  TCP localhost.localdomain:postgres->192.168.1.104:39264 (ESTABLISHED)
+postmaste 65700 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65700 postgres   11u  IPv4 167123      0t0  TCP localhost.localdomain:postgres->192.168.1.104:51826 (ESTABLISHED)
+postmaste 65701 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65701 postgres   11u  IPv4 168011      0t0  TCP localhost.localdomain:postgres->192.168.1.104:51838 (ESTABLISHED)
+postmaste 65702 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65702 postgres   11u  IPv4 168012      0t0  TCP localhost.localdomain:postgres->192.168.1.104:51852 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  65769   64983 bash -c  log_file="/tmp/mem  2344
+
+Process: bash (PID: 65769)
+    PID    PPID CMD                           RSS
+  65769   64983 bash -c  log_file="/tmp/mem  2344
+  Children of PID 65769:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(65780)
+=== receptor Process Tree ===
+bash(64983)---pstree(65784)
+=== nginx Process Tree ===
+bash(64983)---pstree(65788)
+=== postgresql Process Tree ===
+bash(64983)---pstree(65792)
+=== redis Process Tree ===
+bash(64983)---pstree(65796)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(65800)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(65804)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(65808)
+
+=================================================================================
+2025-07-07 09:08:56
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         562        4000          37        3417        7118
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  55086       1 /usr/bin/postmaster -D /var 27648
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25584
+  65825   55086 postgres: awx awx 192.168.1 25200
+  65816   55086 postgres: awx awx 192.168.1 23792
+    799       1 /usr/sbin/NetworkManager -- 21776
+  65826   55086 postgres: awx awx 192.168.1 21232
+  65817   55086 postgres: awx awx 192.168.1 21104
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       03:02
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    167393 pipe
+postmaste 65816 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65816 postgres   11u  IPv4 168374      0t0       TCP localhost.localdomain:postgres->192.168.1.104:56728 (ESTABLISHED)
+postmaste 65817 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65817 postgres   11u  IPv4 168375      0t0       TCP localhost.localdomain:postgres->192.168.1.104:56738 (ESTABLISHED)
+postmaste 65824 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65824 postgres   11u  IPv4 168382      0t0       TCP localhost.localdomain:postgres->192.168.1.104:49268 (ESTABLISHED)
+postmaste 65825 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65825 postgres   11u  IPv4 166534      0t0       TCP localhost.localdomain:postgres->192.168.1.104:49284 (ESTABLISHED)
+postmaste 65826 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65826 postgres   11u  IPv4 166535      0t0       TCP localhost.localdomain:postgres->192.168.1.104:49300 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 65832:
+  No child processes found
+Receptor Threads for PID 65832:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 65832:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 65816 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65816 postgres   11u  IPv4 168374      0t0  TCP localhost.localdomain:postgres->192.168.1.104:56728 (ESTABLISHED)
+postmaste 65817 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65817 postgres   11u  IPv4 168375      0t0  TCP localhost.localdomain:postgres->192.168.1.104:56738 (ESTABLISHED)
+postmaste 65824 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65824 postgres   11u  IPv4 168382      0t0  TCP localhost.localdomain:postgres->192.168.1.104:49268 (ESTABLISHED)
+postmaste 65825 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65825 postgres   11u  IPv4 166534      0t0  TCP localhost.localdomain:postgres->192.168.1.104:49284 (ESTABLISHED)
+postmaste 65826 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65826 postgres   11u  IPv4 166535      0t0  TCP localhost.localdomain:postgres->192.168.1.104:49300 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  65891   64983 bash -c  log_file="/tmp/mem  2344
+
+Process: bash (PID: 65891)
+    PID    PPID CMD                           RSS
+  65891   64983 bash -c  log_file="/tmp/mem  2344
+  Children of PID 65891:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(65902)
+=== receptor Process Tree ===
+bash(64983)---pstree(65906)
+=== nginx Process Tree ===
+bash(64983)---pstree(65910)
+=== postgresql Process Tree ===
+bash(64983)---pstree(65914)
+=== redis Process Tree ===
+bash(64983)---pstree(65918)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(65922)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(65926)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(65930)
+
+=================================================================================
+2025-07-07 09:09:27
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         569        3993          37        3417        7111
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  55086       1 /usr/bin/postmaster -D /var 27648
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25584
+  65943   55086 postgres: awx awx 192.168.1 25456
+  65825   55086 postgres: awx awx 192.168.1 25200
+  65939   55086 postgres: awx awx 192.168.1 23792
+    799       1 /usr/sbin/NetworkManager -- 21776
+  65944   55086 postgres: awx awx 192.168.1 21232
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       03:32
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    167800 pipe
+postmaste 65825 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65825 postgres   11u  IPv4 166534      0t0       TCP localhost.localdomain:postgres->192.168.1.104:49284 (ESTABLISHED)
+postmaste 65939 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65939 postgres   11u  IPv4 166690      0t0       TCP localhost.localdomain:postgres->192.168.1.104:57860 (ESTABLISHED)
+postmaste 65943 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65943 postgres   11u  IPv4 169296      0t0       TCP localhost.localdomain:postgres->192.168.1.104:58134 (ESTABLISHED)
+postmaste 65944 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 65944 postgres   11u  IPv4 169297      0t0       TCP localhost.localdomain:postgres->192.168.1.104:58138 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 65952:
+  No child processes found
+Receptor Threads for PID 65952:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 65952:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 65825 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65825 postgres   11u  IPv4 166534      0t0  TCP localhost.localdomain:postgres->192.168.1.104:49284 (ESTABLISHED)
+postmaste 65939 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65939 postgres   11u  IPv4 166690      0t0  TCP localhost.localdomain:postgres->192.168.1.104:57860 (ESTABLISHED)
+postmaste 65943 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65943 postgres   11u  IPv4 169296      0t0  TCP localhost.localdomain:postgres->192.168.1.104:58134 (ESTABLISHED)
+postmaste 65944 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 65944 postgres   11u  IPv4 169297      0t0  TCP localhost.localdomain:postgres->192.168.1.104:58138 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  66011   64983 bash -c  log_file="/tmp/mem  2344
+
+Process: bash (PID: 66011)
+    PID    PPID CMD                           RSS
+  66011   64983 bash -c  log_file="/tmp/mem  2344
+  Children of PID 66011:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(66022)
+=== receptor Process Tree ===
+bash(64983)---pstree(66026)
+=== nginx Process Tree ===
+bash(64983)---pstree(66030)
+=== postgresql Process Tree ===
+bash(64983)---pstree(66034)
+=== redis Process Tree ===
+bash(64983)---pstree(66038)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(66042)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(66046)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(66050)
+
+=================================================================================
+2025-07-07 09:09:57
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         576        3986          37        3417        7104
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  66079   55086 postgres: awx awx 192.168.1 28912
+  55086       1 /usr/bin/postmaster -D /var 27648
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25584
+  66057   55086 postgres: awx awx 192.168.1 23280
+    799       1 /usr/sbin/NetworkManager -- 21776
+  66080   55086 postgres: awx awx 192.168.1 21616
+  66060   55086 postgres: awx awx 192.168.1 21104
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       04:03
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    169592 pipe
+postmaste 66057 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66057 postgres   11u  IPv4 166820      0t0       TCP localhost.localdomain:postgres->192.168.1.104:41994 (ESTABLISHED)
+postmaste 66060 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66060 postgres   11u  IPv4 166823      0t0       TCP localhost.localdomain:postgres->192.168.1.104:42028 (ESTABLISHED)
+postmaste 66078 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66078 postgres   11u  IPv4 168823      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33976 (ESTABLISHED)
+postmaste 66079 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66079 postgres   11u  IPv4 168824      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33982 (ESTABLISHED)
+postmaste 66080 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66080 postgres   11u  IPv4 169561      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33996 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 66087:
+  No child processes found
+Receptor Threads for PID 66087:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 66087:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 66057 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66057 postgres   11u  IPv4 166820      0t0  TCP localhost.localdomain:postgres->192.168.1.104:41994 (ESTABLISHED)
+postmaste 66060 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66060 postgres   11u  IPv4 166823      0t0  TCP localhost.localdomain:postgres->192.168.1.104:42028 (ESTABLISHED)
+postmaste 66078 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66078 postgres   11u  IPv4 168823      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33976 (ESTABLISHED)
+postmaste 66079 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66079 postgres   11u  IPv4 168824      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33982 (ESTABLISHED)
+postmaste 66080 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66080 postgres   11u  IPv4 169561      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33996 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  66146   64983 bash -c  log_file="/tmp/mem  2344
+
+Process: bash (PID: 66146)
+    PID    PPID CMD                           RSS
+  66146   64983 bash -c  log_file="/tmp/mem  2344
+  Children of PID 66146:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(66157)
+=== receptor Process Tree ===
+bash(64983)---pstree(66161)
+=== nginx Process Tree ===
+bash(64983)---pstree(66165)
+=== postgresql Process Tree ===
+bash(64983)---pstree(66169)
+=== redis Process Tree ===
+bash(64983)---pstree(66173)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(66177)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(66181)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(66185)
+
+=================================================================================
+2025-07-07 09:10:27
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         565        3997          37        3417        7115
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  55086       1 /usr/bin/postmaster -D /var 27648
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25584
+  66203   55086 postgres: awx awx 192.168.1 25200
+  66199   55086 postgres: awx awx 192.168.1 23792
+    799       1 /usr/sbin/NetworkManager -- 21776
+  66080   55086 postgres: awx awx 192.168.1 21616
+  66204   55086 postgres: awx awx 192.168.1 21232
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       04:33
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    170437 pipe
+postmaste 66080 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66080 postgres   11u  IPv4 169561      0t0       TCP localhost.localdomain:postgres->192.168.1.104:33996 (ESTABLISHED)
+postmaste 66199 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66199 postgres   11u  IPv4 171112      0t0       TCP localhost.localdomain:postgres->192.168.1.104:39012 (ESTABLISHED)
+postmaste 66203 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66203 postgres   11u  IPv4 171116      0t0       TCP localhost.localdomain:postgres->192.168.1.104:34006 (ESTABLISHED)
+postmaste 66204 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66204 postgres   11u  IPv4 171117      0t0       TCP localhost.localdomain:postgres->192.168.1.104:34010 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 66212:
+  No child processes found
+Receptor Threads for PID 66212:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 66212:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 66080 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66080 postgres   11u  IPv4 169561      0t0  TCP localhost.localdomain:postgres->192.168.1.104:33996 (ESTABLISHED)
+postmaste 66199 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66199 postgres   11u  IPv4 171112      0t0  TCP localhost.localdomain:postgres->192.168.1.104:39012 (ESTABLISHED)
+postmaste 66203 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66203 postgres   11u  IPv4 171116      0t0  TCP localhost.localdomain:postgres->192.168.1.104:34006 (ESTABLISHED)
+postmaste 66204 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66204 postgres   11u  IPv4 171117      0t0  TCP localhost.localdomain:postgres->192.168.1.104:34010 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  66271   64983 bash -c  log_file="/tmp/mem  2344
+
+Process: bash (PID: 66271)
+    PID    PPID CMD                           RSS
+  66271   64983 bash -c  log_file="/tmp/mem  2344
+  Children of PID 66271:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(66282)
+=== receptor Process Tree ===
+bash(64983)---pstree(66286)
+=== nginx Process Tree ===
+bash(64983)---pstree(66290)
+=== postgresql Process Tree ===
+bash(64983)---pstree(66294)
+=== redis Process Tree ===
+bash(64983)---pstree(66298)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(66302)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(66306)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(66310)
+
+=================================================================================
+2025-07-07 09:10:57
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         567        3995          37        3417        7113
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  55086       1 /usr/bin/postmaster -D /var 27648
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  55089   55086 postgres: checkpointer      25584
+  66329   55086 postgres: awx awx 192.168.1 25456
+  66317   55086 postgres: awx awx 192.168.1 23280
+    799       1 /usr/sbin/NetworkManager -- 21776
+  66328   55086 postgres: awx awx 192.168.1 21616
+  66322   55086 postgres: awx awx 192.168.1 21360
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       05:03
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    170871 pipe
+postmaste 66317 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66317 postgres   11u  IPv4 171295      0t0       TCP localhost.localdomain:postgres->192.168.1.104:55924 (ESTABLISHED)
+postmaste 66320 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66320 postgres   11u  IPv4 172360      0t0       TCP localhost.localdomain:postgres->192.168.1.104:55960 (ESTABLISHED)
+postmaste 66322 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66322 postgres   11u  IPv4 171302      0t0       TCP localhost.localdomain:postgres->192.168.1.104:55978 (ESTABLISHED)
+postmaste 66327 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66327 postgres   11u  IPv4 171307      0t0       TCP localhost.localdomain:postgres->192.168.1.104:39612 (ESTABLISHED)
+postmaste 66328 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66328 postgres   11u  IPv4 171308      0t0       TCP localhost.localdomain:postgres->192.168.1.104:39626 (ESTABLISHED)
+postmaste 66329 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66329 postgres   11u  IPv4 171309      0t0       TCP localhost.localdomain:postgres->192.168.1.104:39632 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 66335:
+  No child processes found
+Receptor Threads for PID 66335:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 66335:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 66317 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66317 postgres   11u  IPv4 171295      0t0  TCP localhost.localdomain:postgres->192.168.1.104:55924 (ESTABLISHED)
+postmaste 66320 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66320 postgres   11u  IPv4 172360      0t0  TCP localhost.localdomain:postgres->192.168.1.104:55960 (ESTABLISHED)
+postmaste 66322 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66322 postgres   11u  IPv4 171302      0t0  TCP localhost.localdomain:postgres->192.168.1.104:55978 (ESTABLISHED)
+postmaste 66327 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66327 postgres   11u  IPv4 171307      0t0  TCP localhost.localdomain:postgres->192.168.1.104:39612 (ESTABLISHED)
+postmaste 66328 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66328 postgres   11u  IPv4 171308      0t0  TCP localhost.localdomain:postgres->192.168.1.104:39626 (ESTABLISHED)
+postmaste 66329 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66329 postgres   11u  IPv4 171309      0t0  TCP localhost.localdomain:postgres->192.168.1.104:39632 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  66394   64983 bash -c  log_file="/tmp/mem  2344
+
+Process: bash (PID: 66394)
+    PID    PPID CMD                           RSS
+  66394   64983 bash -c  log_file="/tmp/mem  2344
+  Children of PID 66394:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(66405)
+=== receptor Process Tree ===
+bash(64983)---pstree(66409)
+=== nginx Process Tree ===
+bash(64983)---pstree(66413)
+=== postgresql Process Tree ===
+bash(64983)---pstree(66417)
+=== redis Process Tree ===
+bash(64983)---pstree(66421)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(66425)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(66429)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(66433)
+
+=================================================================================
+2025-07-07 09:11:28
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         566        3996          37        3417        7114
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+    766       1 /usr/bin/python3 -s /usr/sb 44416
+    823       1 /usr/bin/python3 -Es /usr/s 29188
+  55086       1 /usr/bin/postmaster -D /var 27648
+  55089   55086 postgres: checkpointer      25840
+   1026       1 /usr/lib/polkit-1/polkitd - 25700
+  66329   55086 postgres: awx awx 192.168.1 25456
+  66444   55086 postgres: awx awx 192.168.1 25200
+  66317   55086 postgres: awx awx 192.168.1 23280
+    799       1 /usr/sbin/NetworkManager -- 21776
+  66328   55086 postgres: awx awx 192.168.1 21616
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+  64983       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       05:33
+Receptor Child Processes for PID 64983:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 64983:
+    PID    SPID %CPU %MEM   RSS COMMAND
+  64983   64983  0.0  0.0  3456 bash
+Receptor Network Connections for PID 64983:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0       UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0       UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0       UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0       TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0       TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0       TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0       TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0       TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+bash      64983     root  cwd    DIR  253,0      142 100663430 /root
+bash      64983     root  rtd    DIR  253,0      235       128 /
+bash      64983     root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      64983     root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      64983     root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      64983     root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      64983     root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      64983     root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      64983     root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      64983     root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      64983     root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      64983     root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      64983     root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      64983     root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      64983     root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      64983     root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      64983     root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      64983     root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      64983     root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      64983     root    0r   CHR    1,3      0t0         4 /dev/null
+bash      64983     root    1w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    2w   REG  253,0        0  67754923 /tmp/memory_monitor.log
+bash      64983     root    3r  FIFO   0,13      0t0    174194 pipe
+postmaste 66317 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66317 postgres   11u  IPv4 171295      0t0       TCP localhost.localdomain:postgres->192.168.1.104:55924 (ESTABLISHED)
+postmaste 66320 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66320 postgres   11u  IPv4 172360      0t0       TCP localhost.localdomain:postgres->192.168.1.104:55960 (ESTABLISHED)
+postmaste 66328 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66328 postgres   11u  IPv4 171308      0t0       TCP localhost.localdomain:postgres->192.168.1.104:39626 (ESTABLISHED)
+postmaste 66329 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66329 postgres   11u  IPv4 171309      0t0       TCP localhost.localdomain:postgres->192.168.1.104:39632 (ESTABLISHED)
+postmaste 66444 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66444 postgres   11u  IPv4 172555      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47470 (ESTABLISHED)
+postmaste 66445 postgres   10u  IPv6 110305      0t0       UDP localhost:41256->localhost:41256 
+postmaste 66445 postgres   11u  IPv4 172556      0t0       TCP localhost.localdomain:postgres->192.168.1.104:47482 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 66453:
+  No child processes found
+Receptor Threads for PID 66453:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 66453:
+COMMAND     PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd     786   chrony    5u  IPv4  22581      0t0  UDP localhost:323 
+chronyd     786   chrony    6u  IPv6  22582      0t0  UDP localhost:323 
+NetworkMa   799     root   26u  IPv4  24890      0t0  UDP localhost.localdomain:bootpc->pi.hole:bootps 
+sshd        821     root    3u  IPv4  22022      0t0  TCP *:ssh (LISTEN)
+sshd        821     root    4u  IPv6  22024      0t0  TCP *:ssh (LISTEN)
+postmaste 55086 postgres    6u  IPv4 110297      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres    7u  IPv6 110298      0t0  TCP *:postgres (LISTEN)
+postmaste 55086 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55089 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55090 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55091 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55092 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55093 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 55094 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59934 postgres   11u  IPv4 120499      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44676 (ESTABLISHED)
+postmaste 59968 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59968 postgres   11u  IPv4 121311      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44696 (ESTABLISHED)
+postmaste 59973 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59973 postgres   11u  IPv4 121314      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44720 (ESTABLISHED)
+postmaste 59974 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59974 postgres   11u  IPv4 121315      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44722 (ESTABLISHED)
+postmaste 59977 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 59977 postgres   11u  IPv4 121327      0t0  TCP localhost.localdomain:postgres->192.168.1.104:44746 (ESTABLISHED)
+postmaste 61452 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61452 postgres   11u  IPv4 135320      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47088 (ESTABLISHED)
+postmaste 61598 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 61598 postgres   11u  IPv4 138349      0t0  TCP localhost.localdomain:postgres->192.168.1.104:37064 (ESTABLISHED)
+postmaste 66317 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66317 postgres   11u  IPv4 171295      0t0  TCP localhost.localdomain:postgres->192.168.1.104:55924 (ESTABLISHED)
+postmaste 66320 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66320 postgres   11u  IPv4 172360      0t0  TCP localhost.localdomain:postgres->192.168.1.104:55960 (ESTABLISHED)
+postmaste 66328 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66328 postgres   11u  IPv4 171308      0t0  TCP localhost.localdomain:postgres->192.168.1.104:39626 (ESTABLISHED)
+postmaste 66329 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66329 postgres   11u  IPv4 171309      0t0  TCP localhost.localdomain:postgres->192.168.1.104:39632 (ESTABLISHED)
+postmaste 66444 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66444 postgres   11u  IPv4 172555      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47470 (ESTABLISHED)
+postmaste 66445 postgres   10u  IPv6 110305      0t0  UDP localhost:41256->localhost:41256 
+postmaste 66445 postgres   11u  IPv4 172556      0t0  TCP localhost.localdomain:postgres->192.168.1.104:47482 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 64983)
+    PID    PPID CMD                           RSS
+  64983       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 64983:
+    PID    PPID CMD                           RSS
+  66512   64983 bash -c  log_file="/tmp/mem  2344
+
+Process: bash (PID: 66512)
+    PID    PPID CMD                           RSS
+  66512   64983 bash -c  log_file="/tmp/mem  2344
+  Children of PID 66512:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(64983)---pstree(66523)
+=== receptor Process Tree ===
+bash(64983)---pstree(66527)
+=== nginx Process Tree ===
+bash(64983)---pstree(66531)
+=== postgresql Process Tree ===
+bash(64983)---pstree(66535)
+=== redis Process Tree ===
+bash(64983)---pstree(66539)
+=== uwsgi Process Tree ===
+bash(64983)---pstree(66543)
+=== automation-hub Process Tree ===
+bash(64983)---pstree(66547)
+=== automation-eda Process Tree ===
+bash(64983)---pstree(66551)
+
+Memory monitoring completed for aap24 medium test at Mon Jul  7 09:11:58 AM PDT 2025

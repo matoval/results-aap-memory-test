@@ -1,0 +1,8 @@
+AAP 2.4 Service Information
+Timestamp: 2025-07-07T14:25:12Z
+
+  receptor.service         loaded active running Receptor
+--- Memory usage by AAP services ---
+awx       154533  0.0  0.6 1273916 47844 ?       Ssl  08:06   0:00 /usr/bin/receptor -c /etc/receptor/receptor.conf
+root      162302  0.0  0.0   7124  3456 ?        S    08:42   0:00 /bin/sh -c systemctl list-units --type=service --state=running | grep -E "(automation|receptor|platform)" || true echo "--- Memory usage by AAP services ---" ps aux --sort=-%mem | grep -E "(automation|receptor|platform|postgresql)" | head -10 || true 
+root      162306  0.0  0.0   6424  2304 ?        S    08:42   0:00 grep -E (automation|receptor|platform|postgresql)

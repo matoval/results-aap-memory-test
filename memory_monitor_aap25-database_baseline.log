@@ -1,0 +1,963 @@
+Starting memory monitoring for aap25 baseline test at Mon Jul  7 08:42:16 AM PDT 2025
+=================================================================================
+2025-07-07 08:42:16
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         812        6054         206        1275        6868
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1101       1 /usr/bin/postmaster -D /var 114304
+   1197    1101 postgres: checkpointer      54300
+    745       1 /usr/bin/python3 -s /usr/sb 43148
+   1566    1101 postgres: awx awx 192.168.1 37532
+   1198    1101 postgres: background writer 35612
+   1571    1101 postgres: awx awx 192.168.1 32544
+1073088    1101 postgres: awx awx 192.168.1 30364
+    785       1 /usr/bin/python3 -Es /usr/s 28944
+   2632    1101 postgres: awx automationgat 28444
+   2810    1101 postgres: awx automationgat 28316
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+1073391       1 bash -c  log_file="/tmp/mem  3328   7260  0.0  0.0       00:00
+Receptor Child Processes for PID 1073391:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1073391:
+    PID    SPID %CPU %MEM   RSS COMMAND
+1073391 1073391  0.0  0.0  3328 bash
+Receptor Network Connections for PID 1073391:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF      NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0       UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0       UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0       UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0       TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0       TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0       TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0       TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0       TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0       TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+postmaste 1073088      postgres   10u  IPv4 4580173      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:50444 (ESTABLISHED)
+postmaste 1073089      postgres   10u  IPv4 4577255      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:50460 (ESTABLISHED)
+postmaste 1073102      postgres   10u  IPv4 4577278      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:52370 (ESTABLISHED)
+sshd      1073124          root    4u  IPv4 4581011      0t0       TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+sshd      1073147          root    4u  IPv4 4581011      0t0       TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+bash      1073391          root  cwd    DIR   253,0      192  67240070 /root
+bash      1073391          root  rtd    DIR   253,0      235       128 /
+bash      1073391          root  txt    REG   253,0  1389072  67323062 /usr/bin/bash
+bash      1073391          root  mem    REG   253,0  2586930    223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1073391          root  mem    REG   253,0   346132 100921885 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1073391          root  mem    REG   253,0  2544344 100922208 /usr/lib64/libc.so.6
+bash      1073391          root  mem    REG   253,0       54    223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1073391          root  mem    REG   253,0     3284  34000453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1073391          root  mem    REG   253,0      286  34000451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1073391          root  mem    REG   253,0       57  34000464 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1073391          root  mem    REG   253,0    26988  67396209 /usr/lib64/gconv/gconv-modules.cache
+bash      1073391          root  mem    REG   253,0   195080 100921869 /usr/lib64/libtinfo.so.6.2
+bash      1073391          root  mem    REG   253,0       34 100922186 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1073391          root  mem    REG   253,0       77    223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1073391          root  mem    REG   253,0      167  34000447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1073391          root  mem    REG   253,0       59  34000452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1073391          root  mem    REG   253,0       23  34000450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1073391          root  mem    REG   253,0      369  34000449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1073391          root  mem    REG   253,0   897856 100922204 /usr/lib64/ld-linux-x86-64.so.2
+bash      1073391          root    0r   CHR     1,3      0t0         4 /dev/null
+bash      1073391          root    1w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    2w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    3r  FIFO    0,13      0t0   4583588 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 1073399:
+  No child processes found
+Receptor Threads for PID 1073399:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 1073399:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0  UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0  UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0  UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0  TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0  TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0  TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0  TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0  TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0  TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+postmaste 1073088      postgres   10u  IPv4 4580173      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:50444 (ESTABLISHED)
+postmaste 1073089      postgres   10u  IPv4 4577255      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:50460 (ESTABLISHED)
+postmaste 1073102      postgres   10u  IPv4 4577278      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:52370 (ESTABLISHED)
+sshd      1073124          root    4u  IPv4 4581011      0t0  TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+sshd      1073147          root    4u  IPv4 4581011      0t0  TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1073391)
+    PID    PPID CMD                           RSS
+1073391       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1073391:
+    PID    PPID CMD                           RSS
+1073458 1073391 bash -c  log_file="/tmp/mem  2060
+
+Process: bash (PID: 1073458)
+    PID    PPID CMD                           RSS
+1073458 1073391 bash -c  log_file="/tmp/mem  2060
+  Children of PID 1073458:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1073391)---pstree(1073469)
+=== receptor Process Tree ===
+bash(1073391)---pstree(1073473)
+=== nginx Process Tree ===
+bash(1073391)---pstree(1073477)
+=== postgresql Process Tree ===
+bash(1073391)---pstree(1073481)
+=== redis Process Tree ===
+bash(1073391)---pstree(1073485)
+=== uwsgi Process Tree ===
+bash(1073391)---pstree(1073489)
+=== automation-hub Process Tree ===
+bash(1073391)---pstree(1073493)
+=== automation-eda Process Tree ===
+bash(1073391)---pstree(1073497)
+
+=================================================================================
+2025-07-07 08:42:46
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         777        6089         206        1275        6904
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1101       1 /usr/bin/postmaster -D /var 114304
+   1197    1101 postgres: checkpointer      54300
+    745       1 /usr/bin/python3 -s /usr/sb 43148
+   1566    1101 postgres: awx awx 192.168.1 37532
+   1198    1101 postgres: background writer 35612
+   1571    1101 postgres: awx awx 192.168.1 32544
+1073516    1101 postgres: awx awx 192.168.1 30364
+    785       1 /usr/bin/python3 -Es /usr/s 28944
+1073544    1101 postgres: awx awx 192.168.1 28828
+   2632    1101 postgres: awx automationgat 28444
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+1073391       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       00:31
+Receptor Child Processes for PID 1073391:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1073391:
+    PID    SPID %CPU %MEM   RSS COMMAND
+1073391 1073391  0.0  0.0  3456 bash
+Receptor Network Connections for PID 1073391:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF      NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0       UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0       UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0       UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0       TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0       TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0       TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0       TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0       TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0       TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+postmaste 1073102      postgres   10u  IPv4 4577278      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:52370 (ESTABLISHED)
+sshd      1073124          root    4u  IPv4 4581011      0t0       TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+sshd      1073147          root    4u  IPv4 4581011      0t0       TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+bash      1073391          root  cwd    DIR   253,0      192  67240070 /root
+bash      1073391          root  rtd    DIR   253,0      235       128 /
+bash      1073391          root  txt    REG   253,0  1389072  67323062 /usr/bin/bash
+bash      1073391          root  mem    REG   253,0  2586930    223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1073391          root  mem    REG   253,0   346132 100921885 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1073391          root  mem    REG   253,0  2544344 100922208 /usr/lib64/libc.so.6
+bash      1073391          root  mem    REG   253,0       54    223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1073391          root  mem    REG   253,0     3284  34000453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1073391          root  mem    REG   253,0      286  34000451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1073391          root  mem    REG   253,0       57  34000464 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1073391          root  mem    REG   253,0    26988  67396209 /usr/lib64/gconv/gconv-modules.cache
+bash      1073391          root  mem    REG   253,0   195080 100921869 /usr/lib64/libtinfo.so.6.2
+bash      1073391          root  mem    REG   253,0       34 100922186 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1073391          root  mem    REG   253,0       77    223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1073391          root  mem    REG   253,0      167  34000447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1073391          root  mem    REG   253,0       59  34000452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1073391          root  mem    REG   253,0       23  34000450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1073391          root  mem    REG   253,0      369  34000449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1073391          root  mem    REG   253,0   897856 100922204 /usr/lib64/ld-linux-x86-64.so.2
+bash      1073391          root    0r   CHR     1,3      0t0         4 /dev/null
+bash      1073391          root    1w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    2w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    3r  FIFO    0,13      0t0   4585579 pipe
+postmaste 1073516      postgres   10u  IPv4 4582906      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:52934 (ESTABLISHED)
+postmaste 1073544      postgres   10u  IPv4 4582377      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:41086 (ESTABLISHED)
+postmaste 1073617      postgres   10u  IPv4 4585559      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:47590 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 1073634:
+  No child processes found
+Receptor Threads for PID 1073634:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 1073634:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0  UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0  UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0  UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0  TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0  TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0  TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0  TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0  TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0  TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+postmaste 1073102      postgres   10u  IPv4 4577278      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:52370 (ESTABLISHED)
+sshd      1073124          root    4u  IPv4 4581011      0t0  TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+sshd      1073147          root    4u  IPv4 4581011      0t0  TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+postmaste 1073516      postgres   10u  IPv4 4582906      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:52934 (ESTABLISHED)
+postmaste 1073544      postgres   10u  IPv4 4582377      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:41086 (ESTABLISHED)
+postmaste 1073617      postgres   10u  IPv4 4585559      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:47590 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1073391)
+    PID    PPID CMD                           RSS
+1073391       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1073391:
+    PID    PPID CMD                           RSS
+1073693 1073391 bash -c  log_file="/tmp/mem  2080
+
+Process: bash (PID: 1073693)
+    PID    PPID CMD                           RSS
+1073693 1073391 bash -c  log_file="/tmp/mem  2080
+  Children of PID 1073693:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1073391)---pstree(1073704)
+=== receptor Process Tree ===
+bash(1073391)---pstree(1073708)
+=== nginx Process Tree ===
+bash(1073391)---pstree(1073716)
+=== postgresql Process Tree ===
+bash(1073391)---pstree(1073727)
+=== redis Process Tree ===
+bash(1073391)---pstree(1073731)
+=== uwsgi Process Tree ===
+bash(1073391)---pstree(1073735)
+=== automation-hub Process Tree ===
+bash(1073391)---pstree(1073739)
+=== automation-eda Process Tree ===
+bash(1073391)---pstree(1073743)
+
+=================================================================================
+2025-07-07 08:43:17
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         784        6080         206        1277        6896
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1101       1 /usr/bin/postmaster -D /var 114304
+   1197    1101 postgres: checkpointer      54300
+    745       1 /usr/bin/python3 -s /usr/sb 43148
+   1566    1101 postgres: awx awx 192.168.1 37532
+   1198    1101 postgres: background writer 35740
+1073935    1101 postgres: awx awx 192.168.1 34588
+1073929    1101 postgres: awx awx 192.168.1 34332
+1073930    1101 postgres: awx awx 192.168.1 33820
+1073888    1101 postgres: awx awx 192.168.1 33308
+   1571    1101 postgres: awx awx 192.168.1 32544
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+1073391       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:02
+Receptor Child Processes for PID 1073391:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1073391:
+    PID    SPID %CPU %MEM   RSS COMMAND
+1073391 1073391  0.0  0.0  3456 bash
+Receptor Network Connections for PID 1073391:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF      NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0       UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0       UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0       UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0       TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0       TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0       TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0       TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0       TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0       TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+sshd      1073124          root    4u  IPv4 4581011      0t0       TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+sshd      1073147          root    4u  IPv4 4581011      0t0       TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+bash      1073391          root  cwd    DIR   253,0      192  67240070 /root
+bash      1073391          root  rtd    DIR   253,0      235       128 /
+bash      1073391          root  txt    REG   253,0  1389072  67323062 /usr/bin/bash
+bash      1073391          root  mem    REG   253,0  2586930    223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1073391          root  mem    REG   253,0   346132 100921885 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1073391          root  mem    REG   253,0  2544344 100922208 /usr/lib64/libc.so.6
+bash      1073391          root  mem    REG   253,0       54    223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1073391          root  mem    REG   253,0     3284  34000453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1073391          root  mem    REG   253,0      286  34000451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1073391          root  mem    REG   253,0       57  34000464 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1073391          root  mem    REG   253,0    26988  67396209 /usr/lib64/gconv/gconv-modules.cache
+bash      1073391          root  mem    REG   253,0   195080 100921869 /usr/lib64/libtinfo.so.6.2
+bash      1073391          root  mem    REG   253,0       34 100922186 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1073391          root  mem    REG   253,0       77    223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1073391          root  mem    REG   253,0      167  34000447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1073391          root  mem    REG   253,0       59  34000452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1073391          root  mem    REG   253,0       23  34000450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1073391          root  mem    REG   253,0      369  34000449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1073391          root  mem    REG   253,0   897856 100922204 /usr/lib64/ld-linux-x86-64.so.2
+bash      1073391          root    0r   CHR     1,3      0t0         4 /dev/null
+bash      1073391          root    1w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    2w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    3r  FIFO    0,13      0t0   4586255 pipe
+postmaste 1073888      postgres   10u  IPv4 4584170      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:46490 (ESTABLISHED)
+postmaste 1073929      postgres   10u  IPv4 4585329      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57388 (ESTABLISHED)
+postmaste 1073934      postgres   10u  IPv4 4584229      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57430 (ESTABLISHED)
+postmaste 1073935      postgres   10u  IPv4 4584230      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57432 (ESTABLISHED)
+postmaste 1073936      postgres   10u  IPv4 4584231      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57450 (ESTABLISHED)
+postmaste 1073937      postgres   10u  IPv4 4584232      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57456 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 1073944:
+  No child processes found
+Receptor Threads for PID 1073944:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 1073944:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0  UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0  UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0  UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0  TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0  TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0  TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0  TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0  TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0  TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+sshd      1073124          root    4u  IPv4 4581011      0t0  TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+sshd      1073147          root    4u  IPv4 4581011      0t0  TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+postmaste 1073888      postgres   10u  IPv4 4584170      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:46490 (ESTABLISHED)
+postmaste 1073929      postgres   10u  IPv4 4585329      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57388 (ESTABLISHED)
+postmaste 1073934      postgres   10u  IPv4 4584229      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57430 (ESTABLISHED)
+postmaste 1073935      postgres   10u  IPv4 4584230      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57432 (ESTABLISHED)
+postmaste 1073936      postgres   10u  IPv4 4584231      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57450 (ESTABLISHED)
+postmaste 1073937      postgres   10u  IPv4 4584232      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57456 (ESTABLISHED)
+postmaste 1073965      postgres   10u  IPv4 4586881      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57464 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1073391)
+    PID    PPID CMD                           RSS
+1073391       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1073391:
+    PID    PPID CMD                           RSS
+1074015 1073391 bash -c  log_file="/tmp/mem  2084
+
+Process: bash (PID: 1074015)
+    PID    PPID CMD                           RSS
+1074015 1073391 bash -c  log_file="/tmp/mem  2084
+  Children of PID 1074015:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1073391)---pstree(1074026)
+=== receptor Process Tree ===
+bash(1073391)---pstree(1074030)
+=== nginx Process Tree ===
+bash(1073391)---pstree(1074034)
+=== postgresql Process Tree ===
+bash(1073391)---pstree(1074038)
+=== redis Process Tree ===
+bash(1073391)---pstree(1074042)
+=== uwsgi Process Tree ===
+bash(1073391)---pstree(1074046)
+=== automation-hub Process Tree ===
+bash(1073391)---pstree(1074050)
+=== automation-eda Process Tree ===
+bash(1073391)---pstree(1074054)
+
+=================================================================================
+2025-07-07 08:43:47
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         777        6087         207        1278        6903
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1101       1 /usr/bin/postmaster -D /var 114304
+   1197    1101 postgres: checkpointer      54300
+    745       1 /usr/bin/python3 -s /usr/sb 43148
+   1566    1101 postgres: awx awx 192.168.1 37532
+   1198    1101 postgres: background writer 35740
+   1571    1101 postgres: awx awx 192.168.1 32544
+1074169    1101 postgres: awx awx 192.168.1 31900
+    785       1 /usr/bin/python3 -Es /usr/s 28944
+1074197    1101 postgres: awx awx 192.168.1 28828
+   2632    1101 postgres: awx automationgat 28444
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+1073391       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       01:32
+Receptor Child Processes for PID 1073391:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1073391:
+    PID    SPID %CPU %MEM   RSS COMMAND
+1073391 1073391  0.0  0.0  3456 bash
+Receptor Network Connections for PID 1073391:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF      NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0       UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0       UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0       UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0       TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0       TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0       TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0       TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0       TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0       TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+sshd      1073124          root    4u  IPv4 4581011      0t0       TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+sshd      1073147          root    4u  IPv4 4581011      0t0       TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+bash      1073391          root  cwd    DIR   253,0      192  67240070 /root
+bash      1073391          root  rtd    DIR   253,0      235       128 /
+bash      1073391          root  txt    REG   253,0  1389072  67323062 /usr/bin/bash
+bash      1073391          root  mem    REG   253,0  2586930    223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1073391          root  mem    REG   253,0   346132 100921885 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1073391          root  mem    REG   253,0  2544344 100922208 /usr/lib64/libc.so.6
+bash      1073391          root  mem    REG   253,0       54    223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1073391          root  mem    REG   253,0     3284  34000453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1073391          root  mem    REG   253,0      286  34000451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1073391          root  mem    REG   253,0       57  34000464 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1073391          root  mem    REG   253,0    26988  67396209 /usr/lib64/gconv/gconv-modules.cache
+bash      1073391          root  mem    REG   253,0   195080 100921869 /usr/lib64/libtinfo.so.6.2
+bash      1073391          root  mem    REG   253,0       34 100922186 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1073391          root  mem    REG   253,0       77    223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1073391          root  mem    REG   253,0      167  34000447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1073391          root  mem    REG   253,0       59  34000452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1073391          root  mem    REG   253,0       23  34000450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1073391          root  mem    REG   253,0      369  34000449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1073391          root  mem    REG   253,0   897856 100922204 /usr/lib64/ld-linux-x86-64.so.2
+bash      1073391          root    0r   CHR     1,3      0t0         4 /dev/null
+bash      1073391          root    1w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    2w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    3r  FIFO    0,13      0t0   4588687 pipe
+postmaste 1074169      postgres   10u  IPv4 4588631      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57366 (ESTABLISHED)
+postmaste 1074197      postgres   10u  IPv4 4588670      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:38208 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 1074215:
+  No child processes found
+Receptor Threads for PID 1074215:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 1074215:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0  UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0  UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0  UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0  TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0  TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0  TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0  TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0  TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0  TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+sshd      1073124          root    4u  IPv4 4581011      0t0  TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+sshd      1073147          root    4u  IPv4 4581011      0t0  TCP aap25-database.aap-test.local:ssh->192.168.1.49:51414 (ESTABLISHED)
+postmaste 1074169      postgres   10u  IPv4 4588631      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:57366 (ESTABLISHED)
+postmaste 1074197      postgres   10u  IPv4 4588670      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:38208 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1073391)
+    PID    PPID CMD                           RSS
+1073391       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1073391:
+    PID    PPID CMD                           RSS
+1074274 1073391 bash -c  log_file="/tmp/mem  2084
+
+Process: bash (PID: 1074274)
+    PID    PPID CMD                           RSS
+1074274 1073391 bash -c  log_file="/tmp/mem  2084
+  Children of PID 1074274:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1073391)---pstree(1074285)
+=== receptor Process Tree ===
+bash(1073391)---pstree(1074289)
+=== nginx Process Tree ===
+bash(1073391)---pstree(1074293)
+=== postgresql Process Tree ===
+bash(1073391)---pstree(1074297)
+=== redis Process Tree ===
+bash(1073391)---pstree(1074301)
+=== uwsgi Process Tree ===
+bash(1073391)---pstree(1074305)
+=== automation-hub Process Tree ===
+bash(1073391)---pstree(1074309)
+=== automation-eda Process Tree ===
+bash(1073391)---pstree(1074313)
+
+=================================================================================
+2025-07-07 08:44:18
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         763        6101         207        1278        6917
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1101       1 /usr/bin/postmaster -D /var 114304
+   1197    1101 postgres: checkpointer      54428
+    745       1 /usr/bin/python3 -s /usr/sb 43148
+   1566    1101 postgres: awx awx 192.168.1 37532
+   1198    1101 postgres: background writer 35740
+   1571    1101 postgres: awx awx 192.168.1 32544
+    785       1 /usr/bin/python3 -Es /usr/s 28944
+1074434    1101 postgres: awx awx 192.168.1 28828
+   2632    1101 postgres: awx automationgat 28444
+   2810    1101 postgres: awx automationgat 28316
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+1073391       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:03
+Receptor Child Processes for PID 1073391:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1073391:
+    PID    SPID %CPU %MEM   RSS COMMAND
+1073391 1073391  0.0  0.0  3456 bash
+Receptor Network Connections for PID 1073391:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF      NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0       UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0       UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0       UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0       TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0       TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0       TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0       TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0       TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0       TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+bash      1073391          root  cwd    DIR   253,0      192  67240070 /root
+bash      1073391          root  rtd    DIR   253,0      235       128 /
+bash      1073391          root  txt    REG   253,0  1389072  67323062 /usr/bin/bash
+bash      1073391          root  mem    REG   253,0  2586930    223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1073391          root  mem    REG   253,0   346132 100921885 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1073391          root  mem    REG   253,0  2544344 100922208 /usr/lib64/libc.so.6
+bash      1073391          root  mem    REG   253,0       54    223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1073391          root  mem    REG   253,0     3284  34000453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1073391          root  mem    REG   253,0      286  34000451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1073391          root  mem    REG   253,0       57  34000464 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1073391          root  mem    REG   253,0    26988  67396209 /usr/lib64/gconv/gconv-modules.cache
+bash      1073391          root  mem    REG   253,0   195080 100921869 /usr/lib64/libtinfo.so.6.2
+bash      1073391          root  mem    REG   253,0       34 100922186 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1073391          root  mem    REG   253,0       77    223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1073391          root  mem    REG   253,0      167  34000447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1073391          root  mem    REG   253,0       59  34000452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1073391          root  mem    REG   253,0       23  34000450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1073391          root  mem    REG   253,0      369  34000449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1073391          root  mem    REG   253,0   897856 100922204 /usr/lib64/ld-linux-x86-64.so.2
+bash      1073391          root    0r   CHR     1,3      0t0         4 /dev/null
+bash      1073391          root    1w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    2w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    3r  FIFO    0,13      0t0   4588986 pipe
+postmaste 1074434      postgres   10u  IPv4 4590054      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:39266 (ESTABLISHED)
+postmaste 1074448      postgres   10u  IPv4 4590061      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:39276 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 1074454:
+  No child processes found
+Receptor Threads for PID 1074454:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 1074454:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0  UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0  UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0  UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0  TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0  TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0  TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0  TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0  TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0  TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+postmaste 1074434      postgres   10u  IPv4 4590054      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:39266 (ESTABLISHED)
+postmaste 1074448      postgres   10u  IPv4 4590061      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:39276 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1073391)
+    PID    PPID CMD                           RSS
+1073391       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1073391:
+    PID    PPID CMD                           RSS
+1074513 1073391 bash -c  log_file="/tmp/mem  2084
+
+Process: bash (PID: 1074513)
+    PID    PPID CMD                           RSS
+1074513 1073391 bash -c  log_file="/tmp/mem  2084
+  Children of PID 1074513:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1073391)---pstree(1074524)
+=== receptor Process Tree ===
+bash(1073391)---pstree(1074528)
+=== nginx Process Tree ===
+bash(1073391)---pstree(1074532)
+=== postgresql Process Tree ===
+bash(1073391)---pstree(1074536)
+=== redis Process Tree ===
+bash(1073391)---pstree(1074540)
+=== uwsgi Process Tree ===
+bash(1073391)---pstree(1074544)
+=== automation-hub Process Tree ===
+bash(1073391)---pstree(1074548)
+=== automation-eda Process Tree ===
+bash(1073391)---pstree(1074552)
+
+=================================================================================
+2025-07-07 08:44:49
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681         768        6096         207        1278        6912
+Swap:           4095           0        4095
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+   1101       1 /usr/bin/postmaster -D /var 114304
+   1197    1101 postgres: checkpointer      54684
+    745       1 /usr/bin/python3 -s /usr/sb 43148
+   1566    1101 postgres: awx awx 192.168.1 37532
+   1198    1101 postgres: background writer 35740
+   1571    1101 postgres: awx awx 192.168.1 32544
+    785       1 /usr/bin/python3 -Es /usr/s 28944
+1074673    1101 postgres: awx awx 192.168.1 28828
+   2632    1101 postgres: awx automationgat 28444
+   2810    1101 postgres: awx automationgat 28316
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+1073391       1 bash -c  log_file="/tmp/mem  3456   7260  0.0  0.0       02:33
+Receptor Child Processes for PID 1073391:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 1073391:
+    PID    SPID %CPU %MEM   RSS COMMAND
+1073391 1073391  0.0  0.0  3456 bash
+Receptor Network Connections for PID 1073391:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF      NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0       UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0       UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0       UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0       TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0       TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0       TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0       TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0       TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0       TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0       TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+bash      1073391          root  cwd    DIR   253,0      192  67240070 /root
+bash      1073391          root  rtd    DIR   253,0      235       128 /
+bash      1073391          root  txt    REG   253,0  1389072  67323062 /usr/bin/bash
+bash      1073391          root  mem    REG   253,0  2586930    223716 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      1073391          root  mem    REG   253,0   346132 100921885 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      1073391          root  mem    REG   253,0  2544344 100922208 /usr/lib64/libc.so.6
+bash      1073391          root  mem    REG   253,0       54    223719 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      1073391          root  mem    REG   253,0     3284  34000453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      1073391          root  mem    REG   253,0      286  34000451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      1073391          root  mem    REG   253,0       57  34000464 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      1073391          root  mem    REG   253,0    26988  67396209 /usr/lib64/gconv/gconv-modules.cache
+bash      1073391          root  mem    REG   253,0   195080 100921869 /usr/lib64/libtinfo.so.6.2
+bash      1073391          root  mem    REG   253,0       34 100922186 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      1073391          root  mem    REG   253,0       77    223718 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      1073391          root  mem    REG   253,0      167  34000447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      1073391          root  mem    REG   253,0       59  34000452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      1073391          root  mem    REG   253,0       23  34000450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      1073391          root  mem    REG   253,0      369  34000449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      1073391          root  mem    REG   253,0   897856 100922204 /usr/lib64/ld-linux-x86-64.so.2
+bash      1073391          root    0r   CHR     1,3      0t0         4 /dev/null
+bash      1073391          root    1w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    2w   REG   253,0        0  43735380 /tmp/memory_monitor.log
+bash      1073391          root    3r  FIFO    0,13      0t0   4589463 pipe
+postmaste 1074649      postgres   10u  IPv4 4590309      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:56688 (ESTABLISHED)
+postmaste 1074673      postgres   10u  IPv4 4590328      0t0       TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:56730 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 1074694:
+  No child processes found
+Receptor Threads for PID 1074694:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 1074694:
+COMMAND       PID          USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+chronyd       753        chrony    5u  IPv4   23810      0t0  UDP localhost:323 
+chronyd       753        chrony    6u  IPv6   23811      0t0  UDP localhost:323 
+NetworkMa     756          root   26u  IPv4   24087      0t0  UDP aap25-database.aap-test.local:bootpc->pi.hole:bootps 
+sshd          778          root    3u  IPv4   21198      0t0  TCP *:ssh (LISTEN)
+sshd          778          root    4u  IPv6   21200      0t0  TCP *:ssh (LISTEN)
+node_expo    1077 node_exporter    3u  IPv6   25105      0t0  TCP *:jetdirect (LISTEN)
+node_expo    1077 node_exporter    7u  IPv6   25322      0t0  TCP aap25-database.aap-test.local:jetdirect->monitoring-node.aap-test.local:44140 (ESTABLISHED)
+postmaste    1101      postgres    6u  IPv4   24188      0t0  TCP *:postgres (LISTEN)
+postmaste    1101      postgres    7u  IPv6   24189      0t0  TCP *:postgres (LISTEN)
+postmaste    1232      postgres   10u  IPv4   24226      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58186 (ESTABLISHED)
+postmaste    1566      postgres   10u  IPv4   23395      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58258 (ESTABLISHED)
+postmaste    1569      postgres   10u  IPv4   23398      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58288 (ESTABLISHED)
+postmaste    1570      postgres   10u  IPv4   23399      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58302 (ESTABLISHED)
+postmaste    1571      postgres   10u  IPv4   23400      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58306 (ESTABLISHED)
+postmaste    1572      postgres   10u  IPv4   23402      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:58310 (ESTABLISHED)
+postmaste    2057      postgres   10u  IPv4   27493      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:34028 (ESTABLISHED)
+postmaste    2632      postgres   10u  IPv4   32730      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57804 (ESTABLISHED)
+postmaste    2634      postgres   10u  IPv4   32732      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57828 (ESTABLISHED)
+postmaste    2637      postgres   10u  IPv4   32735      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57844 (ESTABLISHED)
+postmaste    2638      postgres   10u  IPv4   32736      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57850 (ESTABLISHED)
+postmaste    2640      postgres   10u  IPv4   32738      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57866 (ESTABLISHED)
+postmaste    2659      postgres   10u  IPv4   32767      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:57896 (ESTABLISHED)
+postmaste    2810      postgres   10u  IPv4   35143      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:45932 (ESTABLISHED)
+postmaste   17807      postgres   10u  IPv4   99176      0t0  TCP aap25-database.aap-test.local:postgres->192.168.1.30:38746 (ESTABLISHED)
+postmaste 1074649      postgres   10u  IPv4 4590309      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:56688 (ESTABLISHED)
+postmaste 1074673      postgres   10u  IPv4 4590328      0t0  TCP aap25-database.aap-test.local:postgres->aap25-control.aap-test.local:56730 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 3456 KB (3 MB)
+Total Receptor VSZ Memory: 7260 KB (7 MB)
+Number of Receptor Processes: 2
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: bash (PID: 1073391)
+    PID    PPID CMD                           RSS
+1073391       1 bash -c  log_file="/tmp/mem  3456
+  Children of PID 1073391:
+    PID    PPID CMD                           RSS
+1074754 1073391 bash -c  log_file="/tmp/mem  2084
+
+Process: bash (PID: 1074754)
+    PID    PPID CMD                           RSS
+1074754 1073391 bash -c  log_file="/tmp/mem  2084
+  Children of PID 1074754:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(1073391)---pstree(1074765)
+=== receptor Process Tree ===
+bash(1073391)---pstree(1074769)
+=== nginx Process Tree ===
+bash(1073391)---pstree(1074773)
+=== postgresql Process Tree ===
+bash(1073391)---pstree(1074777)
+=== redis Process Tree ===
+bash(1073391)---pstree(1074781)
+=== uwsgi Process Tree ===
+bash(1073391)---pstree(1074785)
+=== automation-hub Process Tree ===
+bash(1073391)---pstree(1074789)
+=== automation-eda Process Tree ===
+bash(1073391)---pstree(1074793)
+
+Memory monitoring completed for aap25 baseline test at Mon Jul  7 08:45:19 AM PDT 2025

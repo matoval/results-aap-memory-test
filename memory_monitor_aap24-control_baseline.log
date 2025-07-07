@@ -1,0 +1,2300 @@
+Starting memory monitoring for aap24 baseline test at Mon Jul  7 08:42:29 AM PDT 2025
+=================================================================================
+2025-07-07 08:42:29
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        2087        1775          18        4134        5593
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+ 159821  159659 /var/lib/awx/venv/awx/bin/p 135680
+ 159822  159659 /var/lib/awx/venv/awx/bin/p 131504
+ 159827  159659 /var/lib/awx/venv/awx/bin/p 130668
+ 162020  159821 /var/lib/awx/venv/awx/bin/p 128628
+ 159825  159659 /var/lib/awx/venv/awx/bin/p 127324
+ 162008  159821 /var/lib/awx/venv/awx/bin/p 126836
+ 162010  159821 /var/lib/awx/venv/awx/bin/p 126580
+ 162018  159821 /var/lib/awx/venv/awx/bin/p 126324
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 125592
+ 161994  159821 /var/lib/awx/venv/awx/bin/p 125552
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 154533       1 /usr/bin/receptor -c /etc/r 47972 1273916 0.0  0.6       36:08
+Receptor Child Processes for PID 154533:
+  No child processes found
+Receptor Threads for PID 154533:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 154533  154533  0.0  0.6 47972 receptor
+ 154533  154535  0.0  0.6 47972 receptor
+ 154533  154536  0.0  0.6 47972 receptor
+ 154533  154537  0.0  0.6 47972 receptor
+ 154533  154538  0.0  0.6 47972 receptor
+ 154533  154539  0.0  0.6 47972 receptor
+ 154533  154541  0.0  0.6 47972 receptor
+ 154533  160103  0.0  0.6 47972 receptor
+Receptor Network Connections for PID 154533:
+COMMAND      PID   USER   FD      TYPE             DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u     IPv4              15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u     IPv6              15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u     IPv4              22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u     IPv4              22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u     IPv6              22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx  cwd       DIR              253,0      235       128 /
+receptor  154533    awx  rtd       DIR              253,0      235       128 /
+receptor  154533    awx  txt       REG              253,0 54652712 101254061 /usr/bin/receptor
+receptor  154533    awx  mem       REG              253,0  5436640     31489 /usr/lib64/libcrypto.so.3.2.2
+receptor  154533    awx  mem       REG              253,0  2544344      2940 /usr/lib64/libc.so.6
+receptor  154533    awx  mem       REG              253,0   102552      3026 /usr/lib64/libz.so.1.2.11
+receptor  154533    awx  mem       REG              253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+receptor  154533    awx    0r      CHR                1,3      0t0         4 /dev/null
+receptor  154533    awx    1w      REG              253,0     1801 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    2w      REG              253,0     1801 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    3rW     REG               0,23        0      2259 /run/awx-receptor/receptor.sock.lock
+receptor  154533    awx    4u  a_inode               0,14        0        62 [eventpoll:5,7,8,10]
+receptor  154533    awx    5r     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    6w     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    7u     unix 0xffff991287934600      0t0    460015 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor  154533    awx    8u     IPv6             461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx   10u     IPv6             461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u     IPv4             513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u     IPv4             508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   14u     IPv4             510826      0t0       TCP controller.example.com:https->192.168.1.49:51680 (ESTABLISHED)
+nginx     159246  nginx   20u     IPv4             510829      0t0       TCP controller.example.com:https->192.168.1.49:51702 (ESTABLISHED)
+nginx     159247  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   12u     IPv4             511488      0t0       TCP controller.example.com:https->192.168.1.49:51688 (ESTABLISHED)
+awx-manag 159821    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u     IPv4             503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u     IPv4             481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u     IPv4             481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u     IPv4             481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u     IPv4             481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u     IPv4             497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 161994    awx   37u     IPv4             513148      0t0       TCP controller.example.com:53152->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 161994    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162008    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162010    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162010    awx   61u     IPv4             512146      0t0       TCP controller.example.com:53140->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   59u     IPv4             514063      0t0       TCP controller.example.com:53170->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   44u     IPv4             508915      0t0       TCP controller.example.com:58700->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u     IPv4             513058      0t0       TCP controller.example.com:53376->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 162383       1 bash -c  log_file="/tmp/mem  3584   7260  0.0  0.0       00:00
+Receptor Child Processes for PID 162383:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 162383:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 162383  162383  0.0  0.0  3584 bash
+Receptor Network Connections for PID 162383:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   14u  IPv4 510826      0t0       TCP controller.example.com:https->192.168.1.49:51680 (ESTABLISHED)
+nginx     159246  nginx   20u  IPv4 510829      0t0       TCP controller.example.com:https->192.168.1.49:51702 (ESTABLISHED)
+nginx     159247  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   12u  IPv4 511488      0t0       TCP controller.example.com:https->192.168.1.49:51688 (ESTABLISHED)
+awx-manag 159821    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 161994    awx   37u  IPv4 513148      0t0       TCP controller.example.com:53152->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 161994    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162008    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162010    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162010    awx   61u  IPv4 512146      0t0       TCP controller.example.com:53140->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   59u  IPv4 514063      0t0       TCP controller.example.com:53170->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   44u  IPv4 508915      0t0       TCP controller.example.com:58700->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u  IPv4 513058      0t0       TCP controller.example.com:53376->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+bash      162383   root  cwd    DIR  253,0      142 100663430 /root
+bash      162383   root  rtd    DIR  253,0      235       128 /
+bash      162383   root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      162383   root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      162383   root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      162383   root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      162383   root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      162383   root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      162383   root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      162383   root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      162383   root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      162383   root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      162383   root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      162383   root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      162383   root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      162383   root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      162383   root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      162383   root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      162383   root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      162383   root    0r   CHR    1,3      0t0         4 /dev/null
+bash      162383   root    1w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    2w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    3r  FIFO   0,13      0t0    512532 pipe
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 162391:
+  No child processes found
+Receptor Threads for PID 162391:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 162391:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0  UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0  UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0  UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0  TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0  TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0  TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0  TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0  TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0  TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159246  nginx   14u  IPv4 510826      0t0  TCP controller.example.com:https->192.168.1.49:51680 (ESTABLISHED)
+nginx     159246  nginx   20u  IPv4 510829      0t0  TCP controller.example.com:https->192.168.1.49:51702 (ESTABLISHED)
+nginx     159247  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx   12u  IPv4 511488      0t0  TCP controller.example.com:https->192.168.1.49:51688 (ESTABLISHED)
+awx-manag 159821    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0  TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0  TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0  TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0  TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0  TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0  TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 161994    awx   37u  IPv4 513148      0t0  TCP controller.example.com:53152->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 161994    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162008    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162010    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162010    awx   61u  IPv4 512146      0t0  TCP controller.example.com:53140->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   59u  IPv4 514063      0t0  TCP controller.example.com:53170->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   44u  IPv4 508915      0t0  TCP controller.example.com:58700->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u  IPv4 513058      0t0  TCP controller.example.com:53376->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 51556 KB (50 MB)
+Total Receptor VSZ Memory: 1281176 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 52595)
+    PID    PPID CMD                           RSS
+  52595       1 /usr/bin/redis-server unixs 13152
+
+Process: receptor (PID: 154533)
+    PID    PPID CMD                           RSS
+ 154533       1 /usr/bin/receptor -c /etc/r 47972
+
+Process: nginx (PID: 159243)
+    PID    PPID CMD                           RSS
+ 159243       1 nginx: master process /usr/  2252
+  Children of PID 159243:
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: nginx (PID: 159244)
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+
+Process: nginx (PID: 159245)
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+
+Process: nginx (PID: 159246)
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+
+Process: nginx (PID: 159247)
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: uwsgi (PID: 159823)
+    PID    PPID CMD                           RSS
+ 159823  159659 /var/lib/awx/venv/awx/bin/u 103628
+  Children of PID 159823:
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112280
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 120988
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 111772
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 125592
+
+Process: uwsgi (PID: 159834)
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112280
+
+Process: uwsgi (PID: 159835)
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 120988
+
+Process: uwsgi (PID: 159836)
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 111772
+
+Process: uwsgi (PID: 159837)
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 125592
+
+Process: bash (PID: 162383)
+    PID    PPID CMD                           RSS
+ 162383       1 bash -c  log_file="/tmp/mem  3584
+  Children of PID 162383:
+    PID    PPID CMD                           RSS
+ 162471  162383 bash -c  log_file="/tmp/mem  2328
+
+Process: bash (PID: 162471)
+    PID    PPID CMD                           RSS
+ 162471  162383 bash -c  log_file="/tmp/mem  2328
+  Children of PID 162471:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(162383)---pstree(162526)
+=== receptor Process Tree ===
+receptor(154533)-+-{receptor}(154535)
+                 |-{receptor}(154536)
+                 |-{receptor}(154537)
+                 |-{receptor}(154538)
+                 |-{receptor}(154539)
+                 |-{receptor}(154541)
+                 `-{receptor}(160103)
+bash(162383)---pstree(162531)
+=== nginx Process Tree ===
+nginx(159243)-+-nginx(159244)
+              |-nginx(159245)
+              |-nginx(159246)
+              `-nginx(159247)
+nginx(159244)
+nginx(159245)
+nginx(159246)
+nginx(159247)
+bash(162383)---pstree(162540)
+=== postgresql Process Tree ===
+bash(162383)---pstree(162544)
+=== redis Process Tree ===
+redis-server(52595)-+-{redis-server}(52596)
+                    |-{redis-server}(52597)
+                    |-{redis-server}(52598)
+                    `-{redis-server}(52599)
+bash(162383)---pstree(162549)
+=== uwsgi Process Tree ===
+uwsgi(159823)-+-uwsgi(159834)
+              |-uwsgi(159835)
+              |-uwsgi(159836)
+              `-uwsgi(159837)
+uwsgi(159834)
+uwsgi(159835)
+uwsgi(159836)
+uwsgi(159837)
+bash(162383)---pstree(162558)
+=== automation-hub Process Tree ===
+bash(162383)---pstree(162562)
+=== automation-eda Process Tree ===
+bash(162383)---pstree(162566)
+
+=================================================================================
+2025-07-07 08:43:00
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        2016        1844          18        4136        5664
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+ 159821  159659 /var/lib/awx/venv/awx/bin/p 135680
+ 159822  159659 /var/lib/awx/venv/awx/bin/p 131504
+ 159827  159659 /var/lib/awx/venv/awx/bin/p 130668
+ 162020  159821 /var/lib/awx/venv/awx/bin/p 128884
+ 162018  159821 /var/lib/awx/venv/awx/bin/p 128244
+ 159825  159659 /var/lib/awx/venv/awx/bin/p 127324
+ 162016  159821 /var/lib/awx/venv/awx/bin/p 126964
+ 162571  159821 /var/lib/awx/venv/awx/bin/p 126592
+ 162569  159821 /var/lib/awx/venv/awx/bin/p 126464
+ 162573  159821 /var/lib/awx/venv/awx/bin/p 126080
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 154533       1 /usr/bin/receptor -c /etc/r 48332 1273916 0.0  0.6       36:38
+Receptor Child Processes for PID 154533:
+  No child processes found
+Receptor Threads for PID 154533:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 154533  154533  0.0  0.6 48332 receptor
+ 154533  154535  0.0  0.6 48332 receptor
+ 154533  154536  0.0  0.6 48332 receptor
+ 154533  154537  0.0  0.6 48332 receptor
+ 154533  154538  0.0  0.6 48332 receptor
+ 154533  154539  0.0  0.6 48332 receptor
+ 154533  154541  0.0  0.6 48332 receptor
+ 154533  160103  0.0  0.6 48332 receptor
+Receptor Network Connections for PID 154533:
+COMMAND      PID   USER   FD      TYPE             DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u     IPv4              15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u     IPv6              15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u     IPv4              22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u     IPv4              22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u     IPv6              22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx  cwd       DIR              253,0      235       128 /
+receptor  154533    awx  rtd       DIR              253,0      235       128 /
+receptor  154533    awx  txt       REG              253,0 54652712 101254061 /usr/bin/receptor
+receptor  154533    awx  mem       REG              253,0  5436640     31489 /usr/lib64/libcrypto.so.3.2.2
+receptor  154533    awx  mem       REG              253,0  2544344      2940 /usr/lib64/libc.so.6
+receptor  154533    awx  mem       REG              253,0   102552      3026 /usr/lib64/libz.so.1.2.11
+receptor  154533    awx  mem       REG              253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+receptor  154533    awx    0r      CHR                1,3      0t0         4 /dev/null
+receptor  154533    awx    1w      REG              253,0     1801 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    2w      REG              253,0     1801 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    3rW     REG               0,23        0      2259 /run/awx-receptor/receptor.sock.lock
+receptor  154533    awx    4u  a_inode               0,14        0        62 [eventpoll:5,7,8,10]
+receptor  154533    awx    5r     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    6w     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    7u     unix 0xffff991287934600      0t0    460015 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor  154533    awx    8u     IPv6             461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx   10u     IPv6             461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u     IPv4             513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u     IPv4             508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+awx-manag 159821    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u     IPv4             503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u     IPv4             481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u     IPv4             481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u     IPv4             481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u     IPv4             481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u     IPv4             497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 160023    awx   16u     IPv4             517016      0t0       TCP controller.example.com:39166->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   49u     IPv4             513523      0t0       TCP controller.example.com:41216->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u     IPv4             516992      0t0       TCP controller.example.com:41226->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+awx-manag 162569    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u     IPv4             517348      0t0       TCP controller.example.com:39172->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u     IPv4             513538      0t0       TCP controller.example.com:41246->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   61u     IPv4             513543      0t0       TCP controller.example.com:39178->192.168.1.145:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 162383       1 bash -c  log_file="/tmp/mem  3584   7260  0.0  0.0       00:31
+Receptor Child Processes for PID 162383:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 162383:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 162383  162383  0.0  0.0  3584 bash
+Receptor Network Connections for PID 162383:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+awx-manag 159821    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 160023    awx   16u  IPv4 517016      0t0       TCP controller.example.com:39166->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   49u  IPv4 513523      0t0       TCP controller.example.com:41216->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u  IPv4 516992      0t0       TCP controller.example.com:41226->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+bash      162383   root  cwd    DIR  253,0      142 100663430 /root
+bash      162383   root  rtd    DIR  253,0      235       128 /
+bash      162383   root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      162383   root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      162383   root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      162383   root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      162383   root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      162383   root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      162383   root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      162383   root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      162383   root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      162383   root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      162383   root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      162383   root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      162383   root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      162383   root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      162383   root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      162383   root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      162383   root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      162383   root    0r   CHR    1,3      0t0         4 /dev/null
+bash      162383   root    1w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    2w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    3r  FIFO   0,13      0t0    518213 pipe
+awx-manag 162569    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u  IPv4 517348      0t0       TCP controller.example.com:39172->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u  IPv4 513538      0t0       TCP controller.example.com:41246->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   61u  IPv4 513543      0t0       TCP controller.example.com:39178->192.168.1.145:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 162583:
+  No child processes found
+Receptor Threads for PID 162583:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 162583:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0  UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0  UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0  UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0  TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0  TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0  TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0  TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0  TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0  TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+awx-manag 159821    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0  TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0  TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0  TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0  TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0  TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0  TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 160023    awx   16u  IPv4 517016      0t0  TCP controller.example.com:39166->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   49u  IPv4 513523      0t0  TCP controller.example.com:41216->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u  IPv4 516992      0t0  TCP controller.example.com:41226->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+awx-manag 162569    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u  IPv4 517348      0t0  TCP controller.example.com:39172->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u  IPv4 513538      0t0  TCP controller.example.com:41246->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   61u  IPv4 513543      0t0  TCP controller.example.com:39178->192.168.1.145:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 51916 KB (50 MB)
+Total Receptor VSZ Memory: 1281176 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 52595)
+    PID    PPID CMD                           RSS
+  52595       1 /usr/bin/redis-server unixs 13408
+
+Process: receptor (PID: 154533)
+    PID    PPID CMD                           RSS
+ 154533       1 /usr/bin/receptor -c /etc/r 48332
+
+Process: nginx (PID: 159243)
+    PID    PPID CMD                           RSS
+ 159243       1 nginx: master process /usr/  2252
+  Children of PID 159243:
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: nginx (PID: 159244)
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+
+Process: nginx (PID: 159245)
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+
+Process: nginx (PID: 159246)
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+
+Process: nginx (PID: 159247)
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: uwsgi (PID: 159823)
+    PID    PPID CMD                           RSS
+ 159823  159659 /var/lib/awx/venv/awx/bin/u 103628
+  Children of PID 159823:
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112280
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 120988
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 111772
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 125592
+
+Process: uwsgi (PID: 159834)
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112280
+
+Process: uwsgi (PID: 159835)
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 120988
+
+Process: uwsgi (PID: 159836)
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 111772
+
+Process: uwsgi (PID: 159837)
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 125592
+
+Process: bash (PID: 162383)
+    PID    PPID CMD                           RSS
+ 162383       1 bash -c  log_file="/tmp/mem  3584
+  Children of PID 162383:
+    PID    PPID CMD                           RSS
+ 162663  162383 bash -c  log_file="/tmp/mem  2344
+
+Process: bash (PID: 162663)
+    PID    PPID CMD                           RSS
+ 162663  162383 bash -c  log_file="/tmp/mem  2344
+  Children of PID 162663:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(162383)---pstree(162718)
+=== receptor Process Tree ===
+receptor(154533)-+-{receptor}(154535)
+                 |-{receptor}(154536)
+                 |-{receptor}(154537)
+                 |-{receptor}(154538)
+                 |-{receptor}(154539)
+                 |-{receptor}(154541)
+                 `-{receptor}(160103)
+bash(162383)---pstree(162723)
+=== nginx Process Tree ===
+nginx(159243)-+-nginx(159244)
+              |-nginx(159245)
+              |-nginx(159246)
+              `-nginx(159247)
+nginx(159244)
+nginx(159245)
+nginx(159246)
+nginx(159247)
+bash(162383)---pstree(162732)
+=== postgresql Process Tree ===
+bash(162383)---pstree(162736)
+=== redis Process Tree ===
+redis-server(52595)-+-{redis-server}(52596)
+                    |-{redis-server}(52597)
+                    |-{redis-server}(52598)
+                    `-{redis-server}(52599)
+bash(162383)---pstree(162741)
+=== uwsgi Process Tree ===
+uwsgi(159823)-+-uwsgi(159834)
+              |-uwsgi(159835)
+              |-uwsgi(159836)
+              `-uwsgi(159837)
+uwsgi(159834)
+uwsgi(159835)
+uwsgi(159836)
+uwsgi(159837)
+bash(162383)---pstree(162750)
+=== automation-hub Process Tree ===
+bash(162383)---pstree(162754)
+=== automation-eda Process Tree ===
+bash(162383)---pstree(162758)
+
+=================================================================================
+2025-07-07 08:43:30
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        2187        1641          18        4168        5493
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+ 159821  159659 /var/lib/awx/venv/awx/bin/p 135680
+ 162571  159821 /var/lib/awx/venv/awx/bin/p 131584
+ 159822  159659 /var/lib/awx/venv/awx/bin/p 131504
+ 162018  159821 /var/lib/awx/venv/awx/bin/p 130676
+ 159827  159659 /var/lib/awx/venv/awx/bin/p 130668
+ 162573  159821 /var/lib/awx/venv/awx/bin/p 130560
+ 162020  159821 /var/lib/awx/venv/awx/bin/p 129140
+ 159825  159659 /var/lib/awx/venv/awx/bin/p 127324
+ 162016  159821 /var/lib/awx/venv/awx/bin/p 126964
+ 162569  159821 /var/lib/awx/venv/awx/bin/p 126464
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 154533       1 /usr/bin/receptor -c /etc/r 48788 1273916 0.0  0.6       37:09
+Receptor Child Processes for PID 154533:
+  No child processes found
+Receptor Threads for PID 154533:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 154533  154533  0.0  0.6 48788 receptor
+ 154533  154535  0.0  0.6 48788 receptor
+ 154533  154536  0.0  0.6 48788 receptor
+ 154533  154537  0.0  0.6 48788 receptor
+ 154533  154538  0.0  0.6 48788 receptor
+ 154533  154539  0.0  0.6 48788 receptor
+ 154533  154541  0.0  0.6 48788 receptor
+ 154533  160103  0.0  0.6 48788 receptor
+Receptor Network Connections for PID 154533:
+COMMAND      PID   USER   FD      TYPE             DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u     IPv4              15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u     IPv6              15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u     IPv4              22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u     IPv4              22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u     IPv6              22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx  cwd       DIR              253,0      235       128 /
+receptor  154533    awx  rtd       DIR              253,0      235       128 /
+receptor  154533    awx  txt       REG              253,0 54652712 101254061 /usr/bin/receptor
+receptor  154533    awx  mem       REG              253,0  5436640     31489 /usr/lib64/libcrypto.so.3.2.2
+receptor  154533    awx  mem       REG              253,0  2544344      2940 /usr/lib64/libc.so.6
+receptor  154533    awx  mem       REG              253,0   102552      3026 /usr/lib64/libz.so.1.2.11
+receptor  154533    awx  mem       REG              253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+receptor  154533    awx    0r      CHR                1,3      0t0         4 /dev/null
+receptor  154533    awx    1w      REG              253,0     2373 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    2w      REG              253,0     2373 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    3rW     REG               0,23        0      2259 /run/awx-receptor/receptor.sock.lock
+receptor  154533    awx    4u  a_inode               0,14        0        62 [eventpoll:5,7,8,9,10]
+receptor  154533    awx    5r     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    6w     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    7u     unix 0xffff991287934600      0t0    460015 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor  154533    awx    8u     IPv6             461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx    9u     unix 0xffff99139093da00      0t0    522631 /var/run/awx-receptor/receptor.sock type=STREAM (CONNECTED)
+receptor  154533    awx   10u     IPv6             461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+receptor  154533    awx   11r      REG              253,0    34078   3415388 /tmp/receptor/192.168.1.104/ffAXNjFk/stdout
+receptor  154533    awx   12w      REG              253,0    34078   3415388 /tmp/receptor/192.168.1.104/ffAXNjFk/stdout
+nginx     159243   root    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u     IPv4             513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   20u     IPv4             519581      0t0       TCP controller.example.com:https->192.168.1.49:45816 (ESTABLISHED)
+nginx     159245  nginx   22u     IPv4             508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+awx-manag 159821    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u     IPv4             503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u     IPv4             481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u     IPv4             481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u     IPv4             481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u     IPv4             481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u     IPv4             497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   49u     IPv4             513523      0t0       TCP controller.example.com:41216->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   44u     IPv4             520087      0t0       TCP controller.example.com:43454->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u     IPv4             522424      0t0       TCP controller.example.com:43466->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+awx-manag 162569    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u     IPv4             517348      0t0       TCP controller.example.com:39172->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u     IPv4             523523      0t0       TCP controller.example.com:57476->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 162383       1 bash -c  log_file="/tmp/mem  3584   7260  0.0  0.0       01:01
+Receptor Child Processes for PID 162383:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 162383:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 162383  162383  0.0  0.0  3584 bash
+Receptor Network Connections for PID 162383:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   20u  IPv4 519581      0t0       TCP controller.example.com:https->192.168.1.49:45816 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+awx-manag 159821    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   49u  IPv4 513523      0t0       TCP controller.example.com:41216->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   44u  IPv4 520087      0t0       TCP controller.example.com:43454->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u  IPv4 522424      0t0       TCP controller.example.com:43466->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+bash      162383   root  cwd    DIR  253,0      142 100663430 /root
+bash      162383   root  rtd    DIR  253,0      235       128 /
+bash      162383   root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      162383   root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      162383   root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      162383   root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      162383   root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      162383   root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      162383   root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      162383   root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      162383   root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      162383   root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      162383   root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      162383   root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      162383   root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      162383   root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      162383   root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      162383   root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      162383   root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      162383   root    0r   CHR    1,3      0t0         4 /dev/null
+bash      162383   root    1w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    2w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    3r  FIFO   0,13      0t0    522714 pipe
+awx-manag 162569    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u  IPv4 517348      0t0       TCP controller.example.com:39172->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u  IPv4 523523      0t0       TCP controller.example.com:57476->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 164366:
+  No child processes found
+Receptor Threads for PID 164366:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 164366:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0  UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0  UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0  UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0  TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0  TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0  TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0  TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0  TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   20u  IPv4 519581      0t0  TCP controller.example.com:https->192.168.1.49:45816 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0  TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+awx-manag 159821    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0  TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0  TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0  TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0  TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0  TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0  TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162006    awx   49u  IPv4 513523      0t0  TCP controller.example.com:41216->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162016    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162018    awx   44u  IPv4 520087      0t0  TCP controller.example.com:43454->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u  IPv4 522424      0t0  TCP controller.example.com:43466->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+awx-manag 162569    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u  IPv4 517348      0t0  TCP controller.example.com:39172->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u  IPv4 523523      0t0  TCP controller.example.com:57476->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 52372 KB (51 MB)
+Total Receptor VSZ Memory: 1281176 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 52595)
+    PID    PPID CMD                           RSS
+  52595       1 /usr/bin/redis-server unixs 13408
+
+Process: receptor (PID: 154533)
+    PID    PPID CMD                           RSS
+ 154533       1 /usr/bin/receptor -c /etc/r 48788
+
+Process: nginx (PID: 159243)
+    PID    PPID CMD                           RSS
+ 159243       1 nginx: master process /usr/  2252
+  Children of PID 159243:
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: nginx (PID: 159244)
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+
+Process: nginx (PID: 159245)
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+
+Process: nginx (PID: 159246)
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+
+Process: nginx (PID: 159247)
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: uwsgi (PID: 159823)
+    PID    PPID CMD                           RSS
+ 159823  159659 /var/lib/awx/venv/awx/bin/u 103628
+  Children of PID 159823:
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112920
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 124060
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 123676
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 125720
+
+Process: uwsgi (PID: 159834)
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112920
+
+Process: uwsgi (PID: 159835)
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 124060
+
+Process: uwsgi (PID: 159836)
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 123676
+
+Process: uwsgi (PID: 159837)
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 125720
+
+Process: bash (PID: 162383)
+    PID    PPID CMD                           RSS
+ 162383       1 bash -c  log_file="/tmp/mem  3584
+  Children of PID 162383:
+    PID    PPID CMD                           RSS
+ 164446  162383 bash -c  log_file="/tmp/mem  2360
+
+Process: bash (PID: 164446)
+    PID    PPID CMD                           RSS
+ 164446  162383 bash -c  log_file="/tmp/mem  2360
+  Children of PID 164446:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(162383)---pstree(164501)
+=== receptor Process Tree ===
+receptor(154533)-+-{receptor}(154535)
+                 |-{receptor}(154536)
+                 |-{receptor}(154537)
+                 |-{receptor}(154538)
+                 |-{receptor}(154539)
+                 |-{receptor}(154541)
+                 `-{receptor}(160103)
+bash(162383)---pstree(164506)
+=== nginx Process Tree ===
+nginx(159243)-+-nginx(159244)
+              |-nginx(159245)
+              |-nginx(159246)
+              `-nginx(159247)
+nginx(159244)
+nginx(159245)
+nginx(159246)
+nginx(159247)
+bash(162383)---pstree(164515)
+=== postgresql Process Tree ===
+bash(162383)---pstree(164519)
+=== redis Process Tree ===
+redis-server(52595)-+-{redis-server}(52596)
+                    |-{redis-server}(52597)
+                    |-{redis-server}(52598)
+                    `-{redis-server}(52599)
+bash(162383)---pstree(164524)
+=== uwsgi Process Tree ===
+uwsgi(159823)-+-uwsgi(159834)
+              |-uwsgi(159835)
+              |-uwsgi(159836)
+              `-uwsgi(159837)
+uwsgi(159834)
+uwsgi(159835)
+uwsgi(159836)
+uwsgi(159837)
+bash(162383)---pstree(164533)
+=== automation-hub Process Tree ===
+bash(162383)---pstree(164537)
+=== automation-eda Process Tree ===
+bash(162383)---pstree(164541)
+
+=================================================================================
+2025-07-07 08:44:01
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        2137        1691          18        4168        5543
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+ 159821  159659 /var/lib/awx/venv/awx/bin/p 133696
+ 162571  159821 /var/lib/awx/venv/awx/bin/p 131584
+ 159822  159659 /var/lib/awx/venv/awx/bin/p 131504
+ 159827  159659 /var/lib/awx/venv/awx/bin/p 130668
+ 162573  159821 /var/lib/awx/venv/awx/bin/p 130560
+ 162020  159821 /var/lib/awx/venv/awx/bin/p 129524
+ 159825  159659 /var/lib/awx/venv/awx/bin/p 127324
+ 162569  159821 /var/lib/awx/venv/awx/bin/p 126464
+ 164628  159821 /var/lib/awx/venv/awx/bin/p 126360
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 125848
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 154533       1 /usr/bin/receptor -c /etc/r 47832 1273916 0.0  0.6       37:40
+Receptor Child Processes for PID 154533:
+  No child processes found
+Receptor Threads for PID 154533:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 154533  154533  0.0  0.6 47832 receptor
+ 154533  154535  0.0  0.6 47832 receptor
+ 154533  154536  0.0  0.6 47832 receptor
+ 154533  154537  0.0  0.6 47832 receptor
+ 154533  154538  0.0  0.6 47832 receptor
+ 154533  154539  0.0  0.6 47832 receptor
+ 154533  154541  0.0  0.6 47832 receptor
+ 154533  160103  0.0  0.6 47832 receptor
+Receptor Network Connections for PID 154533:
+COMMAND      PID   USER   FD      TYPE             DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u     IPv4              15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u     IPv6              15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u     IPv4              22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u     IPv4              22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u     IPv6              22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx  cwd       DIR              253,0      235       128 /
+receptor  154533    awx  rtd       DIR              253,0      235       128 /
+receptor  154533    awx  txt       REG              253,0 54652712 101254061 /usr/bin/receptor
+receptor  154533    awx  mem       REG              253,0  5436640     31489 /usr/lib64/libcrypto.so.3.2.2
+receptor  154533    awx  mem       REG              253,0  2544344      2940 /usr/lib64/libc.so.6
+receptor  154533    awx  mem       REG              253,0   102552      3026 /usr/lib64/libz.so.1.2.11
+receptor  154533    awx  mem       REG              253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+receptor  154533    awx    0r      CHR                1,3      0t0         4 /dev/null
+receptor  154533    awx    1w      REG              253,0     2373 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    2w      REG              253,0     2373 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    3rW     REG               0,23        0      2259 /run/awx-receptor/receptor.sock.lock
+receptor  154533    awx    4u  a_inode               0,14        0        62 [eventpoll:5,7,8,9,10]
+receptor  154533    awx    5r     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    6w     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    7u     unix 0xffff991287934600      0t0    460015 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor  154533    awx    8u     IPv6             461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx    9u     unix 0xffff99139093da00      0t0    522631 /var/run/awx-receptor/receptor.sock type=STREAM (CONNECTED)
+receptor  154533    awx   10u     IPv6             461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+receptor  154533    awx   11r      REG              253,0    34078   3415388 /tmp/receptor/192.168.1.104/ffAXNjFk/stdout
+receptor  154533    awx   12w      REG              253,0    34078   3415388 /tmp/receptor/192.168.1.104/ffAXNjFk/stdout
+nginx     159243   root    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u     IPv4             513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   20u     IPv4             519581      0t0       TCP controller.example.com:https->192.168.1.49:45816 (ESTABLISHED)
+nginx     159245  nginx   22u     IPv4             508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+awx-manag 159821    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u     IPv4             503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u     IPv4             481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u     IPv4             481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u     IPv4             481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u     IPv4             481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u     IPv4             497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 160023    awx   16u     IPv4             525532      0t0       TCP controller.example.com:60394->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u     IPv4             524029      0t0       TCP controller.example.com:60416->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+awx-manag 162569    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u     IPv4             523129      0t0       TCP controller.example.com:60400->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u     IPv4             523931      0t0       TCP controller.example.com:40312->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164628    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   42u     IPv4             522984      0t0       TCP controller.example.com:40346->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164632    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 162383       1 bash -c  log_file="/tmp/mem  3584   7260  0.0  0.0       01:32
+Receptor Child Processes for PID 162383:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 162383:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 162383  162383  0.0  0.0  3584 bash
+Receptor Network Connections for PID 162383:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   20u  IPv4 519581      0t0       TCP controller.example.com:https->192.168.1.49:45816 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+awx-manag 159821    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 160023    awx   16u  IPv4 525532      0t0       TCP controller.example.com:60394->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u  IPv4 524029      0t0       TCP controller.example.com:60416->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+bash      162383   root  cwd    DIR  253,0      142 100663430 /root
+bash      162383   root  rtd    DIR  253,0      235       128 /
+bash      162383   root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      162383   root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      162383   root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      162383   root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      162383   root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      162383   root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      162383   root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      162383   root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      162383   root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      162383   root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      162383   root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      162383   root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      162383   root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      162383   root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      162383   root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      162383   root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      162383   root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      162383   root    0r   CHR    1,3      0t0         4 /dev/null
+bash      162383   root    1w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    2w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    3r  FIFO   0,13      0t0    525872 pipe
+awx-manag 162569    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u  IPv4 523129      0t0       TCP controller.example.com:60400->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u  IPv4 523931      0t0       TCP controller.example.com:40312->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164628    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   42u  IPv4 522984      0t0       TCP controller.example.com:40346->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164632    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 165062:
+  No child processes found
+Receptor Threads for PID 165062:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 165062:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0  UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0  UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0  UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0  TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0  TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0  TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0  TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0  TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   20u  IPv4 519581      0t0  TCP controller.example.com:https->192.168.1.49:45816 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0  TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+awx-manag 159821    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0  TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0  TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0  TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0  TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0  TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0  TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 160023    awx   16u  IPv4 525532      0t0  TCP controller.example.com:60394->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u  IPv4 524029      0t0  TCP controller.example.com:60416->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+awx-manag 162569    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u  IPv4 523129      0t0  TCP controller.example.com:60400->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u  IPv4 523931      0t0  TCP controller.example.com:40312->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164628    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   42u  IPv4 522984      0t0  TCP controller.example.com:40346->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164632    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 51416 KB (50 MB)
+Total Receptor VSZ Memory: 1281176 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 52595)
+    PID    PPID CMD                           RSS
+  52595       1 /usr/bin/redis-server unixs 13280
+
+Process: receptor (PID: 154533)
+    PID    PPID CMD                           RSS
+ 154533       1 /usr/bin/receptor -c /etc/r 47832
+
+Process: nginx (PID: 159243)
+    PID    PPID CMD                           RSS
+ 159243       1 nginx: master process /usr/  2252
+  Children of PID 159243:
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: nginx (PID: 159244)
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+
+Process: nginx (PID: 159245)
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+
+Process: nginx (PID: 159246)
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+
+Process: nginx (PID: 159247)
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: uwsgi (PID: 159823)
+    PID    PPID CMD                           RSS
+ 159823  159659 /var/lib/awx/venv/awx/bin/u 103628
+  Children of PID 159823:
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112920
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 124316
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 124188
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 125848
+
+Process: uwsgi (PID: 159834)
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112920
+
+Process: uwsgi (PID: 159835)
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 124316
+
+Process: uwsgi (PID: 159836)
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 124188
+
+Process: uwsgi (PID: 159837)
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 125848
+
+Process: bash (PID: 162383)
+    PID    PPID CMD                           RSS
+ 162383       1 bash -c  log_file="/tmp/mem  3584
+  Children of PID 162383:
+    PID    PPID CMD                           RSS
+ 165142  162383 bash -c  log_file="/tmp/mem  2364
+
+Process: bash (PID: 165142)
+    PID    PPID CMD                           RSS
+ 165142  162383 bash -c  log_file="/tmp/mem  2364
+  Children of PID 165142:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(162383)---pstree(165197)
+=== receptor Process Tree ===
+receptor(154533)-+-{receptor}(154535)
+                 |-{receptor}(154536)
+                 |-{receptor}(154537)
+                 |-{receptor}(154538)
+                 |-{receptor}(154539)
+                 |-{receptor}(154541)
+                 `-{receptor}(160103)
+bash(162383)---pstree(165202)
+=== nginx Process Tree ===
+nginx(159243)-+-nginx(159244)
+              |-nginx(159245)
+              |-nginx(159246)
+              `-nginx(159247)
+nginx(159244)
+nginx(159245)
+nginx(159246)
+nginx(159247)
+bash(162383)---pstree(165211)
+=== postgresql Process Tree ===
+bash(162383)---pstree(165215)
+=== redis Process Tree ===
+redis-server(52595)-+-{redis-server}(52596)
+                    |-{redis-server}(52597)
+                    |-{redis-server}(52598)
+                    `-{redis-server}(52599)
+bash(162383)---pstree(165220)
+=== uwsgi Process Tree ===
+uwsgi(159823)-+-uwsgi(159834)
+              |-uwsgi(159835)
+              |-uwsgi(159836)
+              `-uwsgi(159837)
+uwsgi(159834)
+uwsgi(159835)
+uwsgi(159836)
+uwsgi(159837)
+bash(162383)---pstree(165229)
+=== automation-hub Process Tree ===
+bash(162383)---pstree(165233)
+=== automation-eda Process Tree ===
+bash(162383)---pstree(165237)
+
+=================================================================================
+2025-07-07 08:44:32
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        2200        1627          18        4169        5480
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+ 159821  159659 /var/lib/awx/venv/awx/bin/p 133696
+ 162571  159821 /var/lib/awx/venv/awx/bin/p 131584
+ 159822  159659 /var/lib/awx/venv/awx/bin/p 131504
+ 162020  159821 /var/lib/awx/venv/awx/bin/p 130804
+ 159827  159659 /var/lib/awx/venv/awx/bin/p 130668
+ 162573  159821 /var/lib/awx/venv/awx/bin/p 130560
+ 159825  159659 /var/lib/awx/venv/awx/bin/p 127324
+ 164628  159821 /var/lib/awx/venv/awx/bin/p 126744
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 126488
+ 162569  159821 /var/lib/awx/venv/awx/bin/p 126464
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 154533       1 /usr/bin/receptor -c /etc/r 48216 1273916 0.0  0.6       38:10
+Receptor Child Processes for PID 154533:
+  No child processes found
+Receptor Threads for PID 154533:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 154533  154533  0.0  0.6 48216 receptor
+ 154533  154535  0.0  0.6 48216 receptor
+ 154533  154536  0.0  0.6 48216 receptor
+ 154533  154537  0.0  0.6 48216 receptor
+ 154533  154538  0.0  0.6 48216 receptor
+ 154533  154539  0.0  0.6 48216 receptor
+ 154533  154541  0.0  0.6 48216 receptor
+ 154533  160103  0.0  0.6 48216 receptor
+Receptor Network Connections for PID 154533:
+COMMAND      PID   USER   FD      TYPE             DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u     IPv4              15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u     IPv6              15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u     IPv4              22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u     IPv4              22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u     IPv6              22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx  cwd       DIR              253,0      235       128 /
+receptor  154533    awx  rtd       DIR              253,0      235       128 /
+receptor  154533    awx  txt       REG              253,0 54652712 101254061 /usr/bin/receptor
+receptor  154533    awx  mem       REG              253,0  5436640     31489 /usr/lib64/libcrypto.so.3.2.2
+receptor  154533    awx  mem       REG              253,0  2544344      2940 /usr/lib64/libc.so.6
+receptor  154533    awx  mem       REG              253,0   102552      3026 /usr/lib64/libz.so.1.2.11
+receptor  154533    awx  mem       REG              253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+receptor  154533    awx    0r      CHR                1,3      0t0         4 /dev/null
+receptor  154533    awx    1w      REG              253,0     2373 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    2w      REG              253,0     2373 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    3rW     REG               0,23        0      2259 /run/awx-receptor/receptor.sock.lock
+receptor  154533    awx    4u  a_inode               0,14        0        62 [eventpoll:5,7,8,9,10]
+receptor  154533    awx    5r     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    6w     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    7u     unix 0xffff991287934600      0t0    460015 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor  154533    awx    8u     IPv6             461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx    9u     unix 0xffff99139093da00      0t0    522631 /var/run/awx-receptor/receptor.sock type=STREAM (CONNECTED)
+receptor  154533    awx   10u     IPv6             461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+receptor  154533    awx   11r      REG              253,0    34078   3415388 /tmp/receptor/192.168.1.104/ffAXNjFk/stdout
+receptor  154533    awx   12w      REG              253,0    34078   3415388 /tmp/receptor/192.168.1.104/ffAXNjFk/stdout
+nginx     159243   root    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u     IPv4             513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u     IPv4             508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+awx-manag 159821    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u     IPv4             503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u     IPv4             481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u     IPv4             481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u     IPv4             481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u     IPv4             481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u     IPv4             497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u     IPv4             524029      0t0       TCP controller.example.com:60416->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+awx-manag 162569    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u     IPv4             523129      0t0       TCP controller.example.com:60400->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u     IPv4             528391      0t0       TCP controller.example.com:35312->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164628    awx   33u     IPv4             527508      0t0       TCP controller.example.com:33466->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164628    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   42u     IPv4             526127      0t0       TCP controller.example.com:33470->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164632    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 162383       1 bash -c  log_file="/tmp/mem  3584   7260  0.0  0.0       02:02
+Receptor Child Processes for PID 162383:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 162383:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 162383  162383  0.0  0.0  3584 bash
+Receptor Network Connections for PID 162383:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+awx-manag 159821    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u  IPv4 524029      0t0       TCP controller.example.com:60416->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+bash      162383   root  cwd    DIR  253,0      142 100663430 /root
+bash      162383   root  rtd    DIR  253,0      235       128 /
+bash      162383   root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      162383   root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      162383   root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      162383   root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      162383   root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      162383   root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      162383   root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      162383   root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      162383   root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      162383   root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      162383   root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      162383   root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      162383   root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      162383   root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      162383   root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      162383   root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      162383   root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      162383   root    0r   CHR    1,3      0t0         4 /dev/null
+bash      162383   root    1w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    2w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    3r  FIFO   0,13      0t0    526988 pipe
+awx-manag 162569    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u  IPv4 523129      0t0       TCP controller.example.com:60400->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u  IPv4 528391      0t0       TCP controller.example.com:35312->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164628    awx   33u  IPv4 527508      0t0       TCP controller.example.com:33466->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164628    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   42u  IPv4 526127      0t0       TCP controller.example.com:33470->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164632    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 165670:
+  No child processes found
+Receptor Threads for PID 165670:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 165670:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0  UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0  UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0  UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0  TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0  TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0  TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0  TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0  TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0  TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+awx-manag 159821    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0  TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0  TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0  TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0  TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0  TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0  TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162020    awx   63u  IPv4 524029      0t0  TCP controller.example.com:60416->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+awx-manag 162569    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162569    awx   50u  IPv4 523129      0t0  TCP controller.example.com:60400->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162571    awx   53u  IPv4 528391      0t0  TCP controller.example.com:35312->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164628    awx   33u  IPv4 527508      0t0  TCP controller.example.com:33466->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164628    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   42u  IPv4 526127      0t0  TCP controller.example.com:33470->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164632    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 51800 KB (50 MB)
+Total Receptor VSZ Memory: 1281176 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 52595)
+    PID    PPID CMD                           RSS
+  52595       1 /usr/bin/redis-server unixs 13144
+
+Process: receptor (PID: 154533)
+    PID    PPID CMD                           RSS
+ 154533       1 /usr/bin/receptor -c /etc/r 48216
+
+Process: nginx (PID: 159243)
+    PID    PPID CMD                           RSS
+ 159243       1 nginx: master process /usr/  2252
+  Children of PID 159243:
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: nginx (PID: 159244)
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+
+Process: nginx (PID: 159245)
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+
+Process: nginx (PID: 159246)
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+
+Process: nginx (PID: 159247)
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: uwsgi (PID: 159823)
+    PID    PPID CMD                           RSS
+ 159823  159659 /var/lib/awx/venv/awx/bin/u 103628
+  Children of PID 159823:
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112920
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 124316
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 124188
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 126488
+
+Process: uwsgi (PID: 159834)
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112920
+
+Process: uwsgi (PID: 159835)
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 124316
+
+Process: uwsgi (PID: 159836)
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 124188
+
+Process: uwsgi (PID: 159837)
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 126488
+
+Process: bash (PID: 162383)
+    PID    PPID CMD                           RSS
+ 162383       1 bash -c  log_file="/tmp/mem  3584
+  Children of PID 162383:
+    PID    PPID CMD                           RSS
+ 165750  162383 bash -c  log_file="/tmp/mem  2368
+
+Process: bash (PID: 165750)
+    PID    PPID CMD                           RSS
+ 165750  162383 bash -c  log_file="/tmp/mem  2368
+  Children of PID 165750:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(162383)---pstree(165805)
+=== receptor Process Tree ===
+receptor(154533)-+-{receptor}(154535)
+                 |-{receptor}(154536)
+                 |-{receptor}(154537)
+                 |-{receptor}(154538)
+                 |-{receptor}(154539)
+                 |-{receptor}(154541)
+                 `-{receptor}(160103)
+bash(162383)---pstree(165810)
+=== nginx Process Tree ===
+nginx(159243)-+-nginx(159244)
+              |-nginx(159245)
+              |-nginx(159246)
+              `-nginx(159247)
+nginx(159244)
+nginx(159245)
+nginx(159246)
+nginx(159247)
+bash(162383)---pstree(165819)
+=== postgresql Process Tree ===
+bash(162383)---pstree(165823)
+=== redis Process Tree ===
+redis-server(52595)-+-{redis-server}(52596)
+                    |-{redis-server}(52597)
+                    |-{redis-server}(52598)
+                    `-{redis-server}(52599)
+bash(162383)---pstree(165828)
+=== uwsgi Process Tree ===
+uwsgi(159823)-+-uwsgi(159834)
+              |-uwsgi(159835)
+              |-uwsgi(159836)
+              `-uwsgi(159837)
+uwsgi(159834)
+uwsgi(159835)
+uwsgi(159836)
+uwsgi(159837)
+bash(162383)---pstree(165837)
+=== automation-hub Process Tree ===
+bash(162383)---pstree(165841)
+=== automation-eda Process Tree ===
+bash(162383)---pstree(165864)
+
+=================================================================================
+2025-07-07 08:45:02
+Memory Usage Report:
+               total        used        free      shared  buff/cache   available
+Mem:            7681        2178        1649          18        4169        5502
+Swap:           8067           0        8067
+
+Top 10 Processes by RSS Memory:
+    PID    PPID CMD                           RSS
+ 159821  159659 /var/lib/awx/venv/awx/bin/p 133696
+ 159822  159659 /var/lib/awx/venv/awx/bin/p 131504
+ 159827  159659 /var/lib/awx/venv/awx/bin/p 130668
+ 162573  159821 /var/lib/awx/venv/awx/bin/p 130560
+ 162569  159821 /var/lib/awx/venv/awx/bin/p 128512
+ 159825  159659 /var/lib/awx/venv/awx/bin/p 127324
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 126744
+ 164632  159821 /var/lib/awx/venv/awx/bin/p 126488
+ 160018  159822 /var/lib/awx/venv/awx/bin/p 124888
+ 164630  159821 /var/lib/awx/venv/awx/bin/p 124696
+
+=== RECEPTOR PROCESS ANALYSIS ===
+Receptor Main Processes:
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 154533       1 /usr/bin/receptor -c /etc/r 48308 1273916 0.0  0.6       38:41
+Receptor Child Processes for PID 154533:
+  No child processes found
+Receptor Threads for PID 154533:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 154533  154533  0.0  0.6 48308 receptor
+ 154533  154535  0.0  0.6 48308 receptor
+ 154533  154536  0.0  0.6 48308 receptor
+ 154533  154537  0.0  0.6 48308 receptor
+ 154533  154538  0.0  0.6 48308 receptor
+ 154533  154539  0.0  0.6 48308 receptor
+ 154533  154541  0.0  0.6 48308 receptor
+ 154533  160103  0.0  0.6 48308 receptor
+Receptor Network Connections for PID 154533:
+COMMAND      PID   USER   FD      TYPE             DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u     IPv4              15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u     IPv6              15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u     IPv4              22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u     IPv4              22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u     IPv6              22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx  cwd       DIR              253,0      235       128 /
+receptor  154533    awx  rtd       DIR              253,0      235       128 /
+receptor  154533    awx  txt       REG              253,0 54652712 101254061 /usr/bin/receptor
+receptor  154533    awx  mem       REG              253,0  5436640     31489 /usr/lib64/libcrypto.so.3.2.2
+receptor  154533    awx  mem       REG              253,0  2544344      2940 /usr/lib64/libc.so.6
+receptor  154533    awx  mem       REG              253,0   102552      3026 /usr/lib64/libz.so.1.2.11
+receptor  154533    awx  mem       REG              253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+receptor  154533    awx    0r      CHR                1,3      0t0         4 /dev/null
+receptor  154533    awx    1w      REG              253,0     2373 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    2w      REG              253,0     2373 101274996 /var/log/receptor/receptor.log
+receptor  154533    awx    3rW     REG               0,23        0      2259 /run/awx-receptor/receptor.sock.lock
+receptor  154533    awx    4u  a_inode               0,14        0        62 [eventpoll:5,7,8,9,10]
+receptor  154533    awx    5r     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    6w     FIFO               0,13      0t0    460014 pipe
+receptor  154533    awx    7u     unix 0xffff991287934600      0t0    460015 /var/run/awx-receptor/receptor.sock type=STREAM (LISTEN)
+receptor  154533    awx    8u     IPv6             461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx    9u     unix 0xffff99139093da00      0t0    522631 /var/run/awx-receptor/receptor.sock type=STREAM (CONNECTED)
+receptor  154533    awx   10u     IPv6             461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+receptor  154533    awx   11r      REG              253,0    34078   3415388 /tmp/receptor/192.168.1.104/ffAXNjFk/stdout
+receptor  154533    awx   12w      REG              253,0    34078   3415388 /tmp/receptor/192.168.1.104/ffAXNjFk/stdout
+nginx     159243   root    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u     IPv4             513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u     IPv4             508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx    8u     IPv4             477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u     IPv4             477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u     IPv6             477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u     IPv6             477064      0t0       TCP *:http (LISTEN)
+awx-manag 159821    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u     IPv4             503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u     IPv4             481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u     IPv4             481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u     IPv4             481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u     IPv4             481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u     IPv4             497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 160023    awx   16u     IPv4             528094      0t0       TCP controller.example.com:56194->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u     IPv4             511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+awx-manag 162569    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   42u     IPv4             529829      0t0       TCP controller.example.com:56218->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164632    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165932    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165932    awx   57u     IPv4             529035      0t0       TCP controller.example.com:56202->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165934    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165934    awx   47u     IPv4             527937      0t0       TCP controller.example.com:38232->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165936    awx   38u     IPv4             481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165936    awx   59u     IPv4             528882      0t0       TCP controller.example.com:38260->192.168.1.145:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+ 162383       1 bash -c  log_file="/tmp/mem  3584   7260  0.0  0.0       02:33
+Receptor Child Processes for PID 162383:
+      PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Threads for PID 162383:
+    PID    SPID %CPU %MEM   RSS COMMAND
+ 162383  162383  0.0  0.0  3584 bash
+Receptor Network Connections for PID 162383:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF      NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0       UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0       UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0       UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0       TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0       TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0       TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0       TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0       TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0       TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx    8u  IPv4 477061      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0       TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0       TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0       TCP *:http (LISTEN)
+awx-manag 159821    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0       TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0       TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0       TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0       TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0       TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0       TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 160023    awx   16u  IPv4 528094      0t0       TCP controller.example.com:56194->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0       TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+bash      162383   root  cwd    DIR  253,0      142 100663430 /root
+bash      162383   root  rtd    DIR  253,0      235       128 /
+bash      162383   root  txt    REG  253,0  1389072 100699305 /usr/bin/bash
+bash      162383   root  mem    REG  253,0  2586930      2913 /usr/lib/locale/en_US.utf8/LC_COLLATE
+bash      162383   root  mem    REG  253,0  2544344      2940 /usr/lib64/libc.so.6
+bash      162383   root  mem    REG  253,0   346132 100699359 /usr/lib/locale/C.utf8/LC_CTYPE
+bash      162383   root  mem    REG  253,0       54      2916 /usr/lib/locale/en_US.utf8/LC_NUMERIC
+bash      162383   root  mem    REG  253,0     3284  33558453 /usr/lib/locale/en_US.utf8/LC_TIME
+bash      162383   root  mem    REG  253,0      286  33558451 /usr/lib/locale/en_US.utf8/LC_MONETARY
+bash      162383   root  mem    REG  253,0       57  33558272 /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+bash      162383   root  mem    REG  253,0    26988  67253951 /usr/lib64/gconv/gconv-modules.cache
+bash      162383   root  mem    REG  253,0   195080      2575 /usr/lib64/libtinfo.so.6.2
+bash      162383   root  mem    REG  253,0       34 100699659 /usr/lib/locale/en_US.utf8/LC_PAPER
+bash      162383   root  mem    REG  253,0       77      2915 /usr/lib/locale/en_US.utf8/LC_NAME
+bash      162383   root  mem    REG  253,0      167  33558447 /usr/lib/locale/en_US.utf8/LC_ADDRESS
+bash      162383   root  mem    REG  253,0       59  33558452 /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+bash      162383   root  mem    REG  253,0       23  33558450 /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+bash      162383   root  mem    REG  253,0      369  33558449 /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+bash      162383   root  mem    REG  253,0   897856      2936 /usr/lib64/ld-linux-x86-64.so.2
+bash      162383   root    0r   CHR    1,3      0t0         4 /dev/null
+bash      162383   root    1w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    2w   REG  253,0        0  68039593 /tmp/memory_monitor.log
+bash      162383   root    3r  FIFO   0,13      0t0    529965 pipe
+awx-manag 162569    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   42u  IPv4 529829      0t0       TCP controller.example.com:56218->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164632    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165932    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165932    awx   57u  IPv4 529035      0t0       TCP controller.example.com:56202->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165934    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165934    awx   47u  IPv4 527937      0t0       TCP controller.example.com:38232->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165936    awx   38u  IPv4 481726      0t0       TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165936    awx   59u  IPv4 528882      0t0       TCP controller.example.com:38260->192.168.1.145:postgres (ESTABLISHED)
+
+    PID    PPID CMD                           RSS    VSZ %CPU %MEM     ELAPSED
+Receptor Child Processes for PID 166369:
+  No child processes found
+Receptor Threads for PID 166369:
+    PID    SPID %CPU %MEM   RSS COMMAND
+Receptor Network Connections for PID 166369:
+COMMAND      PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chronyd      784 chrony    5u  IPv4  15240      0t0  UDP localhost:323 
+chronyd      784 chrony    6u  IPv6  15241      0t0  UDP localhost:323 
+NetworkMa    800   root   26u  IPv4  22860      0t0  UDP controller.example.com:bootpc->pi.hole:bootps 
+sshd         821   root    3u  IPv4  22141      0t0  TCP *:ssh (LISTEN)
+sshd         821   root    4u  IPv6  22150      0t0  TCP *:ssh (LISTEN)
+receptor  154533    awx    8u  IPv6 461190      0t0  TCP *:27199 (LISTEN)
+receptor  154533    awx   10u  IPv6 461928      0t0  TCP controller.example.com:27199->192.168.1.168:60108 (ESTABLISHED)
+nginx     159243   root    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159243   root    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159243   root   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159243   root   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159244  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159244  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159245  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159245  nginx   18u  IPv4 513050      0t0  TCP controller.example.com:https->192.168.1.49:51712 (ESTABLISHED)
+nginx     159245  nginx   22u  IPv4 508845      0t0  TCP controller.example.com:https->192.168.1.49:32834 (ESTABLISHED)
+nginx     159246  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159246  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159246  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx    8u  IPv4 477061      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx    9u  IPv4 477062      0t0  TCP *:http (LISTEN)
+nginx     159247  nginx   10u  IPv6 477063      0t0  TCP *:https (LISTEN)
+nginx     159247  nginx   11u  IPv6 477064      0t0  TCP *:http (LISTEN)
+awx-manag 159821    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159822    awx   29u  IPv4 503942      0t0  TCP controller.example.com:37064->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159825    awx   17u  IPv4 481755      0t0  TCP controller.example.com:44746->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root    8u  IPv4 481133      0t0  TCP controller.example.com:44720->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159827   root   14u  IPv4 481136      0t0  TCP controller.example.com:44722->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx    8u  IPv4 481645      0t0  TCP controller.example.com:44676->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 159828    awx   14u  IPv4 497652      0t0  TCP controller.example.com:47088->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 160023    awx   16u  IPv4 528094      0t0  TCP controller.example.com:56194->192.168.1.145:postgres (ESTABLISHED)
+sshd      162026   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+sshd      162029   root    4u  IPv4 511524      0t0  TCP controller.example.com:ssh->192.168.1.49:35526 (ESTABLISHED)
+awx-manag 162569    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 162573    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164630    awx   42u  IPv4 529829      0t0  TCP controller.example.com:56218->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 164632    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165932    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165932    awx   57u  IPv4 529035      0t0  TCP controller.example.com:56202->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165934    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165934    awx   47u  IPv4 527937      0t0  TCP controller.example.com:38232->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165936    awx   38u  IPv4 481726      0t0  TCP controller.example.com:44696->192.168.1.145:postgres (ESTABLISHED)
+awx-manag 165936    awx   59u  IPv4 528882      0t0  TCP controller.example.com:38260->192.168.1.145:postgres (ESTABLISHED)
+  No network connections found
+
+=== RECEPTOR MEMORY SUMMARY ===
+Total Receptor RSS Memory: 51892 KB (50 MB)
+Total Receptor VSZ Memory: 1281176 KB (1251 MB)
+Number of Receptor Processes: 3
+
+AAP-related Processes and Children:
+=== AAP Service Processes ===
+Process: redis-server (PID: 52595)
+    PID    PPID CMD                           RSS
+  52595       1 /usr/bin/redis-server unixs 13272
+
+Process: receptor (PID: 154533)
+    PID    PPID CMD                           RSS
+ 154533       1 /usr/bin/receptor -c /etc/r 48308
+
+Process: nginx (PID: 159243)
+    PID    PPID CMD                           RSS
+ 159243       1 nginx: master process /usr/  2252
+  Children of PID 159243:
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: nginx (PID: 159244)
+    PID    PPID CMD                           RSS
+ 159244  159243 nginx: worker process        4044
+
+Process: nginx (PID: 159245)
+    PID    PPID CMD                           RSS
+ 159245  159243 nginx: worker process        8524
+
+Process: nginx (PID: 159246)
+    PID    PPID CMD                           RSS
+ 159246  159243 nginx: worker process        8140
+
+Process: nginx (PID: 159247)
+    PID    PPID CMD                           RSS
+ 159247  159243 nginx: worker process        8268
+
+Process: uwsgi (PID: 159823)
+    PID    PPID CMD                           RSS
+ 159823  159659 /var/lib/awx/venv/awx/bin/u 103628
+  Children of PID 159823:
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112920
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 124316
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 124188
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 126744
+
+Process: uwsgi (PID: 159834)
+    PID    PPID CMD                           RSS
+ 159834  159823 /var/lib/awx/venv/awx/bin/u 112920
+
+Process: uwsgi (PID: 159835)
+    PID    PPID CMD                           RSS
+ 159835  159823 /var/lib/awx/venv/awx/bin/u 124316
+
+Process: uwsgi (PID: 159836)
+    PID    PPID CMD                           RSS
+ 159836  159823 /var/lib/awx/venv/awx/bin/u 124188
+
+Process: uwsgi (PID: 159837)
+    PID    PPID CMD                           RSS
+ 159837  159823 /var/lib/awx/venv/awx/bin/u 126744
+
+Process: bash (PID: 162383)
+    PID    PPID CMD                           RSS
+ 162383       1 bash -c  log_file="/tmp/mem  3584
+  Children of PID 162383:
+    PID    PPID CMD                           RSS
+ 166449  162383 bash -c  log_file="/tmp/mem  2368
+
+Process: bash (PID: 166449)
+    PID    PPID CMD                           RSS
+ 166449  162383 bash -c  log_file="/tmp/mem  2368
+  Children of PID 166449:
+    PID    PPID CMD                           RSS
+
+
+Process Tree for AAP Services:
+=== automation-controller Process Tree ===
+bash(162383)---pstree(166504)
+=== receptor Process Tree ===
+receptor(154533)-+-{receptor}(154535)
+                 |-{receptor}(154536)
+                 |-{receptor}(154537)
+                 |-{receptor}(154538)
+                 |-{receptor}(154539)
+                 |-{receptor}(154541)
+                 `-{receptor}(160103)
+bash(162383)---pstree(166509)
+=== nginx Process Tree ===
+nginx(159243)-+-nginx(159244)
+              |-nginx(159245)
+              |-nginx(159246)
+              `-nginx(159247)
+nginx(159244)
+nginx(159245)
+nginx(159246)
+nginx(159247)
+bash(162383)---pstree(166518)
+=== postgresql Process Tree ===
+bash(162383)---pstree(166522)
+=== redis Process Tree ===
+redis-server(52595)-+-{redis-server}(52596)
+                    |-{redis-server}(52597)
+                    |-{redis-server}(52598)
+                    `-{redis-server}(52599)
+bash(162383)---pstree(166527)
+=== uwsgi Process Tree ===
+uwsgi(159823)-+-uwsgi(159834)
+              |-uwsgi(159835)
+              |-uwsgi(159836)
+              `-uwsgi(159837)
+uwsgi(159834)
+uwsgi(159835)
+uwsgi(159836)
+uwsgi(159837)
+bash(162383)---pstree(166536)
+=== automation-hub Process Tree ===
+bash(162383)---pstree(166540)
+=== automation-eda Process Tree ===
+bash(162383)---pstree(166544)
+
+Memory monitoring completed for aap24 baseline test at Mon Jul  7 08:45:33 AM PDT 2025

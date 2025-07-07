@@ -1,0 +1,12 @@
+Receptor Version Information - AAP 2.4
+Timestamp: 2025-07-07T14:25:12Z
+Hostname: localhost
+
+--- Receptor Version Information ---
+receptor command not found
+--- Receptor Package Information ---
+No receptor packages found
+--- Receptor Process Information ---
+root       62123  0.0  0.0   7124  3456 ?        S    08:42   0:00 /bin/sh -c echo "--- Receptor Version Information ---" if command -v receptor &> /dev/null; then   receptor --version 2>&1 || echo "receptor --version failed" else   echo "receptor command not found" fi echo "--- Receptor Package Information ---" rpm -qa | grep -i receptor || echo "No receptor packages found" echo "--- Receptor Process Information ---" ps aux | grep -E "[r]eceptor" | head -5 || echo "No receptor processes found" echo "--- Receptor Service Status ---" systemctl status receptor 2>&1 | head -10 || echo "Receptor service status unavailable" 
+--- Receptor Service Status ---
+Unit receptor.service could not be found.

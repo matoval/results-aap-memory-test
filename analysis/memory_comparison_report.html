@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AAP Memory Comparison Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; }
+        .section { margin: 20px 0; }
+        .metrics { display: flex; justify-content: space-around; }
+        .metric-box { border: 1px solid #ccc; padding: 15px; border-radius: 5px; text-align: center; }
+        .aap24 { border-left: 5px solid #007acc; }
+        .aap25 { border-left: 5px solid #cc4400; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .conclusion { background-color: #e8f5e8; padding: 15px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Ansible Automation Platform Memory Comparison Report</h1>
+        <p><strong>Generated:</strong> 2025-07-07T15:49:31Z</p>
+        <p><strong>Test Environment:</strong> Proxmox VMs on 192.168.1.155 (AAP 2.4) and 192.168.1.73 (AAP 2.5)</p>
+    </div>
+
+    <div class="section">
+        <h2>Test Configuration</h2>
+        <table>
+            <tr><th>Parameter</th><th>Value</th></tr>
+            <tr><td>Host Memory</td><td>32GB</td></tr>
+            <tr><td>VM Memory (Control/Execution)</td><td>8GB each</td></tr>
+            <tr><td>VM Memory (Database)</td><td>8GB</td></tr>
+            <tr><td>VM Memory (Monitoring)</td><td>4GB</td></tr>
+            <tr><td>Monitoring Interval</td><td>5 seconds</td></tr>
+            <tr><td>Test Duration</td><td>3600 seconds</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Environment Details</h2>
+        <div class="metrics">
+            <div class="metric-box aap24">
+                <h3>AAP 2.4 Environment</h3>
+                <p><strong>Control Node:</strong> 192.168.1.222</p>
+                <p><strong>Execution Node:</strong> 192.168.1.71</p>
+                <p><strong>Database Node:</strong> 192.168.1.171</p>
+                <p><strong>Architecture:</strong> Traditional</p>
+            </div>
+            <div class="metric-box aap25">
+                <h3>AAP 2.5 Environment</h3>
+                <p><strong>Control Node:</strong> 192.168.1.233</p>
+                <p><strong>Execution Node:</strong> 192.168.1.20</p>
+                <p><strong>Database Node:</strong> 192.168.1.7</p>
+                <p><strong>Architecture:</strong> Platform Gateway + Enhanced EDA</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Memory Usage Summary</h2>
+                <div class="metrics">
+            <div class="metric-box aap24">
+                <h3>AAP 2.4 Results</h3>
+                <p><strong>Average Memory:</strong> 1203.0 MB</p>
+                <p><strong>Peak Memory:</strong> 2341.0 MB</p>
+                <p><strong>Min Memory:</strong> 562.0 MB</p>
+                <p><strong>Samples:</strong> 132</p>
+            </div>
+            <div class="metric-box aap25">
+                <h3>AAP 2.5 Results</h3>
+                <p><strong>Average Memory:</strong> 1672.9 MB</p>
+                <p><strong>Peak Memory:</strong> 3074.0 MB</p>
+                <p><strong>Min Memory:</strong> 760.0 MB</p>
+                <p><strong>Samples:</strong> 176</p>
+            </div>
+        </div>
+        
+        <h3>Direct Comparison</h3>
+        <table>
+            <tr><th>Metric</th><th>AAP 2.4</th><th>AAP 2.5</th><th>Difference</th><th>% Change</th></tr>
+            <tr>
+                <td>Average Memory (MB)</td>
+                <td>1203.0</td>
+                <td>1672.9</td>
+                <td>470.0</td>
+                <td>39.1%</td>
+            </tr>
+            <tr>
+                <td>Peak Memory (MB)</td>
+                <td>2341.0</td>
+                <td>3074.0</td>
+                <td>733.0</td>
+                <td>31.3%</td>
+            </tr>
+            <tr>
+                <td>Min Memory (MB)</td>
+                <td>562.0</td>
+                <td>760.0</td>
+                <td>198.0</td>
+                <td>35.2%</td>
+            </tr>
+        </table>
+                
+                <h3>Top Memory Consuming Processes</h3>
+        <div class="metrics">
+            <div class="metric-box aap24">
+                <h4>AAP 2.4 Top 10 Processes</h4>
+                                <table>
+                    <tr><th>Process</th><th>Avg Memory (MB)</th><th>Count</th></tr>
+                                        <tr>
+                        <td>/var/lib/awx/venv/awx/bin/u</td>
+                        <td>126.7</td>
+                        <td>55</td>
+                    </tr>
+                                        <tr>
+                        <td>/var/lib/awx/venv/awx/bin/p</td>
+                        <td>126.1</td>
+                        <td>385</td>
+                    </tr>
+                                        <tr>
+                        <td>/usr/lib/systemd/systemd-lo</td>
+                        <td>13.4</td>
+                        <td>11</td>
+                    </tr>
+                                        <tr>
+                        <td>/usr/lib/systemd/systemd-ud</td>
+                        <td>13.3</td>
+                        <td>11</td>
+                    </tr>
+                                        <tr>
+                        <td>/usr/lib/systemd/systemd-jo</td>
+                        <td>10.4</td>
+                        <td>3</td>
+                    </tr>
+                                    </table>
+                            </div>
+            <div class="metric-box aap25">
+                <h4>AAP 2.5 Top 10 Processes</h4>
+                                <table>
+                    <tr><th>Process</th><th>Avg Memory (MB)</th><th>Count</th></tr>
+                                        <tr>
+                        <td>/var/lib/awx/venv/awx/bin/u</td>
+                        <td>161.8</td>
+                        <td>24</td>
+                    </tr>
+                                        <tr>
+                        <td>/var/lib/awx/venv/awx/bin/p</td>
+                        <td>161.2</td>
+                        <td>416</td>
+                    </tr>
+                                    </table>
+                            </div>
+        </div>
+                
+        <h3>Analysis Files</h3>
+        <p>Detailed memory usage analysis is available in the following files:</p>
+        <ul>
+            <li><strong>memory_comparison_charts.png</strong> - Visual comparison charts</li>
+            <li><strong>memory_analysis_summary.json</strong> - Detailed numerical analysis</li>
+            <li><strong>analyze_memory.py</strong> - Analysis script for custom reports</li>
+        </ul>
+        
+        <h3>Key Metrics Tracked</h3>
+        <table>
+            <tr><th>Metric</th><th>Description</th><th>Source</th></tr>
+            <tr><td>System Memory Usage</td><td>Total RAM consumption per node</td><td>Node Exporter</td></tr>
+            <tr><td>AAP Service Memory</td><td>Memory used by AAP-specific services</td><td>Memory Monitor</td></tr>
+            <tr><td>Peak Memory Usage</td><td>Maximum memory consumption during tests</td><td>Memory Monitor</td></tr>
+            <tr><td>Memory Growth Rate</td><td>Rate of memory increase over time</td><td>Analysis Script</td></tr>
+            <tr><td>Service-specific Usage</td><td>Per-service memory breakdown</td><td>Process Monitoring</td></tr>
+            <tr><td><strong>Top 10 Processes by RSS</strong></td><td>Highest memory consuming processes</td><td>Process Monitoring</td></tr>
+            <tr><td><strong>Child Process Analysis</strong></td><td>Parent-child process relationships</td><td>Process Monitoring</td></tr>
+            <tr><td><strong>Process Tree Visualization</strong></td><td>Hierarchical process structure</td><td>Process Monitoring</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Test Scenarios Executed</h2>
+        <table>
+            <tr><th>Test Type</th><th>Description</th><th>Forks</th><th>Duration</th></tr>
+            <tr><td>Baseline</td><td>Idle memory consumption</td><td>N/A</td><td>30 minutes</td></tr>
+            <tr><td>Light</td><td>Simple playbook execution</td><td>10</td><td>15 minutes</td></tr>
+            <tr><td>Medium</td><td>Moderate workload with fact gathering</td><td>50</td><td>20 minutes</td></tr>
+            <tr><td>Heavy</td><td>High workload with memory stress</td><td>100</td><td>25 minutes</td></tr>
+            <tr><td>Stress</td><td>Maximum workload test</td><td>200</td><td>30 minutes</td></tr>
+            <tr><td>Scaling</td><td>Progressive scaling test</td><td>10-100</td><td>45 minutes</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>AAP 2.5 Specific Components</h2>
+        <p>AAP 2.5 introduces several new components that impact memory usage:</p>
+        <ul>
+            <li><strong>Platform Gateway:</strong> New unified entry point (~200-300MB baseline)</li>
+            <li><strong>Enhanced Event-Driven Ansible:</strong> Improved EDA capabilities (~250MB baseline)</li>
+            <li><strong>Unified UI Architecture:</strong> Consolidated user interface components</li>
+            <li><strong>Enhanced Receptor Mesh:</strong> Improved execution node communication</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Enhanced Process Analysis</h2>
+        <p>The memory testing now includes detailed process-level analysis:</p>
+        
+        <h3>Process Memory Tracking</h3>
+        <ul>
+            <li><strong>Top 10 Memory Consumers:</strong> Real-time tracking of highest RSS processes</li>
+            <li><strong>AAP Service Breakdown:</strong> Memory usage per AAP component</li>
+            <li><strong>Parent-Child Relationships:</strong> Complete process hierarchy analysis</li>
+            <li><strong>Process Trees:</strong> Visual representation of service dependencies</li>
+        </ul>
+        
+        <h3>Monitored AAP Services</h3>
+        <table>
+            <tr><th>Service</th><th>Description</th><th>Expected Child Processes</th></tr>
+            <tr><td>automation-controller</td><td>Main AAP controller service</td><td>uwsgi workers, celery workers</td></tr>
+            <tr><td>receptor</td><td>Execution mesh communication</td><td>receptor workers, SSH connections</td></tr>
+            <tr><td>nginx</td><td>Web server and proxy</td><td>nginx worker processes</td></tr>
+            <tr><td>postgresql</td><td>Database service</td><td>postgres worker processes</td></tr>
+            <tr><td>redis</td><td>Cache and message broker</td><td>redis workers</td></tr>
+            <tr><td>automation-hub</td><td>Content management (AAP 2.5)</td><td>hub workers, pulp workers</td></tr>
+            <tr><td>automation-eda</td><td>Event-driven automation (AAP 2.5)</td><td>EDA workers, rulebook activations</td></tr>
+        </table>
+        
+        <h3>Process Analysis Benefits</h3>
+        <ul>
+            <li>Identify memory leaks in specific components</li>
+            <li>Track worker process scaling behavior</li>
+            <li>Compare child process counts between AAP versions</li>
+            <li>Analyze service startup and shutdown patterns</li>
+            <li>Monitor resource usage during different workload phases</li>
+        </ul>
+    </div>
+
+        <div class="section conclusion">
+        <h2>Key Findings & Recommendations</h2>
+                                
+        <div class="metrics">
+            <div class="metric-box aap25">
+                <h3>Memory Impact Summary</h3>
+                <p><strong>Average Difference:</strong> 470.0 MB (39.1%)</p>
+                <p><strong>Peak Difference:</strong> 733.0 MB</p>
+                <p><strong>Status:</strong> 
+                                    Significant increase - consider capacity planning
+                                </p>
+            </div>
+        </div>
+        
+        <h3>Recommendations</h3>
+        <ul>
+                    <li><strong>High Priority:</strong> Review AAP 2.5 configuration for optimization opportunities</li>
+            <li><strong>Capacity Planning:</strong> Consider increasing memory allocation for AAP 2.5 environments</li>
+            <li><strong>Monitoring:</strong> Implement enhanced monitoring for memory usage trends</li>
+                </ul>
+        
+        <h3>Monitoring Access</h3>
+        <p><strong>Grafana Dashboard:</strong> <a href="http://192.168.1.207:3000">http://192.168.1.207:3000</a></p>
+        <p><strong>Prometheus Metrics:</strong> <a href="http://192.168.1.207:9090">http://192.168.1.207:9090</a></p>
+    </div>
+    
+    <div class="section">
+        <h2>Files and Locations</h2>
+        <table>
+            <tr><th>File/Directory</th><th>Location</th><th>Description</th></tr>
+            <tr><td>Raw Memory Logs</td><td>/home/msandova/repos/results-aap-memory-test</td><td>Original monitoring data from each node</td></tr>
+            <tr><td>Analysis Results</td><td>/home/msandova/repos/results-aap-memory-test/analysis</td><td>Processed analysis and reports</td></tr>
+            <tr><td>Prometheus Data</td><td>/var/lib/prometheus</td><td>Time-series monitoring data</td></tr>
+            <tr><td>Grafana Dashboards</td><td>/var/lib/grafana</td><td>Visualization configuration</td></tr>
+        </table>
+    </div>
+</body>
+</html>
