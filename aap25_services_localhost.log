@@ -1,0 +1,15 @@
+AAP 2.5 Service Information
+Timestamp: 2025-07-07T15:42:05Z
+
+  automation-gateway-proxy.service loaded active running Automation Gateway Proxy Service
+--- Memory usage by AAP services ---
+root        1042  0.1  1.7 145940 132076 ?       S    13:43   0:25 uwsgi /etc/ansible-automation-platform/gateway/uwsgi.ini
+root        1044  0.1  1.6 143780 130056 ?       S    13:43   0:15 uwsgi /etc/ansible-automation-platform/gateway/uwsgi.ini
+root        1045  0.1  1.6 141816 127948 ?       S    13:43   0:17 uwsgi /etc/ansible-automation-platform/gateway/uwsgi.ini
+root        1043  0.0  1.6 140556 125936 ?       S    13:43   0:12 uwsgi /etc/ansible-automation-platform/gateway/uwsgi.ini
+root        1041  0.0  1.6 138320 124588 ?       S    13:43   0:12 uwsgi /etc/ansible-automation-platform/gateway/uwsgi.ini
+root         718  0.2  0.9 195816 70012 ?        Sl   13:42   0:45 /usr/bin/envoy --config-path /etc/ansible-automation-platform/gateway/envoy.yaml --log-path /var/log/ansible-automation-platform/gateway/envoy.log
+root        1039  0.0  0.1  24604 14208 ?        S    13:43   0:00 uwsgi /etc/ansible-automation-platform/gateway/uwsgi.ini
+root         717  0.0  0.0   7124  3584 ?        Ss   13:42   0:00 bash -o pipefail -c /usr/bin/envoy --config-path /etc/ansible-automation-platform/gateway/envoy.yaml --log-path /var/log/ansible-automation-platform/gateway/envoy.log 2>&1 |tee
+root        3305  0.0  0.0   7124  3456 ?        S    17:54   0:00 /bin/sh -c systemctl list-units --type=service --state=running | grep -E "(automation|receptor|platform)" || true echo "--- Memory usage by AAP services ---" ps aux --sort=-%mem | grep -E "(automation|receptor|platform|postgresql)" | head -10 || true 
+root        3309  0.0  0.0   6424  2304 ?        S    17:54   0:00 grep -E (automation|receptor|platform|postgresql)
